@@ -19,5 +19,10 @@ namespace SchoolManagementSystem
         {
 
         }
+
+        private void MngEvtImgBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

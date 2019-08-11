@@ -8,5 +8,10 @@ namespace SchoolManagementSystem
         {
             InitializeComponent();
         }
+
+        private void HomePage2_Load(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }

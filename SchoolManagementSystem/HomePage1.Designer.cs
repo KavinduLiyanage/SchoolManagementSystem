@@ -51,7 +51,7 @@
             // 
             this.MngStaffImgBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MngStaffImgBtn.BackgroundImage")));
             this.MngStaffImgBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.MngStaffImgBtn.Location = new System.Drawing.Point(74, 55);
+            this.MngStaffImgBtn.Location = new System.Drawing.Point(71, 53);
             this.MngStaffImgBtn.Name = "MngStaffImgBtn";
             this.MngStaffImgBtn.Size = new System.Drawing.Size(95, 92);
             this.MngStaffImgBtn.TabIndex = 0;
@@ -151,11 +151,12 @@
             // 
             this.MngEvtImgBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MngEvtImgBtn.BackgroundImage")));
             this.MngEvtImgBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.MngEvtImgBtn.Location = new System.Drawing.Point(74, 250);
+            this.MngEvtImgBtn.Location = new System.Drawing.Point(71, 250);
             this.MngEvtImgBtn.Name = "MngEvtImgBtn";
             this.MngEvtImgBtn.Size = new System.Drawing.Size(95, 92);
             this.MngEvtImgBtn.TabIndex = 16;
             this.MngEvtImgBtn.UseVisualStyleBackColor = true;
+            this.MngEvtImgBtn.Click += new System.EventHandler(this.MngEvtImgBtn_Click);
             // 
             // MngResrceBtn
             // 
@@ -245,6 +246,7 @@
             this.Controls.Add(this.MngStuImgBtn);
             this.Controls.Add(this.MngStaffBtn);
             this.Controls.Add(this.MngStaffImgBtn);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "HomePage1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Welcome Admin";

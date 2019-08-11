@@ -10,22 +10,11 @@ using System.Windows.Forms;
 
 namespace SchoolManagementSystem
 {
-    public partial class LoginForm : Form
+    public partial class HomePage3 : Form
     {
-        public LoginForm()
+        public HomePage3()
         {
             InitializeComponent();
-        }
-
-        private void PictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Button1_Click(object sender, EventArgs e)
-        {
-            HomePage1 newPage = new HomePage1();
-            newPage.Show();
         }
     }
 }

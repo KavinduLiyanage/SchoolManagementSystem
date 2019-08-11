@@ -1,6 +1,6 @@
 ﻿namespace SchoolManagementSystem
 {
-    partial class HomePage1
+    partial class HomePage3
     {
         /// <summary>
         /// Required designer variable.
@@ -30,15 +30,15 @@
         {
             this.SuspendLayout();
             // 
-            // HomePage1
+            // HomePage3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "HomePage1";
+            this.Name = "HomePage3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Welcome Admin";
+            this.Text = "Welcome Student";
             this.ResumeLayout(false);
 
         }

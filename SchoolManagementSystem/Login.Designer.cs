@@ -41,14 +41,14 @@
             // 
             // pwdTxtBox
             // 
-            this.pwdTxtBox.Location = new System.Drawing.Point(598, 213);
+            this.pwdTxtBox.Location = new System.Drawing.Point(601, 243);
             this.pwdTxtBox.Name = "pwdTxtBox";
             this.pwdTxtBox.Size = new System.Drawing.Size(151, 22);
             this.pwdTxtBox.TabIndex = 11;
             // 
             // unTxtBox
             // 
-            this.unTxtBox.Location = new System.Drawing.Point(598, 150);
+            this.unTxtBox.Location = new System.Drawing.Point(601, 180);
             this.unTxtBox.Name = "unTxtBox";
             this.unTxtBox.Size = new System.Drawing.Size(151, 22);
             this.unTxtBox.TabIndex = 10;
@@ -58,7 +58,7 @@
             this.LgnBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.LgnBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LgnBtn.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LgnBtn.Location = new System.Drawing.Point(529, 274);
+            this.LgnBtn.Location = new System.Drawing.Point(532, 304);
             this.LgnBtn.Name = "LgnBtn";
             this.LgnBtn.Size = new System.Drawing.Size(136, 56);
             this.LgnBtn.TabIndex = 9;
@@ -70,7 +70,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(447, 213);
+            this.label3.Location = new System.Drawing.Point(450, 243);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(104, 27);
             this.label3.TabIndex = 8;
@@ -80,7 +80,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(447, 150);
+            this.label2.Location = new System.Drawing.Point(450, 180);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(119, 27);
             this.label2.TabIndex = 7;
@@ -91,7 +91,7 @@
             this.WelcomeLbl.AutoSize = true;
             this.WelcomeLbl.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.WelcomeLbl.ForeColor = System.Drawing.Color.Red;
-            this.WelcomeLbl.Location = new System.Drawing.Point(420, 79);
+            this.WelcomeLbl.Location = new System.Drawing.Point(438, 109);
             this.WelcomeLbl.Name = "WelcomeLbl";
             this.WelcomeLbl.Size = new System.Drawing.Size(329, 32);
             this.WelcomeLbl.TabIndex = 6;

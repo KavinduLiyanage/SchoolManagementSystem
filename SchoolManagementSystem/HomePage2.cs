@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace SchoolManagementSystem
 {
-    public partial class HomePage1 : Form
+    public partial class HomePage2 : Form
     {
-        public HomePage1()
+        public HomePage2()
         {
             InitializeComponent();
-        }
-
-        private void ListView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

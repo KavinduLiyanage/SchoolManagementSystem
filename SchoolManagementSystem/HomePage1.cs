@@ -21,5 +21,10 @@ namespace SchoolManagementSystem
         {
 
         }
+
+        private void FlowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

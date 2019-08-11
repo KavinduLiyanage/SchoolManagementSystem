@@ -51,7 +51,7 @@
             // 
             this.MngStaffImgBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MngStaffImgBtn.BackgroundImage")));
             this.MngStaffImgBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.MngStaffImgBtn.Location = new System.Drawing.Point(71, 53);
+            this.MngStaffImgBtn.Location = new System.Drawing.Point(80, 43);
             this.MngStaffImgBtn.Name = "MngStaffImgBtn";
             this.MngStaffImgBtn.Size = new System.Drawing.Size(95, 92);
             this.MngStaffImgBtn.TabIndex = 0;
@@ -62,7 +62,7 @@
             this.MngStaffBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.MngStaffBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MngStaffBtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MngStaffBtn.Location = new System.Drawing.Point(44, 153);
+            this.MngStaffBtn.Location = new System.Drawing.Point(53, 143);
             this.MngStaffBtn.Name = "MngStaffBtn";
             this.MngStaffBtn.Size = new System.Drawing.Size(145, 70);
             this.MngStaffBtn.TabIndex = 9;
@@ -74,7 +74,7 @@
             this.MngStuBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.MngStuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MngStuBtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MngStuBtn.Location = new System.Drawing.Point(238, 153);
+            this.MngStuBtn.Location = new System.Drawing.Point(247, 143);
             this.MngStuBtn.Name = "MngStuBtn";
             this.MngStuBtn.Size = new System.Drawing.Size(145, 70);
             this.MngStuBtn.TabIndex = 11;
@@ -85,7 +85,7 @@
             // 
             this.MngStuImgBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MngStuImgBtn.BackgroundImage")));
             this.MngStuImgBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.MngStuImgBtn.Location = new System.Drawing.Point(265, 55);
+            this.MngStuImgBtn.Location = new System.Drawing.Point(274, 45);
             this.MngStuImgBtn.Name = "MngStuImgBtn";
             this.MngStuImgBtn.Size = new System.Drawing.Size(95, 92);
             this.MngStuImgBtn.TabIndex = 10;
@@ -96,7 +96,7 @@
             this.MngExmBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.MngExmBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MngExmBtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MngExmBtn.Location = new System.Drawing.Point(420, 153);
+            this.MngExmBtn.Location = new System.Drawing.Point(429, 143);
             this.MngExmBtn.Name = "MngExmBtn";
             this.MngExmBtn.Size = new System.Drawing.Size(145, 70);
             this.MngExmBtn.TabIndex = 13;
@@ -107,7 +107,7 @@
             // 
             this.MngExmImgBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MngExmImgBtn.BackgroundImage")));
             this.MngExmImgBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.MngExmImgBtn.Location = new System.Drawing.Point(444, 55);
+            this.MngExmImgBtn.Location = new System.Drawing.Point(453, 45);
             this.MngExmImgBtn.Name = "MngExmImgBtn";
             this.MngExmImgBtn.Size = new System.Drawing.Size(95, 92);
             this.MngExmImgBtn.TabIndex = 12;
@@ -118,7 +118,7 @@
             this.MngInvenBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.MngInvenBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MngInvenBtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MngInvenBtn.Location = new System.Drawing.Point(594, 153);
+            this.MngInvenBtn.Location = new System.Drawing.Point(603, 143);
             this.MngInvenBtn.Name = "MngInvenBtn";
             this.MngInvenBtn.Size = new System.Drawing.Size(145, 70);
             this.MngInvenBtn.TabIndex = 15;
@@ -129,7 +129,7 @@
             // 
             this.MngInvenImgBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MngInvenImgBtn.BackgroundImage")));
             this.MngInvenImgBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.MngInvenImgBtn.Location = new System.Drawing.Point(618, 55);
+            this.MngInvenImgBtn.Location = new System.Drawing.Point(627, 45);
             this.MngInvenImgBtn.Name = "MngInvenImgBtn";
             this.MngInvenImgBtn.Size = new System.Drawing.Size(95, 92);
             this.MngInvenImgBtn.TabIndex = 14;
@@ -140,7 +140,7 @@
             this.MngEvtBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.MngEvtBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MngEvtBtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MngEvtBtn.Location = new System.Drawing.Point(44, 348);
+            this.MngEvtBtn.Location = new System.Drawing.Point(53, 338);
             this.MngEvtBtn.Name = "MngEvtBtn";
             this.MngEvtBtn.Size = new System.Drawing.Size(145, 70);
             this.MngEvtBtn.TabIndex = 17;
@@ -151,7 +151,7 @@
             // 
             this.MngEvtImgBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MngEvtImgBtn.BackgroundImage")));
             this.MngEvtImgBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.MngEvtImgBtn.Location = new System.Drawing.Point(71, 250);
+            this.MngEvtImgBtn.Location = new System.Drawing.Point(80, 240);
             this.MngEvtImgBtn.Name = "MngEvtImgBtn";
             this.MngEvtImgBtn.Size = new System.Drawing.Size(95, 92);
             this.MngEvtImgBtn.TabIndex = 16;
@@ -163,7 +163,7 @@
             this.MngResrceBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.MngResrceBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MngResrceBtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MngResrceBtn.Location = new System.Drawing.Point(238, 348);
+            this.MngResrceBtn.Location = new System.Drawing.Point(247, 338);
             this.MngResrceBtn.Name = "MngResrceBtn";
             this.MngResrceBtn.Size = new System.Drawing.Size(145, 70);
             this.MngResrceBtn.TabIndex = 19;
@@ -174,7 +174,7 @@
             // 
             this.MngResrceImgBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MngResrceImgBtn.BackgroundImage")));
             this.MngResrceImgBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.MngResrceImgBtn.Location = new System.Drawing.Point(265, 250);
+            this.MngResrceImgBtn.Location = new System.Drawing.Point(274, 240);
             this.MngResrceImgBtn.Name = "MngResrceImgBtn";
             this.MngResrceImgBtn.Size = new System.Drawing.Size(95, 92);
             this.MngResrceImgBtn.TabIndex = 18;
@@ -185,7 +185,7 @@
             this.MngLibBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.MngLibBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MngLibBtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MngLibBtn.Location = new System.Drawing.Point(420, 348);
+            this.MngLibBtn.Location = new System.Drawing.Point(429, 338);
             this.MngLibBtn.Name = "MngLibBtn";
             this.MngLibBtn.Size = new System.Drawing.Size(145, 70);
             this.MngLibBtn.TabIndex = 21;
@@ -196,7 +196,7 @@
             // 
             this.MngLibImgBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MngLibImgBtn.BackgroundImage")));
             this.MngLibImgBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.MngLibImgBtn.Location = new System.Drawing.Point(444, 250);
+            this.MngLibImgBtn.Location = new System.Drawing.Point(453, 240);
             this.MngLibImgBtn.Name = "MngLibImgBtn";
             this.MngLibImgBtn.Size = new System.Drawing.Size(95, 92);
             this.MngLibImgBtn.TabIndex = 20;
@@ -207,7 +207,7 @@
             this.MngNticeBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.MngNticeBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MngNticeBtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MngNticeBtn.Location = new System.Drawing.Point(594, 348);
+            this.MngNticeBtn.Location = new System.Drawing.Point(603, 338);
             this.MngNticeBtn.Name = "MngNticeBtn";
             this.MngNticeBtn.Size = new System.Drawing.Size(145, 70);
             this.MngNticeBtn.TabIndex = 23;
@@ -218,7 +218,7 @@
             // 
             this.MngNticeImgBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MngNticeImgBtn.BackgroundImage")));
             this.MngNticeImgBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.MngNticeImgBtn.Location = new System.Drawing.Point(618, 250);
+            this.MngNticeImgBtn.Location = new System.Drawing.Point(627, 240);
             this.MngNticeImgBtn.Name = "MngNticeImgBtn";
             this.MngNticeImgBtn.Size = new System.Drawing.Size(95, 92);
             this.MngNticeImgBtn.TabIndex = 22;

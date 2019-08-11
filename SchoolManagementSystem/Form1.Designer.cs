@@ -122,6 +122,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.WelcomeLbl);
             this.Name = "LoginForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "School Management System";
             ((System.ComponentModel.ISupportInitialize)(this.LgnImg)).EndInit();
             this.ResumeLayout(false);

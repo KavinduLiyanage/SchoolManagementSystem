@@ -30,5 +30,15 @@ namespace SchoolManagementSystem
             this.Hide();
             adminHome.ShowDialog();
         }
+
+        private void RadioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NonAcedemicRadio_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

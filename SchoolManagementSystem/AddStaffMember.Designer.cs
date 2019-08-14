@@ -36,7 +36,7 @@
             this.radioPanelType = new System.Windows.Forms.Panel();
             this.memberType = new System.Windows.Forms.Label();
             this.adedemicRadio = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.NametextBox1 = new System.Windows.Forms.TextBox();
             this.nameLabel = new System.Windows.Forms.Label();
             this.imgPanel = new System.Windows.Forms.PictureBox();
             this.usrImg = new System.Windows.Forms.PictureBox();
@@ -53,6 +53,14 @@
             this.userRadio = new System.Windows.Forms.RadioButton();
             this.accessLabel = new System.Windows.Forms.Label();
             this.adminRadio = new System.Windows.Forms.RadioButton();
+            this.nameTextBox2 = new System.Windows.Forms.TextBox();
+            this.nameLabel2 = new System.Windows.Forms.Label();
+            this.NICTextBox = new System.Windows.Forms.TextBox();
+            this.nicLabel1 = new System.Windows.Forms.Label();
+            this.doblabel = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.addressTextBox = new System.Windows.Forms.TextBox();
+            this.addressLabel = new System.Windows.Forms.Label();
             this.ContentPanel.SuspendLayout();
             this.addGroupBox.SuspendLayout();
             this.radioPanelType.SuspendLayout();
@@ -98,9 +106,17 @@
             // 
             // addGroupBox
             // 
+            this.addGroupBox.Controls.Add(this.addressTextBox);
+            this.addGroupBox.Controls.Add(this.addressLabel);
+            this.addGroupBox.Controls.Add(this.dateTimePicker1);
+            this.addGroupBox.Controls.Add(this.doblabel);
+            this.addGroupBox.Controls.Add(this.NICTextBox);
+            this.addGroupBox.Controls.Add(this.nicLabel1);
+            this.addGroupBox.Controls.Add(this.nameTextBox2);
+            this.addGroupBox.Controls.Add(this.nameLabel2);
             this.addGroupBox.Controls.Add(this.raioPanelAccess);
             this.addGroupBox.Controls.Add(this.radioPanelType);
-            this.addGroupBox.Controls.Add(this.textBox1);
+            this.addGroupBox.Controls.Add(this.NametextBox1);
             this.addGroupBox.Controls.Add(this.nameLabel);
             this.addGroupBox.Location = new System.Drawing.Point(3, 17);
             this.addGroupBox.Name = "addGroupBox";
@@ -113,7 +129,7 @@
             this.radioPanelType.Controls.Add(this.nonAcedemicRadio);
             this.radioPanelType.Controls.Add(this.memberType);
             this.radioPanelType.Controls.Add(this.adedemicRadio);
-            this.radioPanelType.Location = new System.Drawing.Point(5, 76);
+            this.radioPanelType.Location = new System.Drawing.Point(5, 20);
             this.radioPanelType.Name = "radioPanelType";
             this.radioPanelType.Size = new System.Drawing.Size(250, 76);
             this.radioPanelType.TabIndex = 4;
@@ -140,22 +156,24 @@
             this.adedemicRadio.UseVisualStyleBackColor = true;
             this.adedemicRadio.CheckedChanged += new System.EventHandler(this.RadioButton1_CheckedChanged);
             // 
-            // textBox1
+            // NametextBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(128, 33);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(127, 22);
-            this.textBox1.TabIndex = 1;
+            this.NametextBox1.Location = new System.Drawing.Point(153, 189);
+            this.NametextBox1.Name = "NametextBox1";
+            this.NametextBox1.Size = new System.Drawing.Size(246, 22);
+            this.NametextBox1.TabIndex = 1;
+            this.NametextBox1.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
             // 
             // nameLabel
             // 
             this.nameLabel.AutoSize = true;
             this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameLabel.Location = new System.Drawing.Point(11, 35);
+            this.nameLabel.Location = new System.Drawing.Point(7, 188);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(53, 20);
+            this.nameLabel.Size = new System.Drawing.Size(85, 20);
             this.nameLabel.TabIndex = 0;
-            this.nameLabel.Text = "Name";
+            this.nameLabel.Text = "Full Name";
+            this.nameLabel.Click += new System.EventHandler(this.NameLabel_Click);
             // 
             // imgPanel
             // 
@@ -277,7 +295,7 @@
             this.raioPanelAccess.Controls.Add(this.userRadio);
             this.raioPanelAccess.Controls.Add(this.accessLabel);
             this.raioPanelAccess.Controls.Add(this.adminRadio);
-            this.raioPanelAccess.Location = new System.Drawing.Point(5, 158);
+            this.raioPanelAccess.Location = new System.Drawing.Point(5, 102);
             this.raioPanelAccess.Name = "raioPanelAccess";
             this.raioPanelAccess.Size = new System.Drawing.Size(250, 76);
             this.raioPanelAccess.TabIndex = 5;
@@ -313,6 +331,74 @@
             this.adminRadio.TabStop = true;
             this.adminRadio.Text = "Admin";
             this.adminRadio.UseVisualStyleBackColor = true;
+            // 
+            // nameTextBox2
+            // 
+            this.nameTextBox2.Location = new System.Drawing.Point(152, 228);
+            this.nameTextBox2.Name = "nameTextBox2";
+            this.nameTextBox2.Size = new System.Drawing.Size(247, 22);
+            this.nameTextBox2.TabIndex = 7;
+            // 
+            // nameLabel2
+            // 
+            this.nameLabel2.AutoSize = true;
+            this.nameLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameLabel2.Location = new System.Drawing.Point(6, 227);
+            this.nameLabel2.Name = "nameLabel2";
+            this.nameLabel2.Size = new System.Drawing.Size(141, 20);
+            this.nameLabel2.TabIndex = 6;
+            this.nameLabel2.Text = "Name with Initials";
+            // 
+            // NICTextBox
+            // 
+            this.NICTextBox.Location = new System.Drawing.Point(153, 264);
+            this.NICTextBox.Name = "NICTextBox";
+            this.NICTextBox.Size = new System.Drawing.Size(246, 22);
+            this.NICTextBox.TabIndex = 9;
+            // 
+            // nicLabel1
+            // 
+            this.nicLabel1.AutoSize = true;
+            this.nicLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nicLabel1.Location = new System.Drawing.Point(7, 263);
+            this.nicLabel1.Name = "nicLabel1";
+            this.nicLabel1.Size = new System.Drawing.Size(37, 20);
+            this.nicLabel1.TabIndex = 8;
+            this.nicLabel1.Text = "NIC";
+            // 
+            // doblabel
+            // 
+            this.doblabel.AutoSize = true;
+            this.doblabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.doblabel.Location = new System.Drawing.Point(6, 300);
+            this.doblabel.Name = "doblabel";
+            this.doblabel.Size = new System.Drawing.Size(109, 20);
+            this.doblabel.TabIndex = 10;
+            this.doblabel.Text = "Date Of Birth";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(152, 298);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(247, 22);
+            this.dateTimePicker1.TabIndex = 12;
+            // 
+            // addressTextBox
+            // 
+            this.addressTextBox.Location = new System.Drawing.Point(153, 337);
+            this.addressTextBox.Name = "addressTextBox";
+            this.addressTextBox.Size = new System.Drawing.Size(246, 22);
+            this.addressTextBox.TabIndex = 14;
+            // 
+            // addressLabel
+            // 
+            this.addressLabel.AutoSize = true;
+            this.addressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addressLabel.Location = new System.Drawing.Point(7, 336);
+            this.addressLabel.Name = "addressLabel";
+            this.addressLabel.Size = new System.Drawing.Size(71, 20);
+            this.addressLabel.TabIndex = 13;
+            this.addressLabel.Text = "Address";
             // 
             // AddStaffMember
             // 
@@ -365,7 +451,7 @@
         private System.Windows.Forms.GroupBox addGroupBox;
         private System.Windows.Forms.RadioButton adedemicRadio;
         private System.Windows.Forms.Label memberType;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox NametextBox1;
         private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.Panel radioPanelType;
         private System.Windows.Forms.RadioButton nonAcedemicRadio;
@@ -373,5 +459,13 @@
         private System.Windows.Forms.RadioButton userRadio;
         private System.Windows.Forms.Label accessLabel;
         private System.Windows.Forms.RadioButton adminRadio;
+        private System.Windows.Forms.TextBox nameTextBox2;
+        private System.Windows.Forms.Label nameLabel2;
+        private System.Windows.Forms.Label doblabel;
+        private System.Windows.Forms.TextBox NICTextBox;
+        private System.Windows.Forms.Label nicLabel1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox addressTextBox;
+        private System.Windows.Forms.Label addressLabel;
     }
 }

@@ -104,6 +104,7 @@
             this.MngExmBtn.TabIndex = 13;
             this.MngExmBtn.Text = "Exam Management";
             this.MngExmBtn.UseVisualStyleBackColor = false;
+            this.MngExmBtn.Click += new System.EventHandler(this.MngExmBtn_Click);
             // 
             // MngExmImgBtn
             // 
@@ -114,6 +115,7 @@
             this.MngExmImgBtn.Size = new System.Drawing.Size(95, 92);
             this.MngExmImgBtn.TabIndex = 12;
             this.MngExmImgBtn.UseVisualStyleBackColor = true;
+            this.MngExmImgBtn.Click += new System.EventHandler(this.MngExmImgBtn_Click);
             // 
             // MngInvenBtn
             // 

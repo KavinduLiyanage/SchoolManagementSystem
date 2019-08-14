@@ -47,17 +47,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddMarks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddMarks.designer.cs">
+      <DependentUpon>AddMarks.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddStaffMember.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddStaffMember.Designer.cs">
       <DependentUpon>AddStaffMember.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddTimetable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddTimetable.designer.cs">
+      <DependentUpon>AddTimetable.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminMngStaffHome.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminMngStaffHome.Designer.cs">
       <DependentUpon>AdminMngStaffHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassResultSheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassResultSheet.designer.cs">
+      <DependentUpon>ClassResultSheet.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -83,13 +101,64 @@
     <Compile Include="HomePage3.Designer.cs">
       <DependentUpon>HomePage3.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageMarks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageMarks.designer.cs">
+      <DependentUpon>ManageMarks.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SectionResultSheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SectionResultSheet.designer.cs">
+      <DependentUpon>SectionResultSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentResultSheet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentResultSheet.designer.cs">
+      <DependentUpon>StudentResultSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeachersHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeachersHome.designer.cs">
+      <DependentUpon>TeachersHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateORDeleteMarks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateORDeleteMarks.designer.cs">
+      <DependentUpon>UpdateORDeleteMarks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateOrDeleteTimetable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateOrDeleteTimetable.designer.cs">
+      <DependentUpon>UpdateOrDeleteTimetable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewTimetable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewTimetable.designer.cs">
+      <DependentUpon>ViewTimetable.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddMarks.resx">
+      <DependentUpon>AddMarks.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddStaffMember.resx">
       <DependentUpon>AddStaffMember.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddTimetable.resx">
+      <DependentUpon>AddTimetable.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdminMngStaffHome.resx">
       <DependentUpon>AdminMngStaffHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassResultSheet.resx">
+      <DependentUpon>ClassResultSheet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomePage3.resx">
       <DependentUpon>HomePage3.cs</DependentUpon>
@@ -103,6 +172,9 @@
     <EmbeddedResource Include="HomePage2.resx">
       <DependentUpon>HomePage2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ManageMarks.resx">
+      <DependentUpon>ManageMarks.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -112,6 +184,24 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SectionResultSheet.resx">
+      <DependentUpon>SectionResultSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentResultSheet.resx">
+      <DependentUpon>StudentResultSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeachersHome.resx">
+      <DependentUpon>TeachersHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateORDeleteMarks.resx">
+      <DependentUpon>UpdateORDeleteMarks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateOrDeleteTimetable.resx">
+      <DependentUpon>UpdateOrDeleteTimetable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewTimetable.resx">
+      <DependentUpon>ViewTimetable.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

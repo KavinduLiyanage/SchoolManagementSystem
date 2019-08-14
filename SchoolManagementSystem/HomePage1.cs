@@ -38,5 +38,19 @@ namespace SchoolManagementSystem
             this.Hide();
             adminHome.ShowDialog();
         }
+
+        private void MngExmBtn_Click(object sender, EventArgs e)
+        {
+            TeachersHome home = new TeachersHome();
+            this.Hide();
+            home.ShowDialog();
+        }
+
+        private void MngExmImgBtn_Click(object sender, EventArgs e)
+        {
+            TeachersHome home = new TeachersHome();
+            this.Hide();
+            home.ShowDialog();
+        }
     }
 }

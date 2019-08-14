@@ -68,6 +68,7 @@
             this.MngStaffBtn.TabIndex = 9;
             this.MngStaffBtn.Text = "Staff Management";
             this.MngStaffBtn.UseVisualStyleBackColor = false;
+            this.MngStaffBtn.Click += new System.EventHandler(this.MngStaffBtn_Click);
             // 
             // MngStuBtn
             // 
@@ -228,7 +229,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.BackColor = System.Drawing.SystemColors.GrayText;
             this.ClientSize = new System.Drawing.Size(1262, 673);
             this.Controls.Add(this.MngNticeBtn);
             this.Controls.Add(this.MngNticeImgBtn);

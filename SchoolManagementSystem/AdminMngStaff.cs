@@ -16,5 +16,15 @@ namespace SchoolManagementSystem
         {
             InitializeComponent();
         }
+
+        private void PictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -13,5 +13,10 @@ namespace SchoolManagementSystem
         {
 
         }
+
+        private void DomainUpDown1_SelectedItemChanged(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }

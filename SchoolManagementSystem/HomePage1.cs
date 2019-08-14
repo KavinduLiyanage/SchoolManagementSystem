@@ -24,5 +24,10 @@ namespace SchoolManagementSystem
         {
 
         }
+
+        private void MngStaffBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

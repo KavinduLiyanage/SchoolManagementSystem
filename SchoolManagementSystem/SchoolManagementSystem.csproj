@@ -47,11 +47,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminMngStaff.cs">
+    <Compile Include="AddStaffMember.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminMngStaff.Designer.cs">
-      <DependentUpon>AdminMngStaff.cs</DependentUpon>
+    <Compile Include="AddStaffMember.Designer.cs">
+      <DependentUpon>AddStaffMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminMngStaffHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminMngStaffHome.Designer.cs">
+      <DependentUpon>AdminMngStaffHome.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -79,8 +85,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AdminMngStaff.resx">
-      <DependentUpon>AdminMngStaff.cs</DependentUpon>
+    <EmbeddedResource Include="AddStaffMember.resx">
+      <DependentUpon>AddStaffMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminMngStaffHome.resx">
+      <DependentUpon>AdminMngStaffHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomePage3.resx">
       <DependentUpon>HomePage3.cs</DependentUpon>

@@ -27,14 +27,14 @@ namespace SchoolManagementSystem
 
         private void MngStaffBtn_Click(object sender, EventArgs e)
         {
-            AdminMngStaff adminHome = new AdminMngStaff();
+            AdminMngStaffHome adminHome = new AdminMngStaffHome();
             this.Hide();
             adminHome.ShowDialog();
         }
 
         private void MngStaffImgBtn_Click(object sender, EventArgs e)
         {
-            AdminMngStaff adminHome = new AdminMngStaff();
+            AdminMngStaffHome adminHome = new AdminMngStaffHome();
             this.Hide();
             adminHome.ShowDialog();
         }

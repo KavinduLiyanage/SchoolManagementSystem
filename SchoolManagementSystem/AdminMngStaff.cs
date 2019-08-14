@@ -26,5 +26,12 @@ namespace SchoolManagementSystem
         {
 
         }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            HomePage1 home = new HomePage1();
+            this.Hide();
+            home.ShowDialog();
+        }
     }
 }

@@ -52,6 +52,8 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.addStaffBtn = new System.Windows.Forms.Button();
             this.addStaffImgBtn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.usrImg)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -66,9 +68,9 @@
             // 
             this.usrImg.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.usrImg.Image = ((System.Drawing.Image)(resources.GetObject("usrImg.Image")));
-            this.usrImg.Location = new System.Drawing.Point(44, 120);
+            this.usrImg.Location = new System.Drawing.Point(61, 121);
             this.usrImg.Name = "usrImg";
-            this.usrImg.Size = new System.Drawing.Size(210, 180);
+            this.usrImg.Size = new System.Drawing.Size(174, 135);
             this.usrImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.usrImg.TabIndex = 22;
             this.usrImg.TabStop = false;
@@ -77,6 +79,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnAddMarksSRS);
             this.panel1.Controls.Add(this.btnClassResultSheetSRS);
             this.panel1.Controls.Add(this.btnUpdateDeleteSRS);
@@ -90,7 +93,7 @@
             // btnAddMarksSRS
             // 
             this.btnAddMarksSRS.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.btnAddMarksSRS.Location = new System.Drawing.Point(11, 76);
+            this.btnAddMarksSRS.Location = new System.Drawing.Point(11, 115);
             this.btnAddMarksSRS.Name = "btnAddMarksSRS";
             this.btnAddMarksSRS.Size = new System.Drawing.Size(235, 35);
             this.btnAddMarksSRS.TabIndex = 23;
@@ -100,7 +103,7 @@
             // btnClassResultSheetSRS
             // 
             this.btnClassResultSheetSRS.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.btnClassResultSheetSRS.Location = new System.Drawing.Point(11, 148);
+            this.btnClassResultSheetSRS.Location = new System.Drawing.Point(11, 187);
             this.btnClassResultSheetSRS.Name = "btnClassResultSheetSRS";
             this.btnClassResultSheetSRS.Size = new System.Drawing.Size(235, 35);
             this.btnClassResultSheetSRS.TabIndex = 18;
@@ -110,7 +113,7 @@
             // btnUpdateDeleteSRS
             // 
             this.btnUpdateDeleteSRS.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.btnUpdateDeleteSRS.Location = new System.Drawing.Point(11, 112);
+            this.btnUpdateDeleteSRS.Location = new System.Drawing.Point(11, 151);
             this.btnUpdateDeleteSRS.Name = "btnUpdateDeleteSRS";
             this.btnUpdateDeleteSRS.Size = new System.Drawing.Size(235, 35);
             this.btnUpdateDeleteSRS.TabIndex = 18;
@@ -120,7 +123,7 @@
             // btnManageMarksSRS
             // 
             this.btnManageMarksSRS.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.btnManageMarksSRS.Location = new System.Drawing.Point(11, 40);
+            this.btnManageMarksSRS.Location = new System.Drawing.Point(11, 79);
             this.btnManageMarksSRS.Name = "btnManageMarksSRS";
             this.btnManageMarksSRS.Size = new System.Drawing.Size(235, 35);
             this.btnManageMarksSRS.TabIndex = 17;
@@ -130,7 +133,7 @@
             // btnTeachersHomeSRS
             // 
             this.btnTeachersHomeSRS.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.btnTeachersHomeSRS.Location = new System.Drawing.Point(11, 3);
+            this.btnTeachersHomeSRS.Location = new System.Drawing.Point(11, 42);
             this.btnTeachersHomeSRS.Name = "btnTeachersHomeSRS";
             this.btnTeachersHomeSRS.Size = new System.Drawing.Size(235, 35);
             this.btnTeachersHomeSRS.TabIndex = 17;
@@ -300,12 +303,38 @@
             this.addStaffImgBtn.TabIndex = 0;
             this.addStaffImgBtn.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Red;
+            this.button1.Location = new System.Drawing.Point(11, 6);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(235, 35);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "Home";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Location = new System.Drawing.Point(61, 272);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(171, 25);
+            this.linkLabel1.TabIndex = 26;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Milinda Ranawaka";
+            // 
             // AdminMngStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GrayText;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.usrImg);
@@ -324,6 +353,7 @@
             this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -352,5 +382,7 @@
         private System.Windows.Forms.Button addStaffBtn;
         private System.Windows.Forms.Button viewLeaveBtn;
         private System.Windows.Forms.Button ViewSalaryBtn;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

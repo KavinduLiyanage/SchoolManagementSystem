@@ -56,6 +56,7 @@
             this.MngStaffImgBtn.Size = new System.Drawing.Size(95, 92);
             this.MngStaffImgBtn.TabIndex = 0;
             this.MngStaffImgBtn.UseVisualStyleBackColor = true;
+            this.MngStaffImgBtn.Click += new System.EventHandler(this.MngStaffImgBtn_Click);
             // 
             // MngStaffBtn
             // 

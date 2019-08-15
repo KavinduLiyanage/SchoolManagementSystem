@@ -23,5 +23,12 @@ namespace SchoolManagementSystem
             this.Hide();
             seh.ShowDialog();
         }
+
+        private void BtnStudentHome_Click(object sender, EventArgs e)
+        {
+            HomePage3 hp3 = new HomePage3();
+            this.Hide();
+            hp3.ShowDialog();
+        }
     }
 }

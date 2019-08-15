@@ -119,6 +119,7 @@
             this.btnStudentHome.TabIndex = 46;
             this.btnStudentHome.Text = "Home";
             this.btnStudentHome.UseVisualStyleBackColor = true;
+            this.btnStudentHome.Click += new System.EventHandler(this.BtnStudentHome_Click);
             // 
             // panel1
             // 

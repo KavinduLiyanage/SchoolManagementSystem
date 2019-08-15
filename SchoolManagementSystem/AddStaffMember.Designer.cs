@@ -114,6 +114,7 @@
             // 
             // ContentPanel
             // 
+            this.ContentPanel.BackColor = System.Drawing.SystemColors.GrayText;
             this.ContentPanel.Controls.Add(this.addGroupBox);
             this.ContentPanel.Location = new System.Drawing.Point(288, 104);
             this.ContentPanel.Name = "ContentPanel";

@@ -59,6 +59,7 @@
             this.btnImgAT = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lbUserAT = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -87,6 +88,7 @@
             // btnSectionResultSheetATT
             // 
             this.btnSectionResultSheetATT.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnSectionResultSheetATT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSectionResultSheetATT.Location = new System.Drawing.Point(11, 220);
             this.btnSectionResultSheetATT.Name = "btnSectionResultSheetATT";
             this.btnSectionResultSheetATT.Size = new System.Drawing.Size(235, 35);
@@ -98,6 +100,7 @@
             // btnAddMarksATT
             // 
             this.btnAddMarksATT.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnAddMarksATT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddMarksATT.Location = new System.Drawing.Point(11, 76);
             this.btnAddMarksATT.Name = "btnAddMarksATT";
             this.btnAddMarksATT.Size = new System.Drawing.Size(235, 35);
@@ -109,6 +112,7 @@
             // btnClassResultSheetATT
             // 
             this.btnClassResultSheetATT.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnClassResultSheetATT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClassResultSheetATT.Location = new System.Drawing.Point(11, 185);
             this.btnClassResultSheetATT.Name = "btnClassResultSheetATT";
             this.btnClassResultSheetATT.Size = new System.Drawing.Size(235, 35);
@@ -120,6 +124,7 @@
             // btnUpdateTimetableATT
             // 
             this.btnUpdateTimetableATT.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnUpdateTimetableATT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateTimetableATT.Location = new System.Drawing.Point(11, 292);
             this.btnUpdateTimetableATT.Name = "btnUpdateTimetableATT";
             this.btnUpdateTimetableATT.Size = new System.Drawing.Size(235, 35);
@@ -131,6 +136,7 @@
             // btnGetTimetableATT
             // 
             this.btnGetTimetableATT.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnGetTimetableATT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGetTimetableATT.Location = new System.Drawing.Point(11, 256);
             this.btnGetTimetableATT.Name = "btnGetTimetableATT";
             this.btnGetTimetableATT.Size = new System.Drawing.Size(235, 35);
@@ -142,6 +148,7 @@
             // btnStudentResultSheetATT
             // 
             this.btnStudentResultSheetATT.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnStudentResultSheetATT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStudentResultSheetATT.Location = new System.Drawing.Point(11, 148);
             this.btnStudentResultSheetATT.Name = "btnStudentResultSheetATT";
             this.btnStudentResultSheetATT.Size = new System.Drawing.Size(235, 35);
@@ -153,6 +160,7 @@
             // btnUpdateDeleteATT
             // 
             this.btnUpdateDeleteATT.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnUpdateDeleteATT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateDeleteATT.Location = new System.Drawing.Point(11, 112);
             this.btnUpdateDeleteATT.Name = "btnUpdateDeleteATT";
             this.btnUpdateDeleteATT.Size = new System.Drawing.Size(235, 35);
@@ -164,6 +172,7 @@
             // btnManageMarksATT
             // 
             this.btnManageMarksATT.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnManageMarksATT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManageMarksATT.Location = new System.Drawing.Point(11, 40);
             this.btnManageMarksATT.Name = "btnManageMarksATT";
             this.btnManageMarksATT.Size = new System.Drawing.Size(235, 35);
@@ -175,6 +184,7 @@
             // btnTeachersHomeATT
             // 
             this.btnTeachersHomeATT.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnTeachersHomeATT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTeachersHomeATT.Location = new System.Drawing.Point(11, 3);
             this.btnTeachersHomeATT.Name = "btnTeachersHomeATT";
             this.btnTeachersHomeATT.Size = new System.Drawing.Size(235, 35);
@@ -206,7 +216,7 @@
             this.panel2.Controls.Add(this.btnInsertATT);
             this.panel2.Controls.Add(this.lbTimeATT);
             this.panel2.Controls.Add(this.lbDateATT);
-            this.panel2.Location = new System.Drawing.Point(294, 145);
+            this.panel2.Location = new System.Drawing.Point(294, 107);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(380, 491);
             this.panel2.TabIndex = 29;
@@ -231,9 +241,10 @@
             // lbGradeATT
             // 
             this.lbGradeATT.AutoSize = true;
+            this.lbGradeATT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbGradeATT.Location = new System.Drawing.Point(48, 235);
             this.lbGradeATT.Name = "lbGradeATT";
-            this.lbGradeATT.Size = new System.Drawing.Size(48, 17);
+            this.lbGradeATT.Size = new System.Drawing.Size(55, 20);
             this.lbGradeATT.TabIndex = 16;
             this.lbGradeATT.Text = "Grade";
             // 
@@ -247,18 +258,20 @@
             // lbSubjectATT
             // 
             this.lbSubjectATT.AutoSize = true;
+            this.lbSubjectATT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSubjectATT.Location = new System.Drawing.Point(48, 284);
             this.lbSubjectATT.Name = "lbSubjectATT";
-            this.lbSubjectATT.Size = new System.Drawing.Size(55, 17);
+            this.lbSubjectATT.Size = new System.Drawing.Size(65, 20);
             this.lbSubjectATT.TabIndex = 2;
             this.lbSubjectATT.Text = "Subject";
             // 
             // lbTermATT
             // 
             this.lbTermATT.AutoSize = true;
+            this.lbTermATT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTermATT.Location = new System.Drawing.Point(46, 91);
             this.lbTermATT.Name = "lbTermATT";
-            this.lbTermATT.Size = new System.Drawing.Size(41, 17);
+            this.lbTermATT.Size = new System.Drawing.Size(48, 20);
             this.lbTermATT.TabIndex = 0;
             this.lbTermATT.Text = "Term";
             // 
@@ -280,6 +293,7 @@
             // btnInsertATT
             // 
             this.btnInsertATT.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnInsertATT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInsertATT.Location = new System.Drawing.Point(128, 408);
             this.btnInsertATT.Name = "btnInsertATT";
             this.btnInsertATT.Size = new System.Drawing.Size(130, 50);
@@ -290,9 +304,10 @@
             // lbTimeATT
             // 
             this.lbTimeATT.AutoSize = true;
+            this.lbTimeATT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTimeATT.Location = new System.Drawing.Point(48, 184);
             this.lbTimeATT.Name = "lbTimeATT";
-            this.lbTimeATT.Size = new System.Drawing.Size(39, 17);
+            this.lbTimeATT.Size = new System.Drawing.Size(46, 20);
             this.lbTimeATT.TabIndex = 1;
             this.lbTimeATT.Text = "Time";
             this.lbTimeATT.Click += new System.EventHandler(this.LbTimeATT_Click);
@@ -300,9 +315,10 @@
             // lbDateATT
             // 
             this.lbDateATT.AutoSize = true;
+            this.lbDateATT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDateATT.Location = new System.Drawing.Point(46, 138);
             this.lbDateATT.Name = "lbDateATT";
-            this.lbDateATT.Size = new System.Drawing.Size(38, 17);
+            this.lbDateATT.Size = new System.Drawing.Size(45, 20);
             this.lbDateATT.TabIndex = 4;
             this.lbDateATT.Text = "Date";
             // 
@@ -312,7 +328,7 @@
             this.panel3.Controls.Add(this.dataGridView1);
             this.panel3.Controls.Add(this.tbSearch);
             this.panel3.Controls.Add(this.lbTimetableIDATT);
-            this.panel3.Location = new System.Drawing.Point(692, 126);
+            this.panel3.Location = new System.Drawing.Point(691, 109);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(558, 531);
             this.panel3.TabIndex = 30;
@@ -329,7 +345,7 @@
             // 
             // tbSearch
             // 
-            this.tbSearch.Location = new System.Drawing.Point(124, 18);
+            this.tbSearch.Location = new System.Drawing.Point(133, 18);
             this.tbSearch.Name = "tbSearch";
             this.tbSearch.Size = new System.Drawing.Size(403, 22);
             this.tbSearch.TabIndex = 12;
@@ -337,9 +353,10 @@
             // lbTimetableIDATT
             // 
             this.lbTimetableIDATT.AutoSize = true;
+            this.lbTimetableIDATT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTimetableIDATT.Location = new System.Drawing.Point(23, 18);
             this.lbTimetableIDATT.Name = "lbTimetableIDATT";
-            this.lbTimetableIDATT.Size = new System.Drawing.Size(87, 17);
+            this.lbTimetableIDATT.Size = new System.Drawing.Size(104, 20);
             this.lbTimetableIDATT.TabIndex = 13;
             this.lbTimetableIDATT.Text = "Timetable ID";
             // 
@@ -374,11 +391,19 @@
             this.lbUserAT.TabIndex = 33;
             this.lbUserAT.Text = "Ashani Malsha";
             // 
+            // panel4
+            // 
+            this.panel4.Location = new System.Drawing.Point(17, 10);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1233, 92);
+            this.panel4.TabIndex = 34;
+            // 
             // AddTimetable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.lbUserAT);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnImgAT);
@@ -433,5 +458,6 @@
         private System.Windows.Forms.Button btnImgAT;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lbUserAT;
+        private System.Windows.Forms.Panel panel4;
     }
 }

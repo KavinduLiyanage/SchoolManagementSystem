@@ -47,6 +47,7 @@
             this.lbUserM = new System.Windows.Forms.Label();
             this.btnimgM = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -58,6 +59,7 @@
             // btnAddMarks
             // 
             this.btnAddMarks.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnAddMarks.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddMarks.Location = new System.Drawing.Point(21, 28);
             this.btnAddMarks.Name = "btnAddMarks";
             this.btnAddMarks.Size = new System.Drawing.Size(245, 60);
@@ -69,6 +71,7 @@
             // btnDeleteUpdate
             // 
             this.btnDeleteUpdate.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnDeleteUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteUpdate.Location = new System.Drawing.Point(21, 120);
             this.btnDeleteUpdate.Name = "btnDeleteUpdate";
             this.btnDeleteUpdate.Size = new System.Drawing.Size(245, 60);
@@ -80,6 +83,7 @@
             // btnRSstudent
             // 
             this.btnRSstudent.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnRSstudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRSstudent.Location = new System.Drawing.Point(20, 216);
             this.btnRSstudent.Name = "btnRSstudent";
             this.btnRSstudent.Size = new System.Drawing.Size(245, 60);
@@ -91,6 +95,7 @@
             // btnRSclass
             // 
             this.btnRSclass.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnRSclass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRSclass.Location = new System.Drawing.Point(20, 308);
             this.btnRSclass.Name = "btnRSclass";
             this.btnRSclass.Size = new System.Drawing.Size(245, 60);
@@ -102,6 +107,7 @@
             // btnRSsection
             // 
             this.btnRSsection.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnRSsection.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRSsection.Location = new System.Drawing.Point(20, 397);
             this.btnRSsection.Name = "btnRSsection";
             this.btnRSsection.Size = new System.Drawing.Size(245, 60);
@@ -113,6 +119,7 @@
             // btnTeachersHomeM
             // 
             this.btnTeachersHomeM.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnTeachersHomeM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTeachersHomeM.Location = new System.Drawing.Point(12, 12);
             this.btnTeachersHomeM.Name = "btnTeachersHomeM";
             this.btnTeachersHomeM.Size = new System.Drawing.Size(235, 45);
@@ -124,6 +131,7 @@
             // btnAddTimetableM
             // 
             this.btnAddTimetableM.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnAddTimetableM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddTimetableM.Location = new System.Drawing.Point(12, 60);
             this.btnAddTimetableM.Name = "btnAddTimetableM";
             this.btnAddTimetableM.Size = new System.Drawing.Size(235, 45);
@@ -135,6 +143,7 @@
             // btnManageTimetableM
             // 
             this.btnManageTimetableM.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnManageTimetableM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManageTimetableM.Location = new System.Drawing.Point(12, 107);
             this.btnManageTimetableM.Name = "btnManageTimetableM";
             this.btnManageTimetableM.Size = new System.Drawing.Size(235, 45);
@@ -146,6 +155,7 @@
             // btnViewTimetableM
             // 
             this.btnViewTimetableM.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnViewTimetableM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewTimetableM.Location = new System.Drawing.Point(12, 155);
             this.btnViewTimetableM.Name = "btnViewTimetableM";
             this.btnViewTimetableM.Size = new System.Drawing.Size(235, 45);
@@ -180,6 +190,7 @@
             // btnUpdateDeleteTimetableM
             // 
             this.btnUpdateDeleteTimetableM.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnUpdateDeleteTimetableM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateDeleteTimetableM.Location = new System.Drawing.Point(12, 204);
             this.btnUpdateDeleteTimetableM.Name = "btnUpdateDeleteTimetableM";
             this.btnUpdateDeleteTimetableM.Size = new System.Drawing.Size(235, 45);
@@ -252,11 +263,19 @@
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
             // 
+            // panel5
+            // 
+            this.panel5.Location = new System.Drawing.Point(23, 24);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1227, 92);
+            this.panel5.TabIndex = 17;
+            // 
             // ManageMarks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -294,5 +313,6 @@
         private System.Windows.Forms.Label lbUserM;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnimgM;
+        private System.Windows.Forms.Panel panel5;
     }
 }

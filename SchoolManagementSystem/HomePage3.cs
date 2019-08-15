@@ -18,5 +18,12 @@ namespace SchoolManagementSystem
         {
 
         }
+
+        private void MngExmBtn_Click(object sender, System.EventArgs e)
+        {
+            StudentExam seh = new StudentExam();
+            this.Hide();
+            seh.ShowDialog();
+        }
     }
 }

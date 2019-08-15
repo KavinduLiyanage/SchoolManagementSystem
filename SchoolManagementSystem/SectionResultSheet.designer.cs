@@ -57,6 +57,7 @@
             this.lbUserSERS = new System.Windows.Forms.Label();
             this.btnimgSERS = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -85,6 +86,7 @@
             // btnAddMarksCRS
             // 
             this.btnAddMarksCRS.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnAddMarksCRS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddMarksCRS.Location = new System.Drawing.Point(11, 76);
             this.btnAddMarksCRS.Name = "btnAddMarksCRS";
             this.btnAddMarksCRS.Size = new System.Drawing.Size(235, 35);
@@ -96,6 +98,7 @@
             // btnClassResultSheetCRS
             // 
             this.btnClassResultSheetCRS.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnClassResultSheetCRS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClassResultSheetCRS.Location = new System.Drawing.Point(11, 185);
             this.btnClassResultSheetCRS.Name = "btnClassResultSheetCRS";
             this.btnClassResultSheetCRS.Size = new System.Drawing.Size(235, 35);
@@ -107,6 +110,7 @@
             // btnUpdateTimetableCRS
             // 
             this.btnUpdateTimetableCRS.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnUpdateTimetableCRS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateTimetableCRS.Location = new System.Drawing.Point(11, 292);
             this.btnUpdateTimetableCRS.Name = "btnUpdateTimetableCRS";
             this.btnUpdateTimetableCRS.Size = new System.Drawing.Size(235, 35);
@@ -118,6 +122,7 @@
             // btnAddTimetableCRS
             // 
             this.btnAddTimetableCRS.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnAddTimetableCRS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddTimetableCRS.Location = new System.Drawing.Point(11, 256);
             this.btnAddTimetableCRS.Name = "btnAddTimetableCRS";
             this.btnAddTimetableCRS.Size = new System.Drawing.Size(235, 35);
@@ -129,6 +134,7 @@
             // btnManageTimetableCRS
             // 
             this.btnManageTimetableCRS.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnManageTimetableCRS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManageTimetableCRS.Location = new System.Drawing.Point(11, 220);
             this.btnManageTimetableCRS.Name = "btnManageTimetableCRS";
             this.btnManageTimetableCRS.Size = new System.Drawing.Size(235, 35);
@@ -140,6 +146,7 @@
             // btnStudentResultSheetCRS
             // 
             this.btnStudentResultSheetCRS.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnStudentResultSheetCRS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStudentResultSheetCRS.Location = new System.Drawing.Point(11, 148);
             this.btnStudentResultSheetCRS.Name = "btnStudentResultSheetCRS";
             this.btnStudentResultSheetCRS.Size = new System.Drawing.Size(235, 35);
@@ -151,6 +158,7 @@
             // btnUpdateDeleteCRS
             // 
             this.btnUpdateDeleteCRS.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnUpdateDeleteCRS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateDeleteCRS.Location = new System.Drawing.Point(11, 112);
             this.btnUpdateDeleteCRS.Name = "btnUpdateDeleteCRS";
             this.btnUpdateDeleteCRS.Size = new System.Drawing.Size(235, 35);
@@ -162,6 +170,7 @@
             // btnManageMarksCRS
             // 
             this.btnManageMarksCRS.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnManageMarksCRS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManageMarksCRS.Location = new System.Drawing.Point(11, 40);
             this.btnManageMarksCRS.Name = "btnManageMarksCRS";
             this.btnManageMarksCRS.Size = new System.Drawing.Size(235, 35);
@@ -173,6 +182,7 @@
             // btnTeachersHomeCRS
             // 
             this.btnTeachersHomeCRS.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnTeachersHomeCRS.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTeachersHomeCRS.Location = new System.Drawing.Point(11, 3);
             this.btnTeachersHomeCRS.Name = "btnTeachersHomeCRS";
             this.btnTeachersHomeCRS.Size = new System.Drawing.Size(235, 35);
@@ -216,36 +226,44 @@
             // lbGrade
             // 
             this.lbGrade.AutoSize = true;
+            this.lbGrade.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lbGrade.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbGrade.Location = new System.Drawing.Point(66, 35);
             this.lbGrade.Name = "lbGrade";
-            this.lbGrade.Size = new System.Drawing.Size(86, 17);
+            this.lbGrade.Size = new System.Drawing.Size(100, 20);
             this.lbGrade.TabIndex = 0;
             this.lbGrade.Text = "Enter Grade";
             // 
             // lbSubName
             // 
             this.lbSubName.AutoSize = true;
+            this.lbSubName.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lbSubName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSubName.Location = new System.Drawing.Point(66, 76);
             this.lbSubName.Name = "lbSubName";
-            this.lbSubName.Size = new System.Drawing.Size(96, 17);
+            this.lbSubName.Size = new System.Drawing.Size(114, 20);
             this.lbSubName.TabIndex = 1;
             this.lbSubName.Text = "Subject Name";
             // 
             // lbExam
             // 
             this.lbExam.AutoSize = true;
+            this.lbExam.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lbExam.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbExam.Location = new System.Drawing.Point(66, 118);
             this.lbExam.Name = "lbExam";
-            this.lbExam.Size = new System.Drawing.Size(84, 17);
+            this.lbExam.Size = new System.Drawing.Size(101, 20);
             this.lbExam.TabIndex = 2;
             this.lbExam.Text = "Select exam";
             // 
             // lbYear
             // 
             this.lbYear.AutoSize = true;
+            this.lbYear.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lbYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbYear.Location = new System.Drawing.Point(66, 164);
             this.lbYear.Name = "lbYear";
-            this.lbYear.Size = new System.Drawing.Size(76, 17);
+            this.lbYear.Size = new System.Drawing.Size(88, 20);
             this.lbYear.TabIndex = 4;
             this.lbYear.Text = "Enter Year";
             // 
@@ -295,13 +313,13 @@
             this.panelSRS.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panelSRS.Location = new System.Drawing.Point(811, 110);
             this.panelSRS.Name = "panelSRS";
-            this.panelSRS.Size = new System.Drawing.Size(421, 480);
+            this.panelSRS.Size = new System.Drawing.Size(439, 480);
             this.panelSRS.TabIndex = 27;
             // 
             // btnSearchSERS
             // 
             this.btnSearchSERS.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnSearchSERS.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchSERS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearchSERS.Location = new System.Drawing.Point(863, 610);
             this.btnSearchSERS.Name = "btnSearchSERS";
             this.btnSearchSERS.Size = new System.Drawing.Size(130, 50);
@@ -312,7 +330,7 @@
             // btnGetReportSERS
             // 
             this.btnGetReportSERS.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnGetReportSERS.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGetReportSERS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGetReportSERS.Location = new System.Drawing.Point(1053, 611);
             this.btnGetReportSERS.Name = "btnGetReportSERS";
             this.btnGetReportSERS.Size = new System.Drawing.Size(130, 50);
@@ -351,11 +369,19 @@
             this.pictureBox2.TabIndex = 32;
             this.pictureBox2.TabStop = false;
             // 
+            // panel4
+            // 
+            this.panel4.Location = new System.Drawing.Point(12, 12);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1236, 92);
+            this.panel4.TabIndex = 33;
+            // 
             // SectionResultSheet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnimgSERS);
             this.Controls.Add(this.lbUserSERS);
@@ -410,5 +436,6 @@
         private System.Windows.Forms.Label lbUserSERS;
         private System.Windows.Forms.Button btnimgSERS;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel4;
     }
 }

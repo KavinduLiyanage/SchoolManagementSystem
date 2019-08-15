@@ -62,6 +62,7 @@
             this.lbUserUDT = new System.Windows.Forms.Label();
             this.btnimgUDT = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -93,7 +94,7 @@
             // 
             // tbSearch
             // 
-            this.tbSearch.Location = new System.Drawing.Point(124, 18);
+            this.tbSearch.Location = new System.Drawing.Point(139, 19);
             this.tbSearch.Name = "tbSearch";
             this.tbSearch.Size = new System.Drawing.Size(403, 22);
             this.tbSearch.TabIndex = 12;
@@ -101,16 +102,16 @@
             // lbTimetableIDUDTT
             // 
             this.lbTimetableIDUDTT.AutoSize = true;
+            this.lbTimetableIDUDTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTimetableIDUDTT.Location = new System.Drawing.Point(23, 18);
             this.lbTimetableIDUDTT.Name = "lbTimetableIDUDTT";
-            this.lbTimetableIDUDTT.Size = new System.Drawing.Size(87, 17);
+            this.lbTimetableIDUDTT.Size = new System.Drawing.Size(104, 20);
             this.lbTimetableIDUDTT.TabIndex = 13;
             this.lbTimetableIDUDTT.Text = "Timetable ID";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel2.Controls.Add(this.btnDeleteUDTT);
             this.panel2.Controls.Add(this.comboBox2);
             this.panel2.Controls.Add(this.dateTimePicker1);
             this.panel2.Controls.Add(this.lbGradeUDTT);
@@ -119,18 +120,18 @@
             this.panel2.Controls.Add(this.lbTermUDTT);
             this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.textBox3);
-            this.panel2.Controls.Add(this.btnUpdateUDTT);
             this.panel2.Controls.Add(this.lbTimeUDTT);
             this.panel2.Controls.Add(this.lbDateUDTT);
             this.panel2.Location = new System.Drawing.Point(293, 107);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(380, 558);
+            this.panel2.Size = new System.Drawing.Size(380, 494);
             this.panel2.TabIndex = 34;
             // 
             // btnDeleteUDTT
             // 
             this.btnDeleteUDTT.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnDeleteUDTT.Location = new System.Drawing.Point(213, 405);
+            this.btnDeleteUDTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteUDTT.Location = new System.Drawing.Point(517, 611);
             this.btnDeleteUDTT.Name = "btnDeleteUDTT";
             this.btnDeleteUDTT.Size = new System.Drawing.Size(130, 50);
             this.btnDeleteUDTT.TabIndex = 19;
@@ -140,7 +141,7 @@
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(143, 284);
+            this.comboBox2.Location = new System.Drawing.Point(143, 325);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(200, 24);
             this.comboBox2.TabIndex = 18;
@@ -149,7 +150,7 @@
             // 
             this.dateTimePicker1.Checked = false;
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(143, 133);
+            this.dateTimePicker1.Location = new System.Drawing.Point(143, 174);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker1.TabIndex = 17;
@@ -157,15 +158,16 @@
             // lbGradeUDTT
             // 
             this.lbGradeUDTT.AutoSize = true;
-            this.lbGradeUDTT.Location = new System.Drawing.Point(48, 235);
+            this.lbGradeUDTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGradeUDTT.Location = new System.Drawing.Point(48, 276);
             this.lbGradeUDTT.Name = "lbGradeUDTT";
-            this.lbGradeUDTT.Size = new System.Drawing.Size(48, 17);
+            this.lbGradeUDTT.Size = new System.Drawing.Size(55, 20);
             this.lbGradeUDTT.TabIndex = 16;
             this.lbGradeUDTT.Text = "Grade";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(143, 88);
+            this.textBox1.Location = new System.Drawing.Point(143, 129);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(200, 22);
             this.textBox1.TabIndex = 5;
@@ -173,32 +175,34 @@
             // lbSubjectUDTT
             // 
             this.lbSubjectUDTT.AutoSize = true;
-            this.lbSubjectUDTT.Location = new System.Drawing.Point(48, 284);
+            this.lbSubjectUDTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSubjectUDTT.Location = new System.Drawing.Point(48, 325);
             this.lbSubjectUDTT.Name = "lbSubjectUDTT";
-            this.lbSubjectUDTT.Size = new System.Drawing.Size(55, 17);
+            this.lbSubjectUDTT.Size = new System.Drawing.Size(65, 20);
             this.lbSubjectUDTT.TabIndex = 2;
             this.lbSubjectUDTT.Text = "Subject";
             // 
             // lbTermUDTT
             // 
             this.lbTermUDTT.AutoSize = true;
-            this.lbTermUDTT.Location = new System.Drawing.Point(46, 91);
+            this.lbTermUDTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTermUDTT.Location = new System.Drawing.Point(46, 132);
             this.lbTermUDTT.Name = "lbTermUDTT";
-            this.lbTermUDTT.Size = new System.Drawing.Size(41, 17);
+            this.lbTermUDTT.Size = new System.Drawing.Size(48, 20);
             this.lbTermUDTT.TabIndex = 0;
             this.lbTermUDTT.Text = "Term";
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(143, 232);
+            this.comboBox1.Location = new System.Drawing.Point(143, 273);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(200, 24);
             this.comboBox1.TabIndex = 9;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(143, 184);
+            this.textBox3.Location = new System.Drawing.Point(143, 225);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(200, 22);
             this.textBox3.TabIndex = 7;
@@ -206,7 +210,8 @@
             // btnUpdateUDTT
             // 
             this.btnUpdateUDTT.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnUpdateUDTT.Location = new System.Drawing.Point(32, 405);
+            this.btnUpdateUDTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdateUDTT.Location = new System.Drawing.Point(333, 611);
             this.btnUpdateUDTT.Name = "btnUpdateUDTT";
             this.btnUpdateUDTT.Size = new System.Drawing.Size(130, 50);
             this.btnUpdateUDTT.TabIndex = 14;
@@ -216,18 +221,20 @@
             // lbTimeUDTT
             // 
             this.lbTimeUDTT.AutoSize = true;
-            this.lbTimeUDTT.Location = new System.Drawing.Point(48, 184);
+            this.lbTimeUDTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTimeUDTT.Location = new System.Drawing.Point(48, 225);
             this.lbTimeUDTT.Name = "lbTimeUDTT";
-            this.lbTimeUDTT.Size = new System.Drawing.Size(39, 17);
+            this.lbTimeUDTT.Size = new System.Drawing.Size(46, 20);
             this.lbTimeUDTT.TabIndex = 1;
             this.lbTimeUDTT.Text = "Time";
             // 
             // lbDateUDTT
             // 
             this.lbDateUDTT.AutoSize = true;
-            this.lbDateUDTT.Location = new System.Drawing.Point(46, 138);
+            this.lbDateUDTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDateUDTT.Location = new System.Drawing.Point(46, 179);
             this.lbDateUDTT.Name = "lbDateUDTT";
-            this.lbDateUDTT.Size = new System.Drawing.Size(38, 17);
+            this.lbDateUDTT.Size = new System.Drawing.Size(45, 20);
             this.lbDateUDTT.TabIndex = 4;
             this.lbDateUDTT.Text = "Date";
             // 
@@ -251,6 +258,7 @@
             // btnSectionResultSheetUDTT
             // 
             this.btnSectionResultSheetUDTT.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnSectionResultSheetUDTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSectionResultSheetUDTT.Location = new System.Drawing.Point(11, 220);
             this.btnSectionResultSheetUDTT.Name = "btnSectionResultSheetUDTT";
             this.btnSectionResultSheetUDTT.Size = new System.Drawing.Size(235, 35);
@@ -262,6 +270,7 @@
             // btnAddMarksUDTT
             // 
             this.btnAddMarksUDTT.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnAddMarksUDTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddMarksUDTT.Location = new System.Drawing.Point(11, 76);
             this.btnAddMarksUDTT.Name = "btnAddMarksUDTT";
             this.btnAddMarksUDTT.Size = new System.Drawing.Size(235, 35);
@@ -273,6 +282,7 @@
             // btnClassResultSheetUDTT
             // 
             this.btnClassResultSheetUDTT.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnClassResultSheetUDTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClassResultSheetUDTT.Location = new System.Drawing.Point(11, 185);
             this.btnClassResultSheetUDTT.Name = "btnClassResultSheetUDTT";
             this.btnClassResultSheetUDTT.Size = new System.Drawing.Size(235, 35);
@@ -284,6 +294,7 @@
             // btnUpdateTimetableUDTT
             // 
             this.btnUpdateTimetableUDTT.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnUpdateTimetableUDTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateTimetableUDTT.Location = new System.Drawing.Point(11, 292);
             this.btnUpdateTimetableUDTT.Name = "btnUpdateTimetableUDTT";
             this.btnUpdateTimetableUDTT.Size = new System.Drawing.Size(235, 35);
@@ -295,6 +306,7 @@
             // btnGetTimetableUDTT
             // 
             this.btnGetTimetableUDTT.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnGetTimetableUDTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGetTimetableUDTT.Location = new System.Drawing.Point(11, 256);
             this.btnGetTimetableUDTT.Name = "btnGetTimetableUDTT";
             this.btnGetTimetableUDTT.Size = new System.Drawing.Size(235, 35);
@@ -306,6 +318,7 @@
             // btnStudentResultSheetUDTT
             // 
             this.btnStudentResultSheetUDTT.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnStudentResultSheetUDTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStudentResultSheetUDTT.Location = new System.Drawing.Point(11, 148);
             this.btnStudentResultSheetUDTT.Name = "btnStudentResultSheetUDTT";
             this.btnStudentResultSheetUDTT.Size = new System.Drawing.Size(235, 35);
@@ -317,6 +330,7 @@
             // btnUpdateDeleteUDTT
             // 
             this.btnUpdateDeleteUDTT.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnUpdateDeleteUDTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateDeleteUDTT.Location = new System.Drawing.Point(11, 112);
             this.btnUpdateDeleteUDTT.Name = "btnUpdateDeleteUDTT";
             this.btnUpdateDeleteUDTT.Size = new System.Drawing.Size(235, 35);
@@ -328,6 +342,7 @@
             // btnManageMarksUDTT
             // 
             this.btnManageMarksUDTT.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnManageMarksUDTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManageMarksUDTT.Location = new System.Drawing.Point(11, 40);
             this.btnManageMarksUDTT.Name = "btnManageMarksUDTT";
             this.btnManageMarksUDTT.Size = new System.Drawing.Size(235, 35);
@@ -339,6 +354,7 @@
             // btnTeachersHomeUDTT
             // 
             this.btnTeachersHomeUDTT.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnTeachersHomeUDTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTeachersHomeUDTT.Location = new System.Drawing.Point(11, 3);
             this.btnTeachersHomeUDTT.Name = "btnTeachersHomeUDTT";
             this.btnTeachersHomeUDTT.Size = new System.Drawing.Size(235, 35);
@@ -359,6 +375,7 @@
             // btnDisplayUDTT
             // 
             this.btnDisplayUDTT.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnDisplayUDTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDisplayUDTT.Location = new System.Drawing.Point(791, 607);
             this.btnDisplayUDTT.Name = "btnDisplayUDTT";
             this.btnDisplayUDTT.Size = new System.Drawing.Size(130, 50);
@@ -369,6 +386,7 @@
             // btnViewUDTT
             // 
             this.btnViewUDTT.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnViewUDTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewUDTT.Location = new System.Drawing.Point(1066, 607);
             this.btnViewUDTT.Name = "btnViewUDTT";
             this.btnViewUDTT.Size = new System.Drawing.Size(130, 50);
@@ -408,17 +426,27 @@
             this.pictureBox2.TabIndex = 40;
             this.pictureBox2.TabStop = false;
             // 
+            // panel4
+            // 
+            this.panel4.Location = new System.Drawing.Point(14, 9);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1236, 92);
+            this.panel4.TabIndex = 41;
+            // 
             // UpdateOrDeleteTimetable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.btnDeleteUDTT);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnimgUDT);
             this.Controls.Add(this.lbUserUDT);
             this.Controls.Add(this.btnViewUDTT);
             this.Controls.Add(this.btnDisplayUDTT);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.btnUpdateUDTT);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
@@ -473,5 +501,6 @@
         private System.Windows.Forms.Label lbUserUDT;
         private System.Windows.Forms.Button btnimgUDT;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel4;
     }
 }

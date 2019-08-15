@@ -60,6 +60,7 @@
             this.lbUserUDM = new System.Windows.Forms.Label();
             this.btnimgUDM = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel4 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -99,41 +100,45 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(172, 37);
+            this.textBox1.Location = new System.Drawing.Point(188, 37);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 22);
+            this.textBox1.Size = new System.Drawing.Size(184, 22);
             this.textBox1.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(19, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 17);
+            this.label1.Size = new System.Drawing.Size(163, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Registration Number";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(19, 93);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 17);
+            this.label2.Size = new System.Drawing.Size(114, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Subject Name";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(19, 151);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 17);
+            this.label3.Size = new System.Drawing.Size(101, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Select exam";
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(214, 382);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(130, 50);
@@ -144,15 +149,17 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(19, 210);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 17);
+            this.label4.Size = new System.Drawing.Size(100, 20);
             this.label4.TabIndex = 3;
             this.label4.Text = "Enter Marks";
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(49, 382);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(130, 50);
@@ -163,39 +170,40 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(19, 262);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 17);
+            this.label5.Size = new System.Drawing.Size(88, 20);
             this.label5.TabIndex = 4;
             this.label5.Text = "Enter Year";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(172, 205);
+            this.textBox2.Location = new System.Drawing.Point(188, 205);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(200, 22);
+            this.textBox2.Size = new System.Drawing.Size(184, 22);
             this.textBox2.TabIndex = 6;
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(172, 148);
+            this.comboBox1.Location = new System.Drawing.Point(188, 148);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 24);
+            this.comboBox1.Size = new System.Drawing.Size(184, 24);
             this.comboBox1.TabIndex = 9;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(172, 90);
+            this.textBox3.Location = new System.Drawing.Point(188, 90);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(200, 22);
+            this.textBox3.Size = new System.Drawing.Size(184, 22);
             this.textBox3.TabIndex = 7;
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(172, 257);
+            this.dateTimePicker2.Location = new System.Drawing.Point(188, 257);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker2.Size = new System.Drawing.Size(184, 22);
             this.dateTimePicker2.TabIndex = 8;
             // 
             // panel3
@@ -229,9 +237,10 @@
             // lbSearch
             // 
             this.lbSearch.AutoSize = true;
+            this.lbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSearch.Location = new System.Drawing.Point(23, 18);
             this.lbSearch.Name = "lbSearch";
-            this.lbSearch.Size = new System.Drawing.Size(53, 17);
+            this.lbSearch.Size = new System.Drawing.Size(62, 20);
             this.lbSearch.TabIndex = 13;
             this.lbSearch.Text = "Search";
             // 
@@ -255,6 +264,7 @@
             // btnAddMarksUD
             // 
             this.btnAddMarksUD.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnAddMarksUD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddMarksUD.Location = new System.Drawing.Point(11, 76);
             this.btnAddMarksUD.Name = "btnAddMarksUD";
             this.btnAddMarksUD.Size = new System.Drawing.Size(235, 35);
@@ -266,6 +276,7 @@
             // btnSectionResultSheetUD
             // 
             this.btnSectionResultSheetUD.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnSectionResultSheetUD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSectionResultSheetUD.Location = new System.Drawing.Point(11, 185);
             this.btnSectionResultSheetUD.Name = "btnSectionResultSheetUD";
             this.btnSectionResultSheetUD.Size = new System.Drawing.Size(235, 35);
@@ -277,6 +288,7 @@
             // btnUpdateTimetableUD
             // 
             this.btnUpdateTimetableUD.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnUpdateTimetableUD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateTimetableUD.Location = new System.Drawing.Point(11, 292);
             this.btnUpdateTimetableUD.Name = "btnUpdateTimetableUD";
             this.btnUpdateTimetableUD.Size = new System.Drawing.Size(235, 35);
@@ -288,6 +300,7 @@
             // btnAddTimetableUD
             // 
             this.btnAddTimetableUD.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnAddTimetableUD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddTimetableUD.Location = new System.Drawing.Point(11, 256);
             this.btnAddTimetableUD.Name = "btnAddTimetableUD";
             this.btnAddTimetableUD.Size = new System.Drawing.Size(235, 35);
@@ -299,6 +312,7 @@
             // btnManageTimetableUD
             // 
             this.btnManageTimetableUD.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnManageTimetableUD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManageTimetableUD.Location = new System.Drawing.Point(11, 220);
             this.btnManageTimetableUD.Name = "btnManageTimetableUD";
             this.btnManageTimetableUD.Size = new System.Drawing.Size(235, 35);
@@ -310,6 +324,7 @@
             // btnClassResultSheetUD
             // 
             this.btnClassResultSheetUD.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnClassResultSheetUD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClassResultSheetUD.Location = new System.Drawing.Point(11, 148);
             this.btnClassResultSheetUD.Name = "btnClassResultSheetUD";
             this.btnClassResultSheetUD.Size = new System.Drawing.Size(235, 35);
@@ -321,6 +336,7 @@
             // btnStudentResultSheetUD
             // 
             this.btnStudentResultSheetUD.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnStudentResultSheetUD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStudentResultSheetUD.Location = new System.Drawing.Point(11, 112);
             this.btnStudentResultSheetUD.Name = "btnStudentResultSheetUD";
             this.btnStudentResultSheetUD.Size = new System.Drawing.Size(235, 35);
@@ -332,6 +348,7 @@
             // btnManageMarksUD
             // 
             this.btnManageMarksUD.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnManageMarksUD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManageMarksUD.Location = new System.Drawing.Point(11, 40);
             this.btnManageMarksUD.Name = "btnManageMarksUD";
             this.btnManageMarksUD.Size = new System.Drawing.Size(235, 35);
@@ -343,6 +360,7 @@
             // btnTeachersHomeUD
             // 
             this.btnTeachersHomeUD.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnTeachersHomeUD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTeachersHomeUD.Location = new System.Drawing.Point(11, 3);
             this.btnTeachersHomeUD.Name = "btnTeachersHomeUD";
             this.btnTeachersHomeUD.Size = new System.Drawing.Size(235, 35);
@@ -382,11 +400,19 @@
             this.pictureBox2.TabIndex = 27;
             this.pictureBox2.TabStop = false;
             // 
+            // panel4
+            // 
+            this.panel4.Location = new System.Drawing.Point(12, 12);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1236, 92);
+            this.panel4.TabIndex = 28;
+            // 
             // UpdateORDeleteMarks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.panel4);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnimgUDM);
             this.Controls.Add(this.lbUserUDM);
@@ -443,5 +469,6 @@
         private System.Windows.Forms.Label lbUserUDM;
         private System.Windows.Forms.Button btnimgUDM;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel4;
     }
 }

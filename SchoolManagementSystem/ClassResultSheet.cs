@@ -97,5 +97,10 @@ namespace SchoolManagementSystem
             this.Hide();
             att.ShowDialog();
         }
+
+        private void GroupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

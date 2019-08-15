@@ -94,6 +94,7 @@
             this.MngExmBtn.TabIndex = 29;
             this.MngExmBtn.Text = "Exam";
             this.MngExmBtn.UseVisualStyleBackColor = false;
+            this.MngExmBtn.Click += new System.EventHandler(this.MngExmBtn_Click);
             // 
             // MngExmImgBtn
             // 

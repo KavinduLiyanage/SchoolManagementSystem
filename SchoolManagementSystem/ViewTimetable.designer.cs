@@ -55,6 +55,7 @@
             this.lbUserGT = new System.Windows.Forms.Label();
             this.btnimgGT = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -94,9 +95,10 @@
             // lbTimetableIDATT
             // 
             this.lbTimetableIDATT.AutoSize = true;
+            this.lbTimetableIDATT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTimetableIDATT.Location = new System.Drawing.Point(23, 18);
             this.lbTimetableIDATT.Name = "lbTimetableIDATT";
-            this.lbTimetableIDATT.Size = new System.Drawing.Size(87, 17);
+            this.lbTimetableIDATT.Size = new System.Drawing.Size(104, 20);
             this.lbTimetableIDATT.TabIndex = 13;
             this.lbTimetableIDATT.Text = "Timetable ID";
             // 
@@ -107,17 +109,18 @@
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.lbTermATT);
             this.panel2.Controls.Add(this.comboBox1);
-            this.panel2.Location = new System.Drawing.Point(292, 134);
+            this.panel2.Location = new System.Drawing.Point(292, 110);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(493, 150);
+            this.panel2.Size = new System.Drawing.Size(493, 174);
             this.panel2.TabIndex = 34;
             // 
             // lbGradeATT
             // 
             this.lbGradeATT.AutoSize = true;
+            this.lbGradeATT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbGradeATT.Location = new System.Drawing.Point(82, 87);
             this.lbGradeATT.Name = "lbGradeATT";
-            this.lbGradeATT.Size = new System.Drawing.Size(48, 17);
+            this.lbGradeATT.Size = new System.Drawing.Size(55, 20);
             this.lbGradeATT.TabIndex = 16;
             this.lbGradeATT.Text = "Grade";
             // 
@@ -131,9 +134,10 @@
             // lbTermATT
             // 
             this.lbTermATT.AutoSize = true;
+            this.lbTermATT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTermATT.Location = new System.Drawing.Point(80, 44);
             this.lbTermATT.Name = "lbTermATT";
-            this.lbTermATT.Size = new System.Drawing.Size(41, 17);
+            this.lbTermATT.Size = new System.Drawing.Size(48, 20);
             this.lbTermATT.TabIndex = 0;
             this.lbTermATT.Text = "Term";
             // 
@@ -165,6 +169,7 @@
             // btnSectionResultSheetGTT
             // 
             this.btnSectionResultSheetGTT.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnSectionResultSheetGTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSectionResultSheetGTT.Location = new System.Drawing.Point(11, 220);
             this.btnSectionResultSheetGTT.Name = "btnSectionResultSheetGTT";
             this.btnSectionResultSheetGTT.Size = new System.Drawing.Size(235, 35);
@@ -176,6 +181,7 @@
             // btnAddMarksGTT
             // 
             this.btnAddMarksGTT.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnAddMarksGTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddMarksGTT.Location = new System.Drawing.Point(11, 76);
             this.btnAddMarksGTT.Name = "btnAddMarksGTT";
             this.btnAddMarksGTT.Size = new System.Drawing.Size(235, 35);
@@ -187,6 +193,7 @@
             // btnClassResultSheetGTT
             // 
             this.btnClassResultSheetGTT.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnClassResultSheetGTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClassResultSheetGTT.Location = new System.Drawing.Point(11, 185);
             this.btnClassResultSheetGTT.Name = "btnClassResultSheetGTT";
             this.btnClassResultSheetGTT.Size = new System.Drawing.Size(235, 35);
@@ -198,6 +205,7 @@
             // btnUpdateTimetableGTT
             // 
             this.btnUpdateTimetableGTT.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnUpdateTimetableGTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateTimetableGTT.Location = new System.Drawing.Point(11, 292);
             this.btnUpdateTimetableGTT.Name = "btnUpdateTimetableGTT";
             this.btnUpdateTimetableGTT.Size = new System.Drawing.Size(235, 35);
@@ -209,6 +217,7 @@
             // btnAddTimetableGTT
             // 
             this.btnAddTimetableGTT.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnAddTimetableGTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddTimetableGTT.Location = new System.Drawing.Point(11, 256);
             this.btnAddTimetableGTT.Name = "btnAddTimetableGTT";
             this.btnAddTimetableGTT.Size = new System.Drawing.Size(235, 35);
@@ -220,6 +229,7 @@
             // btnStudentResultSheetGTT
             // 
             this.btnStudentResultSheetGTT.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnStudentResultSheetGTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStudentResultSheetGTT.Location = new System.Drawing.Point(11, 148);
             this.btnStudentResultSheetGTT.Name = "btnStudentResultSheetGTT";
             this.btnStudentResultSheetGTT.Size = new System.Drawing.Size(235, 35);
@@ -231,6 +241,7 @@
             // btnUpdateDeleteGTT
             // 
             this.btnUpdateDeleteGTT.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnUpdateDeleteGTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdateDeleteGTT.Location = new System.Drawing.Point(11, 112);
             this.btnUpdateDeleteGTT.Name = "btnUpdateDeleteGTT";
             this.btnUpdateDeleteGTT.Size = new System.Drawing.Size(235, 35);
@@ -242,6 +253,7 @@
             // btnManageMarksGTT
             // 
             this.btnManageMarksGTT.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnManageMarksGTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManageMarksGTT.Location = new System.Drawing.Point(11, 40);
             this.btnManageMarksGTT.Name = "btnManageMarksGTT";
             this.btnManageMarksGTT.Size = new System.Drawing.Size(235, 35);
@@ -253,6 +265,7 @@
             // btnTeachersHomeGTT
             // 
             this.btnTeachersHomeGTT.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnTeachersHomeGTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTeachersHomeGTT.Location = new System.Drawing.Point(11, 3);
             this.btnTeachersHomeGTT.Name = "btnTeachersHomeGTT";
             this.btnTeachersHomeGTT.Size = new System.Drawing.Size(235, 35);
@@ -273,14 +286,15 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel4.Location = new System.Drawing.Point(803, 106);
+            this.panel4.Location = new System.Drawing.Point(802, 110);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(421, 480);
+            this.panel4.Size = new System.Drawing.Size(448, 476);
             this.panel4.TabIndex = 36;
             // 
             // btnDisplayGTT
             // 
             this.btnDisplayGTT.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnDisplayGTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDisplayGTT.Location = new System.Drawing.Point(844, 606);
             this.btnDisplayGTT.Name = "btnDisplayGTT";
             this.btnDisplayGTT.Size = new System.Drawing.Size(130, 50);
@@ -291,11 +305,12 @@
             // btnGetReportGTT
             // 
             this.btnGetReportGTT.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnGetReportGTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGetReportGTT.Location = new System.Drawing.Point(1051, 606);
             this.btnGetReportGTT.Name = "btnGetReportGTT";
             this.btnGetReportGTT.Size = new System.Drawing.Size(130, 50);
             this.btnGetReportGTT.TabIndex = 38;
-            this.btnGetReportGTT.Text = "Get Report";
+            this.btnGetReportGTT.Text = "Get Timetable";
             this.btnGetReportGTT.UseVisualStyleBackColor = false;
             // 
             // lbUserGT
@@ -329,11 +344,19 @@
             this.pictureBox2.TabIndex = 41;
             this.pictureBox2.TabStop = false;
             // 
+            // panel5
+            // 
+            this.panel5.Location = new System.Drawing.Point(14, 12);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1236, 92);
+            this.panel5.TabIndex = 16;
+            // 
             // ViewTimetable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnimgGT);
             this.Controls.Add(this.lbUserGT);
@@ -388,5 +411,6 @@
         private System.Windows.Forms.Label lbUserGT;
         private System.Windows.Forms.Button btnimgGT;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel panel5;
     }
 }

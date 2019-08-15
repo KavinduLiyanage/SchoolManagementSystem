@@ -115,11 +115,23 @@
     <Compile Include="SectionResultSheet.designer.cs">
       <DependentUpon>SectionResultSheet.cs</DependentUpon>
     </Compile>
+    <Compile Include="StudentExam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentExam.Designer.cs">
+      <DependentUpon>StudentExam.cs</DependentUpon>
+    </Compile>
     <Compile Include="StudentResultSheet.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="StudentResultSheet.designer.cs">
       <DependentUpon>StudentResultSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentViewExamTimetable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentViewExamTimetable.Designer.cs">
+      <DependentUpon>StudentViewExamTimetable.cs</DependentUpon>
     </Compile>
     <Compile Include="TeachersHome.cs">
       <SubType>Form</SubType>
@@ -187,8 +199,14 @@
     <EmbeddedResource Include="SectionResultSheet.resx">
       <DependentUpon>SectionResultSheet.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="StudentExam.resx">
+      <DependentUpon>StudentExam.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StudentResultSheet.resx">
       <DependentUpon>StudentResultSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentViewExamTimetable.resx">
+      <DependentUpon>StudentViewExamTimetable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TeachersHome.resx">
       <DependentUpon>TeachersHome.cs</DependentUpon>

@@ -33,12 +33,12 @@
             this.btnimgTH = new System.Windows.Forms.Button();
             this.lbUserTH = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.btnStudentViewTT = new System.Windows.Forms.Button();
             this.btnStudentHome = new System.Windows.Forms.Button();
+            this.btnStudentViewTT = new System.Windows.Forms.Button();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.btnStudentViewTimetableSH = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -90,6 +90,30 @@
             this.panel5.Size = new System.Drawing.Size(260, 335);
             this.panel5.TabIndex = 42;
             // 
+            // btnStudentHome
+            // 
+            this.btnStudentHome.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnStudentHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStudentHome.ForeColor = System.Drawing.Color.Red;
+            this.btnStudentHome.Location = new System.Drawing.Point(11, 20);
+            this.btnStudentHome.Name = "btnStudentHome";
+            this.btnStudentHome.Size = new System.Drawing.Size(240, 45);
+            this.btnStudentHome.TabIndex = 46;
+            this.btnStudentHome.Text = "Home";
+            this.btnStudentHome.UseVisualStyleBackColor = true;
+            this.btnStudentHome.Click += new System.EventHandler(this.BtnStudentHome_Click);
+            // 
+            // btnStudentViewTT
+            // 
+            this.btnStudentViewTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnStudentViewTT.Location = new System.Drawing.Point(11, 71);
+            this.btnStudentViewTT.Name = "btnStudentViewTT";
+            this.btnStudentViewTT.Size = new System.Drawing.Size(240, 45);
+            this.btnStudentViewTT.TabIndex = 0;
+            this.btnStudentViewTT.Text = "View Timetable";
+            this.btnStudentViewTT.UseVisualStyleBackColor = true;
+            this.btnStudentViewTT.Click += new System.EventHandler(this.BtnStudentViewTT_Click);
+            // 
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -98,28 +122,6 @@
             this.pictureBox5.Size = new System.Drawing.Size(260, 220);
             this.pictureBox5.TabIndex = 41;
             this.pictureBox5.TabStop = false;
-            // 
-            // btnStudentViewTT
-            // 
-            this.btnStudentViewTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStudentViewTT.Location = new System.Drawing.Point(9, 96);
-            this.btnStudentViewTT.Name = "btnStudentViewTT";
-            this.btnStudentViewTT.Size = new System.Drawing.Size(240, 45);
-            this.btnStudentViewTT.TabIndex = 0;
-            this.btnStudentViewTT.Text = "View Timetable";
-            this.btnStudentViewTT.UseVisualStyleBackColor = true;
-            this.btnStudentViewTT.Click += new System.EventHandler(this.BtnStudentViewTT_Click);
-            // 
-            // btnStudentHome
-            // 
-            this.btnStudentHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStudentHome.Location = new System.Drawing.Point(9, 45);
-            this.btnStudentHome.Name = "btnStudentHome";
-            this.btnStudentHome.Size = new System.Drawing.Size(240, 45);
-            this.btnStudentHome.TabIndex = 46;
-            this.btnStudentHome.Text = "Home";
-            this.btnStudentHome.UseVisualStyleBackColor = true;
-            this.btnStudentHome.Click += new System.EventHandler(this.BtnStudentHome_Click);
             // 
             // panel1
             // 
@@ -130,15 +132,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(930, 558);
             this.panel1.TabIndex = 46;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(57, 48);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(816, 376);
-            this.panel2.TabIndex = 0;
             // 
             // btnStudentViewTimetableSH
             // 
@@ -151,6 +144,15 @@
             this.btnStudentViewTimetableSH.Text = "View Timetable";
             this.btnStudentViewTimetableSH.UseVisualStyleBackColor = false;
             this.btnStudentViewTimetableSH.Click += new System.EventHandler(this.BtnStudentViewTimetableSH_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel2.Controls.Add(this.pictureBox1);
+            this.panel2.Location = new System.Drawing.Point(57, 48);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(816, 376);
+            this.panel2.TabIndex = 0;
             // 
             // pictureBox1
             // 

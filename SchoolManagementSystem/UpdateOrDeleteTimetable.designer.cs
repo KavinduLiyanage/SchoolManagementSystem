@@ -76,9 +76,9 @@
             this.panel3.Controls.Add(this.dataGridView1);
             this.panel3.Controls.Add(this.tbSearch);
             this.panel3.Controls.Add(this.lbTimetableIDUDTT);
-            this.panel3.Location = new System.Drawing.Point(691, 126);
+            this.panel3.Location = new System.Drawing.Point(691, 107);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(559, 459);
+            this.panel3.Size = new System.Drawing.Size(559, 494);
             this.panel3.TabIndex = 35;
             // 
             // dataGridView1
@@ -88,7 +88,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(526, 383);
+            this.dataGridView1.Size = new System.Drawing.Size(526, 414);
             this.dataGridView1.TabIndex = 14;
             // 
             // tbSearch
@@ -122,9 +122,9 @@
             this.panel2.Controls.Add(this.btnUpdateUDTT);
             this.panel2.Controls.Add(this.lbTimeUDTT);
             this.panel2.Controls.Add(this.lbDateUDTT);
-            this.panel2.Location = new System.Drawing.Point(293, 145);
+            this.panel2.Location = new System.Drawing.Point(293, 107);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(380, 491);
+            this.panel2.Size = new System.Drawing.Size(380, 558);
             this.panel2.TabIndex = 34;
             // 
             // btnDeleteUDTT

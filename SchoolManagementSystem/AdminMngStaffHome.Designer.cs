@@ -291,6 +291,7 @@
             this.viewStaffBtn.TabIndex = 25;
             this.viewStaffBtn.Text = "View Staff Member";
             this.viewStaffBtn.UseVisualStyleBackColor = true;
+            this.viewStaffBtn.Click += new System.EventHandler(this.ViewStaffBtn_Click);
             // 
             // viewStaffImgBtn
             // 

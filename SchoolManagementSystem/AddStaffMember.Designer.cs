@@ -33,6 +33,8 @@
             this.NHomeBtn = new System.Windows.Forms.Button();
             this.ContentPanel = new System.Windows.Forms.Panel();
             this.addGroupBox = new System.Windows.Forms.GroupBox();
+            this.salaryTextBox = new System.Windows.Forms.TextBox();
+            this.salaryLabel = new System.Windows.Forms.Label();
             this.phNoTextBox = new System.Windows.Forms.TextBox();
             this.phNolabel = new System.Windows.Forms.Label();
             this.emailTextBox1 = new System.Windows.Forms.TextBox();
@@ -41,8 +43,8 @@
             this.serviceYrsLabel1 = new System.Windows.Forms.Label();
             this.pastSchTextBox = new System.Windows.Forms.TextBox();
             this.paseSchLabel = new System.Windows.Forms.Label();
-            this.experitextBox1 = new System.Windows.Forms.TextBox();
-            this.experiLabel = new System.Windows.Forms.Label();
+            this.subTextBox1 = new System.Windows.Forms.TextBox();
+            this.subLabel = new System.Windows.Forms.Label();
             this.addStaffBtn = new System.Windows.Forms.Button();
             this.genderPanel = new System.Windows.Forms.Panel();
             this.femaleRadioButton1 = new System.Windows.Forms.RadioButton();
@@ -76,8 +78,6 @@
             this.ButtonPanel = new System.Windows.Forms.Panel();
             this.headerPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.salaryTextBox = new System.Windows.Forms.TextBox();
-            this.salaryLabel = new System.Windows.Forms.Label();
             this.ContentPanel.SuspendLayout();
             this.addGroupBox.SuspendLayout();
             this.genderPanel.SuspendLayout();
@@ -135,8 +135,8 @@
             this.addGroupBox.Controls.Add(this.serviceYrsLabel1);
             this.addGroupBox.Controls.Add(this.pastSchTextBox);
             this.addGroupBox.Controls.Add(this.paseSchLabel);
-            this.addGroupBox.Controls.Add(this.experitextBox1);
-            this.addGroupBox.Controls.Add(this.experiLabel);
+            this.addGroupBox.Controls.Add(this.subTextBox1);
+            this.addGroupBox.Controls.Add(this.subLabel);
             this.addGroupBox.Controls.Add(this.addStaffBtn);
             this.addGroupBox.Controls.Add(this.genderPanel);
             this.addGroupBox.Controls.Add(this.addressTextBox);
@@ -156,6 +156,23 @@
             this.addGroupBox.Size = new System.Drawing.Size(956, 540);
             this.addGroupBox.TabIndex = 0;
             this.addGroupBox.TabStop = false;
+            // 
+            // salaryTextBox
+            // 
+            this.salaryTextBox.Location = new System.Drawing.Point(630, 38);
+            this.salaryTextBox.Name = "salaryTextBox";
+            this.salaryTextBox.Size = new System.Drawing.Size(246, 22);
+            this.salaryTextBox.TabIndex = 28;
+            // 
+            // salaryLabel
+            // 
+            this.salaryLabel.AutoSize = true;
+            this.salaryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.salaryLabel.Location = new System.Drawing.Point(468, 37);
+            this.salaryLabel.Name = "salaryLabel";
+            this.salaryLabel.Size = new System.Drawing.Size(68, 25);
+            this.salaryLabel.TabIndex = 27;
+            this.salaryLabel.Text = "Salary";
             // 
             // phNoTextBox
             // 
@@ -225,22 +242,22 @@
             this.paseSchLabel.TabIndex = 19;
             this.paseSchLabel.Text = "Past School";
             // 
-            // experitextBox1
+            // subTextBox1
             // 
-            this.experitextBox1.Location = new System.Drawing.Point(630, 153);
-            this.experitextBox1.Name = "experitextBox1";
-            this.experitextBox1.Size = new System.Drawing.Size(246, 22);
-            this.experitextBox1.TabIndex = 18;
+            this.subTextBox1.Location = new System.Drawing.Point(630, 153);
+            this.subTextBox1.Name = "subTextBox1";
+            this.subTextBox1.Size = new System.Drawing.Size(246, 22);
+            this.subTextBox1.TabIndex = 18;
             // 
-            // experiLabel
+            // subLabel
             // 
-            this.experiLabel.AutoSize = true;
-            this.experiLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.experiLabel.Location = new System.Drawing.Point(468, 152);
-            this.experiLabel.Name = "experiLabel";
-            this.experiLabel.Size = new System.Drawing.Size(110, 25);
-            this.experiLabel.TabIndex = 17;
-            this.experiLabel.Text = "Experience";
+            this.subLabel.AutoSize = true;
+            this.subLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.subLabel.Location = new System.Drawing.Point(468, 152);
+            this.subLabel.Name = "subLabel";
+            this.subLabel.Size = new System.Drawing.Size(78, 25);
+            this.subLabel.TabIndex = 17;
+            this.subLabel.Text = "Subject";
             // 
             // addStaffBtn
             // 
@@ -291,7 +308,7 @@
             // 
             this.maleRadioButton2.AutoSize = true;
             this.maleRadioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.maleRadioButton2.Location = new System.Drawing.Point(169, 17);
+            this.maleRadioButton2.Location = new System.Drawing.Point(173, 17);
             this.maleRadioButton2.Name = "maleRadioButton2";
             this.maleRadioButton2.Size = new System.Drawing.Size(66, 24);
             this.maleRadioButton2.TabIndex = 3;
@@ -301,7 +318,7 @@
             // 
             // addressTextBox
             // 
-            this.addressTextBox.Location = new System.Drawing.Point(169, 421);
+            this.addressTextBox.Location = new System.Drawing.Point(173, 421);
             this.addressTextBox.Multiline = true;
             this.addressTextBox.Name = "addressTextBox";
             this.addressTextBox.Size = new System.Drawing.Size(246, 65);
@@ -319,7 +336,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(169, 382);
+            this.dateTimePicker1.Location = new System.Drawing.Point(173, 382);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(247, 22);
             this.dateTimePicker1.TabIndex = 12;
@@ -336,7 +353,7 @@
             // 
             // NICTextBox
             // 
-            this.NICTextBox.Location = new System.Drawing.Point(169, 348);
+            this.NICTextBox.Location = new System.Drawing.Point(173, 348);
             this.NICTextBox.Name = "NICTextBox";
             this.NICTextBox.Size = new System.Drawing.Size(246, 22);
             this.NICTextBox.TabIndex = 9;
@@ -353,7 +370,7 @@
             // 
             // nameTextBox2
             // 
-            this.nameTextBox2.Location = new System.Drawing.Point(169, 228);
+            this.nameTextBox2.Location = new System.Drawing.Point(173, 228);
             this.nameTextBox2.Name = "nameTextBox2";
             this.nameTextBox2.Size = new System.Drawing.Size(247, 22);
             this.nameTextBox2.TabIndex = 7;
@@ -382,7 +399,7 @@
             // 
             this.userRadio.AutoSize = true;
             this.userRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.userRadio.Location = new System.Drawing.Point(169, 44);
+            this.userRadio.Location = new System.Drawing.Point(173, 44);
             this.userRadio.Name = "userRadio";
             this.userRadio.Size = new System.Drawing.Size(66, 24);
             this.userRadio.TabIndex = 5;
@@ -404,7 +421,7 @@
             // 
             this.adminRadio.AutoSize = true;
             this.adminRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.adminRadio.Location = new System.Drawing.Point(169, 17);
+            this.adminRadio.Location = new System.Drawing.Point(173, 17);
             this.adminRadio.Name = "adminRadio";
             this.adminRadio.Size = new System.Drawing.Size(77, 24);
             this.adminRadio.TabIndex = 3;
@@ -426,7 +443,7 @@
             // 
             this.nonAcedemicRadio.AutoSize = true;
             this.nonAcedemicRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.nonAcedemicRadio.Location = new System.Drawing.Point(169, 44);
+            this.nonAcedemicRadio.Location = new System.Drawing.Point(173, 44);
             this.nonAcedemicRadio.Name = "nonAcedemicRadio";
             this.nonAcedemicRadio.Size = new System.Drawing.Size(140, 24);
             this.nonAcedemicRadio.TabIndex = 5;
@@ -449,7 +466,7 @@
             // 
             this.adedemicRadio.AutoSize = true;
             this.adedemicRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.adedemicRadio.Location = new System.Drawing.Point(169, 17);
+            this.adedemicRadio.Location = new System.Drawing.Point(173, 17);
             this.adedemicRadio.Name = "adedemicRadio";
             this.adedemicRadio.Size = new System.Drawing.Size(104, 24);
             this.adedemicRadio.TabIndex = 3;
@@ -460,7 +477,7 @@
             // 
             // NametextBox1
             // 
-            this.NametextBox1.Location = new System.Drawing.Point(169, 189);
+            this.NametextBox1.Location = new System.Drawing.Point(173, 189);
             this.NametextBox1.Name = "NametextBox1";
             this.NametextBox1.Size = new System.Drawing.Size(246, 22);
             this.NametextBox1.TabIndex = 1;
@@ -584,23 +601,6 @@
             this.pictureBox1.TabIndex = 33;
             this.pictureBox1.TabStop = false;
             // 
-            // salaryTextBox
-            // 
-            this.salaryTextBox.Location = new System.Drawing.Point(630, 38);
-            this.salaryTextBox.Name = "salaryTextBox";
-            this.salaryTextBox.Size = new System.Drawing.Size(246, 22);
-            this.salaryTextBox.TabIndex = 28;
-            // 
-            // salaryLabel
-            // 
-            this.salaryLabel.AutoSize = true;
-            this.salaryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.salaryLabel.Location = new System.Drawing.Point(468, 37);
-            this.salaryLabel.Name = "salaryLabel";
-            this.salaryLabel.Size = new System.Drawing.Size(68, 25);
-            this.salaryLabel.TabIndex = 27;
-            this.salaryLabel.Text = "Salary";
-            // 
             // AddStaffMember
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -675,8 +675,8 @@
         private System.Windows.Forms.Label genderLabel;
         private System.Windows.Forms.RadioButton maleRadioButton2;
         private System.Windows.Forms.Button addStaffBtn;
-        private System.Windows.Forms.TextBox experitextBox1;
-        private System.Windows.Forms.Label experiLabel;
+        private System.Windows.Forms.TextBox subTextBox1;
+        private System.Windows.Forms.Label subLabel;
         private System.Windows.Forms.TextBox pastSchTextBox;
         private System.Windows.Forms.Label paseSchLabel;
         private System.Windows.Forms.TextBox emailTextBox1;

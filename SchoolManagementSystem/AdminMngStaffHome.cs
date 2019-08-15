@@ -82,5 +82,12 @@ namespace SchoolManagementSystem
             this.Hide();
             newStffLeave.ShowDialog();
         }
+
+        private void ViewStaffBtn_Click(object sender, EventArgs e)
+        {
+            ViewStaffMembers viewStaff = new ViewStaffMembers();
+            this.Hide();
+            viewStaff.ShowDialog();
+        }
     }
 }

@@ -114,7 +114,7 @@ namespace SchoolManagementSystem
                 genderValue = userRadio.Text;
 
 
-            cmd.CommandText = "INSERT INTO staff(memberType,accessLevel,fullName,name,gender,NIC,DOB,address,phoneNo,email,experience,pastSchool,serviceYears,salary,password) VALUES('" + memberTypeValue + "','" + accessLevelValue + "','" + NametextBox1.Text + "','" + nameTextBox2.Text + "','" + genderValue + "','" + NICTextBox.Text + "','" + dateTimePicker1.Value + "','"+ addressTextBox.Text +"','"+ phNoTextBox.Text +"','"+ emailTextBox1.Text +"','"+ experitextBox1.Text +"','"+ pastSchTextBox.Text +"','"+ Int32.Parse(serviceYrsTextBox.Text) +"','"+ Convert.ToDouble(salaryTextBox.Text)+ "','"+ NICTextBox.Text + "')";
+            cmd.CommandText = "INSERT INTO staff(memberType,accessLevel,fullName,name,gender,NIC,DOB,address,phoneNo,email,subject,pastSchool,serviceYears,salary,password) VALUES('" + memberTypeValue + "','" + accessLevelValue + "','" + NametextBox1.Text + "','" + nameTextBox2.Text + "','" + genderValue + "','" + NICTextBox.Text + "','" + dateTimePicker1.Value + "','"+ addressTextBox.Text +"','"+ phNoTextBox.Text +"','"+ emailTextBox1.Text +"','"+ subTextBox1.Text +"','"+ pastSchTextBox.Text +"','"+ Int32.Parse(serviceYrsTextBox.Text) +"','"+ Convert.ToDouble(salaryTextBox.Text)+ "','"+ NICTextBox.Text + "')";
             cmd.ExecuteNonQuery();
             con.Close();
 

@@ -33,6 +33,16 @@
             this.NHomeBtn = new System.Windows.Forms.Button();
             this.ContentPanel = new System.Windows.Forms.Panel();
             this.addGroupBox = new System.Windows.Forms.GroupBox();
+            this.phNoTextBox = new System.Windows.Forms.TextBox();
+            this.phNolabel = new System.Windows.Forms.Label();
+            this.emailTextBox1 = new System.Windows.Forms.TextBox();
+            this.emailLabel = new System.Windows.Forms.Label();
+            this.serviceYrsTextBox = new System.Windows.Forms.TextBox();
+            this.serviceYrsLabel1 = new System.Windows.Forms.Label();
+            this.pastSchTextBox = new System.Windows.Forms.TextBox();
+            this.paseSchLabel = new System.Windows.Forms.Label();
+            this.experitextBox1 = new System.Windows.Forms.TextBox();
+            this.experiLabel = new System.Windows.Forms.Label();
             this.addStaffBtn = new System.Windows.Forms.Button();
             this.genderPanel = new System.Windows.Forms.Panel();
             this.femaleRadioButton1 = new System.Windows.Forms.RadioButton();
@@ -66,16 +76,6 @@
             this.ButtonPanel = new System.Windows.Forms.Panel();
             this.headerPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.experitextBox1 = new System.Windows.Forms.TextBox();
-            this.experiLabel = new System.Windows.Forms.Label();
-            this.pastSchTextBox = new System.Windows.Forms.TextBox();
-            this.paseSchLabel = new System.Windows.Forms.Label();
-            this.serviceYrsTextBox = new System.Windows.Forms.TextBox();
-            this.serviceYrsLabel1 = new System.Windows.Forms.Label();
-            this.emailTextBox1 = new System.Windows.Forms.TextBox();
-            this.emailLabel = new System.Windows.Forms.Label();
-            this.phNoTextBox = new System.Windows.Forms.TextBox();
-            this.phNolabel = new System.Windows.Forms.Label();
             this.ContentPanel.SuspendLayout();
             this.addGroupBox.SuspendLayout();
             this.genderPanel.SuspendLayout();
@@ -152,6 +152,91 @@
             this.addGroupBox.Size = new System.Drawing.Size(956, 540);
             this.addGroupBox.TabIndex = 0;
             this.addGroupBox.TabStop = false;
+            // 
+            // phNoTextBox
+            // 
+            this.phNoTextBox.Location = new System.Drawing.Point(657, 64);
+            this.phNoTextBox.Name = "phNoTextBox";
+            this.phNoTextBox.Size = new System.Drawing.Size(246, 22);
+            this.phNoTextBox.TabIndex = 26;
+            // 
+            // phNolabel
+            // 
+            this.phNolabel.AutoSize = true;
+            this.phNolabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.phNolabel.Location = new System.Drawing.Point(495, 63);
+            this.phNolabel.Name = "phNolabel";
+            this.phNolabel.Size = new System.Drawing.Size(99, 25);
+            this.phNolabel.TabIndex = 25;
+            this.phNolabel.Text = "Phone No";
+            // 
+            // emailTextBox1
+            // 
+            this.emailTextBox1.Location = new System.Drawing.Point(657, 102);
+            this.emailTextBox1.Name = "emailTextBox1";
+            this.emailTextBox1.Size = new System.Drawing.Size(246, 22);
+            this.emailTextBox1.TabIndex = 24;
+            // 
+            // emailLabel
+            // 
+            this.emailLabel.AutoSize = true;
+            this.emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.emailLabel.Location = new System.Drawing.Point(495, 101);
+            this.emailLabel.Name = "emailLabel";
+            this.emailLabel.Size = new System.Drawing.Size(146, 25);
+            this.emailLabel.TabIndex = 23;
+            this.emailLabel.Text = "E-Mail Address";
+            // 
+            // serviceYrsTextBox
+            // 
+            this.serviceYrsTextBox.Location = new System.Drawing.Point(657, 229);
+            this.serviceYrsTextBox.Name = "serviceYrsTextBox";
+            this.serviceYrsTextBox.Size = new System.Drawing.Size(246, 22);
+            this.serviceYrsTextBox.TabIndex = 22;
+            // 
+            // serviceYrsLabel1
+            // 
+            this.serviceYrsLabel1.AutoSize = true;
+            this.serviceYrsLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.serviceYrsLabel1.Location = new System.Drawing.Point(495, 228);
+            this.serviceYrsLabel1.Name = "serviceYrsLabel1";
+            this.serviceYrsLabel1.Size = new System.Drawing.Size(134, 25);
+            this.serviceYrsLabel1.TabIndex = 21;
+            this.serviceYrsLabel1.Text = "Service Years";
+            // 
+            // pastSchTextBox
+            // 
+            this.pastSchTextBox.Location = new System.Drawing.Point(657, 185);
+            this.pastSchTextBox.Name = "pastSchTextBox";
+            this.pastSchTextBox.Size = new System.Drawing.Size(246, 22);
+            this.pastSchTextBox.TabIndex = 20;
+            // 
+            // paseSchLabel
+            // 
+            this.paseSchLabel.AutoSize = true;
+            this.paseSchLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.paseSchLabel.Location = new System.Drawing.Point(495, 184);
+            this.paseSchLabel.Name = "paseSchLabel";
+            this.paseSchLabel.Size = new System.Drawing.Size(117, 25);
+            this.paseSchLabel.TabIndex = 19;
+            this.paseSchLabel.Text = "Past School";
+            // 
+            // experitextBox1
+            // 
+            this.experitextBox1.Location = new System.Drawing.Point(657, 142);
+            this.experitextBox1.Name = "experitextBox1";
+            this.experitextBox1.Size = new System.Drawing.Size(246, 22);
+            this.experitextBox1.TabIndex = 18;
+            // 
+            // experiLabel
+            // 
+            this.experiLabel.AutoSize = true;
+            this.experiLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.experiLabel.Location = new System.Drawing.Point(495, 141);
+            this.experiLabel.Name = "experiLabel";
+            this.experiLabel.Size = new System.Drawing.Size(110, 25);
+            this.experiLabel.TabIndex = 17;
+            this.experiLabel.Text = "Experiance";
             // 
             // addStaffBtn
             // 
@@ -416,6 +501,7 @@
             this.NViewStaffBtn.TabIndex = 23;
             this.NViewStaffBtn.Text = "View Staff Member";
             this.NViewStaffBtn.UseVisualStyleBackColor = false;
+            this.NViewStaffBtn.Click += new System.EventHandler(this.NViewStaffBtn_Click);
             // 
             // NViewLeaveBtn
             // 
@@ -426,6 +512,7 @@
             this.NViewLeaveBtn.TabIndex = 18;
             this.NViewLeaveBtn.Text = "View Staff Leave";
             this.NViewLeaveBtn.UseVisualStyleBackColor = false;
+            this.NViewLeaveBtn.Click += new System.EventHandler(this.NViewLeaveBtn_Click);
             // 
             // NViewSalaryBtn
             // 
@@ -436,6 +523,7 @@
             this.NViewSalaryBtn.TabIndex = 18;
             this.NViewSalaryBtn.Text = "View Salary Info";
             this.NViewSalaryBtn.UseVisualStyleBackColor = false;
+            this.NViewSalaryBtn.Click += new System.EventHandler(this.NViewSalaryBtn_Click);
             // 
             // NAddStaffBtn
             // 
@@ -446,6 +534,7 @@
             this.NAddStaffBtn.TabIndex = 17;
             this.NAddStaffBtn.Text = "Add Staff Member";
             this.NAddStaffBtn.UseVisualStyleBackColor = false;
+            this.NAddStaffBtn.Click += new System.EventHandler(this.NAddStaffBtn_Click);
             // 
             // NStaffHomeBtn
             // 
@@ -489,91 +578,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 33;
             this.pictureBox1.TabStop = false;
-            // 
-            // experitextBox1
-            // 
-            this.experitextBox1.Location = new System.Drawing.Point(657, 142);
-            this.experitextBox1.Name = "experitextBox1";
-            this.experitextBox1.Size = new System.Drawing.Size(246, 22);
-            this.experitextBox1.TabIndex = 18;
-            // 
-            // experiLabel
-            // 
-            this.experiLabel.AutoSize = true;
-            this.experiLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.experiLabel.Location = new System.Drawing.Point(495, 141);
-            this.experiLabel.Name = "experiLabel";
-            this.experiLabel.Size = new System.Drawing.Size(110, 25);
-            this.experiLabel.TabIndex = 17;
-            this.experiLabel.Text = "Experiance";
-            // 
-            // pastSchTextBox
-            // 
-            this.pastSchTextBox.Location = new System.Drawing.Point(657, 185);
-            this.pastSchTextBox.Name = "pastSchTextBox";
-            this.pastSchTextBox.Size = new System.Drawing.Size(246, 22);
-            this.pastSchTextBox.TabIndex = 20;
-            // 
-            // paseSchLabel
-            // 
-            this.paseSchLabel.AutoSize = true;
-            this.paseSchLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.paseSchLabel.Location = new System.Drawing.Point(495, 184);
-            this.paseSchLabel.Name = "paseSchLabel";
-            this.paseSchLabel.Size = new System.Drawing.Size(117, 25);
-            this.paseSchLabel.TabIndex = 19;
-            this.paseSchLabel.Text = "Past School";
-            // 
-            // serviceYrsTextBox
-            // 
-            this.serviceYrsTextBox.Location = new System.Drawing.Point(657, 229);
-            this.serviceYrsTextBox.Name = "serviceYrsTextBox";
-            this.serviceYrsTextBox.Size = new System.Drawing.Size(246, 22);
-            this.serviceYrsTextBox.TabIndex = 22;
-            // 
-            // serviceYrsLabel1
-            // 
-            this.serviceYrsLabel1.AutoSize = true;
-            this.serviceYrsLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.serviceYrsLabel1.Location = new System.Drawing.Point(495, 228);
-            this.serviceYrsLabel1.Name = "serviceYrsLabel1";
-            this.serviceYrsLabel1.Size = new System.Drawing.Size(134, 25);
-            this.serviceYrsLabel1.TabIndex = 21;
-            this.serviceYrsLabel1.Text = "Service Years";
-            // 
-            // emailTextBox1
-            // 
-            this.emailTextBox1.Location = new System.Drawing.Point(657, 102);
-            this.emailTextBox1.Name = "emailTextBox1";
-            this.emailTextBox1.Size = new System.Drawing.Size(246, 22);
-            this.emailTextBox1.TabIndex = 24;
-            // 
-            // emailLabel
-            // 
-            this.emailLabel.AutoSize = true;
-            this.emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.emailLabel.Location = new System.Drawing.Point(495, 101);
-            this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(146, 25);
-            this.emailLabel.TabIndex = 23;
-            this.emailLabel.Text = "E-Mail Address";
-            // 
-            // phNoTextBox
-            // 
-            this.phNoTextBox.Location = new System.Drawing.Point(657, 64);
-            this.phNoTextBox.Name = "phNoTextBox";
-            this.phNoTextBox.Size = new System.Drawing.Size(246, 22);
-            this.phNoTextBox.TabIndex = 26;
-            // 
-            // phNolabel
-            // 
-            this.phNolabel.AutoSize = true;
-            this.phNolabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.phNolabel.Location = new System.Drawing.Point(495, 63);
-            this.phNolabel.Name = "phNolabel";
-            this.phNolabel.Size = new System.Drawing.Size(99, 25);
-            this.phNolabel.TabIndex = 25;
-            this.phNolabel.Text = "Phone No";
             // 
             // AddStaffMember
             // 

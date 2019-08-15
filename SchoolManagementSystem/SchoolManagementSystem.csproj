@@ -139,6 +139,24 @@
     <Compile Include="UpdateOrDeleteTimetable.designer.cs">
       <DependentUpon>UpdateOrDeleteTimetable.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewSalaryInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewSalaryInfo.Designer.cs">
+      <DependentUpon>ViewSalaryInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewStaffLeaves.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewStaffLeaves.Designer.cs">
+      <DependentUpon>ViewStaffLeaves.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewStaffMembers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewStaffMembers.Designer.cs">
+      <DependentUpon>ViewStaffMembers.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewTimetable.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +216,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateOrDeleteTimetable.resx">
       <DependentUpon>UpdateOrDeleteTimetable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewSalaryInfo.resx">
+      <DependentUpon>ViewSalaryInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewStaffLeaves.resx">
+      <DependentUpon>ViewStaffLeaves.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewStaffMembers.resx">
+      <DependentUpon>ViewStaffMembers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewTimetable.resx">
       <DependentUpon>ViewTimetable.cs</DependentUpon>

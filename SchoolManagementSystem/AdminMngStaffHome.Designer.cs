@@ -112,6 +112,7 @@
             this.NViewStaffBtn.TabIndex = 23;
             this.NViewStaffBtn.Text = "View Staff Member";
             this.NViewStaffBtn.UseVisualStyleBackColor = false;
+            this.NViewStaffBtn.Click += new System.EventHandler(this.NViewStaffBtn_Click);
             // 
             // NViewLeaveBtn
             // 
@@ -122,6 +123,7 @@
             this.NViewLeaveBtn.TabIndex = 18;
             this.NViewLeaveBtn.Text = "View Staff Leave";
             this.NViewLeaveBtn.UseVisualStyleBackColor = false;
+            this.NViewLeaveBtn.Click += new System.EventHandler(this.NViewLeaveBtn_Click);
             // 
             // NViewSalaryBtn
             // 
@@ -132,6 +134,7 @@
             this.NViewSalaryBtn.TabIndex = 18;
             this.NViewSalaryBtn.Text = "View Salary Info";
             this.NViewSalaryBtn.UseVisualStyleBackColor = false;
+            this.NViewSalaryBtn.Click += new System.EventHandler(this.NViewSalaryBtn_Click);
             // 
             // NAddStaffBtn
             // 
@@ -142,6 +145,7 @@
             this.NAddStaffBtn.TabIndex = 17;
             this.NAddStaffBtn.Text = "Add Staff Member";
             this.NAddStaffBtn.UseVisualStyleBackColor = false;
+            this.NAddStaffBtn.Click += new System.EventHandler(this.NAddStaffBtn_Click);
             // 
             // NStaffHomeBtn
             // 

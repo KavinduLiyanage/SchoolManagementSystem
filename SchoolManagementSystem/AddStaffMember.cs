@@ -118,9 +118,19 @@ namespace SchoolManagementSystem
             cmd.ExecuteNonQuery();
             con.Close();
 
-            MessageBox.Show("Staff Member Added Succesfully");
+            DialogResult dlgResult = MessageBox.Show("Do You Want To Add More Staff", "Staff Member Added Succesfully!", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
-            
+            if (dlgResult == DialogResult.Yes)
+            {
+                AddStaffMember addstaffMember = new AddStaffMember();
+                this.Hide();
+                addstaffMember.ShowDialog();
+            }
+            else {
+                ViewStaffMembers viewStaff = new ViewStaffMembers();
+                this.Hide();
+                viewStaff.ShowDialog();
+            }
         }
     }
 }

@@ -33,7 +33,25 @@
             this.NHomeBtn = new System.Windows.Forms.Button();
             this.ContentPanel = new System.Windows.Forms.Panel();
             this.addGroupBox = new System.Windows.Forms.GroupBox();
+            this.addStaffBtn = new System.Windows.Forms.Button();
+            this.genderPanel = new System.Windows.Forms.Panel();
+            this.femaleRadioButton1 = new System.Windows.Forms.RadioButton();
+            this.genderLabel = new System.Windows.Forms.Label();
+            this.maleRadioButton2 = new System.Windows.Forms.RadioButton();
+            this.addressTextBox = new System.Windows.Forms.TextBox();
+            this.addressLabel = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.doblabel = new System.Windows.Forms.Label();
+            this.NICTextBox = new System.Windows.Forms.TextBox();
+            this.nicLabel1 = new System.Windows.Forms.Label();
+            this.nameTextBox2 = new System.Windows.Forms.TextBox();
+            this.nameLabel2 = new System.Windows.Forms.Label();
+            this.raioPanelAccess = new System.Windows.Forms.Panel();
+            this.userRadio = new System.Windows.Forms.RadioButton();
+            this.accessLabel = new System.Windows.Forms.Label();
+            this.adminRadio = new System.Windows.Forms.RadioButton();
             this.radioPanelType = new System.Windows.Forms.Panel();
+            this.nonAcedemicRadio = new System.Windows.Forms.RadioButton();
             this.memberType = new System.Windows.Forms.Label();
             this.adedemicRadio = new System.Windows.Forms.RadioButton();
             this.NametextBox1 = new System.Windows.Forms.TextBox();
@@ -48,27 +66,23 @@
             this.ButtonPanel = new System.Windows.Forms.Panel();
             this.headerPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.nonAcedemicRadio = new System.Windows.Forms.RadioButton();
-            this.raioPanelAccess = new System.Windows.Forms.Panel();
-            this.userRadio = new System.Windows.Forms.RadioButton();
-            this.accessLabel = new System.Windows.Forms.Label();
-            this.adminRadio = new System.Windows.Forms.RadioButton();
-            this.nameTextBox2 = new System.Windows.Forms.TextBox();
-            this.nameLabel2 = new System.Windows.Forms.Label();
-            this.NICTextBox = new System.Windows.Forms.TextBox();
-            this.nicLabel1 = new System.Windows.Forms.Label();
-            this.doblabel = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.addressTextBox = new System.Windows.Forms.TextBox();
-            this.addressLabel = new System.Windows.Forms.Label();
+            this.experitextBox1 = new System.Windows.Forms.TextBox();
+            this.experiLabel = new System.Windows.Forms.Label();
+            this.pastSchTextBox = new System.Windows.Forms.TextBox();
+            this.paseSchLabel = new System.Windows.Forms.Label();
+            this.serviceYrsTextBox = new System.Windows.Forms.TextBox();
+            this.serviceYrsLabel1 = new System.Windows.Forms.Label();
+            this.emailTextBox1 = new System.Windows.Forms.TextBox();
+            this.emailLabel = new System.Windows.Forms.Label();
             this.ContentPanel.SuspendLayout();
             this.addGroupBox.SuspendLayout();
+            this.genderPanel.SuspendLayout();
+            this.raioPanelAccess.SuspendLayout();
             this.radioPanelType.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgPanel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usrImg)).BeginInit();
             this.ButtonPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.raioPanelAccess.SuspendLayout();
             this.SuspendLayout();
             // 
             // UsrlinkLabel
@@ -106,6 +120,16 @@
             // 
             // addGroupBox
             // 
+            this.addGroupBox.Controls.Add(this.emailTextBox1);
+            this.addGroupBox.Controls.Add(this.emailLabel);
+            this.addGroupBox.Controls.Add(this.serviceYrsTextBox);
+            this.addGroupBox.Controls.Add(this.serviceYrsLabel1);
+            this.addGroupBox.Controls.Add(this.pastSchTextBox);
+            this.addGroupBox.Controls.Add(this.paseSchLabel);
+            this.addGroupBox.Controls.Add(this.experitextBox1);
+            this.addGroupBox.Controls.Add(this.experiLabel);
+            this.addGroupBox.Controls.Add(this.addStaffBtn);
+            this.addGroupBox.Controls.Add(this.genderPanel);
             this.addGroupBox.Controls.Add(this.addressTextBox);
             this.addGroupBox.Controls.Add(this.addressLabel);
             this.addGroupBox.Controls.Add(this.dateTimePicker1);
@@ -124,6 +148,175 @@
             this.addGroupBox.TabIndex = 0;
             this.addGroupBox.TabStop = false;
             // 
+            // addStaffBtn
+            // 
+            this.addStaffBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.addStaffBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addStaffBtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addStaffBtn.Location = new System.Drawing.Point(748, 476);
+            this.addStaffBtn.Name = "addStaffBtn";
+            this.addStaffBtn.Size = new System.Drawing.Size(185, 41);
+            this.addStaffBtn.TabIndex = 16;
+            this.addStaffBtn.Text = "Add Staff Member";
+            this.addStaffBtn.UseVisualStyleBackColor = false;
+            // 
+            // genderPanel
+            // 
+            this.genderPanel.Controls.Add(this.femaleRadioButton1);
+            this.genderPanel.Controls.Add(this.genderLabel);
+            this.genderPanel.Controls.Add(this.maleRadioButton2);
+            this.genderPanel.Location = new System.Drawing.Point(5, 260);
+            this.genderPanel.Name = "genderPanel";
+            this.genderPanel.Size = new System.Drawing.Size(394, 76);
+            this.genderPanel.TabIndex = 15;
+            // 
+            // femaleRadioButton1
+            // 
+            this.femaleRadioButton1.AutoSize = true;
+            this.femaleRadioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.femaleRadioButton1.Location = new System.Drawing.Point(266, 17);
+            this.femaleRadioButton1.Name = "femaleRadioButton1";
+            this.femaleRadioButton1.Size = new System.Drawing.Size(85, 24);
+            this.femaleRadioButton1.TabIndex = 5;
+            this.femaleRadioButton1.TabStop = true;
+            this.femaleRadioButton1.Text = "Female";
+            this.femaleRadioButton1.UseVisualStyleBackColor = true;
+            // 
+            // genderLabel
+            // 
+            this.genderLabel.AutoSize = true;
+            this.genderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.genderLabel.Location = new System.Drawing.Point(2, 18);
+            this.genderLabel.Name = "genderLabel";
+            this.genderLabel.Size = new System.Drawing.Size(77, 25);
+            this.genderLabel.TabIndex = 2;
+            this.genderLabel.Text = "Gender";
+            // 
+            // maleRadioButton2
+            // 
+            this.maleRadioButton2.AutoSize = true;
+            this.maleRadioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.maleRadioButton2.Location = new System.Drawing.Point(169, 17);
+            this.maleRadioButton2.Name = "maleRadioButton2";
+            this.maleRadioButton2.Size = new System.Drawing.Size(66, 24);
+            this.maleRadioButton2.TabIndex = 3;
+            this.maleRadioButton2.TabStop = true;
+            this.maleRadioButton2.Text = "Male";
+            this.maleRadioButton2.UseVisualStyleBackColor = true;
+            // 
+            // addressTextBox
+            // 
+            this.addressTextBox.Location = new System.Drawing.Point(169, 421);
+            this.addressTextBox.Multiline = true;
+            this.addressTextBox.Name = "addressTextBox";
+            this.addressTextBox.Size = new System.Drawing.Size(246, 65);
+            this.addressTextBox.TabIndex = 14;
+            // 
+            // addressLabel
+            // 
+            this.addressLabel.AutoSize = true;
+            this.addressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.addressLabel.Location = new System.Drawing.Point(7, 420);
+            this.addressLabel.Name = "addressLabel";
+            this.addressLabel.Size = new System.Drawing.Size(85, 25);
+            this.addressLabel.TabIndex = 13;
+            this.addressLabel.Text = "Address";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(169, 382);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(247, 22);
+            this.dateTimePicker1.TabIndex = 12;
+            // 
+            // doblabel
+            // 
+            this.doblabel.AutoSize = true;
+            this.doblabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.doblabel.Location = new System.Drawing.Point(6, 384);
+            this.doblabel.Name = "doblabel";
+            this.doblabel.Size = new System.Drawing.Size(123, 25);
+            this.doblabel.TabIndex = 10;
+            this.doblabel.Text = "Date Of Birth";
+            // 
+            // NICTextBox
+            // 
+            this.NICTextBox.Location = new System.Drawing.Point(169, 348);
+            this.NICTextBox.Name = "NICTextBox";
+            this.NICTextBox.Size = new System.Drawing.Size(246, 22);
+            this.NICTextBox.TabIndex = 9;
+            // 
+            // nicLabel1
+            // 
+            this.nicLabel1.AutoSize = true;
+            this.nicLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.nicLabel1.Location = new System.Drawing.Point(7, 347);
+            this.nicLabel1.Name = "nicLabel1";
+            this.nicLabel1.Size = new System.Drawing.Size(46, 25);
+            this.nicLabel1.TabIndex = 8;
+            this.nicLabel1.Text = "NIC";
+            // 
+            // nameTextBox2
+            // 
+            this.nameTextBox2.Location = new System.Drawing.Point(169, 228);
+            this.nameTextBox2.Name = "nameTextBox2";
+            this.nameTextBox2.Size = new System.Drawing.Size(247, 22);
+            this.nameTextBox2.TabIndex = 7;
+            // 
+            // nameLabel2
+            // 
+            this.nameLabel2.AutoSize = true;
+            this.nameLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.nameLabel2.Location = new System.Drawing.Point(6, 227);
+            this.nameLabel2.Name = "nameLabel2";
+            this.nameLabel2.Size = new System.Drawing.Size(162, 25);
+            this.nameLabel2.TabIndex = 6;
+            this.nameLabel2.Text = "Name with Initials";
+            // 
+            // raioPanelAccess
+            // 
+            this.raioPanelAccess.Controls.Add(this.userRadio);
+            this.raioPanelAccess.Controls.Add(this.accessLabel);
+            this.raioPanelAccess.Controls.Add(this.adminRadio);
+            this.raioPanelAccess.Location = new System.Drawing.Point(5, 102);
+            this.raioPanelAccess.Name = "raioPanelAccess";
+            this.raioPanelAccess.Size = new System.Drawing.Size(351, 76);
+            this.raioPanelAccess.TabIndex = 5;
+            // 
+            // userRadio
+            // 
+            this.userRadio.AutoSize = true;
+            this.userRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.userRadio.Location = new System.Drawing.Point(169, 44);
+            this.userRadio.Name = "userRadio";
+            this.userRadio.Size = new System.Drawing.Size(66, 24);
+            this.userRadio.TabIndex = 5;
+            this.userRadio.TabStop = true;
+            this.userRadio.Text = "User";
+            this.userRadio.UseVisualStyleBackColor = true;
+            // 
+            // accessLabel
+            // 
+            this.accessLabel.AutoSize = true;
+            this.accessLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.accessLabel.Location = new System.Drawing.Point(2, 18);
+            this.accessLabel.Name = "accessLabel";
+            this.accessLabel.Size = new System.Drawing.Size(129, 25);
+            this.accessLabel.TabIndex = 2;
+            this.accessLabel.Text = "Access Level";
+            // 
+            // adminRadio
+            // 
+            this.adminRadio.AutoSize = true;
+            this.adminRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.adminRadio.Location = new System.Drawing.Point(169, 17);
+            this.adminRadio.Name = "adminRadio";
+            this.adminRadio.Size = new System.Drawing.Size(77, 24);
+            this.adminRadio.TabIndex = 3;
+            this.adminRadio.TabStop = true;
+            this.adminRadio.Text = "Admin";
+            this.adminRadio.UseVisualStyleBackColor = true;
+            // 
             // radioPanelType
             // 
             this.radioPanelType.Controls.Add(this.nonAcedemicRadio);
@@ -131,25 +324,39 @@
             this.radioPanelType.Controls.Add(this.adedemicRadio);
             this.radioPanelType.Location = new System.Drawing.Point(5, 20);
             this.radioPanelType.Name = "radioPanelType";
-            this.radioPanelType.Size = new System.Drawing.Size(250, 76);
+            this.radioPanelType.Size = new System.Drawing.Size(351, 76);
             this.radioPanelType.TabIndex = 4;
+            // 
+            // nonAcedemicRadio
+            // 
+            this.nonAcedemicRadio.AutoSize = true;
+            this.nonAcedemicRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.nonAcedemicRadio.Location = new System.Drawing.Point(169, 44);
+            this.nonAcedemicRadio.Name = "nonAcedemicRadio";
+            this.nonAcedemicRadio.Size = new System.Drawing.Size(140, 24);
+            this.nonAcedemicRadio.TabIndex = 5;
+            this.nonAcedemicRadio.TabStop = true;
+            this.nonAcedemicRadio.Text = "Non-Acedemic";
+            this.nonAcedemicRadio.UseVisualStyleBackColor = true;
+            this.nonAcedemicRadio.CheckedChanged += new System.EventHandler(this.NonAcedemicRadio_CheckedChanged);
             // 
             // memberType
             // 
             this.memberType.AutoSize = true;
-            this.memberType.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.memberType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.memberType.Location = new System.Drawing.Point(2, 18);
             this.memberType.Name = "memberType";
-            this.memberType.Size = new System.Drawing.Size(111, 20);
+            this.memberType.Size = new System.Drawing.Size(134, 25);
             this.memberType.TabIndex = 2;
             this.memberType.Text = "Member Type";
             // 
             // adedemicRadio
             // 
             this.adedemicRadio.AutoSize = true;
-            this.adedemicRadio.Location = new System.Drawing.Point(128, 17);
+            this.adedemicRadio.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.adedemicRadio.Location = new System.Drawing.Point(169, 17);
             this.adedemicRadio.Name = "adedemicRadio";
-            this.adedemicRadio.Size = new System.Drawing.Size(90, 21);
+            this.adedemicRadio.Size = new System.Drawing.Size(104, 24);
             this.adedemicRadio.TabIndex = 3;
             this.adedemicRadio.TabStop = true;
             this.adedemicRadio.Text = "Acedemic";
@@ -158,7 +365,7 @@
             // 
             // NametextBox1
             // 
-            this.NametextBox1.Location = new System.Drawing.Point(153, 189);
+            this.NametextBox1.Location = new System.Drawing.Point(169, 189);
             this.NametextBox1.Name = "NametextBox1";
             this.NametextBox1.Size = new System.Drawing.Size(246, 22);
             this.NametextBox1.TabIndex = 1;
@@ -167,10 +374,10 @@
             // nameLabel
             // 
             this.nameLabel.AutoSize = true;
-            this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.nameLabel.Location = new System.Drawing.Point(7, 188);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(85, 20);
+            this.nameLabel.Size = new System.Drawing.Size(100, 25);
             this.nameLabel.TabIndex = 0;
             this.nameLabel.Text = "Full Name";
             this.nameLabel.Click += new System.EventHandler(this.NameLabel_Click);
@@ -278,127 +485,73 @@
             this.pictureBox1.TabIndex = 33;
             this.pictureBox1.TabStop = false;
             // 
-            // nonAcedemicRadio
+            // experitextBox1
             // 
-            this.nonAcedemicRadio.AutoSize = true;
-            this.nonAcedemicRadio.Location = new System.Drawing.Point(128, 44);
-            this.nonAcedemicRadio.Name = "nonAcedemicRadio";
-            this.nonAcedemicRadio.Size = new System.Drawing.Size(121, 21);
-            this.nonAcedemicRadio.TabIndex = 5;
-            this.nonAcedemicRadio.TabStop = true;
-            this.nonAcedemicRadio.Text = "Non-Acedemic";
-            this.nonAcedemicRadio.UseVisualStyleBackColor = true;
-            this.nonAcedemicRadio.CheckedChanged += new System.EventHandler(this.NonAcedemicRadio_CheckedChanged);
+            this.experitextBox1.Location = new System.Drawing.Point(656, 87);
+            this.experitextBox1.Name = "experitextBox1";
+            this.experitextBox1.Size = new System.Drawing.Size(246, 22);
+            this.experitextBox1.TabIndex = 18;
             // 
-            // raioPanelAccess
+            // experiLabel
             // 
-            this.raioPanelAccess.Controls.Add(this.userRadio);
-            this.raioPanelAccess.Controls.Add(this.accessLabel);
-            this.raioPanelAccess.Controls.Add(this.adminRadio);
-            this.raioPanelAccess.Location = new System.Drawing.Point(5, 102);
-            this.raioPanelAccess.Name = "raioPanelAccess";
-            this.raioPanelAccess.Size = new System.Drawing.Size(250, 76);
-            this.raioPanelAccess.TabIndex = 5;
+            this.experiLabel.AutoSize = true;
+            this.experiLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.experiLabel.Location = new System.Drawing.Point(494, 86);
+            this.experiLabel.Name = "experiLabel";
+            this.experiLabel.Size = new System.Drawing.Size(110, 25);
+            this.experiLabel.TabIndex = 17;
+            this.experiLabel.Text = "Experiance";
             // 
-            // userRadio
+            // pastSchTextBox
             // 
-            this.userRadio.AutoSize = true;
-            this.userRadio.Location = new System.Drawing.Point(128, 44);
-            this.userRadio.Name = "userRadio";
-            this.userRadio.Size = new System.Drawing.Size(59, 21);
-            this.userRadio.TabIndex = 5;
-            this.userRadio.TabStop = true;
-            this.userRadio.Text = "User";
-            this.userRadio.UseVisualStyleBackColor = true;
+            this.pastSchTextBox.Location = new System.Drawing.Point(656, 130);
+            this.pastSchTextBox.Name = "pastSchTextBox";
+            this.pastSchTextBox.Size = new System.Drawing.Size(246, 22);
+            this.pastSchTextBox.TabIndex = 20;
             // 
-            // accessLabel
+            // paseSchLabel
             // 
-            this.accessLabel.AutoSize = true;
-            this.accessLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.accessLabel.Location = new System.Drawing.Point(2, 18);
-            this.accessLabel.Name = "accessLabel";
-            this.accessLabel.Size = new System.Drawing.Size(110, 20);
-            this.accessLabel.TabIndex = 2;
-            this.accessLabel.Text = "Access Level";
+            this.paseSchLabel.AutoSize = true;
+            this.paseSchLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.paseSchLabel.Location = new System.Drawing.Point(494, 129);
+            this.paseSchLabel.Name = "paseSchLabel";
+            this.paseSchLabel.Size = new System.Drawing.Size(117, 25);
+            this.paseSchLabel.TabIndex = 19;
+            this.paseSchLabel.Text = "Past School";
             // 
-            // adminRadio
+            // serviceYrsTextBox
             // 
-            this.adminRadio.AutoSize = true;
-            this.adminRadio.Location = new System.Drawing.Point(128, 17);
-            this.adminRadio.Name = "adminRadio";
-            this.adminRadio.Size = new System.Drawing.Size(68, 21);
-            this.adminRadio.TabIndex = 3;
-            this.adminRadio.TabStop = true;
-            this.adminRadio.Text = "Admin";
-            this.adminRadio.UseVisualStyleBackColor = true;
+            this.serviceYrsTextBox.Location = new System.Drawing.Point(656, 174);
+            this.serviceYrsTextBox.Name = "serviceYrsTextBox";
+            this.serviceYrsTextBox.Size = new System.Drawing.Size(246, 22);
+            this.serviceYrsTextBox.TabIndex = 22;
             // 
-            // nameTextBox2
+            // serviceYrsLabel1
             // 
-            this.nameTextBox2.Location = new System.Drawing.Point(152, 228);
-            this.nameTextBox2.Name = "nameTextBox2";
-            this.nameTextBox2.Size = new System.Drawing.Size(247, 22);
-            this.nameTextBox2.TabIndex = 7;
+            this.serviceYrsLabel1.AutoSize = true;
+            this.serviceYrsLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.serviceYrsLabel1.Location = new System.Drawing.Point(494, 173);
+            this.serviceYrsLabel1.Name = "serviceYrsLabel1";
+            this.serviceYrsLabel1.Size = new System.Drawing.Size(134, 25);
+            this.serviceYrsLabel1.TabIndex = 21;
+            this.serviceYrsLabel1.Text = "Service Years";
             // 
-            // nameLabel2
+            // emailTextBox1
             // 
-            this.nameLabel2.AutoSize = true;
-            this.nameLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameLabel2.Location = new System.Drawing.Point(6, 227);
-            this.nameLabel2.Name = "nameLabel2";
-            this.nameLabel2.Size = new System.Drawing.Size(141, 20);
-            this.nameLabel2.TabIndex = 6;
-            this.nameLabel2.Text = "Name with Initials";
+            this.emailTextBox1.Location = new System.Drawing.Point(656, 47);
+            this.emailTextBox1.Name = "emailTextBox1";
+            this.emailTextBox1.Size = new System.Drawing.Size(246, 22);
+            this.emailTextBox1.TabIndex = 24;
             // 
-            // NICTextBox
+            // emailLabel
             // 
-            this.NICTextBox.Location = new System.Drawing.Point(153, 264);
-            this.NICTextBox.Name = "NICTextBox";
-            this.NICTextBox.Size = new System.Drawing.Size(246, 22);
-            this.NICTextBox.TabIndex = 9;
-            // 
-            // nicLabel1
-            // 
-            this.nicLabel1.AutoSize = true;
-            this.nicLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nicLabel1.Location = new System.Drawing.Point(7, 263);
-            this.nicLabel1.Name = "nicLabel1";
-            this.nicLabel1.Size = new System.Drawing.Size(37, 20);
-            this.nicLabel1.TabIndex = 8;
-            this.nicLabel1.Text = "NIC";
-            // 
-            // doblabel
-            // 
-            this.doblabel.AutoSize = true;
-            this.doblabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.doblabel.Location = new System.Drawing.Point(6, 300);
-            this.doblabel.Name = "doblabel";
-            this.doblabel.Size = new System.Drawing.Size(109, 20);
-            this.doblabel.TabIndex = 10;
-            this.doblabel.Text = "Date Of Birth";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(152, 298);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(247, 22);
-            this.dateTimePicker1.TabIndex = 12;
-            // 
-            // addressTextBox
-            // 
-            this.addressTextBox.Location = new System.Drawing.Point(153, 337);
-            this.addressTextBox.Name = "addressTextBox";
-            this.addressTextBox.Size = new System.Drawing.Size(246, 22);
-            this.addressTextBox.TabIndex = 14;
-            // 
-            // addressLabel
-            // 
-            this.addressLabel.AutoSize = true;
-            this.addressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addressLabel.Location = new System.Drawing.Point(7, 336);
-            this.addressLabel.Name = "addressLabel";
-            this.addressLabel.Size = new System.Drawing.Size(71, 20);
-            this.addressLabel.TabIndex = 13;
-            this.addressLabel.Text = "Address";
+            this.emailLabel.AutoSize = true;
+            this.emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.emailLabel.Location = new System.Drawing.Point(494, 46);
+            this.emailLabel.Name = "emailLabel";
+            this.emailLabel.Size = new System.Drawing.Size(146, 25);
+            this.emailLabel.TabIndex = 23;
+            this.emailLabel.Text = "E-Mail Address";
             // 
             // AddStaffMember
             // 
@@ -420,14 +573,16 @@
             this.ContentPanel.ResumeLayout(false);
             this.addGroupBox.ResumeLayout(false);
             this.addGroupBox.PerformLayout();
+            this.genderPanel.ResumeLayout(false);
+            this.genderPanel.PerformLayout();
+            this.raioPanelAccess.ResumeLayout(false);
+            this.raioPanelAccess.PerformLayout();
             this.radioPanelType.ResumeLayout(false);
             this.radioPanelType.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgPanel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usrImg)).EndInit();
             this.ButtonPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.raioPanelAccess.ResumeLayout(false);
-            this.raioPanelAccess.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -467,5 +622,18 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.TextBox addressTextBox;
         private System.Windows.Forms.Label addressLabel;
+        private System.Windows.Forms.Panel genderPanel;
+        private System.Windows.Forms.RadioButton femaleRadioButton1;
+        private System.Windows.Forms.Label genderLabel;
+        private System.Windows.Forms.RadioButton maleRadioButton2;
+        private System.Windows.Forms.Button addStaffBtn;
+        private System.Windows.Forms.TextBox experitextBox1;
+        private System.Windows.Forms.Label experiLabel;
+        private System.Windows.Forms.TextBox pastSchTextBox;
+        private System.Windows.Forms.Label paseSchLabel;
+        private System.Windows.Forms.TextBox emailTextBox1;
+        private System.Windows.Forms.Label emailLabel;
+        private System.Windows.Forms.TextBox serviceYrsTextBox;
+        private System.Windows.Forms.Label serviceYrsLabel1;
     }
 }

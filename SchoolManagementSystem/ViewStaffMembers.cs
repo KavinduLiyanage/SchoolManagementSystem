@@ -13,6 +13,7 @@ namespace SchoolManagementSystem
 {
     public partial class ViewStaffMembers : Form
     {
+        int staffID;
         SqlConnection con = new SqlConnection(@"Data Source=.;Initial Catalog=SchoolManagementSystemDB;Integrated Security=True");
         public ViewStaffMembers()
         {
@@ -96,7 +97,7 @@ namespace SchoolManagementSystem
         {
             int index = e.RowIndex;
             DataGridViewRow selectRow = dataGridView1.Rows[index];
-            int staffID = Int32.Parse(selectRow.Cells[0].Value.ToString());
+            staffID = Int32.Parse(selectRow.Cells[0].Value.ToString());
             string memType = selectRow.Cells[1].Value.ToString();
 
             if (memType.Equals("Acedemic"))
@@ -176,6 +177,31 @@ namespace SchoolManagementSystem
         {
             searchTextBox1.Text = "";
             searchTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+        }
+
+        private void UpdateBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DeleteBtn_Click(object sender, EventArgs e)
+        {
+
+            DialogResult dlgResult = MessageBox.Show("Are You Sure You Want To Delete?", "Delete!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (dlgResult == DialogResult.Yes)
+            {
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "delete from staff where staffID = '" + staffID + "'";
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+
+            ViewStaffMembers viewStaff = new ViewStaffMembers();
+            this.Hide();
+            viewStaff.ShowDialog();
         }
     }
 }

@@ -82,12 +82,6 @@
             this.memberType = new System.Windows.Forms.Label();
             this.adedemicRadio = new System.Windows.Forms.RadioButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.searchTextBox1 = new System.Windows.Forms.TextBox();
-            this.staffBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.schoolManagementSystemDBDataSet1 = new SchoolManagementSystem.SchoolManagementSystemDBDataSet1();
-            this.ButtonPanel = new System.Windows.Forms.Panel();
-            this.staffBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.staffTableAdapter1 = new SchoolManagementSystem.SchoolManagementSystemDBDataSet1TableAdapters.staffTableAdapter();
             this.staffIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.memberTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.accessLevelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -105,6 +99,12 @@
             this.proPicDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.salaryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.staffBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.schoolManagementSystemDBDataSet1 = new SchoolManagementSystem.SchoolManagementSystemDBDataSet1();
+            this.searchTextBox1 = new System.Windows.Forms.TextBox();
+            this.ButtonPanel = new System.Windows.Forms.Panel();
+            this.staffBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.staffTableAdapter1 = new SchoolManagementSystem.SchoolManagementSystemDBDataSet1TableAdapters.staffTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.imgPanel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.ContentPanel.SuspendLayout();
@@ -277,6 +277,7 @@
             this.deleteBtn.TabIndex = 46;
             this.deleteBtn.Text = "Delete";
             this.deleteBtn.UseVisualStyleBackColor = true;
+            this.deleteBtn.Click += new System.EventHandler(this.DeleteBtn_Click);
             // 
             // updateBtn
             // 
@@ -289,6 +290,7 @@
             this.updateBtn.TabIndex = 45;
             this.updateBtn.Text = "Update";
             this.updateBtn.UseVisualStyleBackColor = true;
+            this.updateBtn.Click += new System.EventHandler(this.UpdateBtn_Click);
             // 
             // ConfirmPwdtextBox2
             // 
@@ -680,50 +682,6 @@
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
-            // searchTextBox1
-            // 
-            this.searchTextBox1.Location = new System.Drawing.Point(7, 17);
-            this.searchTextBox1.Name = "searchTextBox1";
-            this.searchTextBox1.Size = new System.Drawing.Size(430, 22);
-            this.searchTextBox1.TabIndex = 0;
-            this.searchTextBox1.Tag = "";
-            this.searchTextBox1.Text = "Search Here";
-            this.searchTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.searchTextBox1.Click += new System.EventHandler(this.SearchTextBox1_Click);
-            this.searchTextBox1.TextChanged += new System.EventHandler(this.SearchTextBox1_TextChanged);
-            // 
-            // staffBindingSource1
-            // 
-            this.staffBindingSource1.DataMember = "staff";
-            this.staffBindingSource1.DataSource = this.schoolManagementSystemDBDataSet1;
-            // 
-            // schoolManagementSystemDBDataSet1
-            // 
-            this.schoolManagementSystemDBDataSet1.DataSetName = "SchoolManagementSystemDBDataSet1";
-            this.schoolManagementSystemDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // ButtonPanel
-            // 
-            this.ButtonPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ButtonPanel.Controls.Add(this.NHomeBtn);
-            this.ButtonPanel.Controls.Add(this.NViewStaffBtn);
-            this.ButtonPanel.Controls.Add(this.NViewLeaveBtn);
-            this.ButtonPanel.Controls.Add(this.NViewSalaryBtn);
-            this.ButtonPanel.Controls.Add(this.NAddStaffBtn);
-            this.ButtonPanel.Controls.Add(this.NStaffHomeBtn);
-            this.ButtonPanel.Location = new System.Drawing.Point(17, 331);
-            this.ButtonPanel.Name = "ButtonPanel";
-            this.ButtonPanel.Size = new System.Drawing.Size(260, 335);
-            this.ButtonPanel.TabIndex = 35;
-            // 
-            // staffBindingSource
-            // 
-            this.staffBindingSource.DataMember = "staff";
-            // 
-            // staffTableAdapter1
-            // 
-            this.staffTableAdapter1.ClearBeforeFill = true;
-            // 
             // staffIDDataGridViewTextBoxColumn
             // 
             this.staffIDDataGridViewTextBoxColumn.DataPropertyName = "staffID";
@@ -860,6 +818,50 @@
             this.passwordDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
             this.passwordDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // staffBindingSource1
+            // 
+            this.staffBindingSource1.DataMember = "staff";
+            this.staffBindingSource1.DataSource = this.schoolManagementSystemDBDataSet1;
+            // 
+            // schoolManagementSystemDBDataSet1
+            // 
+            this.schoolManagementSystemDBDataSet1.DataSetName = "SchoolManagementSystemDBDataSet1";
+            this.schoolManagementSystemDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // searchTextBox1
+            // 
+            this.searchTextBox1.Location = new System.Drawing.Point(7, 17);
+            this.searchTextBox1.Name = "searchTextBox1";
+            this.searchTextBox1.Size = new System.Drawing.Size(430, 22);
+            this.searchTextBox1.TabIndex = 0;
+            this.searchTextBox1.Tag = "";
+            this.searchTextBox1.Text = "Search Here";
+            this.searchTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.searchTextBox1.Click += new System.EventHandler(this.SearchTextBox1_Click);
+            this.searchTextBox1.TextChanged += new System.EventHandler(this.SearchTextBox1_TextChanged);
+            // 
+            // ButtonPanel
+            // 
+            this.ButtonPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ButtonPanel.Controls.Add(this.NHomeBtn);
+            this.ButtonPanel.Controls.Add(this.NViewStaffBtn);
+            this.ButtonPanel.Controls.Add(this.NViewLeaveBtn);
+            this.ButtonPanel.Controls.Add(this.NViewSalaryBtn);
+            this.ButtonPanel.Controls.Add(this.NAddStaffBtn);
+            this.ButtonPanel.Controls.Add(this.NStaffHomeBtn);
+            this.ButtonPanel.Location = new System.Drawing.Point(17, 331);
+            this.ButtonPanel.Name = "ButtonPanel";
+            this.ButtonPanel.Size = new System.Drawing.Size(260, 335);
+            this.ButtonPanel.TabIndex = 35;
+            // 
+            // staffBindingSource
+            // 
+            this.staffBindingSource.DataMember = "staff";
+            // 
+            // staffTableAdapter1
+            // 
+            this.staffTableAdapter1.ClearBeforeFill = true;
             // 
             // ViewStaffMembers
             // 

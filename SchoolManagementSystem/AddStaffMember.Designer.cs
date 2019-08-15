@@ -74,6 +74,8 @@
             this.serviceYrsLabel1 = new System.Windows.Forms.Label();
             this.emailTextBox1 = new System.Windows.Forms.TextBox();
             this.emailLabel = new System.Windows.Forms.Label();
+            this.phNoTextBox = new System.Windows.Forms.TextBox();
+            this.phNolabel = new System.Windows.Forms.Label();
             this.ContentPanel.SuspendLayout();
             this.addGroupBox.SuspendLayout();
             this.genderPanel.SuspendLayout();
@@ -120,6 +122,8 @@
             // 
             // addGroupBox
             // 
+            this.addGroupBox.Controls.Add(this.phNoTextBox);
+            this.addGroupBox.Controls.Add(this.phNolabel);
             this.addGroupBox.Controls.Add(this.emailTextBox1);
             this.addGroupBox.Controls.Add(this.emailLabel);
             this.addGroupBox.Controls.Add(this.serviceYrsTextBox);
@@ -487,7 +491,7 @@
             // 
             // experitextBox1
             // 
-            this.experitextBox1.Location = new System.Drawing.Point(656, 87);
+            this.experitextBox1.Location = new System.Drawing.Point(657, 142);
             this.experitextBox1.Name = "experitextBox1";
             this.experitextBox1.Size = new System.Drawing.Size(246, 22);
             this.experitextBox1.TabIndex = 18;
@@ -496,7 +500,7 @@
             // 
             this.experiLabel.AutoSize = true;
             this.experiLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.experiLabel.Location = new System.Drawing.Point(494, 86);
+            this.experiLabel.Location = new System.Drawing.Point(495, 141);
             this.experiLabel.Name = "experiLabel";
             this.experiLabel.Size = new System.Drawing.Size(110, 25);
             this.experiLabel.TabIndex = 17;
@@ -504,7 +508,7 @@
             // 
             // pastSchTextBox
             // 
-            this.pastSchTextBox.Location = new System.Drawing.Point(656, 130);
+            this.pastSchTextBox.Location = new System.Drawing.Point(657, 185);
             this.pastSchTextBox.Name = "pastSchTextBox";
             this.pastSchTextBox.Size = new System.Drawing.Size(246, 22);
             this.pastSchTextBox.TabIndex = 20;
@@ -513,7 +517,7 @@
             // 
             this.paseSchLabel.AutoSize = true;
             this.paseSchLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.paseSchLabel.Location = new System.Drawing.Point(494, 129);
+            this.paseSchLabel.Location = new System.Drawing.Point(495, 184);
             this.paseSchLabel.Name = "paseSchLabel";
             this.paseSchLabel.Size = new System.Drawing.Size(117, 25);
             this.paseSchLabel.TabIndex = 19;
@@ -521,7 +525,7 @@
             // 
             // serviceYrsTextBox
             // 
-            this.serviceYrsTextBox.Location = new System.Drawing.Point(656, 174);
+            this.serviceYrsTextBox.Location = new System.Drawing.Point(657, 229);
             this.serviceYrsTextBox.Name = "serviceYrsTextBox";
             this.serviceYrsTextBox.Size = new System.Drawing.Size(246, 22);
             this.serviceYrsTextBox.TabIndex = 22;
@@ -530,7 +534,7 @@
             // 
             this.serviceYrsLabel1.AutoSize = true;
             this.serviceYrsLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.serviceYrsLabel1.Location = new System.Drawing.Point(494, 173);
+            this.serviceYrsLabel1.Location = new System.Drawing.Point(495, 228);
             this.serviceYrsLabel1.Name = "serviceYrsLabel1";
             this.serviceYrsLabel1.Size = new System.Drawing.Size(134, 25);
             this.serviceYrsLabel1.TabIndex = 21;
@@ -538,7 +542,7 @@
             // 
             // emailTextBox1
             // 
-            this.emailTextBox1.Location = new System.Drawing.Point(656, 47);
+            this.emailTextBox1.Location = new System.Drawing.Point(657, 102);
             this.emailTextBox1.Name = "emailTextBox1";
             this.emailTextBox1.Size = new System.Drawing.Size(246, 22);
             this.emailTextBox1.TabIndex = 24;
@@ -547,11 +551,28 @@
             // 
             this.emailLabel.AutoSize = true;
             this.emailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.emailLabel.Location = new System.Drawing.Point(494, 46);
+            this.emailLabel.Location = new System.Drawing.Point(495, 101);
             this.emailLabel.Name = "emailLabel";
             this.emailLabel.Size = new System.Drawing.Size(146, 25);
             this.emailLabel.TabIndex = 23;
             this.emailLabel.Text = "E-Mail Address";
+            // 
+            // phNoTextBox
+            // 
+            this.phNoTextBox.Location = new System.Drawing.Point(657, 64);
+            this.phNoTextBox.Name = "phNoTextBox";
+            this.phNoTextBox.Size = new System.Drawing.Size(246, 22);
+            this.phNoTextBox.TabIndex = 26;
+            // 
+            // phNolabel
+            // 
+            this.phNolabel.AutoSize = true;
+            this.phNolabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.phNolabel.Location = new System.Drawing.Point(495, 63);
+            this.phNolabel.Name = "phNolabel";
+            this.phNolabel.Size = new System.Drawing.Size(99, 25);
+            this.phNolabel.TabIndex = 25;
+            this.phNolabel.Text = "Phone No";
             // 
             // AddStaffMember
             // 
@@ -635,5 +656,7 @@
         private System.Windows.Forms.Label emailLabel;
         private System.Windows.Forms.TextBox serviceYrsTextBox;
         private System.Windows.Forms.Label serviceYrsLabel1;
+        private System.Windows.Forms.TextBox phNoTextBox;
+        private System.Windows.Forms.Label phNolabel;
     }
 }

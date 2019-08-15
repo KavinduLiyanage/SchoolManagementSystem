@@ -25,7 +25,7 @@ namespace SchoolManagementSystem
         private void BtnManageMarks_Click(object sender, EventArgs e)
         {
             ManageMarks Mm = new ManageMarks();
-            Mm.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             Mm.ShowDialog();
         }
 
@@ -38,7 +38,7 @@ namespace SchoolManagementSystem
         {
 
             ManageMarks Mm = new ManageMarks();
-            Mm.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             Mm.ShowDialog();
         }
 
@@ -51,14 +51,14 @@ namespace SchoolManagementSystem
         {
 
             AddTimetable att = new AddTimetable();
-            att.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             att.ShowDialog();
         }
 
         private void PictureBox3_Click(object sender, EventArgs e)
         {
             AddTimetable att = new AddTimetable();
-            att.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             att.ShowDialog();
 
         }
@@ -66,15 +66,77 @@ namespace SchoolManagementSystem
         private void Button3_Click(object sender, EventArgs e)
         {
             UpdateOrDeleteTimetable udtt = new UpdateOrDeleteTimetable();
-            udtt.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             udtt.ShowDialog();
         }
 
         private void PictureBox2_Click_1(object sender, EventArgs e)
         {
             UpdateOrDeleteTimetable udtt = new UpdateOrDeleteTimetable();
-            udtt.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             udtt.ShowDialog();
+        }
+
+        private void BtnTeachersHomeTH_Click(object sender, EventArgs e)
+        {
+            TeachersHome Mm = new TeachersHome();
+            this.Hide();
+            Mm.ShowDialog();
+        }
+
+        private void BtnAddMarksTH_Click(object sender, EventArgs e)
+        {
+
+            AddMarks am = new AddMarks();
+            this.Hide();
+            am.ShowDialog();
+        }
+
+        private void BtnUpdateDeleteTH_Click(object sender, EventArgs e)
+        {
+            UpdateORDeleteMarks ud = new UpdateORDeleteMarks();
+            this.Hide();
+            ud.ShowDialog();
+        }
+
+        private void BtnStudentResultSheetTH_Click(object sender, EventArgs e)
+        {
+            StudentResultSheet stdRS = new StudentResultSheet();
+            this.Hide();
+            stdRS.ShowDialog();
+        }
+
+        private void BtnClassResultSheetTH_Click(object sender, EventArgs e)
+        {
+            ClassResultSheet clzRS = new ClassResultSheet();
+            this.Hide();
+            clzRS.ShowDialog();
+        }
+
+        private void BtnSectionResultSheetTH_Click(object sender, EventArgs e)
+        {
+            SectionResultSheet secRS = new SectionResultSheet();
+            this.Hide();
+            secRS.ShowDialog();
+        }
+
+        private void BtnGetTimetableTH_Click(object sender, EventArgs e)
+        {
+            ViewTimetable vtt = new ViewTimetable();
+            this.Hide();
+            vtt.ShowDialog();
+        }
+
+        private void BtnUpdateTimetableTH_Click(object sender, EventArgs e)
+        {
+            UpdateOrDeleteTimetable udtt = new UpdateOrDeleteTimetable();
+            this.Hide();
+            udtt.ShowDialog();
+        }
+
+        private void PictureBox4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

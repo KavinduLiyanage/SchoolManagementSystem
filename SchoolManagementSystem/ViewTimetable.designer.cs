@@ -38,7 +38,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lbTermATT = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSectionResultSheetGTT = new System.Windows.Forms.Button();
             this.btnAddMarksGTT = new System.Windows.Forms.Button();
@@ -53,12 +52,15 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.btnDisplayGTT = new System.Windows.Forms.Button();
             this.btnGetReportGTT = new System.Windows.Forms.Button();
+            this.lbUserGT = new System.Windows.Forms.Label();
+            this.btnimgGT = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -143,17 +145,6 @@
             this.comboBox1.Size = new System.Drawing.Size(200, 24);
             this.comboBox1.TabIndex = 9;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(39, 125);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(221, 173);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 33;
-            this.pictureBox2.TabStop = false;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -224,6 +215,7 @@
             this.btnAddTimetableGTT.TabIndex = 21;
             this.btnAddTimetableGTT.Text = "Add Timetable";
             this.btnAddTimetableGTT.UseVisualStyleBackColor = false;
+            this.btnAddTimetableGTT.Click += new System.EventHandler(this.BtnAddTimetableGTT_Click);
             // 
             // btnStudentResultSheetGTT
             // 
@@ -306,30 +298,65 @@
             this.btnGetReportGTT.Text = "Get Report";
             this.btnGetReportGTT.UseVisualStyleBackColor = false;
             // 
+            // lbUserGT
+            // 
+            this.lbUserGT.AutoSize = true;
+            this.lbUserGT.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lbUserGT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUserGT.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lbUserGT.Location = new System.Drawing.Point(67, 281);
+            this.lbUserGT.Name = "lbUserGT";
+            this.lbUserGT.Size = new System.Drawing.Size(155, 25);
+            this.lbUserGT.TabIndex = 39;
+            this.lbUserGT.Text = "Ashani Malsha";
+            // 
+            // btnimgGT
+            // 
+            this.btnimgGT.Location = new System.Drawing.Point(57, 134);
+            this.btnimgGT.Name = "btnimgGT";
+            this.btnimgGT.Size = new System.Drawing.Size(174, 135);
+            this.btnimgGT.TabIndex = 40;
+            this.btnimgGT.Text = "button1";
+            this.btnimgGT.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(57, 134);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(174, 135);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 41;
+            this.pictureBox2.TabStop = false;
+            // 
             // ViewTimetable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.btnimgGT);
+            this.Controls.Add(this.lbUserGT);
             this.Controls.Add(this.btnGetReportGTT);
             this.Controls.Add(this.btnDisplayGTT);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "ViewTimetable";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewTimetable";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -344,7 +371,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lbTermATT;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnSectionResultSheetGTT;
         private System.Windows.Forms.Button btnAddMarksGTT;
@@ -359,5 +385,8 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnDisplayGTT;
         private System.Windows.Forms.Button btnGetReportGTT;
+        private System.Windows.Forms.Label lbUserGT;
+        private System.Windows.Forms.Button btnimgGT;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

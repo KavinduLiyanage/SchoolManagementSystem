@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddTimetable));
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSectionResultSheetATT = new System.Windows.Forms.Button();
             this.btnAddMarksATT = new System.Windows.Forms.Button();
             this.btnClassResultSheetATT = new System.Windows.Forms.Button();
             this.btnUpdateTimetableATT = new System.Windows.Forms.Button();
@@ -41,40 +41,31 @@
             this.btnTeachersHomeATT = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.lbGradeATT = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lbTermATT = new System.Windows.Forms.Label();
-            this.lbTimeATT = new System.Windows.Forms.Label();
             this.lbSubjectATT = new System.Windows.Forms.Label();
-            this.btnInsertATT = new System.Windows.Forms.Button();
-            this.lbDateATT = new System.Windows.Forms.Label();
+            this.lbTermATT = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.lbGradeATT = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.btnInsertATT = new System.Windows.Forms.Button();
+            this.lbTimeATT = new System.Windows.Forms.Label();
+            this.lbDateATT = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tbSearch = new System.Windows.Forms.TextBox();
             this.lbTimetableIDATT = new System.Windows.Forms.Label();
-            this.btnSectionResultSheetATT = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.btnImgAT = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lbUserAT = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(40, 126);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(221, 173);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 28;
-            this.pictureBox2.TabStop = false;
             // 
             // panel1
             // 
@@ -92,6 +83,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(260, 335);
             this.panel1.TabIndex = 27;
+            // 
+            // btnSectionResultSheetATT
+            // 
+            this.btnSectionResultSheetATT.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnSectionResultSheetATT.Location = new System.Drawing.Point(11, 220);
+            this.btnSectionResultSheetATT.Name = "btnSectionResultSheetATT";
+            this.btnSectionResultSheetATT.Size = new System.Drawing.Size(235, 35);
+            this.btnSectionResultSheetATT.TabIndex = 31;
+            this.btnSectionResultSheetATT.Text = "Section ResultSheet";
+            this.btnSectionResultSheetATT.UseVisualStyleBackColor = false;
+            this.btnSectionResultSheetATT.Click += new System.EventHandler(this.BtnSectionResultSheetATT_Click);
             // 
             // btnAddMarksATT
             // 
@@ -209,31 +211,38 @@
             this.panel2.Size = new System.Drawing.Size(380, 491);
             this.panel2.TabIndex = 29;
             // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(143, 284);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(200, 24);
+            this.comboBox2.TabIndex = 18;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Checked = false;
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(143, 133);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePicker1.TabIndex = 17;
+            // 
+            // lbGradeATT
+            // 
+            this.lbGradeATT.AutoSize = true;
+            this.lbGradeATT.Location = new System.Drawing.Point(48, 235);
+            this.lbGradeATT.Name = "lbGradeATT";
+            this.lbGradeATT.Size = new System.Drawing.Size(48, 17);
+            this.lbGradeATT.TabIndex = 16;
+            this.lbGradeATT.Text = "Grade";
+            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(143, 88);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(200, 22);
             this.textBox1.TabIndex = 5;
-            // 
-            // lbTermATT
-            // 
-            this.lbTermATT.AutoSize = true;
-            this.lbTermATT.Location = new System.Drawing.Point(46, 91);
-            this.lbTermATT.Name = "lbTermATT";
-            this.lbTermATT.Size = new System.Drawing.Size(41, 17);
-            this.lbTermATT.TabIndex = 0;
-            this.lbTermATT.Text = "Term";
-            // 
-            // lbTimeATT
-            // 
-            this.lbTimeATT.AutoSize = true;
-            this.lbTimeATT.Location = new System.Drawing.Point(48, 184);
-            this.lbTimeATT.Name = "lbTimeATT";
-            this.lbTimeATT.Size = new System.Drawing.Size(39, 17);
-            this.lbTimeATT.TabIndex = 1;
-            this.lbTimeATT.Text = "Time";
-            this.lbTimeATT.Click += new System.EventHandler(this.LbTimeATT_Click);
             // 
             // lbSubjectATT
             // 
@@ -244,24 +253,14 @@
             this.lbSubjectATT.TabIndex = 2;
             this.lbSubjectATT.Text = "Subject";
             // 
-            // btnInsertATT
+            // lbTermATT
             // 
-            this.btnInsertATT.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnInsertATT.Location = new System.Drawing.Point(128, 408);
-            this.btnInsertATT.Name = "btnInsertATT";
-            this.btnInsertATT.Size = new System.Drawing.Size(130, 50);
-            this.btnInsertATT.TabIndex = 14;
-            this.btnInsertATT.Text = "Insert";
-            this.btnInsertATT.UseVisualStyleBackColor = false;
-            // 
-            // lbDateATT
-            // 
-            this.lbDateATT.AutoSize = true;
-            this.lbDateATT.Location = new System.Drawing.Point(46, 138);
-            this.lbDateATT.Name = "lbDateATT";
-            this.lbDateATT.Size = new System.Drawing.Size(38, 17);
-            this.lbDateATT.TabIndex = 4;
-            this.lbDateATT.Text = "Date";
+            this.lbTermATT.AutoSize = true;
+            this.lbTermATT.Location = new System.Drawing.Point(46, 91);
+            this.lbTermATT.Name = "lbTermATT";
+            this.lbTermATT.Size = new System.Drawing.Size(41, 17);
+            this.lbTermATT.TabIndex = 0;
+            this.lbTermATT.Text = "Term";
             // 
             // comboBox1
             // 
@@ -278,31 +277,34 @@
             this.textBox3.Size = new System.Drawing.Size(200, 22);
             this.textBox3.TabIndex = 7;
             // 
-            // lbGradeATT
+            // btnInsertATT
             // 
-            this.lbGradeATT.AutoSize = true;
-            this.lbGradeATT.Location = new System.Drawing.Point(48, 235);
-            this.lbGradeATT.Name = "lbGradeATT";
-            this.lbGradeATT.Size = new System.Drawing.Size(48, 17);
-            this.lbGradeATT.TabIndex = 16;
-            this.lbGradeATT.Text = "Grade";
+            this.btnInsertATT.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnInsertATT.Location = new System.Drawing.Point(128, 408);
+            this.btnInsertATT.Name = "btnInsertATT";
+            this.btnInsertATT.Size = new System.Drawing.Size(130, 50);
+            this.btnInsertATT.TabIndex = 14;
+            this.btnInsertATT.Text = "Insert";
+            this.btnInsertATT.UseVisualStyleBackColor = false;
             // 
-            // dateTimePicker1
+            // lbTimeATT
             // 
-            this.dateTimePicker1.Checked = false;
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(143, 133);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePicker1.TabIndex = 17;
+            this.lbTimeATT.AutoSize = true;
+            this.lbTimeATT.Location = new System.Drawing.Point(48, 184);
+            this.lbTimeATT.Name = "lbTimeATT";
+            this.lbTimeATT.Size = new System.Drawing.Size(39, 17);
+            this.lbTimeATT.TabIndex = 1;
+            this.lbTimeATT.Text = "Time";
+            this.lbTimeATT.Click += new System.EventHandler(this.LbTimeATT_Click);
             // 
-            // comboBox2
+            // lbDateATT
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(143, 284);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(200, 24);
-            this.comboBox2.TabIndex = 18;
+            this.lbDateATT.AutoSize = true;
+            this.lbDateATT.Location = new System.Drawing.Point(46, 138);
+            this.lbDateATT.Name = "lbDateATT";
+            this.lbDateATT.Size = new System.Drawing.Size(38, 17);
+            this.lbDateATT.TabIndex = 4;
+            this.lbDateATT.Text = "Date";
             // 
             // panel3
             // 
@@ -341,30 +343,52 @@
             this.lbTimetableIDATT.TabIndex = 13;
             this.lbTimetableIDATT.Text = "Timetable ID";
             // 
-            // btnSectionResultSheetATT
+            // btnImgAT
             // 
-            this.btnSectionResultSheetATT.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.btnSectionResultSheetATT.Location = new System.Drawing.Point(11, 220);
-            this.btnSectionResultSheetATT.Name = "btnSectionResultSheetATT";
-            this.btnSectionResultSheetATT.Size = new System.Drawing.Size(235, 35);
-            this.btnSectionResultSheetATT.TabIndex = 31;
-            this.btnSectionResultSheetATT.Text = "Section ResultSheet";
-            this.btnSectionResultSheetATT.UseVisualStyleBackColor = false;
-            this.btnSectionResultSheetATT.Click += new System.EventHandler(this.BtnSectionResultSheetATT_Click);
+            this.btnImgAT.Location = new System.Drawing.Point(57, 126);
+            this.btnImgAT.Name = "btnImgAT";
+            this.btnImgAT.Size = new System.Drawing.Size(174, 135);
+            this.btnImgAT.TabIndex = 31;
+            this.btnImgAT.Text = "button1";
+            this.btnImgAT.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(57, 126);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(174, 135);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 32;
+            this.pictureBox2.TabStop = false;
+            // 
+            // lbUserAT
+            // 
+            this.lbUserAT.AutoSize = true;
+            this.lbUserAT.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lbUserAT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUserAT.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lbUserAT.Location = new System.Drawing.Point(64, 283);
+            this.lbUserAT.Name = "lbUserAT";
+            this.lbUserAT.Size = new System.Drawing.Size(155, 25);
+            this.lbUserAT.TabIndex = 33;
+            this.lbUserAT.Text = "Ashani Malsha";
             // 
             // AddTimetable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.lbUserAT);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.btnImgAT);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "AddTimetable";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddTimetable";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -372,13 +396,13 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnAddMarksATT;
         private System.Windows.Forms.Button btnClassResultSheetATT;
@@ -406,5 +430,8 @@
         private System.Windows.Forms.TextBox tbSearch;
         private System.Windows.Forms.Label lbTimetableIDATT;
         private System.Windows.Forms.Button btnSectionResultSheetATT;
+        private System.Windows.Forms.Button btnImgAT;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label lbUserAT;
     }
 }

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SectionResultSheet));
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAddMarksCRS = new System.Windows.Forms.Button();
             this.btnClassResultSheetCRS = new System.Windows.Forms.Button();
@@ -55,24 +54,16 @@
             this.panelSRS = new System.Windows.Forms.Panel();
             this.btnSearchSERS = new System.Windows.Forms.Button();
             this.btnGetReportSERS = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.lbUserSERS = new System.Windows.Forms.Label();
+            this.btnimgSERS = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSRS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(37, 129);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(221, 173);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 25;
-            this.pictureBox2.TabStop = false;
             // 
             // panel1
             // 
@@ -133,6 +124,7 @@
             this.btnAddTimetableCRS.TabIndex = 21;
             this.btnAddTimetableCRS.Text = "Add Timetable";
             this.btnAddTimetableCRS.UseVisualStyleBackColor = false;
+            this.btnAddTimetableCRS.Click += new System.EventHandler(this.BtnAddTimetableCRS_Click);
             // 
             // btnManageTimetableCRS
             // 
@@ -328,35 +320,68 @@
             this.btnGetReportSERS.Text = "Get Report";
             this.btnGetReportSERS.UseVisualStyleBackColor = false;
             // 
+            // lbUserSERS
+            // 
+            this.lbUserSERS.AutoSize = true;
+            this.lbUserSERS.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lbUserSERS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUserSERS.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lbUserSERS.Location = new System.Drawing.Point(66, 283);
+            this.lbUserSERS.Name = "lbUserSERS";
+            this.lbUserSERS.Size = new System.Drawing.Size(155, 25);
+            this.lbUserSERS.TabIndex = 30;
+            this.lbUserSERS.Text = "Ashani Malsha";
+            // 
+            // btnimgSERS
+            // 
+            this.btnimgSERS.Location = new System.Drawing.Point(59, 127);
+            this.btnimgSERS.Name = "btnimgSERS";
+            this.btnimgSERS.Size = new System.Drawing.Size(174, 135);
+            this.btnimgSERS.TabIndex = 31;
+            this.btnimgSERS.Text = "button1";
+            this.btnimgSERS.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(59, 127);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(174, 135);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 32;
+            this.pictureBox2.TabStop = false;
+            // 
             // SectionResultSheet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.btnimgSERS);
+            this.Controls.Add(this.lbUserSERS);
             this.Controls.Add(this.btnGetReportSERS);
             this.Controls.Add(this.btnSearchSERS);
             this.Controls.Add(this.panelSRS);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "SectionResultSheet";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SectionResultSheet";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSRS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnAddMarksCRS;
         private System.Windows.Forms.Button btnClassResultSheetCRS;
@@ -382,5 +407,8 @@
         private System.Windows.Forms.Panel panelSRS;
         private System.Windows.Forms.Button btnSearchSERS;
         private System.Windows.Forms.Button btnGetReportSERS;
+        private System.Windows.Forms.Label lbUserSERS;
+        private System.Windows.Forms.Button btnimgSERS;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

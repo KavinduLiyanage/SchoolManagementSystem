@@ -20,56 +20,56 @@ namespace SchoolManagementSystem
         private void BtnTeachersHomeUDTT_Click(object sender, EventArgs e)
         {
             TeachersHome Mm = new TeachersHome();
-            Mm.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             Mm.ShowDialog();
         }
 
         private void BtnManageMarksUDTT_Click(object sender, EventArgs e)
         {
             ManageMarks Mm = new ManageMarks();
-            Mm.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             Mm.ShowDialog();
         }
 
         private void BtnAddMarksUDTT_Click(object sender, EventArgs e)
         {
             AddMarks am = new AddMarks();
-            am.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             am.ShowDialog();
         }
 
         private void BtnUpdateDeleteUDTT_Click(object sender, EventArgs e)
         {
             UpdateORDeleteMarks ud = new UpdateORDeleteMarks();
-            ud.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             ud.ShowDialog();
         }
 
         private void BtnStudentResultSheetUDTT_Click(object sender, EventArgs e)
         {
             StudentResultSheet stdRS = new StudentResultSheet();
-            stdRS.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             stdRS.ShowDialog();
         }
 
         private void BtnClassResultSheetUDTT_Click(object sender, EventArgs e)
         {
             ClassResultSheet clzRS = new ClassResultSheet();
-            clzRS.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             clzRS.ShowDialog();
         }
 
         private void BtnSectionResultSheetUDTT_Click(object sender, EventArgs e)
         {
             SectionResultSheet secRS = new SectionResultSheet();
-            secRS.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             secRS.ShowDialog();
         }
 
         private void BtnUpdateTimetableUDTT_Click(object sender, EventArgs e)
         {
             AddTimetable att = new AddTimetable();
-            att.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             att.ShowDialog();
         }
 
@@ -77,7 +77,7 @@ namespace SchoolManagementSystem
         {
 
             ViewTimetable vtt = new ViewTimetable();
-            vtt.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             vtt.ShowDialog();
         }
 

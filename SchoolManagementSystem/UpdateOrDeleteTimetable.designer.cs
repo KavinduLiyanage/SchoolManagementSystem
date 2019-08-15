@@ -46,7 +46,6 @@
             this.btnUpdateUDTT = new System.Windows.Forms.Button();
             this.lbTimeUDTT = new System.Windows.Forms.Label();
             this.lbDateUDTT = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSectionResultSheetUDTT = new System.Windows.Forms.Button();
             this.btnAddMarksUDTT = new System.Windows.Forms.Button();
@@ -60,12 +59,15 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnDisplayUDTT = new System.Windows.Forms.Button();
             this.btnViewUDTT = new System.Windows.Forms.Button();
+            this.lbUserUDT = new System.Windows.Forms.Label();
+            this.btnimgUDT = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -229,17 +231,6 @@
             this.lbDateUDTT.TabIndex = 4;
             this.lbDateUDTT.Text = "Date";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(39, 126);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(221, 173);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 33;
-            this.pictureBox2.TabStop = false;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -386,29 +377,64 @@
             this.btnViewUDTT.UseVisualStyleBackColor = false;
             this.btnViewUDTT.Click += new System.EventHandler(this.BtnViewUDTT_Click);
             // 
+            // lbUserUDT
+            // 
+            this.lbUserUDT.AutoSize = true;
+            this.lbUserUDT.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lbUserUDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUserUDT.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lbUserUDT.Location = new System.Drawing.Point(64, 283);
+            this.lbUserUDT.Name = "lbUserUDT";
+            this.lbUserUDT.Size = new System.Drawing.Size(155, 25);
+            this.lbUserUDT.TabIndex = 38;
+            this.lbUserUDT.Text = "Ashani Malsha";
+            // 
+            // btnimgUDT
+            // 
+            this.btnimgUDT.Location = new System.Drawing.Point(57, 126);
+            this.btnimgUDT.Name = "btnimgUDT";
+            this.btnimgUDT.Size = new System.Drawing.Size(174, 135);
+            this.btnimgUDT.TabIndex = 39;
+            this.btnimgUDT.Text = "button1";
+            this.btnimgUDT.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(57, 126);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(174, 135);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 40;
+            this.pictureBox2.TabStop = false;
+            // 
             // UpdateOrDeleteTimetable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.btnimgUDT);
+            this.Controls.Add(this.lbUserUDT);
             this.Controls.Add(this.btnViewUDTT);
             this.Controls.Add(this.btnDisplayUDTT);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "UpdateOrDeleteTimetable";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdateOrDeleteTimetable";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -430,7 +456,6 @@
         private System.Windows.Forms.Button btnUpdateUDTT;
         private System.Windows.Forms.Label lbTimeUDTT;
         private System.Windows.Forms.Label lbDateUDTT;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnSectionResultSheetUDTT;
         private System.Windows.Forms.Button btnAddMarksUDTT;
@@ -445,5 +470,8 @@
         private System.Windows.Forms.Button btnDeleteUDTT;
         private System.Windows.Forms.Button btnDisplayUDTT;
         private System.Windows.Forms.Button btnViewUDTT;
+        private System.Windows.Forms.Label lbUserUDT;
+        private System.Windows.Forms.Button btnimgUDT;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

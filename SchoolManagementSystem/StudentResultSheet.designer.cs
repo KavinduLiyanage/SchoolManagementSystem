@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentResultSheet));
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnUpdateTimetableSRS = new System.Windows.Forms.Button();
+            this.btnAddMarksSRS = new System.Windows.Forms.Button();
             this.btnSectionResultSheetSRS = new System.Windows.Forms.Button();
+            this.btnUpdateTimetableSRS = new System.Windows.Forms.Button();
             this.btnAddTimetableSRS = new System.Windows.Forms.Button();
             this.btnManageTimetableSRS = new System.Windows.Forms.Button();
             this.btnClassResultSheetSRS = new System.Windows.Forms.Button();
@@ -40,7 +40,6 @@
             this.btnManageMarksSRS = new System.Windows.Forms.Button();
             this.btnTeachersHomeSRS = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnAddMarksSRS = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tbRegNo = new System.Windows.Forms.TextBox();
             this.lbRegNo = new System.Windows.Forms.Label();
@@ -54,25 +53,16 @@
             this.btnSearchSRS = new System.Windows.Forms.Button();
             this.btnPdfSRS = new System.Windows.Forms.Button();
             this.btnPositionSRS = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.lbUserSRS = new System.Windows.Forms.Label();
+            this.btnimgSRS = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(47, 126);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(210, 180);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 19;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.PictureBox2_Click);
             // 
             // panel1
             // 
@@ -92,16 +82,16 @@
             this.panel1.TabIndex = 18;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel1_Paint);
             // 
-            // btnUpdateTimetableSRS
+            // btnAddMarksSRS
             // 
-            this.btnUpdateTimetableSRS.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.btnUpdateTimetableSRS.Location = new System.Drawing.Point(11, 292);
-            this.btnUpdateTimetableSRS.Name = "btnUpdateTimetableSRS";
-            this.btnUpdateTimetableSRS.Size = new System.Drawing.Size(235, 35);
-            this.btnUpdateTimetableSRS.TabIndex = 19;
-            this.btnUpdateTimetableSRS.Text = "Update / Delete Timetable";
-            this.btnUpdateTimetableSRS.UseVisualStyleBackColor = false;
-            this.btnUpdateTimetableSRS.Click += new System.EventHandler(this.BtnUpdateTimetableSRS_Click);
+            this.btnAddMarksSRS.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnAddMarksSRS.Location = new System.Drawing.Point(11, 76);
+            this.btnAddMarksSRS.Name = "btnAddMarksSRS";
+            this.btnAddMarksSRS.Size = new System.Drawing.Size(235, 35);
+            this.btnAddMarksSRS.TabIndex = 23;
+            this.btnAddMarksSRS.Text = "Add Marks";
+            this.btnAddMarksSRS.UseVisualStyleBackColor = false;
+            this.btnAddMarksSRS.Click += new System.EventHandler(this.BtnAddMarksSRS_Click);
             // 
             // btnSectionResultSheetSRS
             // 
@@ -114,6 +104,17 @@
             this.btnSectionResultSheetSRS.UseVisualStyleBackColor = false;
             this.btnSectionResultSheetSRS.Click += new System.EventHandler(this.BtnSectionResultSheetSRS_Click);
             // 
+            // btnUpdateTimetableSRS
+            // 
+            this.btnUpdateTimetableSRS.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnUpdateTimetableSRS.Location = new System.Drawing.Point(11, 292);
+            this.btnUpdateTimetableSRS.Name = "btnUpdateTimetableSRS";
+            this.btnUpdateTimetableSRS.Size = new System.Drawing.Size(235, 35);
+            this.btnUpdateTimetableSRS.TabIndex = 19;
+            this.btnUpdateTimetableSRS.Text = "Update / Delete Timetable";
+            this.btnUpdateTimetableSRS.UseVisualStyleBackColor = false;
+            this.btnUpdateTimetableSRS.Click += new System.EventHandler(this.BtnUpdateTimetableSRS_Click);
+            // 
             // btnAddTimetableSRS
             // 
             this.btnAddTimetableSRS.BackColor = System.Drawing.SystemColors.InactiveCaption;
@@ -123,6 +124,7 @@
             this.btnAddTimetableSRS.TabIndex = 21;
             this.btnAddTimetableSRS.Text = "Add Timetable";
             this.btnAddTimetableSRS.UseVisualStyleBackColor = false;
+            this.btnAddTimetableSRS.Click += new System.EventHandler(this.BtnAddTimetableSRS_Click);
             // 
             // btnManageTimetableSRS
             // 
@@ -188,17 +190,6 @@
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
-            // 
-            // btnAddMarksSRS
-            // 
-            this.btnAddMarksSRS.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.btnAddMarksSRS.Location = new System.Drawing.Point(11, 76);
-            this.btnAddMarksSRS.Name = "btnAddMarksSRS";
-            this.btnAddMarksSRS.Size = new System.Drawing.Size(235, 35);
-            this.btnAddMarksSRS.TabIndex = 23;
-            this.btnAddMarksSRS.Text = "Add Marks";
-            this.btnAddMarksSRS.UseVisualStyleBackColor = false;
-            this.btnAddMarksSRS.Click += new System.EventHandler(this.BtnAddMarksSRS_Click);
             // 
             // panel2
             // 
@@ -322,37 +313,69 @@
             this.btnPositionSRS.Text = "Position";
             this.btnPositionSRS.UseVisualStyleBackColor = false;
             // 
+            // lbUserSRS
+            // 
+            this.lbUserSRS.AutoSize = true;
+            this.lbUserSRS.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lbUserSRS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUserSRS.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lbUserSRS.Location = new System.Drawing.Point(74, 278);
+            this.lbUserSRS.Name = "lbUserSRS";
+            this.lbUserSRS.Size = new System.Drawing.Size(155, 25);
+            this.lbUserSRS.TabIndex = 23;
+            this.lbUserSRS.Text = "Ashani Malsha";
+            // 
+            // btnimgSRS
+            // 
+            this.btnimgSRS.Location = new System.Drawing.Point(67, 135);
+            this.btnimgSRS.Name = "btnimgSRS";
+            this.btnimgSRS.Size = new System.Drawing.Size(174, 135);
+            this.btnimgSRS.TabIndex = 24;
+            this.btnimgSRS.Text = "button1";
+            this.btnimgSRS.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(67, 135);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(174, 135);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 25;
+            this.pictureBox2.TabStop = false;
+            // 
             // StudentResultSheet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.btnimgSRS);
+            this.Controls.Add(this.lbUserSRS);
             this.Controls.Add(this.btnPositionSRS);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.btnPdfSRS);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.btnSearchSRS);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "StudentResultSheet";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StudentResultSheet";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnUpdateTimetableSRS;
         private System.Windows.Forms.Button btnSectionResultSheetSRS;
@@ -377,5 +400,8 @@
         private System.Windows.Forms.Button btnPositionSRS;
         private System.Windows.Forms.Button btnPdfSRS;
         private System.Windows.Forms.Button btnSearchSRS;
+        private System.Windows.Forms.Label lbUserSRS;
+        private System.Windows.Forms.Button btnimgSRS;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

@@ -20,35 +20,35 @@ namespace SchoolManagementSystem
         private void BtnTeachersHomeGTT_Click(object sender, EventArgs e)
         {
             TeachersHome Mm = new TeachersHome();
-            Mm.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             Mm.ShowDialog();
         }
 
         private void BtnManageMarksGTT_Click(object sender, EventArgs e)
         {
             ManageMarks Mm = new ManageMarks();
-            Mm.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             Mm.ShowDialog();
         }
 
         private void BtnAddMarksGTT_Click(object sender, EventArgs e)
         {
             AddMarks am = new AddMarks();
-            am.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             am.ShowDialog();
         }
 
         private void BtnUpdateDeleteGTT_Click(object sender, EventArgs e)
         {
             UpdateORDeleteMarks ud = new UpdateORDeleteMarks();
-            ud.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             ud.ShowDialog();
         }
 
         private void BtnStudentResultSheetGTT_Click(object sender, EventArgs e)
         {
             StudentResultSheet stdRS = new StudentResultSheet();
-            stdRS.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             stdRS.ShowDialog();
         }
 
@@ -56,7 +56,7 @@ namespace SchoolManagementSystem
         {
 
             ClassResultSheet clzRS = new ClassResultSheet();
-            clzRS.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             clzRS.ShowDialog();
         }
 
@@ -64,15 +64,22 @@ namespace SchoolManagementSystem
         {
 
             SectionResultSheet secRS = new SectionResultSheet();
-            secRS.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             secRS.ShowDialog();
         }
 
         private void BtnUpdateTimetableGTT_Click(object sender, EventArgs e)
         {
             UpdateOrDeleteTimetable udtt = new UpdateOrDeleteTimetable();
-            udtt.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             udtt.ShowDialog();
+        }
+
+        private void BtnAddTimetableGTT_Click(object sender, EventArgs e)
+        {
+            AddTimetable att = new AddTimetable();
+            this.Hide();
+            att.ShowDialog();
         }
     }
 }

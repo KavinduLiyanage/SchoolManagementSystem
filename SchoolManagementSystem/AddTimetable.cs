@@ -35,35 +35,35 @@ namespace SchoolManagementSystem
         private void BtnTeachersHomeATT_Click(object sender, EventArgs e)
         {
             TeachersHome Mm = new TeachersHome();
-            Mm.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             Mm.ShowDialog();
         }
 
         private void BtnManageMarksATT_Click(object sender, EventArgs e)
         {
             ManageMarks Mm = new ManageMarks();
-            Mm.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             Mm.ShowDialog();
         }
 
         private void BtnUpdateDeleteATT_Click(object sender, EventArgs e)
         {
             UpdateORDeleteMarks ud = new UpdateORDeleteMarks();
-            ud.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             ud.ShowDialog();
         }
 
         private void BtnStudentResultSheetATT_Click(object sender, EventArgs e)
         {
             StudentResultSheet stdRS = new StudentResultSheet();
-            stdRS.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             stdRS.ShowDialog();
         }
 
         private void BtnClassResultSheetATT_Click(object sender, EventArgs e)
         {
             ClassResultSheet clzRS = new ClassResultSheet();
-            clzRS.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             clzRS.ShowDialog();
         }
 
@@ -71,7 +71,7 @@ namespace SchoolManagementSystem
         private void BtnSectionResultSheetATT_Click(object sender, EventArgs e)
         {
             SectionResultSheet secRS = new SectionResultSheet();
-            secRS.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             secRS.ShowDialog();
         }
 
@@ -79,21 +79,21 @@ namespace SchoolManagementSystem
         {
 
             AddMarks am = new AddMarks();
-            am.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             am.ShowDialog();
         }
 
         private void BtnUpdateTimetableATT_Click(object sender, EventArgs e)
         {
             UpdateOrDeleteTimetable udtt = new UpdateOrDeleteTimetable();
-            udtt.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             udtt.ShowDialog();
         }
 
         private void BtnGetTimetableATT_Click(object sender, EventArgs e)
         {
             ViewTimetable vtt = new ViewTimetable();
-            vtt.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             vtt.ShowDialog();
         }
     }

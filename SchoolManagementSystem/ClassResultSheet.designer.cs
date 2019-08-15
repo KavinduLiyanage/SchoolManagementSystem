@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClassResultSheet));
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnAddMarksCRS = new System.Windows.Forms.Button();
             this.btnSectionResultSheetCRS = new System.Windows.Forms.Button();
@@ -60,7 +59,9 @@
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.lbUserCRS = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -70,18 +71,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(37, 128);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(221, 173);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 22;
-            this.pictureBox2.TabStop = false;
             // 
             // panel1
             // 
@@ -142,6 +133,7 @@
             this.btnAddTimetableCRS.TabIndex = 21;
             this.btnAddTimetableCRS.Text = "Add Timetable";
             this.btnAddTimetableCRS.UseVisualStyleBackColor = false;
+            this.btnAddTimetableCRS.Click += new System.EventHandler(this.BtnAddTimetableCRS_Click);
             // 
             // btnManageTimetableCRS
             // 
@@ -391,17 +383,50 @@
             this.dataGridView3.Size = new System.Drawing.Size(513, 203);
             this.dataGridView3.TabIndex = 0;
             // 
+            // lbUserCRS
+            // 
+            this.lbUserCRS.AutoSize = true;
+            this.lbUserCRS.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lbUserCRS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUserCRS.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lbUserCRS.Location = new System.Drawing.Point(57, 274);
+            this.lbUserCRS.Name = "lbUserCRS";
+            this.lbUserCRS.Size = new System.Drawing.Size(155, 25);
+            this.lbUserCRS.TabIndex = 27;
+            this.lbUserCRS.Text = "Ashani Malsha";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(52, 124);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(174, 135);
+            this.button1.TabIndex = 28;
+            this.button1.Text = "btnImgCRS";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(52, 124);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(174, 135);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 29;
+            this.pictureBox2.TabStop = false;
+            // 
             // ClassResultSheet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.lbUserCRS);
             this.Controls.Add(this.btnGetReportCRS);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnSearchCRS);
             this.Controls.Add(this.pictureBox1);
@@ -409,7 +434,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ClassResultSheet";
             this.Load += new System.EventHandler(this.ClassResultSheet_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -421,13 +445,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnAddMarksCRS;
         private System.Windows.Forms.Button btnSectionResultSheetCRS;
@@ -458,5 +482,8 @@
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.TextBox tbSearch;
         private System.Windows.Forms.Label lbSearch;
+        private System.Windows.Forms.Label lbUserCRS;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

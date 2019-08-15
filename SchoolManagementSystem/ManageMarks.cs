@@ -21,20 +21,23 @@ namespace SchoolManagementSystem
         {
 
             AddMarks addMarks = new AddMarks();
-            addMarks.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             addMarks.ShowDialog();
         }
 
         private void BtnTeachersHomeM_Click(object sender, EventArgs e)
         {
             TeachersHome Mm = new TeachersHome();
-            Mm.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             Mm.ShowDialog();
         }
 
         private void BtnAddTimetableM_Click(object sender, EventArgs e)
         {
 
+            AddTimetable att = new AddTimetable();
+            this.Hide();
+            att.ShowDialog();
         }
 
         private void Panel2_Paint(object sender, PaintEventArgs e)
@@ -45,28 +48,28 @@ namespace SchoolManagementSystem
         private void BtnDeleteUpdate_Click(object sender, EventArgs e)
         {
             UpdateORDeleteMarks ud = new UpdateORDeleteMarks();
-            ud.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             ud.ShowDialog();
         }
 
         private void BtnUpdateTimeTable_Click(object sender, EventArgs e)
         {
             UpdateOrDeleteTimetable udtt = new UpdateOrDeleteTimetable();
-            udtt.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             udtt.ShowDialog();
         }
 
         private void BtnRSstudent_Click(object sender, EventArgs e)
         {
             StudentResultSheet stdRS = new StudentResultSheet();
-            stdRS.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             stdRS.ShowDialog();
         }
 
         private void BtnRSclass_Click(object sender, EventArgs e)
         {
             ClassResultSheet clzRS = new ClassResultSheet();
-            clzRS.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             clzRS.ShowDialog();
 
         }
@@ -74,14 +77,14 @@ namespace SchoolManagementSystem
         private void BtnRSsection_Click(object sender, EventArgs e)
         {
             SectionResultSheet secRS = new SectionResultSheet();
-            secRS.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             secRS.ShowDialog();
         }
 
         private void BtnDeleteTimetableM_Click(object sender, EventArgs e)
         {
             UpdateOrDeleteTimetable udtt = new UpdateOrDeleteTimetable();
-            udtt.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             udtt.ShowDialog();
         }
 
@@ -89,8 +92,15 @@ namespace SchoolManagementSystem
         {
 
             ViewTimetable vtt = new ViewTimetable();
-            vtt.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             vtt.ShowDialog();
+        }
+
+        private void BtnUpdateDeleteTimetableM_Click(object sender, EventArgs e)
+        {
+            UpdateOrDeleteTimetable udtt = new UpdateOrDeleteTimetable();
+            this.Hide();
+            udtt.ShowDialog();
         }
     }
 }

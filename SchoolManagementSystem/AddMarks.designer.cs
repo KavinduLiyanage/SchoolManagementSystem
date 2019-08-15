@@ -44,25 +44,27 @@
             this.lbSearch = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnUpdateDeleteTimetableA = new System.Windows.Forms.Button();
+            this.btnSectionResultSheetA = new System.Windows.Forms.Button();
+            this.btnClassResultSheetA = new System.Windows.Forms.Button();
+            this.btnStudentResultsheetA = new System.Windows.Forms.Button();
+            this.btnUpdateDeleteMarksA = new System.Windows.Forms.Button();
             this.btnAddTimetableA = new System.Windows.Forms.Button();
             this.btnManageTimetableA = new System.Windows.Forms.Button();
             this.btnManageMarksA = new System.Windows.Forms.Button();
             this.btnTeachersHomeA = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnUpdateDeleteMarksA = new System.Windows.Forms.Button();
-            this.btnStudentResultsheetA = new System.Windows.Forms.Button();
-            this.btnClassResultSheetA = new System.Windows.Forms.Button();
-            this.btnSectionResultSheetA = new System.Windows.Forms.Button();
-            this.btnUpdateDeleteTimetableA = new System.Windows.Forms.Button();
+            this.btnImageAM = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lbUserAM = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // lbRegNo
@@ -206,6 +208,61 @@
             this.panel1.Size = new System.Drawing.Size(260, 335);
             this.panel1.TabIndex = 15;
             // 
+            // btnUpdateDeleteTimetableA
+            // 
+            this.btnUpdateDeleteTimetableA.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnUpdateDeleteTimetableA.Location = new System.Drawing.Point(11, 292);
+            this.btnUpdateDeleteTimetableA.Name = "btnUpdateDeleteTimetableA";
+            this.btnUpdateDeleteTimetableA.Size = new System.Drawing.Size(235, 35);
+            this.btnUpdateDeleteTimetableA.TabIndex = 20;
+            this.btnUpdateDeleteTimetableA.Text = "Update / DeleteTimetable";
+            this.btnUpdateDeleteTimetableA.UseVisualStyleBackColor = false;
+            this.btnUpdateDeleteTimetableA.Click += new System.EventHandler(this.BtnUpdateDeleteTimetableA_Click);
+            // 
+            // btnSectionResultSheetA
+            // 
+            this.btnSectionResultSheetA.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnSectionResultSheetA.Location = new System.Drawing.Point(11, 184);
+            this.btnSectionResultSheetA.Name = "btnSectionResultSheetA";
+            this.btnSectionResultSheetA.Size = new System.Drawing.Size(235, 35);
+            this.btnSectionResultSheetA.TabIndex = 20;
+            this.btnSectionResultSheetA.Text = "Section ResultSheet";
+            this.btnSectionResultSheetA.UseVisualStyleBackColor = false;
+            this.btnSectionResultSheetA.Click += new System.EventHandler(this.BtnSectionResultSheetA_Click);
+            // 
+            // btnClassResultSheetA
+            // 
+            this.btnClassResultSheetA.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnClassResultSheetA.Location = new System.Drawing.Point(11, 148);
+            this.btnClassResultSheetA.Name = "btnClassResultSheetA";
+            this.btnClassResultSheetA.Size = new System.Drawing.Size(235, 35);
+            this.btnClassResultSheetA.TabIndex = 19;
+            this.btnClassResultSheetA.Text = "Class ResultSheet";
+            this.btnClassResultSheetA.UseVisualStyleBackColor = false;
+            this.btnClassResultSheetA.Click += new System.EventHandler(this.BtnClassResultSheetA_Click);
+            // 
+            // btnStudentResultsheetA
+            // 
+            this.btnStudentResultsheetA.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnStudentResultsheetA.Location = new System.Drawing.Point(11, 112);
+            this.btnStudentResultsheetA.Name = "btnStudentResultsheetA";
+            this.btnStudentResultsheetA.Size = new System.Drawing.Size(235, 35);
+            this.btnStudentResultsheetA.TabIndex = 19;
+            this.btnStudentResultsheetA.Text = "Student ResultSheet";
+            this.btnStudentResultsheetA.UseVisualStyleBackColor = false;
+            this.btnStudentResultsheetA.Click += new System.EventHandler(this.BtnStudentResultsheetA_Click);
+            // 
+            // btnUpdateDeleteMarksA
+            // 
+            this.btnUpdateDeleteMarksA.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btnUpdateDeleteMarksA.Location = new System.Drawing.Point(11, 76);
+            this.btnUpdateDeleteMarksA.Name = "btnUpdateDeleteMarksA";
+            this.btnUpdateDeleteMarksA.Size = new System.Drawing.Size(235, 35);
+            this.btnUpdateDeleteMarksA.TabIndex = 19;
+            this.btnUpdateDeleteMarksA.Text = "Update Marks / Delete Marks";
+            this.btnUpdateDeleteMarksA.UseVisualStyleBackColor = false;
+            this.btnUpdateDeleteMarksA.Click += new System.EventHandler(this.BtnUpdateDeleteMarksA_Click);
+            // 
             // btnAddTimetableA
             // 
             this.btnAddTimetableA.BackColor = System.Drawing.SystemColors.InactiveCaption;
@@ -215,6 +272,7 @@
             this.btnAddTimetableA.TabIndex = 21;
             this.btnAddTimetableA.Text = "Add Timetable";
             this.btnAddTimetableA.UseVisualStyleBackColor = false;
+            this.btnAddTimetableA.Click += new System.EventHandler(this.BtnAddTimetableA_Click);
             // 
             // btnManageTimetableA
             // 
@@ -248,17 +306,6 @@
             this.btnTeachersHomeA.Text = "Teachers Home";
             this.btnTeachersHomeA.UseVisualStyleBackColor = false;
             this.btnTeachersHomeA.Click += new System.EventHandler(this.BtnTeachersHomeA_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(36, 134);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(210, 180);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 16;
-            this.pictureBox2.TabStop = false;
             // 
             // panel2
             // 
@@ -301,69 +348,47 @@
             this.dataGridView1.Size = new System.Drawing.Size(508, 405);
             this.dataGridView1.TabIndex = 14;
             // 
-            // btnUpdateDeleteMarksA
+            // btnImageAM
             // 
-            this.btnUpdateDeleteMarksA.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.btnUpdateDeleteMarksA.Location = new System.Drawing.Point(11, 76);
-            this.btnUpdateDeleteMarksA.Name = "btnUpdateDeleteMarksA";
-            this.btnUpdateDeleteMarksA.Size = new System.Drawing.Size(235, 35);
-            this.btnUpdateDeleteMarksA.TabIndex = 19;
-            this.btnUpdateDeleteMarksA.Text = "Update Marks / Delete Marks";
-            this.btnUpdateDeleteMarksA.UseVisualStyleBackColor = false;
-            this.btnUpdateDeleteMarksA.Click += new System.EventHandler(this.BtnUpdateDeleteMarksA_Click);
+            this.btnImageAM.Location = new System.Drawing.Point(51, 131);
+            this.btnImageAM.Name = "btnImageAM";
+            this.btnImageAM.Size = new System.Drawing.Size(174, 135);
+            this.btnImageAM.TabIndex = 15;
+            this.btnImageAM.Text = "button1";
+            this.btnImageAM.UseVisualStyleBackColor = true;
             // 
-            // btnStudentResultsheetA
+            // pictureBox2
             // 
-            this.btnStudentResultsheetA.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.btnStudentResultsheetA.Location = new System.Drawing.Point(11, 112);
-            this.btnStudentResultsheetA.Name = "btnStudentResultsheetA";
-            this.btnStudentResultsheetA.Size = new System.Drawing.Size(235, 35);
-            this.btnStudentResultsheetA.TabIndex = 19;
-            this.btnStudentResultsheetA.Text = "Student ResultSheet";
-            this.btnStudentResultsheetA.UseVisualStyleBackColor = false;
-            this.btnStudentResultsheetA.Click += new System.EventHandler(this.BtnStudentResultsheetA_Click);
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(51, 131);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(174, 135);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 19;
+            this.pictureBox2.TabStop = false;
             // 
-            // btnClassResultSheetA
+            // lbUserAM
             // 
-            this.btnClassResultSheetA.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.btnClassResultSheetA.Location = new System.Drawing.Point(11, 148);
-            this.btnClassResultSheetA.Name = "btnClassResultSheetA";
-            this.btnClassResultSheetA.Size = new System.Drawing.Size(235, 35);
-            this.btnClassResultSheetA.TabIndex = 19;
-            this.btnClassResultSheetA.Text = "Class ResultSheet";
-            this.btnClassResultSheetA.UseVisualStyleBackColor = false;
-            this.btnClassResultSheetA.Click += new System.EventHandler(this.BtnClassResultSheetA_Click);
-            // 
-            // btnSectionResultSheetA
-            // 
-            this.btnSectionResultSheetA.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.btnSectionResultSheetA.Location = new System.Drawing.Point(11, 184);
-            this.btnSectionResultSheetA.Name = "btnSectionResultSheetA";
-            this.btnSectionResultSheetA.Size = new System.Drawing.Size(235, 35);
-            this.btnSectionResultSheetA.TabIndex = 20;
-            this.btnSectionResultSheetA.Text = "Section ResultSheet";
-            this.btnSectionResultSheetA.UseVisualStyleBackColor = false;
-            this.btnSectionResultSheetA.Click += new System.EventHandler(this.BtnSectionResultSheetA_Click);
-            // 
-            // btnUpdateDeleteTimetableA
-            // 
-            this.btnUpdateDeleteTimetableA.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.btnUpdateDeleteTimetableA.Location = new System.Drawing.Point(11, 292);
-            this.btnUpdateDeleteTimetableA.Name = "btnUpdateDeleteTimetableA";
-            this.btnUpdateDeleteTimetableA.Size = new System.Drawing.Size(235, 35);
-            this.btnUpdateDeleteTimetableA.TabIndex = 20;
-            this.btnUpdateDeleteTimetableA.Text = "Update / DeleteTimetable";
-            this.btnUpdateDeleteTimetableA.UseVisualStyleBackColor = false;
-            this.btnUpdateDeleteTimetableA.Click += new System.EventHandler(this.BtnUpdateDeleteTimetableA_Click);
+            this.lbUserAM.AutoSize = true;
+            this.lbUserAM.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lbUserAM.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUserAM.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.lbUserAM.Location = new System.Drawing.Point(59, 283);
+            this.lbUserAM.Name = "lbUserAM";
+            this.lbUserAM.Size = new System.Drawing.Size(155, 25);
+            this.lbUserAM.TabIndex = 20;
+            this.lbUserAM.Text = "Ashani Malsha";
             // 
             // AddMarks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.lbUserAM);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.btnImageAM);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "AddMarks";
@@ -372,13 +397,14 @@
             this.Load += new System.EventHandler(this.AddMarks_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -399,7 +425,6 @@
         private System.Windows.Forms.Label lbSearch;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnTeachersHomeA;
         private System.Windows.Forms.Button btnManageMarksA;
         private System.Windows.Forms.Button btnAddTimetableA;
@@ -412,5 +437,8 @@
         private System.Windows.Forms.Button btnClassResultSheetA;
         private System.Windows.Forms.Button btnSectionResultSheetA;
         private System.Windows.Forms.Button btnUpdateDeleteTimetableA;
+        private System.Windows.Forms.Button btnImageAM;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label lbUserAM;
     }
 }

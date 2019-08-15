@@ -20,35 +20,35 @@ namespace SchoolManagementSystem
         private void BtnTeachersHomeCRS_Click(object sender, EventArgs e)
         {
             TeachersHome Mm = new TeachersHome();
-            Mm.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             Mm.ShowDialog();
         }
 
         private void BtnManageMarksCRS_Click(object sender, EventArgs e)
         {
             ManageMarks Mm = new ManageMarks();
-            Mm.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             Mm.ShowDialog();
         }
 
         private void BtnAddMarksCRS_Click(object sender, EventArgs e)
         {
             AddMarks am = new AddMarks();
-            am.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             am.ShowDialog();
         }
 
         private void BtnUpdateDeleteCRS_Click(object sender, EventArgs e)
         {
             UpdateORDeleteMarks ud = new UpdateORDeleteMarks();
-            ud.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             ud.ShowDialog();
         }
 
         private void BtnStudentResultSheetCRS_Click(object sender, EventArgs e)
         {
             StudentResultSheet stdRS = new StudentResultSheet();
-            stdRS.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             stdRS.ShowDialog();
 
         }
@@ -57,14 +57,14 @@ namespace SchoolManagementSystem
         {
 
             ClassResultSheet clzRS = new ClassResultSheet();
-            clzRS.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             clzRS.ShowDialog();
         }
 
         private void BtnUpdateTimetableCRS_Click(object sender, EventArgs e)
         {
             UpdateOrDeleteTimetable udtt = new UpdateOrDeleteTimetable();
-            udtt.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             udtt.ShowDialog();
         }
 
@@ -72,8 +72,16 @@ namespace SchoolManagementSystem
         {
 
             ViewTimetable vtt = new ViewTimetable();
-            vtt.StartPosition = FormStartPosition.CenterScreen;
+            this.Hide();
             vtt.ShowDialog();
+        }
+
+        private void BtnAddTimetableCRS_Click(object sender, EventArgs e)
+        {
+
+            AddTimetable att = new AddTimetable();
+            this.Hide();
+            att.ShowDialog();
         }
     }
 }

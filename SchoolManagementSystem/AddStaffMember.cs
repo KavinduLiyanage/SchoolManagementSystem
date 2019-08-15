@@ -95,9 +95,13 @@ namespace SchoolManagementSystem
             string memberTypeValue = "";
             bool memberTypeisChecked = adedemicRadio.Checked;
             if (memberTypeisChecked)
+            {
                 memberTypeValue = adedemicRadio.Text;
+            }
             else
+            {
                 memberTypeValue = nonAcedemicRadio.Text;
+            }
 
             string accessLevelValue = "";
             bool accessLevelisChecked = adminRadio.Checked;
@@ -111,7 +115,7 @@ namespace SchoolManagementSystem
             if (genderisChecked)
                 genderValue = maleRadioButton2.Text;
             else
-                genderValue = userRadio.Text;
+                genderValue = femaleRadioButton1.Text;
 
 
             cmd.CommandText = "INSERT INTO staff(memberType,accessLevel,fullName,name,gender,NIC,DOB,address,phoneNo,email,subject,pastSchool,serviceYears,salary,password) VALUES('" + memberTypeValue + "','" + accessLevelValue + "','" + NametextBox1.Text + "','" + nameTextBox2.Text + "','" + genderValue + "','" + NICTextBox.Text + "','" + dateTimePicker1.Value + "','"+ addressTextBox.Text +"','"+ phNoTextBox.Text +"','"+ emailTextBox1.Text +"','"+ subTextBox1.Text +"','"+ pastSchTextBox.Text +"','"+ Int32.Parse(serviceYrsTextBox.Text) +"','"+ Convert.ToDouble(salaryTextBox.Text)+ "','"+ NICTextBox.Text + "')";

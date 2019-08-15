@@ -302,6 +302,7 @@
             this.viewStaffImgBtn.Size = new System.Drawing.Size(90, 94);
             this.viewStaffImgBtn.TabIndex = 24;
             this.viewStaffImgBtn.UseVisualStyleBackColor = true;
+            this.viewStaffImgBtn.Click += new System.EventHandler(this.ViewStaffImgBtn_Click);
             // 
             // panel1
             // 

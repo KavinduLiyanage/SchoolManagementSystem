@@ -63,7 +63,16 @@ namespace SchoolManagementSystem
 
         private void SearchBtn_Click(object sender, EventArgs e)
         {
-
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select * from staff where name like '%"+ searchTextBox1.Text + "%' ";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+            con.Close();
         }
 
         private void ViewStaffMembers_Load(object sender, EventArgs e)
@@ -94,19 +103,79 @@ namespace SchoolManagementSystem
             {
                 adedemicRadio.Checked = true;
             }
-            else {
+            else if (memType.Equals("Non-Acedemic"))
+            {
                 nonAcedemicRadio.Checked = true;
             }
-            string accLvl = selectRow.Cells[2].ToString();
+            string accLvl = selectRow.Cells[2].Value.ToString();
 
             if (accLvl.Equals("Admin"))
             {
                 adminRadio.Checked = true;
             }
-            else
+            else if (accLvl.Equals("User"))
             {
                 userRadio.Checked = true;
             }
+
+            NametextBox1.Text = selectRow.Cells[3].Value.ToString();
+            nameTextBox2.Text = selectRow.Cells[4].Value.ToString();
+
+            string gender = selectRow.Cells[5].Value.ToString();
+
+            if (gender.Equals("Male"))
+            {
+                maleRadioButton2.Checked = true;
+            }
+            else if (gender.Equals("Female"))
+            {
+                femaleRadioButton1.Checked = true;
+            }
+
+            NICTextBox.Text = selectRow.Cells[6].Value.ToString();
+
+            string date = selectRow.Cells[7].Value.ToString();
+            try
+            {
+                DateTime oDate = Convert.ToDateTime(date);
+                dateTimePicker1.Value = new System.DateTime(oDate.Year, oDate.Month, oDate.Day, 0, 0, 0, 0);
+            }
+            catch (Exception) {
+                DateTime newdate = DateTime.Now;
+                dateTimePicker1.Value = new System.DateTime(newdate.Year, newdate.Month, newdate.Day, 0, 0, 0, 0);
+            }
+
+            addressTextBox.Text = selectRow.Cells[8].Value.ToString();
+            phNoTextBox.Text = selectRow.Cells[9].Value.ToString();
+            emailTextBox1.Text = selectRow.Cells[10].Value.ToString();
+            subTextBox1.Text = selectRow.Cells[11].Value.ToString();
+            pastSchTextBox.Text = selectRow.Cells[12].Value.ToString();
+            serviceYrsTextBox.Text = selectRow.Cells[13].Value.ToString();
+            salaryTextBox.Text = selectRow.Cells[15].Value.ToString();
+
+
+            pwdtextBox2.Text = selectRow.Cells[16].Value.ToString();
+            ConfirmPwdtextBox2.Text = selectRow.Cells[16].Value.ToString();
+        }
+
+        private void SearchTextBox1_TextChanged(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select * from staff where name like '%" + searchTextBox1.Text + "%' ";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+            con.Close();
+        }
+
+        private void SearchTextBox1_Click(object sender, EventArgs e)
+        {
+            searchTextBox1.Text = "";
+            searchTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
         }
     }
 }

@@ -81,11 +81,10 @@
             this.nonAcedemicRadio = new System.Windows.Forms.RadioButton();
             this.memberType = new System.Windows.Forms.Label();
             this.adedemicRadio = new System.Windows.Forms.RadioButton();
-            this.searchBtn = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.searchTextBox1 = new System.Windows.Forms.TextBox();
             this.staffBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.schoolManagementSystemDBDataSet1 = new SchoolManagementSystem.SchoolManagementSystemDBDataSet1();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.ButtonPanel = new System.Windows.Forms.Panel();
             this.staffBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.staffTableAdapter1 = new SchoolManagementSystem.SchoolManagementSystemDBDataSet1TableAdapters.staffTableAdapter();
@@ -260,9 +259,8 @@
             this.ContentPanel.Controls.Add(this.nameLabel);
             this.ContentPanel.Controls.Add(this.raioPanelAccess);
             this.ContentPanel.Controls.Add(this.radioPanelType);
-            this.ContentPanel.Controls.Add(this.searchBtn);
             this.ContentPanel.Controls.Add(this.dataGridView1);
-            this.ContentPanel.Controls.Add(this.textBox1);
+            this.ContentPanel.Controls.Add(this.searchTextBox1);
             this.ContentPanel.Location = new System.Drawing.Point(283, 105);
             this.ContentPanel.Name = "ContentPanel";
             this.ContentPanel.Size = new System.Drawing.Size(962, 561);
@@ -450,6 +448,7 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Checked = false;
             this.dateTimePicker1.Location = new System.Drawing.Point(682, 91);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(247, 22);
@@ -648,19 +647,6 @@
             this.adedemicRadio.Text = "Acedemic";
             this.adedemicRadio.UseVisualStyleBackColor = true;
             // 
-            // searchBtn
-            // 
-            this.searchBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.searchBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.searchBtn.Font = new System.Drawing.Font("Times New Roman", 7F);
-            this.searchBtn.Location = new System.Drawing.Point(352, 17);
-            this.searchBtn.Name = "searchBtn";
-            this.searchBtn.Size = new System.Drawing.Size(89, 24);
-            this.searchBtn.TabIndex = 2;
-            this.searchBtn.Text = "Search";
-            this.searchBtn.UseVisualStyleBackColor = true;
-            this.searchBtn.Click += new System.EventHandler(this.SearchBtn_Click);
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToOrderColumns = true;
@@ -694,6 +680,18 @@
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
+            // searchTextBox1
+            // 
+            this.searchTextBox1.Location = new System.Drawing.Point(7, 17);
+            this.searchTextBox1.Name = "searchTextBox1";
+            this.searchTextBox1.Size = new System.Drawing.Size(430, 22);
+            this.searchTextBox1.TabIndex = 0;
+            this.searchTextBox1.Tag = "";
+            this.searchTextBox1.Text = "Search Here";
+            this.searchTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.searchTextBox1.Click += new System.EventHandler(this.SearchTextBox1_Click);
+            this.searchTextBox1.TextChanged += new System.EventHandler(this.SearchTextBox1_TextChanged);
+            // 
             // staffBindingSource1
             // 
             this.staffBindingSource1.DataMember = "staff";
@@ -703,13 +701,6 @@
             // 
             this.schoolManagementSystemDBDataSet1.DataSetName = "SchoolManagementSystemDBDataSet1";
             this.schoolManagementSystemDBDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(7, 17);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(339, 22);
-            this.textBox1.TabIndex = 0;
             // 
             // ButtonPanel
             // 
@@ -922,8 +913,7 @@
         private System.Windows.Forms.Panel ContentPanel;
         private System.Windows.Forms.Panel ButtonPanel;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button searchBtn;
+        private System.Windows.Forms.TextBox searchTextBox1;
         private System.Windows.Forms.BindingSource staffBindingSource;
         private System.Windows.Forms.Panel radioPanelType;
         private System.Windows.Forms.RadioButton nonAcedemicRadio;

@@ -125,21 +125,21 @@ SELECT staffID, memberType, accessLevel, fullName, name, gender, NIC, DOB, addre
   <xs:element name="SchoolManagementSystemDBDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="SchoolManagementSystemDBDataSet1" msprop:Generator_UserDSName="SchoolManagementSystemDBDataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="staff" msprop:Generator_TableClassName="staffDataTable" msprop:Generator_TableVarName="tablestaff" msprop:Generator_TablePropName="staff" msprop:Generator_RowDeletingName="staffRowDeleting" msprop:Generator_RowChangingName="staffRowChanging" msprop:Generator_RowEvHandlerName="staffRowChangeEventHandler" msprop:Generator_RowDeletedName="staffRowDeleted" msprop:Generator_UserTableName="staff" msprop:Generator_RowChangedName="staffRowChanged" msprop:Generator_RowEvArgName="staffRowChangeEvent" msprop:Generator_RowClassName="staffRow">
+        <xs:element name="staff" msprop:Generator_TableClassName="staffDataTable" msprop:Generator_TableVarName="tablestaff" msprop:Generator_RowChangedName="staffRowChanged" msprop:Generator_TablePropName="staff" msprop:Generator_RowDeletingName="staffRowDeleting" msprop:Generator_RowChangingName="staffRowChanging" msprop:Generator_RowEvHandlerName="staffRowChangeEventHandler" msprop:Generator_RowDeletedName="staffRowDeleted" msprop:Generator_RowClassName="staffRow" msprop:Generator_UserTableName="staff" msprop:Generator_RowEvArgName="staffRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="staffID" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnstaffID" msprop:Generator_ColumnPropNameInRow="staffID" msprop:Generator_ColumnPropNameInTable="staffIDColumn" msprop:Generator_UserColumnName="staffID" type="xs:int" />
               <xs:element name="memberType" msprop:Generator_ColumnVarNameInTable="columnmemberType" msprop:Generator_ColumnPropNameInRow="memberType" msprop:Generator_ColumnPropNameInTable="memberTypeColumn" msprop:Generator_UserColumnName="memberType">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="10" />
+                    <xs:maxLength value="20" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
               <xs:element name="accessLevel" msprop:Generator_ColumnVarNameInTable="columnaccessLevel" msprop:Generator_ColumnPropNameInRow="accessLevel" msprop:Generator_ColumnPropNameInTable="accessLevelColumn" msprop:Generator_UserColumnName="accessLevel">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="10" />
+                    <xs:maxLength value="20" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
@@ -160,14 +160,14 @@ SELECT staffID, memberType, accessLevel, fullName, name, gender, NIC, DOB, addre
               <xs:element name="gender" msprop:Generator_ColumnVarNameInTable="columngender" msprop:Generator_ColumnPropNameInRow="gender" msprop:Generator_ColumnPropNameInTable="genderColumn" msprop:Generator_UserColumnName="gender">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="10" />
+                    <xs:maxLength value="20" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
               <xs:element name="NIC" msprop:Generator_ColumnVarNameInTable="columnNIC" msprop:Generator_ColumnPropNameInRow="NIC" msprop:Generator_ColumnPropNameInTable="NICColumn" msprop:Generator_UserColumnName="NIC">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="20" />
+                    <xs:maxLength value="30" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>

@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace SchoolManagementSystem
 {
     public partial class ViewStaffMembers : Form
     {
+        SqlConnection con = new SqlConnection(@"Data Source=.;Initial Catalog=SchoolManagementSystemDB;Integrated Security=True");
         public ViewStaffMembers()
         {
             InitializeComponent();
@@ -57,6 +59,11 @@ namespace SchoolManagementSystem
             ViewStaffLeaves newStffLeave = new ViewStaffLeaves();
             this.Hide();
             newStffLeave.ShowDialog();
+        }
+
+        private void SearchBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace SchoolManagementSystem
 {
     public partial class AddStaffMember : Form
     {
+        SqlConnection con = new SqlConnection(@"Data Source=.;Initial Catalog=SchoolManagementSystemDB;Integrated Security=True");
         public AddStaffMember()
         {
             InitializeComponent();
@@ -82,6 +84,43 @@ namespace SchoolManagementSystem
             ViewStaffLeaves newStffLeave = new ViewStaffLeaves();
             this.Hide();
             newStffLeave.ShowDialog();
+        }
+
+        private void AddStaffBtn_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+
+            string memberTypeValue = "";
+            bool memberTypeisChecked = adedemicRadio.Checked;
+            if (memberTypeisChecked)
+                memberTypeValue = adedemicRadio.Text;
+            else
+                memberTypeValue = nonAcedemicRadio.Text;
+
+            string accessLevelValue = "";
+            bool accessLevelisChecked = adminRadio.Checked;
+            if (accessLevelisChecked)
+                accessLevelValue = adminRadio.Text;
+            else
+                accessLevelValue = userRadio.Text;
+
+            string genderValue = "";
+            bool genderisChecked = maleRadioButton2.Checked;
+            if (genderisChecked)
+                genderValue = maleRadioButton2.Text;
+            else
+                genderValue = userRadio.Text;
+
+
+            cmd.CommandText = "INSERT INTO staff(memberType,accessLevel,fullName,name,gender,NIC,DOB,address,phoneNo,email,experience,pastSchool,serviceYears) VALUES('" + memberTypeValue + "','" + accessLevelValue + "','" + NametextBox1.Text + "','" + nameTextBox2.Text + "','" + genderValue + "','" + NICTextBox.Text + "','" + dateTimePicker1.Value + "','"+ addressTextBox.Text +"','"+ phNoTextBox.Text +"','"+ emailTextBox1.Text +"','"+ experitextBox1.Text +"','"+ pastSchTextBox.Text +"','"+ Int32.Parse(serviceYrsTextBox.Text) +"')";
+            cmd.ExecuteNonQuery();
+            con.Close();
+
+            MessageBox.Show("Staff Member Added Succesfully");
+
+            
         }
     }
 }

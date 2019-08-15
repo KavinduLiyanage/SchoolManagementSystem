@@ -55,5 +55,33 @@ namespace SchoolManagementSystem
         {
 
         }
+
+        private void NViewSalaryBtn_Click(object sender, EventArgs e)
+        {
+            ViewSalaryInfo newViewSalary = new ViewSalaryInfo();
+            this.Hide();
+            newViewSalary.ShowDialog();
+        }
+
+        private void NViewStaffBtn_Click(object sender, EventArgs e)
+        {
+            ViewStaffMembers newviewstaff = new ViewStaffMembers();
+            this.Hide();
+            newviewstaff.ShowDialog();
+        }
+
+        private void NAddStaffBtn_Click(object sender, EventArgs e)
+        {
+            AddStaffMember newStaffPage = new AddStaffMember();
+            this.Hide();
+            newStaffPage.ShowDialog();
+        }
+
+        private void NViewLeaveBtn_Click(object sender, EventArgs e)
+        {
+            ViewStaffLeaves newStffLeave = new ViewStaffLeaves();
+            this.Hide();
+            newStffLeave.ShowDialog();
+        }
     }
 }

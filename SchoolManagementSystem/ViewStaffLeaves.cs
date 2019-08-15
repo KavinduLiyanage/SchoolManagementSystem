@@ -10,38 +10,21 @@ using System.Windows.Forms;
 
 namespace SchoolManagementSystem
 {
-    public partial class AdminMngStaffHome : Form
+    public partial class ViewStaffLeaves : Form
     {
-        public AdminMngStaffHome()
+        public ViewStaffLeaves()
         {
             InitializeComponent();
         }
 
-        private void PictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Button1_Click(object sender, EventArgs e)
+        private void NHomeBtn_Click(object sender, EventArgs e)
         {
             HomePage1 home = new HomePage1();
             this.Hide();
             home.ShowDialog();
         }
 
-        private void AddStaffImgBtn_Click(object sender, EventArgs e)
-        {
-            AddStaffMember newStaffPage = new AddStaffMember();
-            this.Hide();
-            newStaffPage.ShowDialog();
-        }
-
-        private void AddStaffBtn_Click(object sender, EventArgs e)
+        private void NAddStaffBtn_Click(object sender, EventArgs e)
         {
             AddStaffMember newStaffPage = new AddStaffMember();
             this.Hide();
@@ -62,18 +45,11 @@ namespace SchoolManagementSystem
             newViewStaff.ShowDialog();
         }
 
-        private void NAddStaffBtn_Click(object sender, EventArgs e)
-        {
-            AddStaffMember newStaffPage = new AddStaffMember();
-            this.Hide();
-            newStaffPage.ShowDialog();
-        }
-
         private void NViewSalaryBtn_Click(object sender, EventArgs e)
         {
-            ViewSalaryInfo viewSlary = new ViewSalaryInfo();
+            ViewSalaryInfo newViewSalary = new ViewSalaryInfo();
             this.Hide();
-            viewSlary.ShowDialog();
+            newViewSalary.ShowDialog();
         }
 
         private void NViewLeaveBtn_Click(object sender, EventArgs e)

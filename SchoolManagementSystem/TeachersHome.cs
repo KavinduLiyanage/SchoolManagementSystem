@@ -138,5 +138,10 @@ namespace SchoolManagementSystem
         {
 
         }
+
+        private void PictureBox4_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -208,23 +208,32 @@ namespace SchoolManagementSystem
             else
                 genderValue = femaleRadioButton1.Text;
 
-            DialogResult dlgResult = MessageBox.Show("Are You Sure You Want To Update?", "Update!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-            if (dlgResult == DialogResult.Yes)
+            if (pwdtextBox2.Text == ConfirmPwdtextBox2.Text)
             {
+                DialogResult dlgResult = MessageBox.Show("Are You Sure You Want To Update?", "Update!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-                con.Open();
-                SqlCommand cmd = con.CreateCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "UPDATE staff SET memberType = '" + memberTypeValue + "',accessLevel = '" + accessLevelValue + "',fullName = '" + NametextBox1.Text + "',name = '" + nameTextBox2.Text + "',gender = '" + genderValue + "',NIC = '" + NICTextBox.Text + "',DOB = '" + dateTimePicker1.Value + "',address = '" + addressTextBox.Text + "',phoneNo = '" + phNoTextBox.Text + "',email = '" + emailTextBox1.Text + "',subject = '" + subTextBox1.Text + "',pastSchool = '" + pastSchTextBox.Text + "',serviceYears = '" + Int32.Parse(serviceYrsTextBox.Text) + "',salary = '" + Convert.ToDouble(salaryTextBox.Text) + "',password = '" + pwdtextBox2.Text + "',subject2 = '" + subTextBox2.Text + "' WHERE staffID = '" + staffID + "'";
-                cmd.ExecuteNonQuery();
-                con.Close();
+                if (dlgResult == DialogResult.Yes)
+                {
 
-                MessageBox.Show("Updated Succesfully");
+                    con.Open();
+                    SqlCommand cmd = con.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = "UPDATE staff SET memberType = '" + memberTypeValue + "',accessLevel = '" + accessLevelValue + "',fullName = '" + NametextBox1.Text + "',name = '" + nameTextBox2.Text + "',gender = '" + genderValue + "',NIC = '" + NICTextBox.Text + "',DOB = '" + dateTimePicker1.Value + "',address = '" + addressTextBox.Text + "',phoneNo = '" + phNoTextBox.Text + "',email = '" + emailTextBox1.Text + "',subject = '" + subTextBox1.Text + "',pastSchool = '" + pastSchTextBox.Text + "',serviceYears = '" + Int32.Parse(serviceYrsTextBox.Text) + "',salary = '" + Convert.ToDouble(salaryTextBox.Text) + "',password = '" + pwdtextBox2.Text + "',subject2 = '" + subTextBox2.Text + "' WHERE staffID = '" + staffID + "'";
+                    cmd.ExecuteNonQuery();
+                    con.Close();
 
-                ViewStaffMembers viewStaff = new ViewStaffMembers();
-                this.Hide();
-                viewStaff.ShowDialog();
+                    MessageBox.Show("Updated Succesfully");
+
+                    ViewStaffMembers viewStaff = new ViewStaffMembers();
+                    this.Hide();
+                    viewStaff.ShowDialog();
+                }
+
+            }
+            else {
+                MessageBox.Show("Please Check Password!");
+                pwdtextBox2.Text = "";
+                ConfirmPwdtextBox2.Text = "";
             }
         }
 

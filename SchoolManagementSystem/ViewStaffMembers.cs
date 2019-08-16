@@ -183,7 +183,49 @@ namespace SchoolManagementSystem
 
         private void UpdateBtn_Click(object sender, EventArgs e)
         {
+            string memberTypeValue = "";
+            bool memberTypeisChecked = adedemicRadio.Checked;
+            if (memberTypeisChecked)
+            {
+                memberTypeValue = adedemicRadio.Text;
+            }
+            else
+            {
+                memberTypeValue = nonAcedemicRadio.Text;
+            }
 
+            string accessLevelValue = "";
+            bool accessLevelisChecked = adminRadio.Checked;
+            if (accessLevelisChecked)
+                accessLevelValue = adminRadio.Text;
+            else
+                accessLevelValue = userRadio.Text;
+
+            string genderValue = "";
+            bool genderisChecked = maleRadioButton2.Checked;
+            if (genderisChecked)
+                genderValue = maleRadioButton2.Text;
+            else
+                genderValue = femaleRadioButton1.Text;
+
+            DialogResult dlgResult = MessageBox.Show("Are You Sure You Want To Update?", "Update!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (dlgResult == DialogResult.Yes)
+            {
+
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "UPDATE staff SET memberType = '" + memberTypeValue + "',accessLevel = '" + accessLevelValue + "',fullName = '" + NametextBox1.Text + "',name = '" + nameTextBox2.Text + "',gender = '" + genderValue + "',NIC = '" + NICTextBox.Text + "',DOB = '" + dateTimePicker1.Value + "',address = '" + addressTextBox.Text + "',phoneNo = '" + phNoTextBox.Text + "',email = '" + emailTextBox1.Text + "',subject = '" + subTextBox1.Text + "',pastSchool = '" + pastSchTextBox.Text + "',serviceYears = '" + Int32.Parse(serviceYrsTextBox.Text) + "',salary = '" + Convert.ToDouble(salaryTextBox.Text) + "',password = '" + pwdtextBox2.Text + "',subject2 = '" + subTextBox2.Text + "' WHERE staffID = '" + staffID + "'";
+                cmd.ExecuteNonQuery();
+                con.Close();
+
+                MessageBox.Show("Updated Succesfully");
+
+                ViewStaffMembers viewStaff = new ViewStaffMembers();
+                this.Hide();
+                viewStaff.ShowDialog();
+            }
         }
 
         private void DeleteBtn_Click(object sender, EventArgs e)

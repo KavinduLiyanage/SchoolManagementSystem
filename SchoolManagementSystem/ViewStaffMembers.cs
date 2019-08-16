@@ -186,7 +186,7 @@ namespace SchoolManagementSystem
 
         private void DeleteBtn_Click(object sender, EventArgs e)
         {
-
+            //Copy to Another Table
             DialogResult dlgResult = MessageBox.Show("Are You Sure You Want To Delete?", "Delete!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (dlgResult == DialogResult.Yes)

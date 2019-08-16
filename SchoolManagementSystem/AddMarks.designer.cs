@@ -35,10 +35,9 @@
             this.lbMarks = new System.Windows.Forms.Label();
             this.lbYear = new System.Windows.Forms.Label();
             this.tbRegNo = new System.Windows.Forms.TextBox();
-            this.tbMarks = new System.Windows.Forms.TextBox();
-            this.tbSubName = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.cmbExam = new System.Windows.Forms.ComboBox();
+            this.tbMark = new System.Windows.Forms.TextBox();
+            this.YearPicker = new System.Windows.Forms.DateTimePicker();
+            this.cbExam = new System.Windows.Forms.ComboBox();
             this.btnInsert = new System.Windows.Forms.Button();
             this.tbSearch = new System.Windows.Forms.TextBox();
             this.lbSearch = new System.Windows.Forms.Label();
@@ -55,16 +54,17 @@
             this.btnTeachersHomeA = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewMarks = new System.Windows.Forms.DataGridView();
             this.btnImageAM = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lbUserAM = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.cbSubName = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMarks)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -128,39 +128,33 @@
             this.tbRegNo.Size = new System.Drawing.Size(186, 22);
             this.tbRegNo.TabIndex = 5;
             // 
-            // tbMarks
+            // tbMark
             // 
-            this.tbMarks.Location = new System.Drawing.Point(186, 205);
-            this.tbMarks.Name = "tbMarks";
-            this.tbMarks.Size = new System.Drawing.Size(186, 22);
-            this.tbMarks.TabIndex = 6;
+            this.tbMark.Location = new System.Drawing.Point(186, 205);
+            this.tbMark.Name = "tbMark";
+            this.tbMark.Size = new System.Drawing.Size(186, 22);
+            this.tbMark.TabIndex = 6;
             // 
-            // tbSubName
+            // YearPicker
             // 
-            this.tbSubName.Location = new System.Drawing.Point(186, 90);
-            this.tbSubName.Name = "tbSubName";
-            this.tbSubName.Size = new System.Drawing.Size(186, 22);
-            this.tbSubName.TabIndex = 7;
-            this.tbSubName.TextChanged += new System.EventHandler(this.TbSubName_TextChanged);
+            this.YearPicker.CustomFormat = "yyyy";
+            this.YearPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.YearPicker.Location = new System.Drawing.Point(186, 257);
+            this.YearPicker.Name = "YearPicker";
+            this.YearPicker.Size = new System.Drawing.Size(186, 22);
+            this.YearPicker.TabIndex = 8;
             // 
-            // dateTimePicker1
+            // cbExam
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(186, 257);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(186, 22);
-            this.dateTimePicker1.TabIndex = 8;
-            // 
-            // cmbExam
-            // 
-            this.cmbExam.FormattingEnabled = true;
-            this.cmbExam.Items.AddRange(new object[] {
+            this.cbExam.FormattingEnabled = true;
+            this.cbExam.Items.AddRange(new object[] {
             "1 st Term",
             "2nd Term",
             "3rd Term"});
-            this.cmbExam.Location = new System.Drawing.Point(186, 148);
-            this.cmbExam.Name = "cmbExam";
-            this.cmbExam.Size = new System.Drawing.Size(186, 24);
-            this.cmbExam.TabIndex = 9;
+            this.cbExam.Location = new System.Drawing.Point(186, 148);
+            this.cbExam.Name = "cbExam";
+            this.cbExam.Size = new System.Drawing.Size(186, 24);
+            this.cbExam.TabIndex = 9;
             // 
             // btnInsert
             // 
@@ -330,6 +324,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Controls.Add(this.cbSubName);
             this.panel2.Controls.Add(this.tbRegNo);
             this.panel2.Controls.Add(this.lbRegNo);
             this.panel2.Controls.Add(this.lbSubName);
@@ -337,10 +332,9 @@
             this.panel2.Controls.Add(this.lbMarks);
             this.panel2.Controls.Add(this.lbYear);
             this.panel2.Controls.Add(this.btnInsert);
-            this.panel2.Controls.Add(this.tbMarks);
-            this.panel2.Controls.Add(this.cmbExam);
-            this.panel2.Controls.Add(this.tbSubName);
-            this.panel2.Controls.Add(this.dateTimePicker1);
+            this.panel2.Controls.Add(this.tbMark);
+            this.panel2.Controls.Add(this.cbExam);
+            this.panel2.Controls.Add(this.YearPicker);
             this.panel2.Location = new System.Drawing.Point(296, 109);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(389, 514);
@@ -350,7 +344,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel3.Controls.Add(this.dataGridView1);
+            this.panel3.Controls.Add(this.dataGridViewMarks);
             this.panel3.Controls.Add(this.tbSearch);
             this.panel3.Controls.Add(this.lbSearch);
             this.panel3.Location = new System.Drawing.Point(703, 111);
@@ -358,15 +352,15 @@
             this.panel3.Size = new System.Drawing.Size(547, 512);
             this.panel3.TabIndex = 18;
             // 
-            // dataGridView1
+            // dataGridViewMarks
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(19, 64);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(508, 427);
-            this.dataGridView1.TabIndex = 14;
+            this.dataGridViewMarks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewMarks.Location = new System.Drawing.Point(19, 64);
+            this.dataGridViewMarks.Name = "dataGridViewMarks";
+            this.dataGridViewMarks.RowHeadersWidth = 51;
+            this.dataGridViewMarks.RowTemplate.Height = 24;
+            this.dataGridViewMarks.Size = new System.Drawing.Size(508, 427);
+            this.dataGridViewMarks.TabIndex = 14;
             // 
             // btnImageAM
             // 
@@ -406,6 +400,14 @@
             this.panel4.Size = new System.Drawing.Size(1236, 92);
             this.panel4.TabIndex = 15;
             // 
+            // cbSubName
+            // 
+            this.cbSubName.FormattingEnabled = true;
+            this.cbSubName.Location = new System.Drawing.Point(186, 87);
+            this.cbSubName.Name = "cbSubName";
+            this.cbSubName.Size = new System.Drawing.Size(186, 24);
+            this.cbSubName.TabIndex = 12;
+            // 
             // AddMarks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -430,7 +432,7 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMarks)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -445,10 +447,9 @@
         private System.Windows.Forms.Label lbMarks;
         private System.Windows.Forms.Label lbYear;
         private System.Windows.Forms.TextBox tbRegNo;
-        private System.Windows.Forms.TextBox tbMarks;
-        private System.Windows.Forms.TextBox tbSubName;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox cmbExam;
+        private System.Windows.Forms.TextBox tbMark;
+        private System.Windows.Forms.DateTimePicker YearPicker;
+        private System.Windows.Forms.ComboBox cbExam;
         private System.Windows.Forms.Button btnInsert;
         private System.Windows.Forms.TextBox tbSearch;
         private System.Windows.Forms.Label lbSearch;
@@ -460,7 +461,7 @@
         private System.Windows.Forms.Button btnManageTimetableA;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewMarks;
         private System.Windows.Forms.Button btnUpdateDeleteMarksA;
         private System.Windows.Forms.Button btnStudentResultsheetA;
         private System.Windows.Forms.Button btnClassResultSheetA;
@@ -470,5 +471,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lbUserAM;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.ComboBox cbSubName;
     }
 }

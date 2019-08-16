@@ -285,5 +285,19 @@ namespace SchoolManagementSystem
             this.Hide();
             viewStaff.ShowDialog();
         }
+
+        private void BtnExamMheader_Click(object sender, EventArgs e)
+        {
+            TeachersHome home = new TeachersHome();
+            this.Hide();
+            home.ShowDialog();
+        }
+
+        private void BtnLogOutHeader_Click(object sender, EventArgs e)
+        {
+            LoginForm log = new LoginForm();
+            this.Hide();
+            log.ShowDialog();
+        }
     }
 }

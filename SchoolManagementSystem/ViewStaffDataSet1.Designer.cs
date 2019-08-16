@@ -20,9 +20,9 @@ namespace SchoolManagementSystem {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("SchoolManagementSystemDBDataSet1")]
+    [global::System.Xml.Serialization.XmlRootAttribute("ViewStaffDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class SchoolManagementSystemDBDataSet1 : global::System.Data.DataSet {
+    public partial class ViewStaffDataSet : global::System.Data.DataSet {
         
         private staffDataTable tablestaff;
         
@@ -30,7 +30,7 @@ namespace SchoolManagementSystem {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public SchoolManagementSystemDBDataSet1() {
+        public ViewStaffDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace SchoolManagementSystem {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected SchoolManagementSystemDBDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected ViewStaffDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace SchoolManagementSystem {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            SchoolManagementSystemDBDataSet1 cln = ((SchoolManagementSystemDBDataSet1)(base.Clone()));
+            ViewStaffDataSet cln = ((ViewStaffDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace SchoolManagementSystem {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "SchoolManagementSystemDBDataSet1";
+            this.DataSetName = "ViewStaffDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/SchoolManagementSystemDBDataSet1.xsd";
+            this.Namespace = "http://tempuri.org/ViewStaffDataSet1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tablestaff = new staffDataTable();
@@ -225,7 +225,7 @@ namespace SchoolManagementSystem {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            SchoolManagementSystemDBDataSet1 ds = new SchoolManagementSystemDBDataSet1();
+            ViewStaffDataSet ds = new ViewStaffDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -312,6 +312,8 @@ namespace SchoolManagementSystem {
             private global::System.Data.DataColumn columnsalary;
             
             private global::System.Data.DataColumn columnpassword;
+            
+            private global::System.Data.DataColumn columnsubject2;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -484,6 +486,14 @@ namespace SchoolManagementSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn subject2Column {
+                get {
+                    return this.columnsubject2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -535,7 +545,8 @@ namespace SchoolManagementSystem {
                         int serviceYears, 
                         string proPic, 
                         float salary, 
-                        string password) {
+                        string password, 
+                        string subject2) {
                 staffRow rowstaffRow = ((staffRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -554,7 +565,8 @@ namespace SchoolManagementSystem {
                         serviceYears,
                         proPic,
                         salary,
-                        password};
+                        password,
+                        subject2};
                 rowstaffRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowstaffRow);
                 return rowstaffRow;
@@ -601,6 +613,7 @@ namespace SchoolManagementSystem {
                 this.columnproPic = base.Columns["proPic"];
                 this.columnsalary = base.Columns["salary"];
                 this.columnpassword = base.Columns["password"];
+                this.columnsubject2 = base.Columns["subject2"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -640,6 +653,8 @@ namespace SchoolManagementSystem {
                 base.Columns.Add(this.columnsalary);
                 this.columnpassword = new global::System.Data.DataColumn("password", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnpassword);
+                this.columnsubject2 = new global::System.Data.DataColumn("subject2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnsubject2);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnstaffID}, true));
                 this.columnstaffID.AutoIncrement = true;
@@ -649,30 +664,31 @@ namespace SchoolManagementSystem {
                 this.columnstaffID.ReadOnly = true;
                 this.columnstaffID.Unique = true;
                 this.columnmemberType.AllowDBNull = false;
-                this.columnmemberType.MaxLength = 20;
+                this.columnmemberType.MaxLength = 2147483647;
                 this.columnaccessLevel.AllowDBNull = false;
-                this.columnaccessLevel.MaxLength = 20;
+                this.columnaccessLevel.MaxLength = 2147483647;
                 this.columnfullName.AllowDBNull = false;
                 this.columnfullName.MaxLength = 2147483647;
                 this.columnname.AllowDBNull = false;
                 this.columnname.MaxLength = 2147483647;
                 this.columngender.AllowDBNull = false;
-                this.columngender.MaxLength = 20;
+                this.columngender.MaxLength = 2147483647;
                 this.columnNIC.AllowDBNull = false;
-                this.columnNIC.MaxLength = 30;
+                this.columnNIC.MaxLength = 2147483647;
                 this.columnDOB.AllowDBNull = false;
-                this.columnDOB.MaxLength = 100;
+                this.columnDOB.MaxLength = 2147483647;
                 this.columnaddress.AllowDBNull = false;
                 this.columnaddress.MaxLength = 2147483647;
                 this.columnphoneNo.AllowDBNull = false;
-                this.columnphoneNo.MaxLength = 10;
+                this.columnphoneNo.MaxLength = 2147483647;
                 this.columnemail.MaxLength = 2147483647;
                 this.columnsubject.MaxLength = 2147483647;
                 this.columnpastSchool.MaxLength = 2147483647;
                 this.columnproPic.MaxLength = 2147483647;
                 this.columnsalary.AllowDBNull = false;
                 this.columnpassword.AllowDBNull = false;
-                this.columnpassword.MaxLength = 64;
+                this.columnpassword.MaxLength = 2147483647;
+                this.columnsubject2.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -740,7 +756,7 @@ namespace SchoolManagementSystem {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                SchoolManagementSystemDBDataSet1 ds = new SchoolManagementSystemDBDataSet1();
+                ViewStaffDataSet ds = new ViewStaffDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1027,6 +1043,22 @@ namespace SchoolManagementSystem {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string subject2 {
+                get {
+                    try {
+                        return ((string)(this[this.tablestaff.subject2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'subject2\' in table \'staff\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablestaff.subject2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsemailNull() {
                 return this.IsNull(this.tablestaff.emailColumn);
             }
@@ -1084,6 +1116,18 @@ namespace SchoolManagementSystem {
             public void SetproPicNull() {
                 this[this.tablestaff.proPicColumn] = global::System.Convert.DBNull;
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Issubject2Null() {
+                return this.IsNull(this.tablestaff.subject2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setsubject2Null() {
+                this[this.tablestaff.subject2Column] = global::System.Convert.DBNull;
+            }
         }
         
         /// <summary>
@@ -1121,7 +1165,7 @@ namespace SchoolManagementSystem {
         }
     }
 }
-namespace SchoolManagementSystem.SchoolManagementSystemDBDataSet1TableAdapters {
+namespace SchoolManagementSystem.ViewStaffDataSetTableAdapters {
     
     
     /// <summary>
@@ -1262,6 +1306,7 @@ namespace SchoolManagementSystem.SchoolManagementSystemDBDataSet1TableAdapters {
             tableMapping.ColumnMappings.Add("proPic", "proPic");
             tableMapping.ColumnMappings.Add("salary", "salary");
             tableMapping.ColumnMappings.Add("password", "password");
+            tableMapping.ColumnMappings.Add("subject2", "subject2");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
@@ -1271,7 +1316,7 @@ namespace SchoolManagementSystem.SchoolManagementSystemDBDataSet1TableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_memberType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "memberType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_accessLevel", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "accessLevel", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_gender", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "gender", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NIC", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NIC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NIC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NIC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DOB", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DOB", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_phoneNo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "phoneNo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_serviceYears", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "serviceYears", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -1280,15 +1325,15 @@ namespace SchoolManagementSystem.SchoolManagementSystemDBDataSet1TableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_password", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "password", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[staff] ([memberType], [accessLevel], [fullName], [name], [gender], [NIC], [DOB], [address], [phoneNo], [email], [subject], [pastSchool], [serviceYears], [proPic], [salary], [password]) VALUES (@memberType, @accessLevel, @fullName, @name, @gender, @NIC, @DOB, @address, @phoneNo, @email, @subject, @pastSchool, @serviceYears, @proPic, @salary, @password);
-SELECT staffID, memberType, accessLevel, fullName, name, gender, NIC, DOB, address, phoneNo, email, subject, pastSchool, serviceYears, proPic, salary, password FROM staff WHERE (staffID = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[staff] ([memberType], [accessLevel], [fullName], [name], [gender], [NIC], [DOB], [address], [phoneNo], [email], [subject], [pastSchool], [serviceYears], [proPic], [salary], [password], [subject2]) VALUES (@memberType, @accessLevel, @fullName, @name, @gender, @NIC, @DOB, @address, @phoneNo, @email, @subject, @pastSchool, @serviceYears, @proPic, @salary, @password, @subject2);
+SELECT staffID, memberType, accessLevel, fullName, name, gender, NIC, DOB, address, phoneNo, email, subject, pastSchool, serviceYears, proPic, salary, password, subject2 FROM staff WHERE (staffID = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@memberType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "memberType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@accessLevel", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "accessLevel", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fullName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fullName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@gender", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "gender", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NIC", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NIC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NIC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NIC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DOB", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DOB", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@address", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "address", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@phoneNo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "phoneNo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1299,17 +1344,18 @@ SELECT staffID, memberType, accessLevel, fullName, name, gender, NIC, DOB, addre
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@proPic", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "proPic", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@salary", global::System.Data.SqlDbType.Real, 0, global::System.Data.ParameterDirection.Input, 0, 0, "salary", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@password", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "password", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@subject2", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "subject2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[staff] SET [memberType] = @memberType, [accessLevel] = @accessLevel, [fullName] = @fullName, [name] = @name, [gender] = @gender, [NIC] = @NIC, [DOB] = @DOB, [address] = @address, [phoneNo] = @phoneNo, [email] = @email, [subject] = @subject, [pastSchool] = @pastSchool, [serviceYears] = @serviceYears, [proPic] = @proPic, [salary] = @salary, [password] = @password WHERE (([staffID] = @Original_staffID) AND ([memberType] = @Original_memberType) AND ([accessLevel] = @Original_accessLevel) AND ([gender] = @Original_gender) AND ([NIC] = @Original_NIC) AND ([DOB] = @Original_DOB) AND ([phoneNo] = @Original_phoneNo) AND ((@IsNull_serviceYears = 1 AND [serviceYears] IS NULL) OR ([serviceYears] = @Original_serviceYears)) AND ([salary] = @Original_salary) AND ([password] = @Original_password));
-SELECT staffID, memberType, accessLevel, fullName, name, gender, NIC, DOB, address, phoneNo, email, subject, pastSchool, serviceYears, proPic, salary, password FROM staff WHERE (staffID = @staffID)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[staff] SET [memberType] = @memberType, [accessLevel] = @accessLevel, [fullName] = @fullName, [name] = @name, [gender] = @gender, [NIC] = @NIC, [DOB] = @DOB, [address] = @address, [phoneNo] = @phoneNo, [email] = @email, [subject] = @subject, [pastSchool] = @pastSchool, [serviceYears] = @serviceYears, [proPic] = @proPic, [salary] = @salary, [password] = @password, [subject2] = @subject2 WHERE (([staffID] = @Original_staffID) AND ([memberType] = @Original_memberType) AND ([accessLevel] = @Original_accessLevel) AND ([gender] = @Original_gender) AND ([NIC] = @Original_NIC) AND ([DOB] = @Original_DOB) AND ([phoneNo] = @Original_phoneNo) AND ((@IsNull_serviceYears = 1 AND [serviceYears] IS NULL) OR ([serviceYears] = @Original_serviceYears)) AND ([salary] = @Original_salary) AND ([password] = @Original_password));
+SELECT staffID, memberType, accessLevel, fullName, name, gender, NIC, DOB, address, phoneNo, email, subject, pastSchool, serviceYears, proPic, salary, password, subject2 FROM staff WHERE (staffID = @staffID)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@memberType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "memberType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@accessLevel", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "accessLevel", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@fullName", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "fullName", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@gender", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "gender", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NIC", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NIC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@NIC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NIC", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@DOB", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DOB", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@address", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "address", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@phoneNo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "phoneNo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -1320,11 +1366,12 @@ SELECT staffID, memberType, accessLevel, fullName, name, gender, NIC, DOB, addre
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@proPic", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "proPic", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@salary", global::System.Data.SqlDbType.Real, 0, global::System.Data.ParameterDirection.Input, 0, 0, "salary", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@password", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "password", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@subject2", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "subject2", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_staffID", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "staffID", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_memberType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "memberType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_accessLevel", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "accessLevel", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_gender", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "gender", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NIC", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NIC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_NIC", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "NIC", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_DOB", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "DOB", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_phoneNo", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "phoneNo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_serviceYears", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "serviceYears", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
@@ -1348,8 +1395,8 @@ SELECT staffID, memberType, accessLevel, fullName, name, gender, NIC, DOB, addre
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT staffID, memberType, accessLevel, fullName, name, gender, NIC, DOB, addres" +
-                "s, phoneNo, email, subject, pastSchool, serviceYears, proPic, salary, password F" +
-                "ROM dbo.staff";
+                "s, phoneNo, email, subject, pastSchool, serviceYears, proPic, salary, password, " +
+                "subject2 FROM dbo.staff";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1357,7 +1404,7 @@ SELECT staffID, memberType, accessLevel, fullName, name, gender, NIC, DOB, addre
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(SchoolManagementSystemDBDataSet1.staffDataTable dataTable) {
+        public virtual int Fill(ViewStaffDataSet.staffDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1370,9 +1417,9 @@ SELECT staffID, memberType, accessLevel, fullName, name, gender, NIC, DOB, addre
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual SchoolManagementSystemDBDataSet1.staffDataTable GetData() {
+        public virtual ViewStaffDataSet.staffDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            SchoolManagementSystemDBDataSet1.staffDataTable dataTable = new SchoolManagementSystemDBDataSet1.staffDataTable();
+            ViewStaffDataSet.staffDataTable dataTable = new ViewStaffDataSet.staffDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1380,14 +1427,14 @@ SELECT staffID, memberType, accessLevel, fullName, name, gender, NIC, DOB, addre
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SchoolManagementSystemDBDataSet1.staffDataTable dataTable) {
+        public virtual int Update(ViewStaffDataSet.staffDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(SchoolManagementSystemDBDataSet1 dataSet) {
+        public virtual int Update(ViewStaffDataSet dataSet) {
             return this.Adapter.Update(dataSet, "staff");
         }
         
@@ -1499,7 +1546,8 @@ SELECT staffID, memberType, accessLevel, fullName, name, gender, NIC, DOB, addre
                     global::System.Nullable<int> serviceYears, 
                     string proPic, 
                     float salary, 
-                    string password) {
+                    string password, 
+                    string subject2) {
             if ((memberType == null)) {
                 throw new global::System.ArgumentNullException("memberType");
             }
@@ -1591,6 +1639,12 @@ SELECT staffID, memberType, accessLevel, fullName, name, gender, NIC, DOB, addre
             else {
                 this.Adapter.InsertCommand.Parameters[15].Value = ((string)(password));
             }
+            if ((subject2 == null)) {
+                this.Adapter.InsertCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[16].Value = ((string)(subject2));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1628,6 +1682,7 @@ SELECT staffID, memberType, accessLevel, fullName, name, gender, NIC, DOB, addre
                     string proPic, 
                     float salary, 
                     string password, 
+                    string subject2, 
                     int Original_staffID, 
                     string Original_memberType, 
                     string Original_accessLevel, 
@@ -1730,59 +1785,65 @@ SELECT staffID, memberType, accessLevel, fullName, name, gender, NIC, DOB, addre
             else {
                 this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(password));
             }
-            this.Adapter.UpdateCommand.Parameters[16].Value = ((int)(Original_staffID));
+            if ((subject2 == null)) {
+                this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(subject2));
+            }
+            this.Adapter.UpdateCommand.Parameters[17].Value = ((int)(Original_staffID));
             if ((Original_memberType == null)) {
                 throw new global::System.ArgumentNullException("Original_memberType");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((string)(Original_memberType));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_memberType));
             }
             if ((Original_accessLevel == null)) {
                 throw new global::System.ArgumentNullException("Original_accessLevel");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_accessLevel));
+                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_accessLevel));
             }
             if ((Original_gender == null)) {
                 throw new global::System.ArgumentNullException("Original_gender");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[19].Value = ((string)(Original_gender));
+                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_gender));
             }
             if ((Original_NIC == null)) {
                 throw new global::System.ArgumentNullException("Original_NIC");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[20].Value = ((string)(Original_NIC));
+                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_NIC));
             }
             if ((Original_DOB == null)) {
                 throw new global::System.ArgumentNullException("Original_DOB");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[21].Value = ((string)(Original_DOB));
+                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_DOB));
             }
             if ((Original_phoneNo == null)) {
                 throw new global::System.ArgumentNullException("Original_phoneNo");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[22].Value = ((string)(Original_phoneNo));
+                this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_phoneNo));
             }
             if ((Original_serviceYears.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((int)(Original_serviceYears.Value));
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((int)(Original_serviceYears.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[23].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[24].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[25].Value = ((float)(Original_salary));
+            this.Adapter.UpdateCommand.Parameters[26].Value = ((float)(Original_salary));
             if ((Original_password == null)) {
                 throw new global::System.ArgumentNullException("Original_password");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[26].Value = ((string)(Original_password));
+                this.Adapter.UpdateCommand.Parameters[27].Value = ((string)(Original_password));
             }
-            this.Adapter.UpdateCommand.Parameters[27].Value = ((int)(staffID));
+            this.Adapter.UpdateCommand.Parameters[28].Value = ((int)(staffID));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1820,6 +1881,7 @@ SELECT staffID, memberType, accessLevel, fullName, name, gender, NIC, DOB, addre
                     string proPic, 
                     float salary, 
                     string password, 
+                    string subject2, 
                     int Original_staffID, 
                     string Original_memberType, 
                     string Original_accessLevel, 
@@ -1830,7 +1892,7 @@ SELECT staffID, memberType, accessLevel, fullName, name, gender, NIC, DOB, addre
                     global::System.Nullable<int> Original_serviceYears, 
                     float Original_salary, 
                     string Original_password) {
-            return this.Update(memberType, accessLevel, fullName, name, gender, NIC, DOB, address, phoneNo, email, subject, pastSchool, serviceYears, proPic, salary, password, Original_staffID, Original_memberType, Original_accessLevel, Original_gender, Original_NIC, Original_DOB, Original_phoneNo, Original_serviceYears, Original_salary, Original_password, Original_staffID);
+            return this.Update(memberType, accessLevel, fullName, name, gender, NIC, DOB, address, phoneNo, email, subject, pastSchool, serviceYears, proPic, salary, password, subject2, Original_staffID, Original_memberType, Original_accessLevel, Original_gender, Original_NIC, Original_DOB, Original_phoneNo, Original_serviceYears, Original_salary, Original_password, Original_staffID);
         }
     }
     
@@ -1925,7 +1987,7 @@ SELECT staffID, memberType, accessLevel, fullName, name, gender, NIC, DOB, addre
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(SchoolManagementSystemDBDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(ViewStaffDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._staffTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.staff.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -1944,7 +2006,7 @@ SELECT staffID, memberType, accessLevel, fullName, name, gender, NIC, DOB, addre
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(SchoolManagementSystemDBDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(ViewStaffDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._staffTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.staff.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -1962,7 +2024,7 @@ SELECT staffID, memberType, accessLevel, fullName, name, gender, NIC, DOB, addre
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(SchoolManagementSystemDBDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(ViewStaffDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._staffTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.staff.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -2004,7 +2066,7 @@ SELECT staffID, memberType, accessLevel, fullName, name, gender, NIC, DOB, addre
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(SchoolManagementSystemDBDataSet1 dataSet) {
+        public virtual int UpdateAll(ViewStaffDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

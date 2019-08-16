@@ -78,8 +78,9 @@ namespace SchoolManagementSystem
 
         private void ViewStaffMembers_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'viewStaffDataSet.staff' table. You can move, or remove it, as needed.
+                this.staffTableAdapter.Fill(this.viewStaffDataSet.staff);
             // TODO: This line of code loads data into the 'schoolManagementSystemDBDataSet1.staff' table. You can move, or remove it, as needed.
-            this.staffTableAdapter1.Fill(this.schoolManagementSystemDBDataSet1.staff);
 
         }
 
@@ -157,6 +158,7 @@ namespace SchoolManagementSystem
 
             pwdtextBox2.Text = selectRow.Cells[16].Value.ToString();
             ConfirmPwdtextBox2.Text = selectRow.Cells[16].Value.ToString();
+            subTextBox2.Text = selectRow.Cells[17].Value.ToString();
         }
 
         private void SearchTextBox1_TextChanged(object sender, EventArgs e)
@@ -194,6 +196,35 @@ namespace SchoolManagementSystem
                 con.Open();
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
+
+                string memberTypeValue = "";
+                bool memberTypeisChecked = adedemicRadio.Checked;
+                if (memberTypeisChecked)
+                {
+                    memberTypeValue = adedemicRadio.Text;
+                }
+                else
+                {
+                    memberTypeValue = nonAcedemicRadio.Text;
+                }
+
+                string accessLevelValue = "";
+                bool accessLevelisChecked = adminRadio.Checked;
+                if (accessLevelisChecked)
+                    accessLevelValue = adminRadio.Text;
+                else
+                    accessLevelValue = userRadio.Text;
+
+                string genderValue = "";
+                bool genderisChecked = maleRadioButton2.Checked;
+                if (genderisChecked)
+                    genderValue = maleRadioButton2.Text;
+                else
+                    genderValue = femaleRadioButton1.Text;
+
+                cmd.CommandText = "INSERT INTO pastStaff(staffID,memberType,accessLevel,fullName,name,gender,NIC,DOB,address,phoneNo,email,subject,pastSchool,serviceYears,salary,password,subject2) VALUES('"+ staffID + "','" + memberTypeValue + "','" + accessLevelValue + "','" + NametextBox1.Text + "','" + nameTextBox2.Text + "','" + genderValue + "','" + NICTextBox.Text + "','" + dateTimePicker1.Value + "','" + addressTextBox.Text + "','" + phNoTextBox.Text + "','" + emailTextBox1.Text + "','" + subTextBox1.Text + "','" + pastSchTextBox.Text + "','" + Int32.Parse(serviceYrsTextBox.Text) + "','" + Convert.ToDouble(salaryTextBox.Text) + "','" + NICTextBox.Text + "','" + subTextBox2.Text + "')";
+                cmd.ExecuteNonQuery();
+
                 cmd.CommandText = "delete from staff where staffID = '" + staffID + "'";
                 cmd.ExecuteNonQuery();
                 con.Close();

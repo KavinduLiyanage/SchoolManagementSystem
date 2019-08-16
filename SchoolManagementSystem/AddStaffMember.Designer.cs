@@ -43,8 +43,6 @@
             this.serviceYrsLabel1 = new System.Windows.Forms.Label();
             this.pastSchTextBox = new System.Windows.Forms.TextBox();
             this.paseSchLabel = new System.Windows.Forms.Label();
-            this.subTextBox1 = new System.Windows.Forms.TextBox();
-            this.subLabel = new System.Windows.Forms.Label();
             this.addStaffBtn = new System.Windows.Forms.Button();
             this.genderPanel = new System.Windows.Forms.Panel();
             this.femaleRadioButton1 = new System.Windows.Forms.RadioButton();
@@ -78,6 +76,10 @@
             this.ButtonPanel = new System.Windows.Forms.Panel();
             this.headerPanel = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.subTextBox2 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.subTextBox1 = new System.Windows.Forms.TextBox();
+            this.subLabel = new System.Windows.Forms.Label();
             this.ContentPanel.SuspendLayout();
             this.addGroupBox.SuspendLayout();
             this.genderPanel.SuspendLayout();
@@ -125,6 +127,10 @@
             // 
             // addGroupBox
             // 
+            this.addGroupBox.Controls.Add(this.subTextBox2);
+            this.addGroupBox.Controls.Add(this.label1);
+            this.addGroupBox.Controls.Add(this.subTextBox1);
+            this.addGroupBox.Controls.Add(this.subLabel);
             this.addGroupBox.Controls.Add(this.salaryTextBox);
             this.addGroupBox.Controls.Add(this.salaryLabel);
             this.addGroupBox.Controls.Add(this.phNoTextBox);
@@ -135,8 +141,6 @@
             this.addGroupBox.Controls.Add(this.serviceYrsLabel1);
             this.addGroupBox.Controls.Add(this.pastSchTextBox);
             this.addGroupBox.Controls.Add(this.paseSchLabel);
-            this.addGroupBox.Controls.Add(this.subTextBox1);
-            this.addGroupBox.Controls.Add(this.subLabel);
             this.addGroupBox.Controls.Add(this.addStaffBtn);
             this.addGroupBox.Controls.Add(this.genderPanel);
             this.addGroupBox.Controls.Add(this.addressTextBox);
@@ -210,7 +214,7 @@
             // 
             // serviceYrsTextBox
             // 
-            this.serviceYrsTextBox.Location = new System.Drawing.Point(630, 240);
+            this.serviceYrsTextBox.Location = new System.Drawing.Point(630, 278);
             this.serviceYrsTextBox.Name = "serviceYrsTextBox";
             this.serviceYrsTextBox.Size = new System.Drawing.Size(246, 22);
             this.serviceYrsTextBox.TabIndex = 22;
@@ -219,7 +223,7 @@
             // 
             this.serviceYrsLabel1.AutoSize = true;
             this.serviceYrsLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.serviceYrsLabel1.Location = new System.Drawing.Point(468, 239);
+            this.serviceYrsLabel1.Location = new System.Drawing.Point(468, 277);
             this.serviceYrsLabel1.Name = "serviceYrsLabel1";
             this.serviceYrsLabel1.Size = new System.Drawing.Size(134, 25);
             this.serviceYrsLabel1.TabIndex = 21;
@@ -227,7 +231,7 @@
             // 
             // pastSchTextBox
             // 
-            this.pastSchTextBox.Location = new System.Drawing.Point(630, 196);
+            this.pastSchTextBox.Location = new System.Drawing.Point(630, 234);
             this.pastSchTextBox.Name = "pastSchTextBox";
             this.pastSchTextBox.Size = new System.Drawing.Size(246, 22);
             this.pastSchTextBox.TabIndex = 20;
@@ -236,28 +240,11 @@
             // 
             this.paseSchLabel.AutoSize = true;
             this.paseSchLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.paseSchLabel.Location = new System.Drawing.Point(468, 195);
+            this.paseSchLabel.Location = new System.Drawing.Point(468, 233);
             this.paseSchLabel.Name = "paseSchLabel";
             this.paseSchLabel.Size = new System.Drawing.Size(117, 25);
             this.paseSchLabel.TabIndex = 19;
             this.paseSchLabel.Text = "Past School";
-            // 
-            // subTextBox1
-            // 
-            this.subTextBox1.Location = new System.Drawing.Point(630, 153);
-            this.subTextBox1.Name = "subTextBox1";
-            this.subTextBox1.Size = new System.Drawing.Size(246, 22);
-            this.subTextBox1.TabIndex = 18;
-            // 
-            // subLabel
-            // 
-            this.subLabel.AutoSize = true;
-            this.subLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.subLabel.Location = new System.Drawing.Point(468, 152);
-            this.subLabel.Name = "subLabel";
-            this.subLabel.Size = new System.Drawing.Size(78, 25);
-            this.subLabel.TabIndex = 17;
-            this.subLabel.Text = "Subject";
             // 
             // addStaffBtn
             // 
@@ -601,6 +588,40 @@
             this.pictureBox1.TabIndex = 33;
             this.pictureBox1.TabStop = false;
             // 
+            // subTextBox2
+            // 
+            this.subTextBox2.Location = new System.Drawing.Point(631, 195);
+            this.subTextBox2.Name = "subTextBox2";
+            this.subTextBox2.Size = new System.Drawing.Size(246, 22);
+            this.subTextBox2.TabIndex = 52;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.Location = new System.Drawing.Point(468, 194);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(94, 25);
+            this.label1.TabIndex = 51;
+            this.label1.Text = "Subject 2";
+            // 
+            // subTextBox1
+            // 
+            this.subTextBox1.Location = new System.Drawing.Point(630, 156);
+            this.subTextBox1.Name = "subTextBox1";
+            this.subTextBox1.Size = new System.Drawing.Size(246, 22);
+            this.subTextBox1.TabIndex = 50;
+            // 
+            // subLabel
+            // 
+            this.subLabel.AutoSize = true;
+            this.subLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.subLabel.Location = new System.Drawing.Point(468, 155);
+            this.subLabel.Name = "subLabel";
+            this.subLabel.Size = new System.Drawing.Size(94, 25);
+            this.subLabel.TabIndex = 49;
+            this.subLabel.Text = "Subject 1";
+            // 
             // AddStaffMember
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -675,8 +696,6 @@
         private System.Windows.Forms.Label genderLabel;
         private System.Windows.Forms.RadioButton maleRadioButton2;
         private System.Windows.Forms.Button addStaffBtn;
-        private System.Windows.Forms.TextBox subTextBox1;
-        private System.Windows.Forms.Label subLabel;
         private System.Windows.Forms.TextBox pastSchTextBox;
         private System.Windows.Forms.Label paseSchLabel;
         private System.Windows.Forms.TextBox emailTextBox1;
@@ -687,5 +706,9 @@
         private System.Windows.Forms.Label phNolabel;
         private System.Windows.Forms.TextBox salaryTextBox;
         private System.Windows.Forms.Label salaryLabel;
+        private System.Windows.Forms.TextBox subTextBox2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox subTextBox1;
+        private System.Windows.Forms.Label subLabel;
     }
 }

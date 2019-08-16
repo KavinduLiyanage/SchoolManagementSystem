@@ -77,6 +77,7 @@
     <Compile Include="ClassResultSheet.designer.cs">
       <DependentUpon>ClassResultSheet.cs</DependentUpon>
     </Compile>
+    <Compile Include="Connection.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>

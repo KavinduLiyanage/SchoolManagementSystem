@@ -7,18 +7,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace SchoolManagementSystem
 {
     public partial class AddMarks : Form
     {
+        SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-7DMUT13V\ASHANI;Initial Catalog=SchoolManagementSystemDB;Integrated Security=True");
+
         public AddMarks()
         {
             InitializeComponent();
+
+            //to get only year without month and date
+            YearPicker.Format = DateTimePickerFormat.Custom;
+            YearPicker.CustomFormat = "yyyy";
+            YearPicker.ShowUpDown = true;
         }
+       Connection o = new Connection();
 
         private void AddMarks_Load(object sender, EventArgs e)
         {
+            //to give created method
+            FillSubjectCombo();
+            displayData();
+
 
         }
 
@@ -29,7 +42,17 @@ namespace SchoolManagementSystem
 
         private void Button1_Click(object sender, EventArgs e)
         {
+            con.Open();
+            string qry = "INSERT INTO ExamMarks VALUES('" + tbRegNo.Text + "', @SubjectID ,'" + cbExam.Text + "','" + tbMark.Text + "','" + YearPicker.Value.Year + "')";
 
+
+            SqlCommand cmd = new SqlCommand(qry, o.con);
+
+            cmd.Parameters.AddWithValue("@SubjectID", cbSubName.SelectedValue);
+            cmd.ExecuteNonQuery();
+            cmd.Parameters.Clear();
+            MessageBox.Show("Record Inserted successfully!!");
+            con.Close();
         }
 
         private void Label1_Click_1(object sender, EventArgs e)
@@ -151,6 +174,65 @@ namespace SchoolManagementSystem
 
         private void Label1_Click_2(object sender, EventArgs e)
         {
+
+        }
+
+        void FillSubjectCombo()
+        {
+            
+            cbSubName.Items.Clear();
+
+            DataSet ds = new DataSet();
+            try
+            {
+
+                string query = "select * from Subject";
+                SqlDataAdapter da = new SqlDataAdapter(query, con);
+                con.Open();
+
+                da.Fill(ds);
+
+                cbSubName.DataSource = ds.Tables[0];
+                cbSubName.DisplayMember = "SubjectName";
+                cbSubName.ValueMember = "SubjectID";
+
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
+  
+
+        }
+
+        public void displayData()
+        {
+            try
+            {
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "SELECT * FROM ExamMarks  ";
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                dataGridViewMarks.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
 
         }
     }

@@ -116,6 +116,12 @@
     <Compile Include="SectionResultSheet.designer.cs">
       <DependentUpon>SectionResultSheet.cs</DependentUpon>
     </Compile>
+    <Compile Include="StaffReqLeave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffReqLeave.Designer.cs">
+      <DependentUpon>StaffReqLeave.cs</DependentUpon>
+    </Compile>
     <Compile Include="StudentExam.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -222,6 +228,9 @@
     </Compile>
     <EmbeddedResource Include="SectionResultSheet.resx">
       <DependentUpon>SectionResultSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffReqLeave.resx">
+      <DependentUpon>StaffReqLeave.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StudentExam.resx">
       <DependentUpon>StudentExam.cs</DependentUpon>

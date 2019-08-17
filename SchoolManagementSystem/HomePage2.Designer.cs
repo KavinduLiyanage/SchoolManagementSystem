@@ -45,6 +45,8 @@
             this.MngStuImgBtn = new System.Windows.Forms.Button();
             this.MngStaffBtn = new System.Windows.Forms.Button();
             this.MngStaffImgBtn = new System.Windows.Forms.Button();
+            this.ReqLeaveBtn = new System.Windows.Forms.Button();
+            this.ReqLeaveImgBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // MngNticeBtn
@@ -223,12 +225,36 @@
             this.MngStaffImgBtn.TabIndex = 24;
             this.MngStaffImgBtn.UseVisualStyleBackColor = true;
             // 
+            // ReqLeaveBtn
+            // 
+            this.ReqLeaveBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.ReqLeaveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ReqLeaveBtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ReqLeaveBtn.Location = new System.Drawing.Point(1066, 284);
+            this.ReqLeaveBtn.Name = "ReqLeaveBtn";
+            this.ReqLeaveBtn.Size = new System.Drawing.Size(145, 70);
+            this.ReqLeaveBtn.TabIndex = 41;
+            this.ReqLeaveBtn.Text = "Request Leave";
+            this.ReqLeaveBtn.UseVisualStyleBackColor = false;
+            // 
+            // ReqLeaveImgBtn
+            // 
+            this.ReqLeaveImgBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ReqLeaveImgBtn.BackgroundImage")));
+            this.ReqLeaveImgBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ReqLeaveImgBtn.Location = new System.Drawing.Point(1090, 186);
+            this.ReqLeaveImgBtn.Name = "ReqLeaveImgBtn";
+            this.ReqLeaveImgBtn.Size = new System.Drawing.Size(95, 92);
+            this.ReqLeaveImgBtn.TabIndex = 40;
+            this.ReqLeaveImgBtn.UseVisualStyleBackColor = true;
+            // 
             // HomePage2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GrayText;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.ReqLeaveBtn);
+            this.Controls.Add(this.ReqLeaveImgBtn);
             this.Controls.Add(this.MngNticeBtn);
             this.Controls.Add(this.MngNticeImgBtn);
             this.Controls.Add(this.MngLibBtn);
@@ -272,5 +298,7 @@
         private System.Windows.Forms.Button MngStuImgBtn;
         private System.Windows.Forms.Button MngStaffBtn;
         private System.Windows.Forms.Button MngStaffImgBtn;
+        private System.Windows.Forms.Button ReqLeaveBtn;
+        private System.Windows.Forms.Button ReqLeaveImgBtn;
     }
 }

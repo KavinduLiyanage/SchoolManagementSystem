@@ -52,5 +52,19 @@ namespace SchoolManagementSystem
             this.Hide();
             home.ShowDialog();
         }
+
+        private void MngResrceImgBtn_Click(object sender, EventArgs e)
+        {
+            ResourceManageHome resMngHome = new ResourceManageHome();
+            this.Hide();
+            resMngHome.ShowDialog();
+        }
+
+        private void MngResrceBtn_Click(object sender, EventArgs e)
+        {
+            ResourceManageHome resMngHome = new ResourceManageHome();
+            this.Hide();
+            resMngHome.ShowDialog();
+        }
     }
 }

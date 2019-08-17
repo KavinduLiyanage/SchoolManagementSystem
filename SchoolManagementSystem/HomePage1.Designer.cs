@@ -173,6 +173,7 @@
             this.MngResrceBtn.TabIndex = 19;
             this.MngResrceBtn.Text = "Resource Management";
             this.MngResrceBtn.UseVisualStyleBackColor = false;
+            this.MngResrceBtn.Click += new System.EventHandler(this.MngResrceBtn_Click);
             // 
             // MngResrceImgBtn
             // 
@@ -183,6 +184,7 @@
             this.MngResrceImgBtn.Size = new System.Drawing.Size(95, 92);
             this.MngResrceImgBtn.TabIndex = 18;
             this.MngResrceImgBtn.UseVisualStyleBackColor = true;
+            this.MngResrceImgBtn.Click += new System.EventHandler(this.MngResrceImgBtn_Click);
             // 
             // MngLibBtn
             // 

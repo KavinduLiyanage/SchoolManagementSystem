@@ -51,18 +51,18 @@
             this.ContentPanel = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tbSearch = new System.Windows.Forms.TextBox();
+            this.searchText = new System.Windows.Forms.TextBox();
             this.lbTimetableIDATT = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnInsertATT = new System.Windows.Forms.Button();
-            this.addressTextBox = new System.Windows.Forms.TextBox();
-            this.addressLabel = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.doblabel = new System.Windows.Forms.Label();
-            this.NICTextBox = new System.Windows.Forms.TextBox();
-            this.nicLabel1 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
+            this.reasonTextBox = new System.Windows.Forms.TextBox();
+            this.reasonLabel = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.doblabel = new System.Windows.Forms.Label();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
+            this.nameLabel1 = new System.Windows.Forms.Label();
+            this.btnInsertATT = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             this.ButtonPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgPanel)).BeginInit();
@@ -308,7 +308,7 @@
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel3.Controls.Add(this.dataGridView1);
-            this.panel3.Controls.Add(this.tbSearch);
+            this.panel3.Controls.Add(this.searchText);
             this.panel3.Controls.Add(this.lbTimetableIDATT);
             this.panel3.Location = new System.Drawing.Point(401, 16);
             this.panel3.Name = "panel3";
@@ -325,12 +325,12 @@
             this.dataGridView1.Size = new System.Drawing.Size(526, 446);
             this.dataGridView1.TabIndex = 14;
             // 
-            // tbSearch
+            // searchText
             // 
-            this.tbSearch.Location = new System.Drawing.Point(133, 18);
-            this.tbSearch.Name = "tbSearch";
-            this.tbSearch.Size = new System.Drawing.Size(403, 22);
-            this.tbSearch.TabIndex = 12;
+            this.searchText.Location = new System.Drawing.Point(133, 18);
+            this.searchText.Name = "searchText";
+            this.searchText.Size = new System.Drawing.Size(403, 22);
+            this.searchText.TabIndex = 12;
             // 
             // lbTimetableIDATT
             // 
@@ -347,46 +347,52 @@
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel2.Controls.Add(this.dateTimePicker2);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.addressTextBox);
-            this.panel2.Controls.Add(this.addressLabel);
+            this.panel2.Controls.Add(this.reasonTextBox);
+            this.panel2.Controls.Add(this.reasonLabel);
             this.panel2.Controls.Add(this.dateTimePicker1);
             this.panel2.Controls.Add(this.doblabel);
-            this.panel2.Controls.Add(this.NICTextBox);
-            this.panel2.Controls.Add(this.nicLabel1);
+            this.panel2.Controls.Add(this.nameTextBox);
+            this.panel2.Controls.Add(this.nameLabel1);
             this.panel2.Controls.Add(this.btnInsertATT);
             this.panel2.Location = new System.Drawing.Point(4, 14);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(380, 491);
+            this.panel2.Size = new System.Drawing.Size(380, 533);
             this.panel2.TabIndex = 31;
             // 
-            // btnInsertATT
+            // dateTimePicker2
             // 
-            this.btnInsertATT.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnInsertATT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsertATT.Location = new System.Drawing.Point(128, 408);
-            this.btnInsertATT.Name = "btnInsertATT";
-            this.btnInsertATT.Size = new System.Drawing.Size(130, 50);
-            this.btnInsertATT.TabIndex = 14;
-            this.btnInsertATT.Text = "Insert";
-            this.btnInsertATT.UseVisualStyleBackColor = false;
+            this.dateTimePicker2.Location = new System.Drawing.Point(172, 174);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(195, 22);
+            this.dateTimePicker2.TabIndex = 22;
             // 
-            // addressTextBox
+            // label1
             // 
-            this.addressTextBox.Location = new System.Drawing.Point(171, 216);
-            this.addressTextBox.Multiline = true;
-            this.addressTextBox.Name = "addressTextBox";
-            this.addressTextBox.Size = new System.Drawing.Size(194, 65);
-            this.addressTextBox.TabIndex = 20;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.Location = new System.Drawing.Point(5, 176);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(123, 25);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Date Of Birth";
             // 
-            // addressLabel
+            // reasonTextBox
             // 
-            this.addressLabel.AutoSize = true;
-            this.addressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.addressLabel.Location = new System.Drawing.Point(5, 215);
-            this.addressLabel.Name = "addressLabel";
-            this.addressLabel.Size = new System.Drawing.Size(85, 25);
-            this.addressLabel.TabIndex = 19;
-            this.addressLabel.Text = "Address";
+            this.reasonTextBox.Location = new System.Drawing.Point(171, 216);
+            this.reasonTextBox.Multiline = true;
+            this.reasonTextBox.Name = "reasonTextBox";
+            this.reasonTextBox.Size = new System.Drawing.Size(194, 65);
+            this.reasonTextBox.TabIndex = 20;
+            // 
+            // reasonLabel
+            // 
+            this.reasonLabel.AutoSize = true;
+            this.reasonLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.reasonLabel.Location = new System.Drawing.Point(5, 215);
+            this.reasonLabel.Name = "reasonLabel";
+            this.reasonLabel.Size = new System.Drawing.Size(79, 25);
+            this.reasonLabel.TabIndex = 19;
+            this.reasonLabel.Text = "Reason";
             // 
             // dateTimePicker1
             // 
@@ -405,39 +411,33 @@
             this.doblabel.TabIndex = 17;
             this.doblabel.Text = "Date Of Birth";
             // 
-            // NICTextBox
+            // nameTextBox
             // 
-            this.NICTextBox.Location = new System.Drawing.Point(171, 98);
-            this.NICTextBox.Name = "NICTextBox";
-            this.NICTextBox.Size = new System.Drawing.Size(194, 22);
-            this.NICTextBox.TabIndex = 16;
+            this.nameTextBox.Location = new System.Drawing.Point(171, 98);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(194, 22);
+            this.nameTextBox.TabIndex = 16;
             // 
-            // nicLabel1
+            // nameLabel1
             // 
-            this.nicLabel1.AutoSize = true;
-            this.nicLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.nicLabel1.Location = new System.Drawing.Point(5, 97);
-            this.nicLabel1.Name = "nicLabel1";
-            this.nicLabel1.Size = new System.Drawing.Size(46, 25);
-            this.nicLabel1.TabIndex = 15;
-            this.nicLabel1.Text = "NIC";
+            this.nameLabel1.AutoSize = true;
+            this.nameLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.nameLabel1.Location = new System.Drawing.Point(5, 97);
+            this.nameLabel1.Name = "nameLabel1";
+            this.nameLabel1.Size = new System.Drawing.Size(64, 25);
+            this.nameLabel1.TabIndex = 15;
+            this.nameLabel1.Text = "Name";
             // 
-            // dateTimePicker2
+            // btnInsertATT
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(172, 174);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(195, 22);
-            this.dateTimePicker2.TabIndex = 22;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(5, 176);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 25);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "Date Of Birth";
+            this.btnInsertATT.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnInsertATT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInsertATT.Location = new System.Drawing.Point(128, 408);
+            this.btnInsertATT.Name = "btnInsertATT";
+            this.btnInsertATT.Size = new System.Drawing.Size(130, 50);
+            this.btnInsertATT.TabIndex = 14;
+            this.btnInsertATT.Text = "Insert";
+            this.btnInsertATT.UseVisualStyleBackColor = false;
             // 
             // StaffReqLeave
             // 
@@ -494,17 +494,17 @@
         private System.Windows.Forms.Panel ContentPanel;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox tbSearch;
+        private System.Windows.Forms.TextBox searchText;
         private System.Windows.Forms.Label lbTimetableIDATT;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnInsertATT;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox addressTextBox;
-        private System.Windows.Forms.Label addressLabel;
+        private System.Windows.Forms.TextBox reasonTextBox;
+        private System.Windows.Forms.Label reasonLabel;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label doblabel;
-        private System.Windows.Forms.TextBox NICTextBox;
-        private System.Windows.Forms.Label nicLabel1;
+        private System.Windows.Forms.TextBox nameTextBox;
+        private System.Windows.Forms.Label nameLabel1;
     }
 }

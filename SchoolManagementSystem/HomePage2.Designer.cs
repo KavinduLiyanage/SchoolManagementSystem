@@ -236,6 +236,7 @@
             this.ReqLeaveBtn.TabIndex = 41;
             this.ReqLeaveBtn.Text = "Request Leave";
             this.ReqLeaveBtn.UseVisualStyleBackColor = false;
+            this.ReqLeaveBtn.Click += new System.EventHandler(this.ReqLeaveBtn_Click);
             // 
             // ReqLeaveImgBtn
             // 
@@ -246,6 +247,7 @@
             this.ReqLeaveImgBtn.Size = new System.Drawing.Size(95, 92);
             this.ReqLeaveImgBtn.TabIndex = 40;
             this.ReqLeaveImgBtn.UseVisualStyleBackColor = true;
+            this.ReqLeaveImgBtn.Click += new System.EventHandler(this.ReqLeaveImgBtn_Click);
             // 
             // HomePage2
             // 

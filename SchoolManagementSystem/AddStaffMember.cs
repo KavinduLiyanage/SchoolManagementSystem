@@ -216,25 +216,25 @@ namespace SchoolManagementSystem
 
             if (addressTextBox.Text.Equals(""))
             {
-                addCon = true;
+                addCon = false;
                 errorArr1.Add("Please Enter Address!");
             }
 
             if (salaryTextBox.Text.Equals(""))
             {
-                salaryCon = true;
+                salaryCon = false;
                 errorArr1.Add("Please Enter Salary!");
             }
 
             if (phNoTextBox.Text.Equals(""))
             {
-                phNoCon = true;
+                phNoCon = false;
                 errorArr1.Add("Please Enter a Phone Number!");
             }
 
             if (emailTextBox1.Text.Equals(""))
             {
-                mailCon = true;
+                mailCon = false;
                 errorArr1.Add("Please Enter a Email Address!");
             }
 

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Collections;
 
 namespace SchoolManagementSystem
 {
@@ -175,13 +176,7 @@ namespace SchoolManagementSystem
             con.Close();
         }
 
-        private void SearchTextBox1_Click(object sender, EventArgs e)
-        {
-            searchTextBox1.Text = "";
-            searchTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-        }
-
-        private void UpdateBtn_Click(object sender, EventArgs e)
+        private void updateBtnOperation()
         {
             string memberTypeValue = "";
             bool memberTypeisChecked = adedemicRadio.Checked;
@@ -208,32 +203,156 @@ namespace SchoolManagementSystem
             else
                 genderValue = femaleRadioButton1.Text;
 
-            if (pwdtextBox2.Text == ConfirmPwdtextBox2.Text)
+            DialogResult dlgResult = MessageBox.Show("Are You Sure You Want To Update?", "Update!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (dlgResult == DialogResult.Yes)
             {
-                DialogResult dlgResult = MessageBox.Show("Are You Sure You Want To Update?", "Update!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-                if (dlgResult == DialogResult.Yes)
-                {
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "UPDATE staff SET memberType = '" + memberTypeValue + "',accessLevel = '" + accessLevelValue + "',fullName = '" + NametextBox1.Text + "',name = '" + nameTextBox2.Text + "',gender = '" + genderValue + "',NIC = '" + NICTextBox.Text + "',DOB = '" + dateTimePicker1.Value + "',address = '" + addressTextBox.Text + "',phoneNo = '" + phNoTextBox.Text + "',email = '" + emailTextBox1.Text + "',subject = '" + subTextBox1.Text + "',pastSchool = '" + pastSchTextBox.Text + "',serviceYears = '" + Int32.Parse(serviceYrsTextBox.Text) + "',salary = '" + Convert.ToDouble(salaryTextBox.Text) + "',password = '" + pwdtextBox2.Text + "',subject2 = '" + subTextBox2.Text + "' WHERE staffID = '" + staffID + "'";
+                cmd.ExecuteNonQuery();
+                con.Close();
 
-                    con.Open();
-                    SqlCommand cmd = con.CreateCommand();
-                    cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = "UPDATE staff SET memberType = '" + memberTypeValue + "',accessLevel = '" + accessLevelValue + "',fullName = '" + NametextBox1.Text + "',name = '" + nameTextBox2.Text + "',gender = '" + genderValue + "',NIC = '" + NICTextBox.Text + "',DOB = '" + dateTimePicker1.Value + "',address = '" + addressTextBox.Text + "',phoneNo = '" + phNoTextBox.Text + "',email = '" + emailTextBox1.Text + "',subject = '" + subTextBox1.Text + "',pastSchool = '" + pastSchTextBox.Text + "',serviceYears = '" + Int32.Parse(serviceYrsTextBox.Text) + "',salary = '" + Convert.ToDouble(salaryTextBox.Text) + "',password = '" + pwdtextBox2.Text + "',subject2 = '" + subTextBox2.Text + "' WHERE staffID = '" + staffID + "'";
-                    cmd.ExecuteNonQuery();
-                    con.Close();
+                MessageBox.Show("Updated Succesfully");
 
-                    MessageBox.Show("Updated Succesfully");
-
-                    ViewStaffMembers viewStaff = new ViewStaffMembers();
-                    this.Hide();
-                    viewStaff.ShowDialog();
-                }
-
+                ViewStaffMembers viewStaff = new ViewStaffMembers();
+                this.Hide();
+                viewStaff.ShowDialog();
             }
-            else {
-                MessageBox.Show("Please Check Password!");
+        }
+
+        private void SearchTextBox1_Click(object sender, EventArgs e)
+        {
+            searchTextBox1.Text = "";
+            searchTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+        }
+
+        private void UpdateBtn_Click(object sender, EventArgs e)
+        {
+            string memberTypeValue = "";
+            bool memberTypeisChecked = adedemicRadio.Checked;
+            if (memberTypeisChecked)
+            {
+                memberTypeValue = adedemicRadio.Text;
+            }
+            else if (nonAcedemicRadio.Checked)
+            {
+                memberTypeValue = nonAcedemicRadio.Text;
+            }
+
+            string accessLevelValue = "";
+            bool accessLevelisChecked = adminRadio.Checked;
+            if (accessLevelisChecked)
+                accessLevelValue = adminRadio.Text;
+            else if (userRadio.Checked)
+                accessLevelValue = userRadio.Text;
+
+            string genderValue = "";
+            bool genderisChecked = maleRadioButton2.Checked;
+            if (genderisChecked)
+                genderValue = maleRadioButton2.Text;
+            else if (femaleRadioButton1.Checked)
+                genderValue = femaleRadioButton1.Text;
+
+            ArrayList errorArr1 = new ArrayList();
+
+            Boolean memTypeCon = true;
+            Boolean accessLevelCon = true;
+            Boolean genderCon = true;
+            Boolean fullNameCon = true;
+            Boolean nameCon = true;
+            Boolean nicCon = true;
+            Boolean addCon = true;
+            Boolean addressCon = true;
+            Boolean salaryCon = true;
+            Boolean phNoCon = true;
+            Boolean mailCon = true;
+            Boolean pwdEqlPwd = true;
+
+
+            if (memberTypeValue.Equals(""))
+            {
+                memTypeCon = false;
+                errorArr1.Add("Please Choose Member Type!");
+            }
+
+            if (accessLevelValue.Equals(""))
+            {
+                accessLevelCon = false;
+                errorArr1.Add("Please Choose Member Type!");
+            }
+
+            if (NametextBox1.Text.Equals(""))
+            {
+                fullNameCon = false;
+                errorArr1.Add("Please Enter Full Name!");
+            }
+
+            if (nameTextBox2.Text.Equals(""))
+            {
+                nameCon = false;
+                errorArr1.Add("Please Enter Name with Initials!");
+            }
+
+            if (genderValue.Equals(""))
+            {
+                genderCon = false;
+                errorArr1.Add("Please Choose a Gender!");
+            }
+
+            if (NICTextBox.Text.Equals(""))
+            {
+                nicCon = false;
+                errorArr1.Add("Please Enter NIC Number!");
+            }
+
+            if (addressTextBox.Text.Equals(""))
+            {
+                addCon = false;
+                errorArr1.Add("Please Enter Address!");
+            }
+
+            if (salaryTextBox.Text.Equals(""))
+            {
+                salaryCon = false;
+                errorArr1.Add("Please Enter Salary!");
+            }
+
+            if (phNoTextBox.Text.Equals(""))
+            {
+                phNoCon = false;
+                errorArr1.Add("Please Enter a Phone Number!");
+            }
+
+            if (emailTextBox1.Text.Equals(""))
+            {
+                mailCon = false;
+                errorArr1.Add("Please Enter a Email Address!");
+            }
+
+            if ((pwdtextBox2.Text != ConfirmPwdtextBox2.Text) || pwdtextBox2.Text.Equals("") || ConfirmPwdtextBox2.Text.Equals(""))
+            {
+                pwdEqlPwd = false;
+                errorArr1.Add("Please Check Password!");
                 pwdtextBox2.Text = "";
                 ConfirmPwdtextBox2.Text = "";
+            }
+
+                string arrayStr = "";
+            foreach (Object obj in errorArr1)
+            {
+                arrayStr = arrayStr + "\n" + obj;
+            }
+
+            if (pwdEqlPwd && memTypeCon && accessLevelCon && genderCon && fullNameCon && nameCon && nicCon && addCon && addressCon && salaryCon && phNoCon && mailCon)
+            {
+                this.updateBtnOperation();
+            }
+            else
+            {
+                MessageBox.Show(arrayStr);
             }
         }
 

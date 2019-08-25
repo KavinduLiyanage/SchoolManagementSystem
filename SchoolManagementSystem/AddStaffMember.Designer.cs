@@ -210,6 +210,7 @@
             this.salaryTextBox.Name = "salaryTextBox";
             this.salaryTextBox.Size = new System.Drawing.Size(246, 22);
             this.salaryTextBox.TabIndex = 28;
+            this.salaryTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SalaryTextBox_KeyPress);
             // 
             // salaryLabel
             // 
@@ -227,6 +228,8 @@
             this.phNoTextBox.Name = "phNoTextBox";
             this.phNoTextBox.Size = new System.Drawing.Size(246, 22);
             this.phNoTextBox.TabIndex = 26;
+            this.phNoTextBox.TextChanged += new System.EventHandler(this.PhNoTextBox_TextChanged);
+            this.phNoTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.PhNoTextBox_KeyPress);
             // 
             // phNolabel
             // 
@@ -261,6 +264,8 @@
             this.serviceYrsTextBox.Name = "serviceYrsTextBox";
             this.serviceYrsTextBox.Size = new System.Drawing.Size(246, 22);
             this.serviceYrsTextBox.TabIndex = 22;
+            this.serviceYrsTextBox.TextChanged += new System.EventHandler(this.ServiceYrsTextBox_TextChanged);
+            this.serviceYrsTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ServiceYrsTextBox_KeyPress);
             // 
             // serviceYrsLabel1
             // 
@@ -387,6 +392,8 @@
             this.NICTextBox.Name = "NICTextBox";
             this.NICTextBox.Size = new System.Drawing.Size(246, 22);
             this.NICTextBox.TabIndex = 9;
+            this.NICTextBox.TextChanged += new System.EventHandler(this.NICTextBox_TextChanged);
+            this.NICTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NICTextBox_KeyPress);
             // 
             // nicLabel1
             // 
@@ -404,6 +411,8 @@
             this.nameTextBox2.Name = "nameTextBox2";
             this.nameTextBox2.Size = new System.Drawing.Size(247, 22);
             this.nameTextBox2.TabIndex = 7;
+            this.nameTextBox2.TextChanged += new System.EventHandler(this.NameTextBox2_TextChanged);
+            this.nameTextBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NameTextBox2_KeyPress);
             // 
             // nameLabel2
             // 
@@ -512,6 +521,7 @@
             this.NametextBox1.Size = new System.Drawing.Size(246, 22);
             this.NametextBox1.TabIndex = 1;
             this.NametextBox1.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
+            this.NametextBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NametextBox1_KeyPress);
             // 
             // nameLabel
             // 

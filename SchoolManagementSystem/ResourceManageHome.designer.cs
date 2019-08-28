@@ -39,14 +39,13 @@
             this.btnInventoryMHeader = new System.Windows.Forms.Button();
             this.btnEventMHeader = new System.Windows.Forms.Button();
             this.subLabel2 = new System.Windows.Forms.PictureBox();
-            this.NViewLeaveBtn = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnNoticeMHeader = new System.Windows.Forms.Button();
             this.NHomeBtn = new System.Windows.Forms.Button();
-            this.NViewStaffBtn = new System.Windows.Forms.Button();
-            this.NViewSalaryBtn = new System.Windows.Forms.Button();
-            this.NAddStaffBtn = new System.Windows.Forms.Button();
-            this.NStaffHomeBtn = new System.Windows.Forms.Button();
+            this.timetablebtn = new System.Windows.Forms.Button();
+            this.viewtimetablebtn = new System.Windows.Forms.Button();
+            this.addclassbtn = new System.Windows.Forms.Button();
+            this.addsubbtn = new System.Windows.Forms.Button();
             this.ButtonPanel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
@@ -177,16 +176,6 @@
             this.subLabel2.TabIndex = 50;
             this.subLabel2.TabStop = false;
             // 
-            // NViewLeaveBtn
-            // 
-            this.NViewLeaveBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.NViewLeaveBtn.Location = new System.Drawing.Point(11, 187);
-            this.NViewLeaveBtn.Name = "NViewLeaveBtn";
-            this.NViewLeaveBtn.Size = new System.Drawing.Size(235, 35);
-            this.NViewLeaveBtn.TabIndex = 18;
-            this.NViewLeaveBtn.Text = "View Staff Leave";
-            this.NViewLeaveBtn.UseVisualStyleBackColor = false;
-            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.SkyBlue;
@@ -227,55 +216,58 @@
             this.NHomeBtn.Text = "Home";
             this.NHomeBtn.UseVisualStyleBackColor = false;
             // 
-            // NViewStaffBtn
+            // timetablebtn
             // 
-            this.NViewStaffBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.NViewStaffBtn.Location = new System.Drawing.Point(11, 115);
-            this.NViewStaffBtn.Name = "NViewStaffBtn";
-            this.NViewStaffBtn.Size = new System.Drawing.Size(235, 35);
-            this.NViewStaffBtn.TabIndex = 23;
-            this.NViewStaffBtn.Text = "View Staff Member";
-            this.NViewStaffBtn.UseVisualStyleBackColor = false;
+            this.timetablebtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.timetablebtn.Location = new System.Drawing.Point(11, 115);
+            this.timetablebtn.Name = "timetablebtn";
+            this.timetablebtn.Size = new System.Drawing.Size(235, 35);
+            this.timetablebtn.TabIndex = 23;
+            this.timetablebtn.Text = "Timetable";
+            this.timetablebtn.UseVisualStyleBackColor = false;
+            this.timetablebtn.Click += new System.EventHandler(this.Timetablebtn_Click);
             // 
-            // NViewSalaryBtn
+            // viewtimetablebtn
             // 
-            this.NViewSalaryBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.NViewSalaryBtn.Location = new System.Drawing.Point(11, 151);
-            this.NViewSalaryBtn.Name = "NViewSalaryBtn";
-            this.NViewSalaryBtn.Size = new System.Drawing.Size(235, 35);
-            this.NViewSalaryBtn.TabIndex = 18;
-            this.NViewSalaryBtn.Text = "View Salary Info";
-            this.NViewSalaryBtn.UseVisualStyleBackColor = false;
+            this.viewtimetablebtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.viewtimetablebtn.Location = new System.Drawing.Point(11, 151);
+            this.viewtimetablebtn.Name = "viewtimetablebtn";
+            this.viewtimetablebtn.Size = new System.Drawing.Size(235, 35);
+            this.viewtimetablebtn.TabIndex = 18;
+            this.viewtimetablebtn.Text = "View Timetable";
+            this.viewtimetablebtn.UseVisualStyleBackColor = false;
+            this.viewtimetablebtn.Click += new System.EventHandler(this.Viewtimetablebtn_Click);
             // 
-            // NAddStaffBtn
+            // addclassbtn
             // 
-            this.NAddStaffBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.NAddStaffBtn.Location = new System.Drawing.Point(10, 79);
-            this.NAddStaffBtn.Name = "NAddStaffBtn";
-            this.NAddStaffBtn.Size = new System.Drawing.Size(235, 35);
-            this.NAddStaffBtn.TabIndex = 17;
-            this.NAddStaffBtn.Text = "Add Staff Member";
-            this.NAddStaffBtn.UseVisualStyleBackColor = false;
+            this.addclassbtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.addclassbtn.Location = new System.Drawing.Point(10, 79);
+            this.addclassbtn.Name = "addclassbtn";
+            this.addclassbtn.Size = new System.Drawing.Size(235, 35);
+            this.addclassbtn.TabIndex = 17;
+            this.addclassbtn.Text = "Add Classroom";
+            this.addclassbtn.UseVisualStyleBackColor = false;
+            this.addclassbtn.Click += new System.EventHandler(this.Addclassbtn_Click);
             // 
-            // NStaffHomeBtn
+            // addsubbtn
             // 
-            this.NStaffHomeBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.NStaffHomeBtn.Location = new System.Drawing.Point(11, 42);
-            this.NStaffHomeBtn.Name = "NStaffHomeBtn";
-            this.NStaffHomeBtn.Size = new System.Drawing.Size(235, 35);
-            this.NStaffHomeBtn.TabIndex = 17;
-            this.NStaffHomeBtn.Text = "Staff Manage Home";
-            this.NStaffHomeBtn.UseVisualStyleBackColor = false;
+            this.addsubbtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.addsubbtn.Location = new System.Drawing.Point(11, 42);
+            this.addsubbtn.Name = "addsubbtn";
+            this.addsubbtn.Size = new System.Drawing.Size(235, 35);
+            this.addsubbtn.TabIndex = 17;
+            this.addsubbtn.Text = "Add Subject";
+            this.addsubbtn.UseVisualStyleBackColor = false;
+            this.addsubbtn.Click += new System.EventHandler(this.Addsubbtn_Click);
             // 
             // ButtonPanel
             // 
             this.ButtonPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ButtonPanel.Controls.Add(this.NHomeBtn);
-            this.ButtonPanel.Controls.Add(this.NViewStaffBtn);
-            this.ButtonPanel.Controls.Add(this.NViewLeaveBtn);
-            this.ButtonPanel.Controls.Add(this.NViewSalaryBtn);
-            this.ButtonPanel.Controls.Add(this.NAddStaffBtn);
-            this.ButtonPanel.Controls.Add(this.NStaffHomeBtn);
+            this.ButtonPanel.Controls.Add(this.timetablebtn);
+            this.ButtonPanel.Controls.Add(this.viewtimetablebtn);
+            this.ButtonPanel.Controls.Add(this.addclassbtn);
+            this.ButtonPanel.Controls.Add(this.addsubbtn);
             this.ButtonPanel.Location = new System.Drawing.Point(17, 331);
             this.ButtonPanel.Name = "ButtonPanel";
             this.ButtonPanel.Size = new System.Drawing.Size(260, 335);
@@ -339,7 +331,7 @@
             this.label1.Text = "RESOURCE MANAGEMENT";
             this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
-            // Form1
+            // ResourceManageHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -351,7 +343,7 @@
             this.Controls.Add(this.subLabel2);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.ButtonPanel);
-            this.Name = "Form1";
+            this.Name = "ResourceManageHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -376,14 +368,13 @@
         private System.Windows.Forms.Button btnInventoryMHeader;
         private System.Windows.Forms.Button btnEventMHeader;
         private System.Windows.Forms.PictureBox subLabel2;
-        private System.Windows.Forms.Button NViewLeaveBtn;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnNoticeMHeader;
         private System.Windows.Forms.Button NHomeBtn;
-        private System.Windows.Forms.Button NViewStaffBtn;
-        private System.Windows.Forms.Button NViewSalaryBtn;
-        private System.Windows.Forms.Button NAddStaffBtn;
-        private System.Windows.Forms.Button NStaffHomeBtn;
+        private System.Windows.Forms.Button timetablebtn;
+        private System.Windows.Forms.Button viewtimetablebtn;
+        private System.Windows.Forms.Button addclassbtn;
+        private System.Windows.Forms.Button addsubbtn;
         private System.Windows.Forms.Panel ButtonPanel;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;

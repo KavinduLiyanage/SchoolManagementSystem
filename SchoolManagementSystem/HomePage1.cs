@@ -22,7 +22,9 @@ namespace SchoolManagementSystem
 
         private void MngEvtImgBtn_Click(object sender, EventArgs e)
         {
-
+            EventDashboard eveDash = new EventDashboard();
+            this.Hide();
+            eveDash.ShowDialog();
         }
 
         private void MngStaffBtn_Click(object sender, EventArgs e)
@@ -67,11 +69,35 @@ namespace SchoolManagementSystem
             resMngHome.ShowDialog();
         }
 
+        private void MngEvtBtn_Click(object sender, EventArgs e)
+        {
+            EventDashboard eveDash = new EventDashboard();
+            this.Hide();
+            eveDash.ShowDialog();
+        }
+
+        private void MngNticeImgBtn_Click(object sender, EventArgs e)
+        {
+            Notice_Dashboard newdash = new Notice_Dashboard();
+            this.Hide();
+            newdash.ShowDialog();
+        }
+
+        private void MngNticeBtn_Click(object sender, EventArgs e)
+        {
+            Notice_Dashboard newdash = new Notice_Dashboard();
+            this.Hide();
+            newdash.ShowDialog();
+        }
+
         private void MngStuBtn_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            CreateStudentAccount sacc = new CreateStudentAccount();
-            sacc.ShowDialog();
+
+        }
+
+        private void MngStuImgBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -25,24 +25,51 @@ namespace SchoolManagementSystem
 
         private void Button1_Click(object sender, EventArgs e)
         {
+          
             ManageSubject openForm = new ManageSubject();
-            openForm.Show();
-            Visible = false;
+            this.Hide();
+            openForm.ShowDialog();
 
         }
 
         private void Button2_Click(object sender, EventArgs e)
         {
             MngClassRoom openForm = new MngClassRoom();
-            openForm.Show();
-            Visible = false;
+            this.Hide();
+            openForm.ShowDialog();
         }
 
         private void Button3_Click(object sender, EventArgs e)
         {
             MngTimeTable openForm = new MngTimeTable();
-            openForm.Show();
-            Visible = false;
+            this.Hide();
+            openForm.ShowDialog();
+        }
+
+        private void Addsubbtn_Click(object sender, EventArgs e)
+        {
+            ManageSubject openForm = new ManageSubject();
+            this.Hide();
+            openForm.ShowDialog();
+        }
+
+        private void Addclassbtn_Click(object sender, EventArgs e)
+        {
+            MngClassRoom openForm = new MngClassRoom();
+            this.Hide();
+            openForm.ShowDialog();
+        }
+
+        private void Timetablebtn_Click(object sender, EventArgs e)
+        {
+            MngTimeTable openForm = new MngTimeTable();
+            this.Hide();
+            openForm.ShowDialog();
+        }
+
+        private void Viewtimetablebtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

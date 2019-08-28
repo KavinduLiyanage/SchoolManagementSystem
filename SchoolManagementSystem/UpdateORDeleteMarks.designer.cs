@@ -28,9 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateORDeleteMarks));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.cbSubName = new System.Windows.Forms.ComboBox();
             this.tbRegNo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -57,17 +61,26 @@
             this.lbUserUDM = new System.Windows.Forms.Label();
             this.btnimgUDM = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.cbSubName = new System.Windows.Forms.ComboBox();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.btnDisplay = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btnLogOutHeader = new System.Windows.Forms.Button();
+            this.btnNoticeMHeader = new System.Windows.Forms.Button();
+            this.btnExamMheader = new System.Windows.Forms.Button();
+            this.btnLibraryMHeader = new System.Windows.Forms.Button();
+            this.btnStudentMHeader = new System.Windows.Forms.Button();
+            this.btnResourseMHeader = new System.Windows.Forms.Button();
+            this.btnInventoryMHeader = new System.Windows.Forms.Button();
+            this.btnEventMHeader = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMarks)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -99,10 +112,47 @@
             this.panel2.Size = new System.Drawing.Size(389, 487);
             this.panel2.TabIndex = 19;
             // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Location = new System.Drawing.Point(42, 382);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(130, 50);
+            this.btnUpdate.TabIndex = 29;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Location = new System.Drawing.Point(228, 382);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(130, 50);
+            this.btnDelete.TabIndex = 16;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
+            // 
+            // cbSubName
+            // 
+            this.cbSubName.FormattingEnabled = true;
+            this.cbSubName.Items.AddRange(new object[] {
+            "Sinhala",
+            "Mathematics",
+            "English"});
+            this.cbSubName.Location = new System.Drawing.Point(188, 87);
+            this.cbSubName.Name = "cbSubName";
+            this.cbSubName.Size = new System.Drawing.Size(184, 24);
+            this.cbSubName.TabIndex = 16;
+            // 
             // tbRegNo
             // 
             this.tbRegNo.Location = new System.Drawing.Point(188, 37);
             this.tbRegNo.Name = "tbRegNo";
+            this.tbRegNo.ReadOnly = true;
             this.tbRegNo.Size = new System.Drawing.Size(184, 22);
             this.tbRegNo.TabIndex = 5;
             // 
@@ -166,6 +216,10 @@
             // cbExam
             // 
             this.cbExam.FormattingEnabled = true;
+            this.cbExam.Items.AddRange(new object[] {
+            "1st Term",
+            "2nd Term",
+            "3rd Term"});
             this.cbExam.Location = new System.Drawing.Point(188, 148);
             this.cbExam.Name = "cbExam";
             this.cbExam.Size = new System.Drawing.Size(184, 24);
@@ -188,7 +242,7 @@
             this.panel3.Controls.Add(this.lbSearch);
             this.panel3.Location = new System.Drawing.Point(703, 153);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(547, 438);
+            this.panel3.Size = new System.Drawing.Size(537, 438);
             this.panel3.TabIndex = 20;
             // 
             // dataGridViewMarks
@@ -199,7 +253,7 @@
             this.dataGridViewMarks.RowHeadersWidth = 51;
             this.dataGridViewMarks.RowTemplate.Height = 24;
             this.dataGridViewMarks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewMarks.Size = new System.Drawing.Size(508, 351);
+            this.dataGridViewMarks.Size = new System.Drawing.Size(496, 351);
             this.dataGridViewMarks.TabIndex = 14;
             this.dataGridViewMarks.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewMarks_CellClick);
             this.dataGridViewMarks.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewMarks_CellContentClick);
@@ -377,38 +431,11 @@
             this.pictureBox2.TabIndex = 27;
             this.pictureBox2.TabStop = false;
             // 
-            // panel4
-            // 
-            this.panel4.Location = new System.Drawing.Point(12, 12);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1236, 92);
-            this.panel4.TabIndex = 28;
-            // 
-            // cbSubName
-            // 
-            this.cbSubName.FormattingEnabled = true;
-            this.cbSubName.Location = new System.Drawing.Point(188, 87);
-            this.cbSubName.Name = "cbSubName";
-            this.cbSubName.Size = new System.Drawing.Size(184, 24);
-            this.cbSubName.TabIndex = 16;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(228, 382);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(130, 50);
-            this.btnDelete.TabIndex = 16;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
-            // 
             // btnDisplay
             // 
             this.btnDisplay.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDisplay.Location = new System.Drawing.Point(922, 606);
+            this.btnDisplay.Location = new System.Drawing.Point(1043, 606);
             this.btnDisplay.Name = "btnDisplay";
             this.btnDisplay.Size = new System.Drawing.Size(130, 50);
             this.btnDisplay.TabIndex = 17;
@@ -416,25 +443,143 @@
             this.btnDisplay.UseVisualStyleBackColor = false;
             this.btnDisplay.Click += new System.EventHandler(this.BtnDisplay_Click);
             // 
-            // btnUpdate
+            // panel5
             // 
-            this.btnUpdate.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(42, 382);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(130, 50);
-            this.btnUpdate.TabIndex = 29;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = false;
-            this.btnUpdate.Click += new System.EventHandler(this.BtnUpdate_Click);
+            this.panel5.BackColor = System.Drawing.Color.SkyBlue;
+            this.panel5.Controls.Add(this.btnLogOutHeader);
+            this.panel5.Controls.Add(this.btnNoticeMHeader);
+            this.panel5.Controls.Add(this.btnExamMheader);
+            this.panel5.Controls.Add(this.btnLibraryMHeader);
+            this.panel5.Controls.Add(this.btnStudentMHeader);
+            this.panel5.Controls.Add(this.btnResourseMHeader);
+            this.panel5.Controls.Add(this.btnInventoryMHeader);
+            this.panel5.Controls.Add(this.btnEventMHeader);
+            this.panel5.Location = new System.Drawing.Point(12, 12);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1228, 92);
+            this.panel5.TabIndex = 44;
+            // 
+            // btnLogOutHeader
+            // 
+            this.btnLogOutHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnLogOutHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogOutHeader.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold);
+            this.btnLogOutHeader.ForeColor = System.Drawing.Color.Maroon;
+            this.btnLogOutHeader.Location = new System.Drawing.Point(1078, 20);
+            this.btnLogOutHeader.Name = "btnLogOutHeader";
+            this.btnLogOutHeader.Size = new System.Drawing.Size(145, 50);
+            this.btnLogOutHeader.TabIndex = 25;
+            this.btnLogOutHeader.Text = "Log Out";
+            this.btnLogOutHeader.UseVisualStyleBackColor = true;
+            // 
+            // btnNoticeMHeader
+            // 
+            this.btnNoticeMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnNoticeMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNoticeMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
+            this.btnNoticeMHeader.Location = new System.Drawing.Point(927, 21);
+            this.btnNoticeMHeader.Name = "btnNoticeMHeader";
+            this.btnNoticeMHeader.Size = new System.Drawing.Size(145, 50);
+            this.btnNoticeMHeader.TabIndex = 23;
+            this.btnNoticeMHeader.Text = "Notice Management";
+            this.btnNoticeMHeader.UseVisualStyleBackColor = false;
+            // 
+            // btnExamMheader
+            // 
+            this.btnExamMheader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnExamMheader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExamMheader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
+            this.btnExamMheader.Location = new System.Drawing.Point(21, 19);
+            this.btnExamMheader.Name = "btnExamMheader";
+            this.btnExamMheader.Size = new System.Drawing.Size(145, 50);
+            this.btnExamMheader.TabIndex = 1;
+            this.btnExamMheader.Text = "Exam Management";
+            this.btnExamMheader.UseVisualStyleBackColor = false;
+            // 
+            // btnLibraryMHeader
+            // 
+            this.btnLibraryMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnLibraryMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLibraryMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
+            this.btnLibraryMHeader.Location = new System.Drawing.Point(776, 21);
+            this.btnLibraryMHeader.Name = "btnLibraryMHeader";
+            this.btnLibraryMHeader.Size = new System.Drawing.Size(145, 50);
+            this.btnLibraryMHeader.TabIndex = 22;
+            this.btnLibraryMHeader.Text = " Library Management";
+            this.btnLibraryMHeader.UseVisualStyleBackColor = false;
+            // 
+            // btnStudentMHeader
+            // 
+            this.btnStudentMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnStudentMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStudentMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
+            this.btnStudentMHeader.Location = new System.Drawing.Point(172, 20);
+            this.btnStudentMHeader.Name = "btnStudentMHeader";
+            this.btnStudentMHeader.Size = new System.Drawing.Size(145, 50);
+            this.btnStudentMHeader.TabIndex = 18;
+            this.btnStudentMHeader.Text = "Student Management";
+            this.btnStudentMHeader.UseVisualStyleBackColor = false;
+            // 
+            // btnResourseMHeader
+            // 
+            this.btnResourseMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnResourseMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnResourseMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
+            this.btnResourseMHeader.Location = new System.Drawing.Point(625, 20);
+            this.btnResourseMHeader.Name = "btnResourseMHeader";
+            this.btnResourseMHeader.Size = new System.Drawing.Size(145, 50);
+            this.btnResourseMHeader.TabIndex = 21;
+            this.btnResourseMHeader.Text = "Resourse Management";
+            this.btnResourseMHeader.UseVisualStyleBackColor = false;
+            // 
+            // btnInventoryMHeader
+            // 
+            this.btnInventoryMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnInventoryMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInventoryMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
+            this.btnInventoryMHeader.Location = new System.Drawing.Point(323, 20);
+            this.btnInventoryMHeader.Name = "btnInventoryMHeader";
+            this.btnInventoryMHeader.Size = new System.Drawing.Size(145, 50);
+            this.btnInventoryMHeader.TabIndex = 19;
+            this.btnInventoryMHeader.Text = "Inventory Management";
+            this.btnInventoryMHeader.UseVisualStyleBackColor = false;
+            // 
+            // btnEventMHeader
+            // 
+            this.btnEventMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnEventMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEventMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
+            this.btnEventMHeader.Location = new System.Drawing.Point(474, 20);
+            this.btnEventMHeader.Name = "btnEventMHeader";
+            this.btnEventMHeader.Size = new System.Drawing.Size(145, 50);
+            this.btnEventMHeader.TabIndex = 20;
+            this.btnEventMHeader.Text = "Event Management";
+            this.btnEventMHeader.UseVisualStyleBackColor = false;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.Location = new System.Drawing.Point(788, 606);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(130, 50);
+            this.btnRefresh.TabIndex = 45;
+            this.btnRefresh.Text = "Reset";
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.BtnRefresh_Click);
             // 
             // UpdateORDeleteMarks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.btnRefresh);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.btnDisplay);
-            this.Controls.Add(this.panel4);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnimgUDM);
             this.Controls.Add(this.lbUserUDM);
@@ -454,6 +599,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMarks)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -488,10 +635,20 @@
         private System.Windows.Forms.Label lbUserUDM;
         private System.Windows.Forms.Button btnimgUDM;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.ComboBox cbSubName;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnDisplay;
         private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button btnLogOutHeader;
+        private System.Windows.Forms.Button btnNoticeMHeader;
+        private System.Windows.Forms.Button btnExamMheader;
+        private System.Windows.Forms.Button btnLibraryMHeader;
+        private System.Windows.Forms.Button btnStudentMHeader;
+        private System.Windows.Forms.Button btnResourseMHeader;
+        private System.Windows.Forms.Button btnInventoryMHeader;
+        private System.Windows.Forms.Button btnEventMHeader;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }

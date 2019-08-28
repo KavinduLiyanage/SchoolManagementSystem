@@ -42,29 +42,27 @@
             this.UsrlinkLabel = new System.Windows.Forms.LinkLabel();
             this.subLabel2 = new System.Windows.Forms.PictureBox();
             this.NHomeBtn = new System.Windows.Forms.Button();
-            this.NViewStaffBtn = new System.Windows.Forms.Button();
-            this.NViewLeaveBtn = new System.Windows.Forms.Button();
-            this.NViewSalaryBtn = new System.Windows.Forms.Button();
-            this.NAddStaffBtn = new System.Windows.Forms.Button();
-            this.NStaffHomeBtn = new System.Windows.Forms.Button();
+            this.addclassbtn = new System.Windows.Forms.Button();
+            this.viewtimetablebtn = new System.Windows.Forms.Button();
+            this.addsubbtn = new System.Windows.Forms.Button();
+            this.Resmngbtn = new System.Windows.Forms.Button();
             this.ButtonPanel = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.txtSubject = new System.Windows.Forms.TextBox();
-            this.txtGrade = new System.Windows.Forms.TextBox();
-            this.txtClassName = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.txtNameOfTeacher = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.txtClassName = new System.Windows.Forms.TextBox();
+            this.txtSubject = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtNameOfTeacher = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.subLabel2)).BeginInit();
             this.ButtonPanel.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnLogOutHeader
@@ -224,209 +222,216 @@
             this.NHomeBtn.Text = "Home";
             this.NHomeBtn.UseVisualStyleBackColor = false;
             // 
-            // NViewStaffBtn
+            // addclassbtn
             // 
-            this.NViewStaffBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.NViewStaffBtn.Location = new System.Drawing.Point(11, 115);
-            this.NViewStaffBtn.Name = "NViewStaffBtn";
-            this.NViewStaffBtn.Size = new System.Drawing.Size(235, 35);
-            this.NViewStaffBtn.TabIndex = 23;
-            this.NViewStaffBtn.Text = "View Staff Member";
-            this.NViewStaffBtn.UseVisualStyleBackColor = false;
+            this.addclassbtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.addclassbtn.Location = new System.Drawing.Point(11, 115);
+            this.addclassbtn.Name = "addclassbtn";
+            this.addclassbtn.Size = new System.Drawing.Size(235, 35);
+            this.addclassbtn.TabIndex = 23;
+            this.addclassbtn.Text = "Add Classroom";
+            this.addclassbtn.UseVisualStyleBackColor = false;
+            this.addclassbtn.Click += new System.EventHandler(this.Addclassbtn_Click);
             // 
-            // NViewLeaveBtn
+            // viewtimetablebtn
             // 
-            this.NViewLeaveBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.NViewLeaveBtn.Location = new System.Drawing.Point(11, 187);
-            this.NViewLeaveBtn.Name = "NViewLeaveBtn";
-            this.NViewLeaveBtn.Size = new System.Drawing.Size(235, 35);
-            this.NViewLeaveBtn.TabIndex = 18;
-            this.NViewLeaveBtn.Text = "View Staff Leave";
-            this.NViewLeaveBtn.UseVisualStyleBackColor = false;
+            this.viewtimetablebtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.viewtimetablebtn.Location = new System.Drawing.Point(11, 151);
+            this.viewtimetablebtn.Name = "viewtimetablebtn";
+            this.viewtimetablebtn.Size = new System.Drawing.Size(235, 35);
+            this.viewtimetablebtn.TabIndex = 18;
+            this.viewtimetablebtn.Text = "View Timetable";
+            this.viewtimetablebtn.UseVisualStyleBackColor = false;
+            this.viewtimetablebtn.Click += new System.EventHandler(this.Viewtimetablebtn_Click);
             // 
-            // NViewSalaryBtn
+            // addsubbtn
             // 
-            this.NViewSalaryBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.NViewSalaryBtn.Location = new System.Drawing.Point(11, 151);
-            this.NViewSalaryBtn.Name = "NViewSalaryBtn";
-            this.NViewSalaryBtn.Size = new System.Drawing.Size(235, 35);
-            this.NViewSalaryBtn.TabIndex = 18;
-            this.NViewSalaryBtn.Text = "View Salary Info";
-            this.NViewSalaryBtn.UseVisualStyleBackColor = false;
+            this.addsubbtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.addsubbtn.Location = new System.Drawing.Point(11, 79);
+            this.addsubbtn.Name = "addsubbtn";
+            this.addsubbtn.Size = new System.Drawing.Size(235, 35);
+            this.addsubbtn.TabIndex = 17;
+            this.addsubbtn.Text = "Add Subject";
+            this.addsubbtn.UseVisualStyleBackColor = false;
+            this.addsubbtn.Click += new System.EventHandler(this.Addsubbtn_Click);
             // 
-            // NAddStaffBtn
+            // Resmngbtn
             // 
-            this.NAddStaffBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.NAddStaffBtn.Location = new System.Drawing.Point(11, 79);
-            this.NAddStaffBtn.Name = "NAddStaffBtn";
-            this.NAddStaffBtn.Size = new System.Drawing.Size(235, 35);
-            this.NAddStaffBtn.TabIndex = 17;
-            this.NAddStaffBtn.Text = "Add Staff Member";
-            this.NAddStaffBtn.UseVisualStyleBackColor = false;
-            // 
-            // NStaffHomeBtn
-            // 
-            this.NStaffHomeBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.NStaffHomeBtn.Location = new System.Drawing.Point(11, 42);
-            this.NStaffHomeBtn.Name = "NStaffHomeBtn";
-            this.NStaffHomeBtn.Size = new System.Drawing.Size(235, 35);
-            this.NStaffHomeBtn.TabIndex = 17;
-            this.NStaffHomeBtn.Text = "Staff Manage Home";
-            this.NStaffHomeBtn.UseVisualStyleBackColor = false;
+            this.Resmngbtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.Resmngbtn.Location = new System.Drawing.Point(11, 42);
+            this.Resmngbtn.Name = "Resmngbtn";
+            this.Resmngbtn.Size = new System.Drawing.Size(235, 35);
+            this.Resmngbtn.TabIndex = 17;
+            this.Resmngbtn.Text = "Resource Manage Home";
+            this.Resmngbtn.UseVisualStyleBackColor = false;
+            this.Resmngbtn.Click += new System.EventHandler(this.Resmngbtn_Click);
             // 
             // ButtonPanel
             // 
             this.ButtonPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ButtonPanel.Controls.Add(this.NHomeBtn);
-            this.ButtonPanel.Controls.Add(this.NViewStaffBtn);
-            this.ButtonPanel.Controls.Add(this.NViewLeaveBtn);
-            this.ButtonPanel.Controls.Add(this.NViewSalaryBtn);
-            this.ButtonPanel.Controls.Add(this.NAddStaffBtn);
-            this.ButtonPanel.Controls.Add(this.NStaffHomeBtn);
+            this.ButtonPanel.Controls.Add(this.addclassbtn);
+            this.ButtonPanel.Controls.Add(this.viewtimetablebtn);
+            this.ButtonPanel.Controls.Add(this.addsubbtn);
+            this.ButtonPanel.Controls.Add(this.Resmngbtn);
             this.ButtonPanel.Location = new System.Drawing.Point(15, 331);
             this.ButtonPanel.Name = "ButtonPanel";
             this.ButtonPanel.Size = new System.Drawing.Size(260, 335);
             this.ButtonPanel.TabIndex = 46;
             // 
-            // panel1
+            // panel2
             // 
-            this.panel1.Controls.Add(this.btnCancel);
-            this.panel1.Controls.Add(this.btnDelete);
-            this.panel1.Controls.Add(this.txtSubject);
-            this.panel1.Controls.Add(this.txtGrade);
-            this.panel1.Controls.Add(this.txtClassName);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.btnSave);
-            this.panel1.Controls.Add(this.txtNameOfTeacher);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(288, 104);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(962, 561);
-            this.panel1.TabIndex = 50;
+            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.btnSave);
+            this.panel2.Controls.Add(this.txtClassName);
+            this.panel2.Controls.Add(this.txtSubject);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.txtNameOfTeacher);
+            this.panel2.Location = new System.Drawing.Point(281, 178);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(969, 488);
+            this.panel2.TabIndex = 23;
             // 
-            // btnCancel
+            // comboBox1
             // 
-            this.btnCancel.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Location = new System.Drawing.Point(297, 415);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(137, 55);
-            this.btnCancel.TabIndex = 22;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = false;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(158, 415);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(131, 55);
-            this.btnDelete.TabIndex = 21;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            // 
-            // txtSubject
-            // 
-            this.txtSubject.Location = new System.Drawing.Point(178, 127);
-            this.txtSubject.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSubject.Name = "txtSubject";
-            this.txtSubject.Size = new System.Drawing.Size(204, 22);
-            this.txtSubject.TabIndex = 20;
-            // 
-            // txtGrade
-            // 
-            this.txtGrade.Location = new System.Drawing.Point(178, 208);
-            this.txtGrade.Margin = new System.Windows.Forms.Padding(4);
-            this.txtGrade.Name = "txtGrade";
-            this.txtGrade.Size = new System.Drawing.Size(204, 22);
-            this.txtGrade.TabIndex = 19;
-            // 
-            // txtClassName
-            // 
-            this.txtClassName.Location = new System.Drawing.Point(178, 283);
-            this.txtClassName.Margin = new System.Windows.Forms.Padding(4);
-            this.txtClassName.Name = "txtClassName";
-            this.txtClassName.Size = new System.Drawing.Size(204, 22);
-            this.txtClassName.TabIndex = 18;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(47, 208);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 17);
-            this.label4.TabIndex = 17;
-            this.label4.Text = "Grade";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(47, 127);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 17);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Subject";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12 Art",
+            "12 Commerce",
+            "12 Maths",
+            "12 Bio",
+            "13 Art",
+            "13 Commerce",
+            "13 Maths",
+            "13 Bio"});
+            this.comboBox1.Location = new System.Drawing.Point(612, 226);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(204, 24);
+            this.comboBox1.TabIndex = 21;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(47, 53);
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.label2.Location = new System.Drawing.Point(144, 67);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 17);
+            this.label2.Size = new System.Drawing.Size(220, 34);
             this.label2.TabIndex = 15;
             this.label2.Text = "Name of Teacher";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.label3.Location = new System.Drawing.Point(144, 146);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(104, 34);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Subject";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.label1.Location = new System.Drawing.Point(144, 304);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(156, 34);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Class Name";
             // 
             // btnSave
             // 
             this.btnSave.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(22, 415);
+            this.btnSave.Location = new System.Drawing.Point(612, 378);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(128, 55);
             this.btnSave.TabIndex = 14;
-            this.btnSave.Text = "Save";
+            this.btnSave.Text = "Insert";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
+            // 
+            // txtClassName
+            // 
+            this.txtClassName.Location = new System.Drawing.Point(612, 304);
+            this.txtClassName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtClassName.Name = "txtClassName";
+            this.txtClassName.Size = new System.Drawing.Size(204, 22);
+            this.txtClassName.TabIndex = 18;
+            // 
+            // txtSubject
+            // 
+            this.txtSubject.Location = new System.Drawing.Point(612, 153);
+            this.txtSubject.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSubject.Name = "txtSubject";
+            this.txtSubject.Size = new System.Drawing.Size(204, 22);
+            this.txtSubject.TabIndex = 20;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.label4.Location = new System.Drawing.Point(144, 226);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(88, 34);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "Grade";
             // 
             // txtNameOfTeacher
             // 
-            this.txtNameOfTeacher.Location = new System.Drawing.Point(178, 53);
+            this.txtNameOfTeacher.Location = new System.Drawing.Point(612, 67);
             this.txtNameOfTeacher.Margin = new System.Windows.Forms.Padding(4);
             this.txtNameOfTeacher.Multiline = true;
             this.txtNameOfTeacher.Name = "txtNameOfTeacher";
-            this.txtNameOfTeacher.Size = new System.Drawing.Size(204, 48);
+            this.txtNameOfTeacher.Size = new System.Drawing.Size(204, 34);
             this.txtNameOfTeacher.TabIndex = 13;
             // 
-            // label1
+            // label5
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(47, 283);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 17);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Class Name";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(582, 118);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(290, 40);
+            this.label5.TabIndex = 50;
+            this.label5.Text = "Add Timetable";
             // 
-            // Form4
+            // MngTimeTable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.UsrlinkLabel);
             this.Controls.Add(this.subLabel2);
             this.Controls.Add(this.ButtonPanel);
-            this.Controls.Add(this.panel1);
-            this.Name = "Form4";
+            this.Name = "MngTimeTable";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Timetable";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -434,8 +439,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.subLabel2)).EndInit();
             this.ButtonPanel.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -456,24 +461,22 @@
         private System.Windows.Forms.LinkLabel UsrlinkLabel;
         private System.Windows.Forms.PictureBox subLabel2;
         private System.Windows.Forms.Button NHomeBtn;
-        private System.Windows.Forms.Button NViewStaffBtn;
-        private System.Windows.Forms.Button NViewLeaveBtn;
-        private System.Windows.Forms.Button NViewSalaryBtn;
-        private System.Windows.Forms.Button NAddStaffBtn;
-        private System.Windows.Forms.Button NStaffHomeBtn;
+        private System.Windows.Forms.Button addclassbtn;
+        private System.Windows.Forms.Button viewtimetablebtn;
+        private System.Windows.Forms.Button addsubbtn;
+        private System.Windows.Forms.Button Resmngbtn;
         private System.Windows.Forms.Panel ButtonPanel;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.TextBox txtSubject;
-        private System.Windows.Forms.TextBox txtGrade;
-        private System.Windows.Forms.TextBox txtClassName;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.TextBox txtNameOfTeacher;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.TextBox txtClassName;
+        private System.Windows.Forms.TextBox txtSubject;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtNameOfTeacher;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 

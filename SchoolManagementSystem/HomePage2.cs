@@ -28,12 +28,14 @@ namespace SchoolManagementSystem
             reqLeave.ShowDialog();
         }
 
-        private void MngStaffBtn_Click(object sender, System.EventArgs e)
+        private void MngNticeBtn_Click(object sender, System.EventArgs e)
         {
-
+            userNoticeView Unv = new userNoticeView();
+            this.Hide();
+            Unv.ShowDialog();
         }
 
-        private void MngStaffImgBtn_Click(object sender, System.EventArgs e)
+        private void MngStuImgBtn_Click(object sender, System.EventArgs e)
         {
 
         }

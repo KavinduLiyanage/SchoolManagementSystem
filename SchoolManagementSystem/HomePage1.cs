@@ -92,12 +92,30 @@ namespace SchoolManagementSystem
 
         private void MngStuBtn_Click(object sender, EventArgs e)
         {
-
+            CreateStudentAccount creAcc = new CreateStudentAccount();
+            this.Hide();
+            creAcc.ShowDialog();
         }
 
         private void MngStuImgBtn_Click(object sender, EventArgs e)
         {
+            CreateStudentAccount creAcc = new CreateStudentAccount();
+            this.Hide();
+            creAcc.ShowDialog();
+        }
 
+        private void MngInvenImgBtn_Click(object sender, EventArgs e)
+        {
+            InventoryDashboard inveDash = new InventoryDashboard();
+            this.Hide();
+            inveDash.ShowDialog();
+        }
+
+        private void MngInvenBtn_Click(object sender, EventArgs e)
+        {
+            InventoryDashboard inveDash = new InventoryDashboard();
+            this.Hide();
+            inveDash.ShowDialog();
         }
     }
 }

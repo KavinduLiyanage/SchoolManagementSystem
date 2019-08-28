@@ -7,14 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 
 namespace SchoolManagementSystem
 {
     public partial class AddTimetable : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=.;Initial Catalog=SchoolManagementSystemDB;Integrated Security=True");
-
         public AddTimetable()
         {
             InitializeComponent();
@@ -98,37 +95,6 @@ namespace SchoolManagementSystem
             ViewTimetable vtt = new ViewTimetable();
             this.Hide();
             vtt.ShowDialog();
-        }
-
-        private void BtnInsertATT_Click(object sender, EventArgs e)
-        {
-            con.Open();
-            string qry = "INSERT INTO ExamTimeTable(Term,Date,Time,Grade,Subject) VALUES('" + cbTerm.Text + "',  '" + dateTimePicker1.Value + "','" + tbTime.Text + "','" + cbGrade.Text + "','" + cbSubject.Text + "')";
-            SqlCommand cmd = new SqlCommand(qry, con);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Record Inserted successfully!!");
-            con.Close();
-        }
-
-        private void AddTimetable_Load(object sender, EventArgs e)
-        {
-           // if (con.State == ConnectionState.Open)
-           // {
-            //    con.Close();
-           // }
-         //   con.Open();
-       }
-
-        public String getIncrTimetblId()
-        {
-            string query = "SELECT COUNT(*) FROM SExamTimeTable";
-            SqlCommand cmd2 = new SqlCommand(query, con);
-            //con.Open();
-            int t = 10001 + (Int32)cmd2.ExecuteScalar();
-            String TId = "T" + t.ToString();
-            //con.Close();
-            return TId;
-
         }
     }
 }

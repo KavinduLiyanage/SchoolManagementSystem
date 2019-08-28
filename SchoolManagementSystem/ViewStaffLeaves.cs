@@ -58,5 +58,26 @@ namespace SchoolManagementSystem
             this.Hide();
             newStffLeave.ShowDialog();
         }
+
+        private void BtnExamMheader_Click(object sender, EventArgs e)
+        {
+            TeachersHome home = new TeachersHome();
+            this.Hide();
+            home.ShowDialog();
+        }
+
+        private void BtnLogOutHeader_Click(object sender, EventArgs e)
+        {
+            LoginForm log = new LoginForm();
+            this.Hide();
+            log.ShowDialog();
+        }
+
+        private void BtnResourseMHeader_Click(object sender, EventArgs e)
+        {
+            ResourceManageHome newres = new ResourceManageHome();
+            this.Hide();
+            newres.ShowDialog();
+        }
     }
 }

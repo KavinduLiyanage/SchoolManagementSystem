@@ -96,5 +96,47 @@ namespace SchoolManagementSystem
             this.Hide();
             viewStaff.ShowDialog();
         }
+
+        private void BtnExamMheader_Click(object sender, EventArgs e)
+        {
+            TeachersHome home = new TeachersHome();
+            this.Hide();
+            home.ShowDialog();
+        }
+
+        private void BtnLogOutHeader_Click(object sender, EventArgs e)
+        {
+            LoginForm log = new LoginForm();
+            this.Hide();
+            log.ShowDialog();
+        }
+
+        private void ViewSalaryImgBtn_Click(object sender, EventArgs e)
+        {
+            ViewSalaryInfo viewSlary = new ViewSalaryInfo();
+            this.Hide();
+            viewSlary.ShowDialog();
+        }
+
+        private void ViewSalaryBtn_Click(object sender, EventArgs e)
+        {
+            ViewSalaryInfo viewSlary = new ViewSalaryInfo();
+            this.Hide();
+            viewSlary.ShowDialog();
+        }
+
+        private void ViewLeaveBtn_Click(object sender, EventArgs e)
+        {
+            ViewStaffLeaves staffLeave = new ViewStaffLeaves();
+            this.Hide();
+            staffLeave.ShowDialog();
+        }
+
+        private void ViewLeaveImgBtn_Click(object sender, EventArgs e)
+        {
+            ViewStaffLeaves staffLeave = new ViewStaffLeaves();
+            this.Hide();
+            staffLeave.ShowDialog();
+        }
     }
 }

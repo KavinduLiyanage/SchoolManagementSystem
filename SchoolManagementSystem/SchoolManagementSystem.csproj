@@ -47,11 +47,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddEventAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEventAdmin.designer.cs">
+      <DependentUpon>AddEventAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddExpensesAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddExpensesAdmin.designer.cs">
+      <DependentUpon>AddExpensesAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddMarks.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddMarks.designer.cs">
       <DependentUpon>AddMarks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddNoticeAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNoticeAdmin.designer.cs">
+      <DependentUpon>AddNoticeAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddParticipantsAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddParticipantsAdmin.designer.cs">
+      <DependentUpon>AddParticipantsAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="AddStaffMember.cs">
       <SubType>Form</SubType>
@@ -78,6 +102,30 @@
       <DependentUpon>ClassResultSheet.cs</DependentUpon>
     </Compile>
     <Compile Include="Connection.cs" />
+    <Compile Include="DeletedList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeletedList.designer.cs">
+      <DependentUpon>DeletedList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteStatus.designer.cs">
+      <DependentUpon>DeleteStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EventDashBoardAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EventDashBoardAdmin.designer.cs">
+      <DependentUpon>EventDashBoardAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryDashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryDashBoard.designer.cs">
+      <DependentUpon>InventoryDashBoard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,19 +150,91 @@
     <Compile Include="HomePage3.Designer.cs">
       <DependentUpon>HomePage3.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageItem.designer.cs">
+      <DependentUpon>ManageItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManageMarks.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ManageMarks.designer.cs">
       <DependentUpon>ManageMarks.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageStock.designer.cs">
+      <DependentUpon>ManageStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageSubject.designer.cs">
+      <DependentUpon>ManageSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MngClassRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MngClassRoom.designer.cs">
+      <DependentUpon>MngClassRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MngTimeTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MngTimeTable.designer.cs">
+      <DependentUpon>MngTimeTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NonAcademicNoticeBoardAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NonAcademicNoticeBoardAdmin.designer.cs">
+      <DependentUpon>NonAcademicNoticeBoardAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NoticeBoardAcademicAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NoticeBoardAcademicAdmin.designer.cs">
+      <DependentUpon>NoticeBoardAcademicAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NoticeBoardAcademicUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NoticeBoardAcademicUser.designer.cs">
+      <DependentUpon>NoticeBoardAcademicUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NoticeBoardNonAcademicUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NoticeBoardNonAcademicUser.designer.cs">
+      <DependentUpon>NoticeBoardNonAcademicUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NoticeDashboardAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NoticeDashboardAdmin.designer.cs">
+      <DependentUpon>NoticeDashboardAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResourceManageHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ResourceManageHome.designer.cs">
+      <DependentUpon>ResourceManageHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="SectionResultSheet.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SectionResultSheet.designer.cs">
       <DependentUpon>SectionResultSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffReqLeave.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffReqLeave.Designer.cs">
+      <DependentUpon>StaffReqLeave.cs</DependentUpon>
     </Compile>
     <Compile Include="StudentExam.cs">
       <SubType>Form</SubType>
@@ -181,8 +301,20 @@
     <Compile Include="ViewTimetable.designer.cs">
       <DependentUpon>ViewTimetable.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddEventAdmin.resx">
+      <DependentUpon>AddEventAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddExpensesAdmin.resx">
+      <DependentUpon>AddExpensesAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddMarks.resx">
       <DependentUpon>AddMarks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddNoticeAdmin.resx">
+      <DependentUpon>AddNoticeAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddParticipantsAdmin.resx">
+      <DependentUpon>AddParticipantsAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddStaffMember.resx">
       <DependentUpon>AddStaffMember.cs</DependentUpon>
@@ -196,8 +328,20 @@
     <EmbeddedResource Include="ClassResultSheet.resx">
       <DependentUpon>ClassResultSheet.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DeletedList.resx">
+      <DependentUpon>DeletedList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteStatus.resx">
+      <DependentUpon>DeleteStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventDashBoardAdmin.resx">
+      <DependentUpon>EventDashBoardAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HomePage3.resx">
       <DependentUpon>HomePage3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryDashBoard.resx">
+      <DependentUpon>InventoryDashBoard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -208,8 +352,38 @@
     <EmbeddedResource Include="HomePage2.resx">
       <DependentUpon>HomePage2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ManageItem.resx">
+      <DependentUpon>ManageItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManageMarks.resx">
       <DependentUpon>ManageMarks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageStock.resx">
+      <DependentUpon>ManageStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageSubject.resx">
+      <DependentUpon>ManageSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MngClassRoom.resx">
+      <DependentUpon>MngClassRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MngTimeTable.resx">
+      <DependentUpon>MngTimeTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NonAcademicNoticeBoardAdmin.resx">
+      <DependentUpon>NonAcademicNoticeBoardAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NoticeBoardAcademicAdmin.resx">
+      <DependentUpon>NoticeBoardAcademicAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NoticeBoardAcademicUser.resx">
+      <DependentUpon>NoticeBoardAcademicUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NoticeBoardNonAcademicUser.resx">
+      <DependentUpon>NoticeBoardNonAcademicUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NoticeDashboardAdmin.resx">
+      <DependentUpon>NoticeDashboardAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -219,9 +393,16 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ResourceManageHome.resx">
+      <DependentUpon>ResourceManageHome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SectionResultSheet.resx">
       <DependentUpon>SectionResultSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffReqLeave.resx">
+      <DependentUpon>StaffReqLeave.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StudentExam.resx">
       <DependentUpon>StudentExam.cs</DependentUpon>
@@ -276,6 +457,81 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddNotice1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\event1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back-black-square-interface-button-symbol2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back-black-square-interface-button-symbol11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Event-Transparent-Image1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expensive1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expensive %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\girl2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_Computer-megaphone-advertising-broadcast-marketing-technology_29926531.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_Copywriter-computer-notebook-hand-technology_29926621.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noticeBoard1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noticeBoard111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chemistry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cleaning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\elecronic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-window-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\market-analysis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moveble.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Music.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sport.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stationery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeachingAids.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

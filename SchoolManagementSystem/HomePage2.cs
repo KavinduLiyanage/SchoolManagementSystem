@@ -13,5 +13,24 @@ namespace SchoolManagementSystem
         {
 
         }
+
+        private void ReqLeaveImgBtn_Click(object sender, System.EventArgs e)
+        {
+            StaffReqLeave reqLeave = new StaffReqLeave();
+            this.Hide();
+            reqLeave.ShowDialog();
+        }
+
+        private void ReqLeaveBtn_Click(object sender, System.EventArgs e)
+        {
+            StaffReqLeave reqLeave = new StaffReqLeave();
+            this.Hide();
+            reqLeave.ShowDialog();
+        }
+
+        private void MngInvenImgBtn_Click(object sender, System.EventArgs e)
+        {
+            
+        }
     }
 }

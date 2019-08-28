@@ -89,5 +89,19 @@ namespace SchoolManagementSystem
             this.Hide();
             newdash.ShowDialog();
         }
+
+        private void MngInvenImgBtn_Click(object sender, EventArgs e)
+        {
+            InventoryDashboard incDash = new InventoryDashboard();
+            this.Hide();
+            incDash.ShowDialog();
+        }
+
+        private void MngInvenBtn_Click(object sender, EventArgs e)
+        {
+            InventoryDashboard incDash = new InventoryDashboard();
+            this.Hide();
+            incDash.ShowDialog();
+        }
     }
 }

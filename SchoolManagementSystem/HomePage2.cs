@@ -27,5 +27,10 @@ namespace SchoolManagementSystem
             this.Hide();
             reqLeave.ShowDialog();
         }
+
+        private void MngInvenImgBtn_Click(object sender, System.EventArgs e)
+        {
+            
+        }
     }
 }

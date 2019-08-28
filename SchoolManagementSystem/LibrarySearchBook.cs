@@ -13,6 +13,7 @@ namespace SchoolManagementSystem
 {
     public partial class LibrarySearchBook : Form
     {
+        private int i;
         SqlConnection con = new SqlConnection(@"Data Source=.;Initial Catalog=SchoolManagementSystemDB;Integrated Security=True");
 
         public LibrarySearchBook()
@@ -144,7 +145,6 @@ namespace SchoolManagementSystem
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            int i;
             i = Convert.ToInt32(dataGridView1.SelectedCells[0].Value.ToString());
 
             try
@@ -157,11 +157,30 @@ namespace SchoolManagementSystem
                 cmd.ExecuteNonQuery();
                 con.Close();
                 MessageBox.Show("Record updated Successfully");
+
+                LibrarySearchBook lib = new LibrarySearchBook();
+                this.Hide();
+                lib.ShowDialog();
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            i = Convert.ToInt32(dataGridView1.SelectedCells[0].Value.ToString());
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "delete from books_info where Id="+i+"";
+            cmd.ExecuteNonQuery();
+            con.Close();
+            MessageBox.Show("Record updated Successfully");
+            LibrarySearchBook lib = new LibrarySearchBook();
+            this.Hide();
+            lib.ShowDialog();
         }
     }
 }

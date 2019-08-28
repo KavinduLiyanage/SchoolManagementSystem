@@ -278,7 +278,7 @@
             this.btnAddMarksTH.Name = "btnAddMarksTH";
             this.btnAddMarksTH.Size = new System.Drawing.Size(235, 45);
             this.btnAddMarksTH.TabIndex = 23;
-            this.btnAddMarksTH.Text = "Add Marks";
+            this.btnAddMarksTH.Text = "Home";
             this.btnAddMarksTH.UseVisualStyleBackColor = false;
             this.btnAddMarksTH.Click += new System.EventHandler(this.BtnAddMarksTH_Click);
             // 
@@ -459,6 +459,7 @@
             this.btnResourseMHeader.TabIndex = 21;
             this.btnResourseMHeader.Text = "Resourse Management";
             this.btnResourseMHeader.UseVisualStyleBackColor = false;
+            this.btnResourseMHeader.Click += new System.EventHandler(this.BtnResourseMHeader_Click);
             // 
             // btnInventoryMHeader
             // 

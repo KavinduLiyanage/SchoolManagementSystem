@@ -84,7 +84,7 @@
             // 
             this.lbRegNo.AutoSize = true;
             this.lbRegNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbRegNo.Location = new System.Drawing.Point(19, 42);
+            this.lbRegNo.Location = new System.Drawing.Point(11, 42);
             this.lbRegNo.Name = "lbRegNo";
             this.lbRegNo.Size = new System.Drawing.Size(163, 20);
             this.lbRegNo.TabIndex = 0;
@@ -95,7 +95,7 @@
             // 
             this.lbSubName.AutoSize = true;
             this.lbSubName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSubName.Location = new System.Drawing.Point(19, 93);
+            this.lbSubName.Location = new System.Drawing.Point(10, 93);
             this.lbSubName.Name = "lbSubName";
             this.lbSubName.Size = new System.Drawing.Size(114, 20);
             this.lbSubName.TabIndex = 1;
@@ -105,7 +105,7 @@
             // 
             this.lbExam.AutoSize = true;
             this.lbExam.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbExam.Location = new System.Drawing.Point(19, 151);
+            this.lbExam.Location = new System.Drawing.Point(11, 151);
             this.lbExam.Name = "lbExam";
             this.lbExam.Size = new System.Drawing.Size(101, 20);
             this.lbExam.TabIndex = 2;
@@ -116,7 +116,7 @@
             // 
             this.lbMarks.AutoSize = true;
             this.lbMarks.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMarks.Location = new System.Drawing.Point(19, 210);
+            this.lbMarks.Location = new System.Drawing.Point(13, 210);
             this.lbMarks.Name = "lbMarks";
             this.lbMarks.Size = new System.Drawing.Size(100, 20);
             this.lbMarks.TabIndex = 3;
@@ -127,7 +127,7 @@
             // 
             this.lbYear.AutoSize = true;
             this.lbYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbYear.Location = new System.Drawing.Point(19, 262);
+            this.lbYear.Location = new System.Drawing.Point(13, 262);
             this.lbYear.Name = "lbYear";
             this.lbYear.Size = new System.Drawing.Size(88, 20);
             this.lbYear.TabIndex = 4;
@@ -135,7 +135,7 @@
             // 
             // tbRegNo
             // 
-            this.tbRegNo.Location = new System.Drawing.Point(186, 42);
+            this.tbRegNo.Location = new System.Drawing.Point(193, 42);
             this.tbRegNo.Name = "tbRegNo";
             this.tbRegNo.Size = new System.Drawing.Size(186, 22);
             this.tbRegNo.TabIndex = 5;
@@ -144,7 +144,7 @@
             // 
             // tbMark
             // 
-            this.tbMark.Location = new System.Drawing.Point(186, 205);
+            this.tbMark.Location = new System.Drawing.Point(193, 208);
             this.tbMark.Name = "tbMark";
             this.tbMark.Size = new System.Drawing.Size(186, 22);
             this.tbMark.TabIndex = 6;
@@ -154,7 +154,7 @@
             // 
             this.YearPicker.CustomFormat = "yyyy";
             this.YearPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.YearPicker.Location = new System.Drawing.Point(186, 257);
+            this.YearPicker.Location = new System.Drawing.Point(193, 260);
             this.YearPicker.Name = "YearPicker";
             this.YearPicker.Size = new System.Drawing.Size(186, 22);
             this.YearPicker.TabIndex = 8;
@@ -166,7 +166,7 @@
             "1st Term",
             "2nd Term",
             "3rd Term"});
-            this.cbExam.Location = new System.Drawing.Point(186, 148);
+            this.cbExam.Location = new System.Drawing.Point(193, 151);
             this.cbExam.Name = "cbExam";
             this.cbExam.Size = new System.Drawing.Size(186, 24);
             this.cbExam.TabIndex = 9;
@@ -189,6 +189,7 @@
             this.tbSearch.Name = "tbSearch";
             this.tbSearch.Size = new System.Drawing.Size(403, 22);
             this.tbSearch.TabIndex = 12;
+            this.tbSearch.TextChanged += new System.EventHandler(this.TbSearch_TextChanged);
             // 
             // lbSearch
             // 
@@ -364,7 +365,7 @@
             "Mathematics",
             "English",
             "Science"});
-            this.cbSubName.Location = new System.Drawing.Point(186, 87);
+            this.cbSubName.Location = new System.Drawing.Point(193, 93);
             this.cbSubName.Name = "cbSubName";
             this.cbSubName.Size = new System.Drawing.Size(186, 24);
             this.cbSubName.TabIndex = 12;

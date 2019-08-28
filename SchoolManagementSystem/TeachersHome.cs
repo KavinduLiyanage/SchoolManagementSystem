@@ -87,9 +87,9 @@ namespace SchoolManagementSystem
         private void BtnAddMarksTH_Click(object sender, EventArgs e)
         {
 
-            AddMarks am = new AddMarks();
+            HomePage1 hp1 = new HomePage1();
             this.Hide();
-            am.ShowDialog();
+            hp1.ShowDialog();
         }
 
         private void BtnUpdateDeleteTH_Click(object sender, EventArgs e)
@@ -142,6 +142,13 @@ namespace SchoolManagementSystem
         private void PictureBox4_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnResourseMHeader_Click(object sender, EventArgs e)
+        {
+            ResourceManageHome rmh = new ResourceManageHome();
+            this.Hide();
+            rmh.ShowDialog();
         }
     }
 }

@@ -63,7 +63,7 @@ namespace SchoolManagementSystem
              }
              catch (Exception ex)
              {
-                 MessageBox.Show("You have already inserted marks for this STUDENT FOR SAME SUBJECT!!!! ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                 MessageBox.Show("You have already inserted marks for this student or worong id!!!! ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                  //MessageBox.Show(ex.Message);
              }
 
@@ -131,7 +131,7 @@ namespace SchoolManagementSystem
                 con.Open();
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "SELECT * FROM ExamMarks WHERE RegNo LIKE '%" + searchValue + "%'  OR  SubjectID LIKE '%" + searchValue + "%'";
+                cmd.CommandText = "SELECT * FROM ExamMarks WHERE SID LIKE '%" + searchValue + "%'  OR  SubjectID LIKE '%" + searchValue + "%'";
                 cmd.ExecuteNonQuery();
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -376,6 +376,11 @@ namespace SchoolManagementSystem
         private void DataGridViewMarks_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void TbSearch_TextChanged(object sender, EventArgs e)
+        {
+            displayData(tbSearch.Text);
         }
     }
 }

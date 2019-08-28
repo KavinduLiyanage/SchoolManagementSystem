@@ -87,5 +87,10 @@ namespace SchoolManagementSystem
             this.Hide();
             viewtble.ShowDialog();
         }
+
+        private void UpdateOrDeleteTimetable_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

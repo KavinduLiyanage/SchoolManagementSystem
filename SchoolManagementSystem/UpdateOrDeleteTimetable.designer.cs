@@ -37,7 +37,7 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lbGradeUDTT = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.cbTerm = new System.Windows.Forms.TextBox();
             this.lbSubjectUDTT = new System.Windows.Forms.Label();
             this.lbTermUDTT = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -124,7 +124,7 @@
             this.panel2.Controls.Add(this.comboBox2);
             this.panel2.Controls.Add(this.dateTimePicker1);
             this.panel2.Controls.Add(this.lbGradeUDTT);
-            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.cbTerm);
             this.panel2.Controls.Add(this.lbSubjectUDTT);
             this.panel2.Controls.Add(this.lbTermUDTT);
             this.panel2.Controls.Add(this.comboBox1);
@@ -163,12 +163,12 @@
             this.lbGradeUDTT.TabIndex = 16;
             this.lbGradeUDTT.Text = "Grade";
             // 
-            // textBox1
+            // cbTerm
             // 
-            this.textBox1.Location = new System.Drawing.Point(143, 129);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 22);
-            this.textBox1.TabIndex = 5;
+            this.cbTerm.Location = new System.Drawing.Point(143, 129);
+            this.cbTerm.Name = "cbTerm";
+            this.cbTerm.Size = new System.Drawing.Size(200, 22);
+            this.cbTerm.TabIndex = 5;
             // 
             // lbSubjectUDTT
             // 
@@ -568,6 +568,7 @@
             this.Name = "UpdateOrDeleteTimetable";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdateOrDeleteTimetable";
+            this.Load += new System.EventHandler(this.UpdateOrDeleteTimetable_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -592,7 +593,7 @@
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label lbGradeUDTT;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox cbTerm;
         private System.Windows.Forms.Label lbSubjectUDTT;
         private System.Windows.Forms.Label lbTermUDTT;
         private System.Windows.Forms.ComboBox comboBox1;

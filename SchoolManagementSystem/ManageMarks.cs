@@ -102,5 +102,12 @@ namespace SchoolManagementSystem
             this.Hide();
             udtt.ShowDialog();
         }
+
+        private void BtnResourseMHeader_Click(object sender, EventArgs e)
+        {
+            ResourceManageHome rmh = new ResourceManageHome();
+            this.Hide();
+            rmh.ShowDialog();
+        }
     }
 }

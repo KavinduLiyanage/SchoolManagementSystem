@@ -30,39 +30,38 @@
         {
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnLogOutHeader = new System.Windows.Forms.Button();
-            this.btnNoticeMHeader = new System.Windows.Forms.Button();
             this.btnExamMheader = new System.Windows.Forms.Button();
             this.btnLibraryMHeader = new System.Windows.Forms.Button();
             this.btnStudentMHeader = new System.Windows.Forms.Button();
             this.btnResourseMHeader = new System.Windows.Forms.Button();
             this.btnInventoryMHeader = new System.Windows.Forms.Button();
-            this.btnEventMHeader = new System.Windows.Forms.Button();
             this.subLabel2 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.UsrlinkLabel = new System.Windows.Forms.LinkLabel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ButtonPanel = new System.Windows.Forms.Panel();
+            this.NHomeBtn = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.subLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.ButtonPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.SkyBlue;
             this.panel5.Controls.Add(this.btnLogOutHeader);
-            this.panel5.Controls.Add(this.btnNoticeMHeader);
             this.panel5.Controls.Add(this.btnExamMheader);
             this.panel5.Controls.Add(this.btnLibraryMHeader);
             this.panel5.Controls.Add(this.btnStudentMHeader);
             this.panel5.Controls.Add(this.btnResourseMHeader);
             this.panel5.Controls.Add(this.btnInventoryMHeader);
-            this.panel5.Controls.Add(this.btnEventMHeader);
             this.panel5.Location = new System.Drawing.Point(15, 7);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel5.Name = "panel5";
@@ -83,19 +82,6 @@
             this.btnLogOutHeader.Text = "Log Out";
             this.btnLogOutHeader.UseVisualStyleBackColor = true;
             // 
-            // btnNoticeMHeader
-            // 
-            this.btnNoticeMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnNoticeMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNoticeMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
-            this.btnNoticeMHeader.Location = new System.Drawing.Point(927, 19);
-            this.btnNoticeMHeader.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnNoticeMHeader.Name = "btnNoticeMHeader";
-            this.btnNoticeMHeader.Size = new System.Drawing.Size(145, 50);
-            this.btnNoticeMHeader.TabIndex = 23;
-            this.btnNoticeMHeader.Text = "Notice Management";
-            this.btnNoticeMHeader.UseVisualStyleBackColor = false;
-            // 
             // btnExamMheader
             // 
             this.btnExamMheader.BackColor = System.Drawing.SystemColors.MenuHighlight;
@@ -114,7 +100,7 @@
             this.btnLibraryMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnLibraryMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLibraryMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
-            this.btnLibraryMHeader.Location = new System.Drawing.Point(776, 19);
+            this.btnLibraryMHeader.Location = new System.Drawing.Point(888, 19);
             this.btnLibraryMHeader.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLibraryMHeader.Name = "btnLibraryMHeader";
             this.btnLibraryMHeader.Size = new System.Drawing.Size(145, 50);
@@ -127,7 +113,7 @@
             this.btnStudentMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnStudentMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStudentMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
-            this.btnStudentMHeader.Location = new System.Drawing.Point(172, 19);
+            this.btnStudentMHeader.Location = new System.Drawing.Point(226, 19);
             this.btnStudentMHeader.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnStudentMHeader.Name = "btnStudentMHeader";
             this.btnStudentMHeader.Size = new System.Drawing.Size(145, 50);
@@ -140,7 +126,7 @@
             this.btnResourseMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnResourseMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnResourseMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
-            this.btnResourseMHeader.Location = new System.Drawing.Point(625, 19);
+            this.btnResourseMHeader.Location = new System.Drawing.Point(667, 19);
             this.btnResourseMHeader.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnResourseMHeader.Name = "btnResourseMHeader";
             this.btnResourseMHeader.Size = new System.Drawing.Size(145, 50);
@@ -153,26 +139,13 @@
             this.btnInventoryMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnInventoryMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInventoryMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
-            this.btnInventoryMHeader.Location = new System.Drawing.Point(323, 19);
+            this.btnInventoryMHeader.Location = new System.Drawing.Point(442, 19);
             this.btnInventoryMHeader.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnInventoryMHeader.Name = "btnInventoryMHeader";
             this.btnInventoryMHeader.Size = new System.Drawing.Size(145, 50);
             this.btnInventoryMHeader.TabIndex = 19;
             this.btnInventoryMHeader.Text = "Inventory Management";
             this.btnInventoryMHeader.UseVisualStyleBackColor = false;
-            // 
-            // btnEventMHeader
-            // 
-            this.btnEventMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnEventMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEventMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
-            this.btnEventMHeader.Location = new System.Drawing.Point(474, 19);
-            this.btnEventMHeader.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnEventMHeader.Name = "btnEventMHeader";
-            this.btnEventMHeader.Size = new System.Drawing.Size(145, 50);
-            this.btnEventMHeader.TabIndex = 20;
-            this.btnEventMHeader.Text = "Event Management";
-            this.btnEventMHeader.UseVisualStyleBackColor = false;
             // 
             // subLabel2
             // 
@@ -183,7 +156,7 @@
             this.subLabel2.Size = new System.Drawing.Size(260, 220);
             this.subLabel2.TabIndex = 54;
             this.subLabel2.TabStop = false;
-            //
+            // 
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
@@ -206,6 +179,30 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(957, 546);
             this.panel1.TabIndex = 56;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(26, 76);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 50;
+            this.dataGridView1.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
+            this.dataGridView1.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.RowTemplate.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(907, 432);
+            this.dataGridView1.TabIndex = 10;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(338, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(298, 29);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Notice Board-Academic Staff";
             // 
             // pictureBox1
             // 
@@ -230,29 +227,28 @@
             this.UsrlinkLabel.TabStop = true;
             this.UsrlinkLabel.Text = "Dulashni Amanda";
             // 
-            // label1
+            // ButtonPanel
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(338, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(298, 29);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Notice Board-Academic Staff";
+            this.ButtonPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ButtonPanel.Controls.Add(this.NHomeBtn);
+            this.ButtonPanel.Location = new System.Drawing.Point(12, 334);
+            this.ButtonPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ButtonPanel.Name = "ButtonPanel";
+            this.ButtonPanel.Size = new System.Drawing.Size(260, 317);
+            this.ButtonPanel.TabIndex = 58;
             // 
-            // dataGridView1
+            // NHomeBtn
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(26, 76);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 50;
-            this.dataGridView1.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft;
-            this.dataGridView1.RowTemplate.DefaultCellStyle.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.RowTemplate.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(907, 432);
-            this.dataGridView1.TabIndex = 10;
+            this.NHomeBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.NHomeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NHomeBtn.ForeColor = System.Drawing.Color.Red;
+            this.NHomeBtn.Location = new System.Drawing.Point(11, 6);
+            this.NHomeBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.NHomeBtn.Name = "NHomeBtn";
+            this.NHomeBtn.Size = new System.Drawing.Size(235, 44);
+            this.NHomeBtn.TabIndex = 24;
+            this.NHomeBtn.Text = "Notices";
+            this.NHomeBtn.UseVisualStyleBackColor = false;
             // 
             // userNoticeView
             // 
@@ -260,6 +256,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GrayText;
             this.ClientSize = new System.Drawing.Size(1258, 664);
+            this.Controls.Add(this.ButtonPanel);
             this.Controls.Add(this.UsrlinkLabel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox4);
@@ -273,8 +270,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ButtonPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -284,13 +282,11 @@
 
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnLogOutHeader;
-        private System.Windows.Forms.Button btnNoticeMHeader;
         private System.Windows.Forms.Button btnExamMheader;
         private System.Windows.Forms.Button btnLibraryMHeader;
         private System.Windows.Forms.Button btnStudentMHeader;
         private System.Windows.Forms.Button btnResourseMHeader;
         private System.Windows.Forms.Button btnInventoryMHeader;
-        private System.Windows.Forms.Button btnEventMHeader;
         private System.Windows.Forms.PictureBox subLabel2;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel1;
@@ -298,5 +294,7 @@
         private System.Windows.Forms.LinkLabel UsrlinkLabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel ButtonPanel;
+        private System.Windows.Forms.Button NHomeBtn;
     }
 }

@@ -66,5 +66,12 @@ namespace SchoolManagementSystem
             this.Hide();
             newadminstaff.ShowDialog();
         }
+
+        private void BtnEventMHeader_Click(object sender, EventArgs e)
+        {
+            EventDashboard edd = new EventDashboard();
+            this.Hide();
+            edd.ShowDialog();
+        }
     }
 }

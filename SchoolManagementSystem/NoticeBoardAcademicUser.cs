@@ -68,5 +68,10 @@ namespace SchoolManagementSystem
         {
             Display_Data();
         }
+
+        private void BtnEventMHeader_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

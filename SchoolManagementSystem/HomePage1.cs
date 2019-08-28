@@ -89,5 +89,15 @@ namespace SchoolManagementSystem
             this.Hide();
             newdash.ShowDialog();
         }
+
+        private void MngStuBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MngStuImgBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

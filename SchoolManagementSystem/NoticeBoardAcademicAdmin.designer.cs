@@ -38,19 +38,22 @@
             this.btnInventoryMHeader = new System.Windows.Forms.Button();
             this.btnEventMHeader = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
             this.Back = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.subLabel2 = new System.Windows.Forms.PictureBox();
             this.UsrlinkLabel = new System.Windows.Forms.LinkLabel();
+            this.ButtonPanel = new System.Windows.Forms.Panel();
+            this.NHomeBtn = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.subLabel2)).BeginInit();
+            this.ButtonPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel5
@@ -188,6 +191,27 @@
             this.panel1.Size = new System.Drawing.Size(957, 546);
             this.panel1.TabIndex = 55;
             // 
+            // Back
+            // 
+            this.Back.BackgroundImage = global::SchoolManagementSystem.Properties.Resources.back_black_square_interface_button_symbol2;
+            this.Back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.Back.Location = new System.Drawing.Point(25, 21);
+            this.Back.Name = "Back";
+            this.Back.Size = new System.Drawing.Size(52, 42);
+            this.Back.TabIndex = 9;
+            this.Back.UseVisualStyleBackColor = true;
+            this.Back.Click += new System.EventHandler(this.Back_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(352, 21);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(298, 29);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Notice Board-Academic Staff";
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -201,27 +225,6 @@
             this.dataGridView1.RowTemplate.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(907, 432);
             this.dataGridView1.TabIndex = 7;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(352, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(298, 29);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Notice Board-Academic Staff";
-            // 
-            // Back
-            // 
-            this.Back.BackgroundImage = global::SchoolManagementSystem.Properties.Resources.back_black_square_interface_button_symbol2;
-            this.Back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.Back.Location = new System.Drawing.Point(25, 21);
-            this.Back.Name = "Back";
-            this.Back.Size = new System.Drawing.Size(52, 42);
-            this.Back.TabIndex = 9;
-            this.Back.UseVisualStyleBackColor = true;
-            this.Back.Click += new System.EventHandler(this.Back_Click);
             // 
             // pictureBox1
             // 
@@ -267,12 +270,36 @@
             this.UsrlinkLabel.TabStop = true;
             this.UsrlinkLabel.Text = "Dulashni Amanda";
             // 
+            // ButtonPanel
+            // 
+            this.ButtonPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ButtonPanel.Controls.Add(this.NHomeBtn);
+            this.ButtonPanel.Location = new System.Drawing.Point(15, 334);
+            this.ButtonPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ButtonPanel.Name = "ButtonPanel";
+            this.ButtonPanel.Size = new System.Drawing.Size(260, 317);
+            this.ButtonPanel.TabIndex = 57;
+            // 
+            // NHomeBtn
+            // 
+            this.NHomeBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.NHomeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NHomeBtn.ForeColor = System.Drawing.Color.Red;
+            this.NHomeBtn.Location = new System.Drawing.Point(11, 6);
+            this.NHomeBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.NHomeBtn.Name = "NHomeBtn";
+            this.NHomeBtn.Size = new System.Drawing.Size(235, 42);
+            this.NHomeBtn.TabIndex = 24;
+            this.NHomeBtn.Text = "Notices";
+            this.NHomeBtn.UseVisualStyleBackColor = false;
+            // 
             // AcadNotice_board
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GrayText;
             this.ClientSize = new System.Drawing.Size(1258, 664);
+            this.Controls.Add(this.ButtonPanel);
             this.Controls.Add(this.UsrlinkLabel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox4);
@@ -288,6 +315,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.subLabel2)).EndInit();
+            this.ButtonPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -312,5 +340,7 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.LinkLabel UsrlinkLabel;
+        private System.Windows.Forms.Panel ButtonPanel;
+        private System.Windows.Forms.Button NHomeBtn;
     }
 }

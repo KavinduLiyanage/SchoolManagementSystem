@@ -61,6 +61,8 @@
             this.UsrlinkLabel = new System.Windows.Forms.LinkLabel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.subLabel2 = new System.Windows.Forms.PictureBox();
+            this.ButtonPanel = new System.Windows.Forms.Panel();
+            this.NHomeBtn = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -68,6 +70,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.subLabel2)).BeginInit();
+            this.ButtonPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel5
@@ -461,12 +464,36 @@
             this.subLabel2.TabIndex = 51;
             this.subLabel2.TabStop = false;
             // 
+            // ButtonPanel
+            // 
+            this.ButtonPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ButtonPanel.Controls.Add(this.NHomeBtn);
+            this.ButtonPanel.Location = new System.Drawing.Point(15, 335);
+            this.ButtonPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ButtonPanel.Name = "ButtonPanel";
+            this.ButtonPanel.Size = new System.Drawing.Size(260, 317);
+            this.ButtonPanel.TabIndex = 58;
+            // 
+            // NHomeBtn
+            // 
+            this.NHomeBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.NHomeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NHomeBtn.ForeColor = System.Drawing.Color.Red;
+            this.NHomeBtn.Location = new System.Drawing.Point(11, 6);
+            this.NHomeBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.NHomeBtn.Name = "NHomeBtn";
+            this.NHomeBtn.Size = new System.Drawing.Size(235, 44);
+            this.NHomeBtn.TabIndex = 24;
+            this.NHomeBtn.Text = "Notices";
+            this.NHomeBtn.UseVisualStyleBackColor = false;
+            // 
             // addNotice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GrayText;
             this.ClientSize = new System.Drawing.Size(1258, 664);
+            this.Controls.Add(this.ButtonPanel);
             this.Controls.Add(this.UsrlinkLabel);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox4);
@@ -484,6 +511,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.subLabel2)).EndInit();
+            this.ButtonPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -524,5 +552,7 @@
         private System.Windows.Forms.Button SearchNoticebtn;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button UpdateNoticebtn;
+        private System.Windows.Forms.Panel ButtonPanel;
+        private System.Windows.Forms.Button NHomeBtn;
     }
 }

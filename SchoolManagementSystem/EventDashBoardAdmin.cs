@@ -61,7 +61,9 @@ namespace SchoolManagementSystem
 
         private void BtnNoticeMHeader_Click(object sender, EventArgs e)
         {
-
+            Notice_Dashboard nd = new Notice_Dashboard();
+            this.Hide();
+            nd.Show();
         }
 
         private void BtnLibraryMHeader_Click(object sender, EventArgs e)

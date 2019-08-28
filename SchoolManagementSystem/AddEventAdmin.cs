@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Collections;
 
 namespace SchoolManagementSystem
 {
@@ -78,22 +79,55 @@ namespace SchoolManagementSystem
 
         private void AddEvent_click(object sender, EventArgs e)
         {
-            OpenConnection();
-            SqlCommand cmd = conn.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = ("set IDENTITY_INSERT ON");
-            cmd.CommandText = ("insert into Events([Event Name], [Event Date], [Event Venue],[Time]) values ('" + textBoxName.Text + "','" + dateTimePicker1.Value.ToString()+ "','" + textBoxvenue.Text + "','" + textBoxTime.Text + "')");
-            cmd.ExecuteNonQuery();
-            CloseConnection();
-            
-
-
-            DialogResult dResult = MessageBox.Show("Add more Events", "Record Inserted Successfully", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-            if (dResult == DialogResult.Yes)
+            ArrayList error1 = new ArrayList();
+            Boolean eventName = true;
+            Boolean eventVenue = true;
+            Boolean time = true;
+            if (textBoxName.Text.Equals(""))
             {
-                AddEventform Addevent = new AddEventform();
-                this.Hide();
-                Addevent.Show();
+                eventName = false;
+                error1.Add("please Add Event Name");
+
+            }
+            if (textBoxvenue.Text.Equals(""))
+            {
+                eventVenue = false;
+                error1.Add("please add Venue");
+            }
+            if (textBoxTime.Text.Equals(""))
+            {
+                time = false;
+                error1.Add("please add time");
+            }
+            string errorArr1 = "";
+            foreach (Object ob in error1)
+            {
+                errorArr1 = errorArr1 + "\n" + ob;
+            }
+
+            if (eventName && eventVenue && time)
+            {
+                OpenConnection();
+                SqlCommand cmd = conn.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = ("set IDENTITY_INSERT ON");
+                cmd.CommandText = ("insert into Events([Event Name], [Event Date], [Event Venue],[Time]) values ('" + textBoxName.Text + "','" + dateTimePicker1.Value.ToString() + "','" + textBoxvenue.Text + "','" + textBoxTime.Text + "')");
+                cmd.ExecuteNonQuery();
+                CloseConnection();
+
+
+
+                DialogResult dResult = MessageBox.Show("Add more Events", "Record Inserted Successfully", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (dResult == DialogResult.Yes)
+                {
+                    AddEventform Addevent = new AddEventform();
+                    this.Hide();
+                    Addevent.Show();
+                }
+            }
+            else
+            {
+                MessageBox.Show(errorArr1);
             }
 
         }
@@ -149,16 +183,49 @@ namespace SchoolManagementSystem
 
         private void UpdateNoticebtn_Click(object sender, EventArgs e)
         {
+            ArrayList error1 = new ArrayList();
+            Boolean eventName = true;
+            Boolean eventVenue = true;
+            Boolean time = true;
+            if (textBoxName.Text.Equals(""))
+            {
+                eventName = false;
+                error1.Add("please Add Event Name");
+
+            }
+            if (textBoxvenue.Text.Equals(""))
+            {
+                eventVenue = false;
+                error1.Add("please add Venue");
+            }
+            if (textBoxTime.Text.Equals(""))
+            {
+                time = false;
+                error1.Add("please add time");
+            }
+            string errorArr1 = "";
+            foreach (Object ob in error1)
+            {
+                errorArr1 = errorArr1 + "\n" + ob;
+            }
+
             DialogResult dResult = MessageBox.Show("Are You Sure You Want To Update?", "Update!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dResult == DialogResult.Yes)
             {
-                OpenConnection();
-                SqlCommand cmd = conn.CreateCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = ("update Events set [Event Name]='" +textBoxName.Text+ "', [Event Date] ='" + dateTimePicker1.Value.ToString() + "',[Event Venue]='" +textBoxvenue.Text+ "',  [Time]='" +textBoxTime.Text+ "' where [Event ID]='" + EventId+ "'");
-                cmd.ExecuteNonQuery();
-                CloseConnection();
-                MessageBox.Show("Updated Succesfully");
+                if (eventName && eventVenue && time)
+                {
+                    OpenConnection();
+                    SqlCommand cmd = conn.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = ("update Events set [Event Name]='" + textBoxName.Text + "', [Event Date] ='" + dateTimePicker1.Value.ToString() + "',[Event Venue]='" + textBoxvenue.Text + "',  [Time]='" + textBoxTime.Text + "' where [Event ID]='" + EventId + "'");
+                    cmd.ExecuteNonQuery();
+                    CloseConnection();
+                    MessageBox.Show("Updated Succesfully");
+                }
+                else
+                {
+                    MessageBox.Show(errorArr1);
+                }
             }
         }
 

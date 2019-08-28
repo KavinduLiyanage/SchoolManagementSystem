@@ -42,7 +42,6 @@
             this.btnStudentMHeader = new System.Windows.Forms.Button();
             this.btnResourseMHeader = new System.Windows.Forms.Button();
             this.btnInventoryMHeader = new System.Windows.Forms.Button();
-            this.btnEventMHeader = new System.Windows.Forms.Button();
             this.subLabel2 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -148,7 +147,6 @@
             this.panel5.Controls.Add(this.btnStudentMHeader);
             this.panel5.Controls.Add(this.btnResourseMHeader);
             this.panel5.Controls.Add(this.btnInventoryMHeader);
-            this.panel5.Controls.Add(this.btnEventMHeader);
             this.panel5.Location = new System.Drawing.Point(15, 7);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel5.Name = "panel5";
@@ -176,7 +174,7 @@
             this.btnNoticeMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnNoticeMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNoticeMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
-            this.btnNoticeMHeader.Location = new System.Drawing.Point(927, 19);
+            this.btnNoticeMHeader.Location = new System.Drawing.Point(910, 19);
             this.btnNoticeMHeader.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnNoticeMHeader.Name = "btnNoticeMHeader";
             this.btnNoticeMHeader.Size = new System.Drawing.Size(145, 50);
@@ -204,7 +202,7 @@
             this.btnLibraryMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnLibraryMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLibraryMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
-            this.btnLibraryMHeader.Location = new System.Drawing.Point(776, 19);
+            this.btnLibraryMHeader.Location = new System.Drawing.Point(728, 19);
             this.btnLibraryMHeader.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLibraryMHeader.Name = "btnLibraryMHeader";
             this.btnLibraryMHeader.Size = new System.Drawing.Size(145, 50);
@@ -218,7 +216,7 @@
             this.btnStudentMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnStudentMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStudentMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
-            this.btnStudentMHeader.Location = new System.Drawing.Point(172, 19);
+            this.btnStudentMHeader.Location = new System.Drawing.Point(195, 19);
             this.btnStudentMHeader.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnStudentMHeader.Name = "btnStudentMHeader";
             this.btnStudentMHeader.Size = new System.Drawing.Size(145, 50);
@@ -232,7 +230,7 @@
             this.btnResourseMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnResourseMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnResourseMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
-            this.btnResourseMHeader.Location = new System.Drawing.Point(625, 19);
+            this.btnResourseMHeader.Location = new System.Drawing.Point(547, 19);
             this.btnResourseMHeader.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnResourseMHeader.Name = "btnResourseMHeader";
             this.btnResourseMHeader.Size = new System.Drawing.Size(145, 50);
@@ -246,7 +244,7 @@
             this.btnInventoryMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnInventoryMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInventoryMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
-            this.btnInventoryMHeader.Location = new System.Drawing.Point(323, 19);
+            this.btnInventoryMHeader.Location = new System.Drawing.Point(362, 19);
             this.btnInventoryMHeader.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnInventoryMHeader.Name = "btnInventoryMHeader";
             this.btnInventoryMHeader.Size = new System.Drawing.Size(145, 50);
@@ -254,20 +252,6 @@
             this.btnInventoryMHeader.Text = "Inventory Management";
             this.btnInventoryMHeader.UseVisualStyleBackColor = false;
             this.btnInventoryMHeader.Click += new System.EventHandler(this.BtnInventoryMHeader_Click);
-            // 
-            // btnEventMHeader
-            // 
-            this.btnEventMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnEventMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEventMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
-            this.btnEventMHeader.Location = new System.Drawing.Point(474, 19);
-            this.btnEventMHeader.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnEventMHeader.Name = "btnEventMHeader";
-            this.btnEventMHeader.Size = new System.Drawing.Size(145, 50);
-            this.btnEventMHeader.TabIndex = 20;
-            this.btnEventMHeader.Text = "Event Management";
-            this.btnEventMHeader.UseVisualStyleBackColor = false;
-            this.btnEventMHeader.Click += new System.EventHandler(this.BtnEventMHeader_Click);
             // 
             // subLabel2
             // 
@@ -407,7 +391,6 @@
         private System.Windows.Forms.Button btnStudentMHeader;
         private System.Windows.Forms.Button btnResourseMHeader;
         private System.Windows.Forms.Button btnInventoryMHeader;
-        private System.Windows.Forms.Button btnEventMHeader;
         private System.Windows.Forms.PictureBox subLabel2;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel1;

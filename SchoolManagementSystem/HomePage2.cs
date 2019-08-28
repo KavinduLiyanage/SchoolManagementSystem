@@ -27,5 +27,17 @@ namespace SchoolManagementSystem
             this.Hide();
             reqLeave.ShowDialog();
         }
+
+        private void MngNticeBtn_Click(object sender, System.EventArgs e)
+        {
+            userNoticeView Unv = new userNoticeView();
+            this.Hide();
+            Unv.ShowDialog();
+        }
+
+        private void MngStuImgBtn_Click(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }

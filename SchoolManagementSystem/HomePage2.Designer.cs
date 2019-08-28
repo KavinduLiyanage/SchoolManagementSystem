@@ -59,6 +59,7 @@
             this.MngNticeBtn.TabIndex = 39;
             this.MngNticeBtn.Text = "Notices";
             this.MngNticeBtn.UseVisualStyleBackColor = false;
+            this.MngNticeBtn.Click += new System.EventHandler(this.MngNticeBtn_Click);
             // 
             // MngNticeImgBtn
             // 
@@ -190,6 +191,7 @@
             this.MngStuImgBtn.Size = new System.Drawing.Size(107, 115);
             this.MngStuImgBtn.TabIndex = 26;
             this.MngStuImgBtn.UseVisualStyleBackColor = true;
+            this.MngStuImgBtn.Click += new System.EventHandler(this.MngStuImgBtn_Click);
             // 
             // MngStaffBtn
             // 

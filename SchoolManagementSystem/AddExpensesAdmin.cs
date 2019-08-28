@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Collections;
 
 namespace SchoolManagementSystem
 {
@@ -95,23 +96,57 @@ namespace SchoolManagementSystem
 
         private void AddEx_click(object sender, EventArgs e)
         {
-            OpenConnection();
-            SqlCommand cmd = conn.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = ("set IDENTITY_INSERT ON");
-            cmd.CommandText = ("insert into Expenses([Event Id],[Details],[Amount]) values ('" + idtextbox.Text + "','" + textBoxdet.Text+ "','" + textBoxAmt.Text + "')");
-            cmd.ExecuteNonQuery();
-            CloseConnection();
-            this.ResetRecords();
+            ArrayList errors = new ArrayList();
+            Boolean eventID = true;
+            Boolean details = true;
+            Boolean amount = true;
 
-
-
-            DialogResult dResult = MessageBox.Show("Add more Expenses", "Record Inserted Successfully", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-            if (dResult == DialogResult.Yes)
+            if (idtextbox.Text.Equals(""))
             {
-                AddEventform Addevent = new AddEventform();
-                this.Hide();
-                Addevent.Show();
+                eventID = false;
+                errors.Add("please Add EventID");
+
+            }
+            if (textBoxdet.Text.Equals(""))
+            {
+                details = false;
+                errors.Add("please add details");
+            }
+            if (textBoxAmt.Text.Equals(""))
+            {
+                amount = false;
+                errors.Add("please add amaount");
+            }
+
+            string errorArr = "";
+            foreach (Object ob in errors)
+            {
+                errorArr = errorArr + "\n" + ob;
+            }
+            if (eventID && details && amount)
+            {
+                OpenConnection();
+                SqlCommand cmd = conn.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = ("set IDENTITY_INSERT ON");
+                cmd.CommandText = ("insert into Expenses([Event Id],[Details],[Amount]) values ('" + idtextbox.Text + "','" + textBoxdet.Text + "','" + textBoxAmt.Text + "')");
+                cmd.ExecuteNonQuery();
+                CloseConnection();
+                this.ResetRecords();
+
+
+
+                DialogResult dResult = MessageBox.Show("Add more Expenses", "Record Inserted Successfully", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+                if (dResult == DialogResult.Yes)
+                {
+                    AddEventform Addevent = new AddEventform();
+                    this.Hide();
+                    Addevent.Show();
+                }
+            }
+            else
+            {
+                MessageBox.Show(errorArr);
             }
         }
 
@@ -139,17 +174,52 @@ namespace SchoolManagementSystem
 
         private void UpdateEx_click(object sender, EventArgs e)
         {
+            ArrayList errors = new ArrayList();
+            Boolean eventID = true;
+            Boolean details = true;
+            Boolean amount = true;
+
+            if (idtextbox.Text.Equals(""))
+            {
+                eventID = false;
+                errors.Add("please Add EventID");
+
+            }
+            if (textBoxdet.Text.Equals(""))
+            {
+                details = false;
+                errors.Add("please add details");
+            }
+            if (textBoxAmt.Text.Equals(""))
+            {
+                amount = false;
+                errors.Add("please add amaount");
+            }
+
+            string errorArr = "";
+            foreach (Object ob in errors)
+            {
+                errorArr = errorArr + "\n" + ob;
+            }
             DialogResult dResult = MessageBox.Show("Are You Sure You Want To Update?", "Update!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
             if (dResult == DialogResult.Yes)
             {
-                OpenConnection();
-                SqlCommand cmd = conn.CreateCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = ("update Expenses set [Event Id]='" + idtextbox.Text + "', [Details] ='" + textBoxdet.Text + "',[Amount]='" + textBoxAmt.Text + "' where [Expense Id]='" + ExpenseID + "'");
-                cmd.ExecuteNonQuery();
-                CloseConnection();
-                MessageBox.Show("Updated Succesfully");
+                if (eventID && details && amount)
+                {
+                    OpenConnection();
+                    SqlCommand cmd = conn.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = ("update Expenses set [Event Id]='" + idtextbox.Text + "', [Details] ='" + textBoxdet.Text + "',[Amount]='" + textBoxAmt.Text + "' where [Expense Id]='" + ExpenseID + "'");
+                    cmd.ExecuteNonQuery();
+                    CloseConnection();
+                    MessageBox.Show("Updated Succesfully");
+                }
+                else
+                {
+                    MessageBox.Show(errorArr);
+                }
             }
+            
         }
 
         private void SearchEx_click(object sender, EventArgs e)

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Collections;
 
 namespace SchoolManagementSystem
 {
@@ -87,23 +88,49 @@ namespace SchoolManagementSystem
 
         private void AddNotice_Click(object sender, EventArgs e)
         {
-            
-
-            OpenConnection();
-            SqlCommand cmd = conn.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = ("set IDENTITY_INSERT ON");
-            cmd.CommandText = ("insert into Notices( [Published Date] ,[Expiration Date], [Category],[Details]) values('" + dateTimePicker1.Value.ToString()+"','"+dateTimePicker2.Value.ToString()+"','"+ Category +"','"+richTextBox1.Text+"')");
-            cmd.ExecuteNonQuery();
-            CloseConnection();
-            ResetRecords();
-            DialogResult dResult = MessageBox.Show("Add more Notices", "Record Inserted Successfully", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-
-            if (dResult == DialogResult.Yes)
+            ArrayList error2 = new ArrayList();
+            Boolean NoticeCat = true;
+            Boolean Details = true;
+            if (Category.Equals(""))
             {
-                addNotice Addnotice = new addNotice();
-                this.Hide();
-                Addnotice.Show();
+                NoticeCat = false;
+                error2.Add("please Add Notice Category");
+
+            }
+            if (richTextBox1.Text.Equals(""))
+            {
+                Details = false;
+                error2.Add("please add Details");
+            }
+
+            string errorArr2 = "";
+            foreach (Object ob in error2)
+            {
+                errorArr2 = errorArr2 + "\n" + ob;
+            }
+
+            if (NoticeCat && Details)
+            {
+                OpenConnection();
+                SqlCommand cmd = conn.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = ("set IDENTITY_INSERT ON");
+                cmd.CommandText = ("insert into Notices( [Published Date] ,[Expiration Date], [Category],[Details]) values('" + dateTimePicker1.Value.ToString() + "','" + dateTimePicker2.Value.ToString() + "','" + Category + "','" + richTextBox1.Text + "')");
+                cmd.ExecuteNonQuery();
+                CloseConnection();
+                ResetRecords();
+                DialogResult dResult = MessageBox.Show("Add more Notices", "Record Inserted Successfully", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+                if (dResult == DialogResult.Yes)
+                {
+                    addNotice Addnotice = new addNotice();
+                    this.Hide();
+                    Addnotice.Show();
+                }
+            }
+            else
+            {
+                MessageBox.Show(errorArr2);
             }
 
 
@@ -200,17 +227,44 @@ namespace SchoolManagementSystem
 
         private void UpdateNoticebtn_Click(object sender, EventArgs e)
         {
+            ArrayList error2 = new ArrayList();
+            Boolean NoticeCat = true;
+            Boolean Details = true;
+            if (Category.Equals(""))
+            {
+                NoticeCat = false;
+                error2.Add("please Add Notice Category");
+
+            }
+            if (richTextBox1.Text.Equals(""))
+            {
+                Details = false;
+                error2.Add("please add Details");
+            }
+
+            string errorArr2 = "";
+            foreach (Object ob in error2)
+            {
+                errorArr2 = errorArr2 + "\n" + ob;
+            }
             DialogResult dResult = MessageBox.Show("Are You Sure You Want To Update?", "Update!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (dResult == DialogResult.Yes)
             {
-                OpenConnection();
-                SqlCommand cmd = conn.CreateCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = ("update notices set [Published Date]='" + dateTimePicker1.Value.ToString() + "',[Expiration Date]='" + dateTimePicker2.Value.ToString() + "',[Category]='"+ Category +"', [Details] ='"+ richTextBox1.Text + "' where [Notice Id]='"+noticeID+"'");
-                cmd.ExecuteNonQuery();
-                CloseConnection();
-                MessageBox.Show("Updated Succesfully");
+                if (NoticeCat && Details)
+                {
+                    OpenConnection();
+                    SqlCommand cmd = conn.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = ("update notices set [Published Date]='" + dateTimePicker1.Value.ToString() + "',[Expiration Date]='" + dateTimePicker2.Value.ToString() + "',[Category]='" + Category + "', [Details] ='" + richTextBox1.Text + "' where [Notice Id]='" + noticeID + "'");
+                    cmd.ExecuteNonQuery();
+                    CloseConnection();
+                    MessageBox.Show("Updated Succesfully");
+                }
+                else
+                {
+                    MessageBox.Show(errorArr2);
+                }
             }
         }
     }

@@ -44,11 +44,15 @@
             this.NHomeBtn = new System.Windows.Forms.Button();
             this.NViewStaffBtn = new System.Windows.Forms.Button();
             this.NViewLeaveBtn = new System.Windows.Forms.Button();
-            this.NViewSalaryBtn = new System.Windows.Forms.Button();
             this.NAddStaffBtn = new System.Windows.Forms.Button();
             this.NStaffHomeBtn = new System.Windows.Forms.Button();
             this.subLabel2 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.ButtonPanel.SuspendLayout();
@@ -204,10 +208,11 @@
             // ButtonPanel
             // 
             this.ButtonPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ButtonPanel.Controls.Add(this.button2);
+            this.ButtonPanel.Controls.Add(this.button1);
             this.ButtonPanel.Controls.Add(this.NHomeBtn);
             this.ButtonPanel.Controls.Add(this.NViewStaffBtn);
             this.ButtonPanel.Controls.Add(this.NViewLeaveBtn);
-            this.ButtonPanel.Controls.Add(this.NViewSalaryBtn);
             this.ButtonPanel.Controls.Add(this.NAddStaffBtn);
             this.ButtonPanel.Controls.Add(this.NStaffHomeBtn);
             this.ButtonPanel.Location = new System.Drawing.Point(12, 329);
@@ -233,7 +238,7 @@
             // 
             this.NViewStaffBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.NViewStaffBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NViewStaffBtn.Location = new System.Drawing.Point(11, 166);
+            this.NViewStaffBtn.Location = new System.Drawing.Point(11, 201);
             this.NViewStaffBtn.Margin = new System.Windows.Forms.Padding(2);
             this.NViewStaffBtn.Name = "NViewStaffBtn";
             this.NViewStaffBtn.Size = new System.Drawing.Size(235, 35);
@@ -245,7 +250,7 @@
             // 
             this.NViewLeaveBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.NViewLeaveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NViewLeaveBtn.Location = new System.Drawing.Point(11, 49);
+            this.NViewLeaveBtn.Location = new System.Drawing.Point(11, 84);
             this.NViewLeaveBtn.Margin = new System.Windows.Forms.Padding(2);
             this.NViewLeaveBtn.Name = "NViewLeaveBtn";
             this.NViewLeaveBtn.Size = new System.Drawing.Size(235, 35);
@@ -254,23 +259,11 @@
             this.NViewLeaveBtn.UseVisualStyleBackColor = false;
             this.NViewLeaveBtn.Click += new System.EventHandler(this.NViewLeaveBtn_Click);
             // 
-            // NViewSalaryBtn
-            // 
-            this.NViewSalaryBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.NViewSalaryBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NViewSalaryBtn.Location = new System.Drawing.Point(11, 204);
-            this.NViewSalaryBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.NViewSalaryBtn.Name = "NViewSalaryBtn";
-            this.NViewSalaryBtn.Size = new System.Drawing.Size(235, 35);
-            this.NViewSalaryBtn.TabIndex = 18;
-            this.NViewSalaryBtn.Text = "Broken Items";
-            this.NViewSalaryBtn.UseVisualStyleBackColor = false;
-            // 
             // NAddStaffBtn
             // 
             this.NAddStaffBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.NAddStaffBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NAddStaffBtn.Location = new System.Drawing.Point(11, 127);
+            this.NAddStaffBtn.Location = new System.Drawing.Point(11, 162);
             this.NAddStaffBtn.Margin = new System.Windows.Forms.Padding(2);
             this.NAddStaffBtn.Name = "NAddStaffBtn";
             this.NAddStaffBtn.Size = new System.Drawing.Size(235, 35);
@@ -282,7 +275,7 @@
             // 
             this.NStaffHomeBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.NStaffHomeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NStaffHomeBtn.Location = new System.Drawing.Point(11, 88);
+            this.NStaffHomeBtn.Location = new System.Drawing.Point(11, 123);
             this.NStaffHomeBtn.Margin = new System.Windows.Forms.Padding(2);
             this.NStaffHomeBtn.Name = "NStaffHomeBtn";
             this.NStaffHomeBtn.Size = new System.Drawing.Size(235, 35);
@@ -302,17 +295,79 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(481, 117);
+            this.dataGridView1.Location = new System.Drawing.Point(435, 172);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(461, 535);
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(562, 457);
             this.dataGridView1.TabIndex = 78;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(11, 45);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(235, 35);
+            this.button1.TabIndex = 25;
+            this.button1.Text = "Inventory Home";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(11, 240);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(235, 35);
+            this.button2.TabIndex = 26;
+            this.button2.Text = "View Stock";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(527, 131);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(345, 35);
+            this.textBox1.TabIndex = 79;
+            this.textBox1.Text = "INVENTORY MANAGEMENT";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(785, 642);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(0, 22);
+            this.label9.TabIndex = 82;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(601, 642);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(174, 22);
+            this.label7.TabIndex = 80;
+            this.label7.Text = "Total Deleted Items:";
             // 
             // DeletedList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.UsrlinkLabel);
@@ -320,7 +375,9 @@
             this.Controls.Add(this.subLabel2);
             this.Controls.Add(this.panel5);
             this.Name = "DeletedList";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "DeletedList";
+            this.Load += new System.EventHandler(this.DeletedList_Load);
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ButtonPanel.ResumeLayout(false);
@@ -348,10 +405,14 @@
         private System.Windows.Forms.Button NHomeBtn;
         private System.Windows.Forms.Button NViewStaffBtn;
         private System.Windows.Forms.Button NViewLeaveBtn;
-        private System.Windows.Forms.Button NViewSalaryBtn;
         private System.Windows.Forms.Button NAddStaffBtn;
         private System.Windows.Forms.Button NStaffHomeBtn;
         private System.Windows.Forms.PictureBox subLabel2;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label7;
     }
 }

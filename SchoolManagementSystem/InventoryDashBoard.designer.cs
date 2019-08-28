@@ -46,6 +46,7 @@
             this.NAddStaffBtn = new System.Windows.Forms.Button();
             this.NStaffHomeBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.panel24 = new System.Windows.Forms.Panel();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
@@ -81,7 +82,6 @@
             this.btnLab = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.subLabel2 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel5.SuspendLayout();
             this.ButtonPanel.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -296,6 +296,7 @@
             this.NViewSalaryBtn.TabIndex = 18;
             this.NViewSalaryBtn.Text = "Broken Items";
             this.NViewSalaryBtn.UseVisualStyleBackColor = false;
+            this.NViewSalaryBtn.Click += new System.EventHandler(this.NViewSalaryBtn_Click);
             // 
             // NAddStaffBtn
             // 
@@ -337,6 +338,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(963, 559);
             this.panel1.TabIndex = 66;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(280, 12);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(345, 35);
+            this.textBox1.TabIndex = 27;
+            this.textBox1.Text = "INVENTORY MANAGEMENT";
             // 
             // button1
             // 
@@ -723,15 +733,6 @@
             this.subLabel2.Size = new System.Drawing.Size(260, 220);
             this.subLabel2.TabIndex = 62;
             this.subLabel2.TabStop = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(280, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(345, 35);
-            this.textBox1.TabIndex = 27;
-            this.textBox1.Text = "INVENTORY MANAGEMENT";
             // 
             // InventoryDashboard
             // 

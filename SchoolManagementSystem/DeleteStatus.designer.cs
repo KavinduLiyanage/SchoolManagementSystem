@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.richDiscription = new System.Windows.Forms.RichTextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -38,6 +39,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.catBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -142,6 +145,10 @@
             this.label3.TabIndex = 84;
             this.label3.Text = "Category";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // DeleteStatus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -160,6 +167,7 @@
             this.Controls.Add(this.label2);
             this.Name = "DeleteStatus";
             this.Text = "DeleteStatus";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,5 +185,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox catBox1;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

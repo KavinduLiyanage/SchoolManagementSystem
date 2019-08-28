@@ -60,7 +60,7 @@ namespace SchoolManagementSystem
 
         public void loadDat()
         {
-            SqlConnection con = new SqlConnection("Data Source=msi\\sqlexpress;Initial Catalog=SchoolManagementSystemDB;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=SchoolManagementSystemDB;Integrated Security=True");
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
@@ -176,7 +176,7 @@ namespace SchoolManagementSystem
                 DialogResult dialogResult = MessageBox.Show("Are you shure to add this item?", "Message", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
-                    SqlConnection con = new SqlConnection("Data Source=msi\\sqlexpress;Initial Catalog=SchoolManagementSystemDB;Integrated Security=True");
+                    SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=SchoolManagementSystemDB;Integrated Security=True");
                     con.Open();
                     var sqlQuery = "";
                     if (IfProductExists(con, codeText.Text))
@@ -300,9 +300,9 @@ namespace SchoolManagementSystem
             {
                 this.dgview.Visible = true;
                 dgview.BringToFront();
-                Search(150, 105, 430, 200, "Item Code,Item Name,Category", "100,50,0");
+                Search(250, 250, 250, 200, "Item Code,Item Name,Category", "100,50,0");
                 this.dgview.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ItemCode_MouseDoubleClick);
-                SqlConnection con = new SqlConnection("Data Source=msi\\sqlexpress;Initial Catalog=SchoolManagementSystemDB;Integrated Security=True");
+                SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=SchoolManagementSystemDB;Integrated Security=True");
                 con.Open();
                 SqlDataAdapter sda = new SqlDataAdapter("Select top(10) ItemCode,ItemName,Category from [Items] where [ItemCode] like'" + codeText.Text + "%'", con);
                 DataTable dt = new DataTable();
@@ -385,8 +385,15 @@ namespace SchoolManagementSystem
         private void Button1_Click(object sender, EventArgs e)
         {
             //int x = Int32.Parse(codeText.Text);
-            DeleteStatus delete = new DeleteStatus(codeText.Text,nametext.Text,Categorybox.Text);
-            delete.Show();
+            if (validation())
+            {
+                DeleteStatus delete = new DeleteStatus(codeText.Text, nametext.Text, Categorybox.Text);
+                delete.Show();
+            }
+            else {
+                MessageBox.Show("Record not Exists...!");
+                resetRecords() ;
+            }
         }
 
         private void NHomeBtn_Click(object sender, EventArgs e)
@@ -408,6 +415,20 @@ namespace SchoolManagementSystem
             ManageStock mngstck = new ManageStock(category);
             this.Hide();
             mngstck.ShowDialog();
+        }
+
+        private void NViewSalaryBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DeletedList list = new DeletedList();
+            list.Show();
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            InventoryDashboard add = new InventoryDashboard();
+            add.Show();
         }
     }
 }

@@ -55,6 +55,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.UsrlinkLabel = new System.Windows.Forms.LinkLabel();
             this.ButtonPanel = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.NHomeBtn = new System.Windows.Forms.Button();
             this.NViewStaffBtn = new System.Windows.Forms.Button();
             this.NViewLeaveBtn = new System.Windows.Forms.Button();
@@ -62,7 +63,6 @@
             this.NAddStaffBtn = new System.Windows.Forms.Button();
             this.NStaffHomeBtn = new System.Windows.Forms.Button();
             this.subLabel2 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -384,6 +384,18 @@
             this.ButtonPanel.Size = new System.Drawing.Size(260, 335);
             this.ButtonPanel.TabIndex = 67;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(11, 200);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(235, 35);
+            this.button1.TabIndex = 25;
+            this.button1.Text = "Inventory Report";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // NHomeBtn
             // 
             this.NHomeBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
@@ -433,6 +445,7 @@
             this.NViewSalaryBtn.TabIndex = 18;
             this.NViewSalaryBtn.Text = "Broken Items";
             this.NViewSalaryBtn.UseVisualStyleBackColor = false;
+            this.NViewSalaryBtn.Click += new System.EventHandler(this.NViewSalaryBtn_Click);
             // 
             // NAddStaffBtn
             // 
@@ -468,18 +481,6 @@
             this.subLabel2.Size = new System.Drawing.Size(260, 220);
             this.subLabel2.TabIndex = 66;
             this.subLabel2.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(11, 200);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(235, 35);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "Inventory Report";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // ManageItem
             // 

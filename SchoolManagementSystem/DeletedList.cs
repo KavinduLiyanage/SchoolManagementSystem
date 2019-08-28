@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,45 @@ namespace SchoolManagementSystem
             this.Hide();
             ManageItem add = new ManageItem("View All Items");
             add.Show();
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            InventoryDashboard add = new InventoryDashboard();
+            add.Show();
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            ManageItem item = new ManageItem("View All Items");
+            item.Show();
+        }
+
+        private void DeletedList_Load(object sender, EventArgs e)
+        {
+            SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=SchoolManagementSystemDB;Integrated Security=True");
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select * from [dbo].[DeletedStatus]";
+            cmd.ExecuteNonQuery();
+            DataTable dt1 = new DataTable();
+            SqlDataAdapter ad = new SqlDataAdapter(cmd);
+            ad.Fill(dt1);
+            dataGridView1.DataSource = dt1;
+            con.Close();
+
+            if (dataGridView1.Rows.Count > 0)
+            {
+                label9.Text = dataGridView1.Rows.Count.ToString();
+                
+            }
+            else
+            {
+                label9.Text = "0";
+            }
         }
     }
 }

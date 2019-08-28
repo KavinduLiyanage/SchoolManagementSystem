@@ -19,38 +19,19 @@ namespace SchoolManagementSystem
             InitializeComponent();
             catbox.Text = category;
             this.category = category;
-            
         }
 
         private void PictureBox2_Click(object sender, EventArgs e)
         {
             this.Hide();
             ManageStock add = new ManageStock(catbox.Text);
-            add.Show();
-
-            
+            add.Show();  
         }
 
 
         public void LoadData()
         {
-            SqlConnection con = new SqlConnection("Data Source=msi\\sqlexpress;Initial Catalog=SchoolManagementSystemDB;Integrated Security=True");
-           // SqlConnection con = Connection.GetSqlConnection();
-
-             /*SqlDataAdapter sdt = new SqlDataAdapter(@"SELECT * FROM [dbo].[Items]", con);
-              DataTable dt = new DataTable();
-              sdt.Fill(dt);
-              dataGridView1.Rows.Clear();
-
-              foreach (DataRow item in dt.Rows)
-              {
-                  int n = dataGridView1.Rows.Add();
-                  dataGridView1.Rows[n].Cells[0].Value = item["ItemCode"].ToString();
-                  dataGridView1.Rows[n].Cells[1].Value = item["Category"].ToString();
-                  dataGridView1.Rows[n].Cells[2].Value = item["ItemName"].ToString();
-                  dataGridView1.Rows[n].Cells[3].Value = item["Discription"].ToString();
-              }*/
-
+            SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=SchoolManagementSystemDB;Integrated Security=True");
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
@@ -67,7 +48,6 @@ namespace SchoolManagementSystem
             ad.Fill(dt1);
             dataGridView1.DataSource = dt1;
             con.Close();
-
         }
 
         private void Grid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -122,14 +102,11 @@ namespace SchoolManagementSystem
             {
                 Categorybox.Text = "Electronic Items";
             }
-
-           
-
         }
 
         private void Btnsave_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection("Data Source=msi\\sqlexpress;Initial Catalog=SchoolManagementSystemDB;Integrated Security=True");
+            SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=SchoolManagementSystemDB;Integrated Security=True");
            //SqlConnection con = Connection.GetSqlConnection();
             con.Open();
 
@@ -161,10 +138,10 @@ namespace SchoolManagementSystem
                         btnsave.Text = "Add";
                         ResetRecords();
 
-                         MessageBox.Show("Record inserted successfully...");
-                            errorProvider1.Clear();
+                        MessageBox.Show("Record inserted successfully...");
+                        errorProvider1.Clear();
+                    }
                 }
-            }
      
         }
 
@@ -282,6 +259,13 @@ namespace SchoolManagementSystem
             this.Hide();
             ManageStock add = new ManageStock(catbox.Text);
             add.Show();
+        }
+
+        private void NViewSalaryBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DeletedList list = new DeletedList();
+            list.Show();
         }
     }
    

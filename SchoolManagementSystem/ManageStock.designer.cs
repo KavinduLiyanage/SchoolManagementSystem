@@ -72,6 +72,7 @@
             this.codeText = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.refreshBtn = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -233,9 +234,9 @@
             this.label7.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(743, 623);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(127, 22);
+            this.label7.Size = new System.Drawing.Size(107, 22);
             this.label7.TabIndex = 65;
-            this.label7.Text = "Total Product:";
+            this.label7.Text = "Total Items:";
             // 
             // label8
             // 
@@ -293,6 +294,7 @@
             // ButtonPanel
             // 
             this.ButtonPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ButtonPanel.Controls.Add(this.button2);
             this.ButtonPanel.Controls.Add(this.NHomeBtn);
             this.ButtonPanel.Controls.Add(this.NViewStaffBtn);
             this.ButtonPanel.Controls.Add(this.NViewLeaveBtn);
@@ -323,7 +325,7 @@
             // 
             this.NViewStaffBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.NViewStaffBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NViewStaffBtn.Location = new System.Drawing.Point(11, 166);
+            this.NViewStaffBtn.Location = new System.Drawing.Point(11, 200);
             this.NViewStaffBtn.Margin = new System.Windows.Forms.Padding(2);
             this.NViewStaffBtn.Name = "NViewStaffBtn";
             this.NViewStaffBtn.Size = new System.Drawing.Size(235, 35);
@@ -335,7 +337,7 @@
             // 
             this.NViewLeaveBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.NViewLeaveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NViewLeaveBtn.Location = new System.Drawing.Point(11, 49);
+            this.NViewLeaveBtn.Location = new System.Drawing.Point(11, 83);
             this.NViewLeaveBtn.Margin = new System.Windows.Forms.Padding(2);
             this.NViewLeaveBtn.Name = "NViewLeaveBtn";
             this.NViewLeaveBtn.Size = new System.Drawing.Size(235, 35);
@@ -348,19 +350,20 @@
             // 
             this.NViewSalaryBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.NViewSalaryBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NViewSalaryBtn.Location = new System.Drawing.Point(11, 204);
+            this.NViewSalaryBtn.Location = new System.Drawing.Point(11, 238);
             this.NViewSalaryBtn.Margin = new System.Windows.Forms.Padding(2);
             this.NViewSalaryBtn.Name = "NViewSalaryBtn";
             this.NViewSalaryBtn.Size = new System.Drawing.Size(235, 35);
             this.NViewSalaryBtn.TabIndex = 18;
             this.NViewSalaryBtn.Text = "Broken Items";
             this.NViewSalaryBtn.UseVisualStyleBackColor = false;
+            this.NViewSalaryBtn.Click += new System.EventHandler(this.NViewSalaryBtn_Click);
             // 
             // NAddStaffBtn
             // 
             this.NAddStaffBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.NAddStaffBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NAddStaffBtn.Location = new System.Drawing.Point(11, 127);
+            this.NAddStaffBtn.Location = new System.Drawing.Point(11, 161);
             this.NAddStaffBtn.Margin = new System.Windows.Forms.Padding(2);
             this.NAddStaffBtn.Name = "NAddStaffBtn";
             this.NAddStaffBtn.Size = new System.Drawing.Size(235, 35);
@@ -372,7 +375,7 @@
             // 
             this.NStaffHomeBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.NStaffHomeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NStaffHomeBtn.Location = new System.Drawing.Point(11, 88);
+            this.NStaffHomeBtn.Location = new System.Drawing.Point(11, 122);
             this.NStaffHomeBtn.Margin = new System.Windows.Forms.Padding(2);
             this.NStaffHomeBtn.Name = "NStaffHomeBtn";
             this.NStaffHomeBtn.Size = new System.Drawing.Size(235, 35);
@@ -444,7 +447,7 @@
             // 
             this.btnsave.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnsave.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsave.Location = new System.Drawing.Point(17, 413);
+            this.btnsave.Location = new System.Drawing.Point(14, 413);
             this.btnsave.Name = "btnsave";
             this.btnsave.Size = new System.Drawing.Size(106, 51);
             this.btnsave.TabIndex = 30;
@@ -456,7 +459,7 @@
             // 
             this.cancelbtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.cancelbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cancelbtn.Location = new System.Drawing.Point(129, 413);
+            this.cancelbtn.Location = new System.Drawing.Point(127, 413);
             this.cancelbtn.Name = "cancelbtn";
             this.cancelbtn.Size = new System.Drawing.Size(106, 51);
             this.cancelbtn.TabIndex = 31;
@@ -519,7 +522,7 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(35, 470);
+            this.button1.Location = new System.Drawing.Point(53, 470);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(257, 58);
             this.button1.TabIndex = 68;
@@ -575,13 +578,26 @@
             // 
             this.refreshBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.refreshBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.refreshBtn.Location = new System.Drawing.Point(241, 413);
+            this.refreshBtn.Location = new System.Drawing.Point(236, 413);
             this.refreshBtn.Name = "refreshBtn";
             this.refreshBtn.Size = new System.Drawing.Size(143, 51);
             this.refreshBtn.TabIndex = 71;
             this.refreshBtn.Text = "REFRESH";
             this.refreshBtn.UseVisualStyleBackColor = false;
             this.refreshBtn.Click += new System.EventHandler(this.RefreshBtn_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(11, 44);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(235, 35);
+            this.button2.TabIndex = 25;
+            this.button2.Text = "Inventory Home";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // ManageStock
             // 
@@ -660,5 +676,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button refreshBtn;
+        private System.Windows.Forms.Button button2;
     }
 }

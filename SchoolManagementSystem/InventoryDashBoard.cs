@@ -79,5 +79,12 @@ namespace SchoolManagementSystem
             ManageItem item = new ManageItem("View All Items");
             item.Show();
         }
+
+        private void NViewSalaryBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            DeletedList list = new DeletedList();
+            list.Show();
+        }
     }
 }

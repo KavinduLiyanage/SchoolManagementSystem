@@ -139,6 +139,30 @@
     <Compile Include="CreateStudentAccount.designer.cs">
       <DependentUpon>CreateStudentAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="IssueBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IssueBook.designer.cs">
+      <DependentUpon>IssueBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LibraryAddBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LibraryAddBook.designer.cs">
+      <DependentUpon>LibraryAddBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LibraryHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LibraryHome.designer.cs">
+      <DependentUpon>LibraryHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LibrarySearchBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LibrarySearchBook.designer.cs">
+      <DependentUpon>LibrarySearchBook.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,6 +260,12 @@
     </Compile>
     <Compile Include="ResourceManageHome.designer.cs">
       <DependentUpon>ResourceManageHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReturnBook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReturnBook.designer.cs">
+      <DependentUpon>ReturnBook.cs</DependentUpon>
     </Compile>
     <Compile Include="SectionResultSheet.cs">
       <SubType>Form</SubType>
@@ -372,6 +402,18 @@
     <EmbeddedResource Include="InventoryDashBoard.resx">
       <DependentUpon>InventoryDashBoard.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="IssueBook.resx">
+      <DependentUpon>IssueBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LibraryAddBook.resx">
+      <DependentUpon>LibraryAddBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LibraryHome.resx">
+      <DependentUpon>LibraryHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LibrarySearchBook.resx">
+      <DependentUpon>LibrarySearchBook.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -426,6 +468,9 @@
     </Compile>
     <EmbeddedResource Include="ResourceManageHome.resx">
       <DependentUpon>ResourceManageHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReturnBook.resx">
+      <DependentUpon>ReturnBook.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SectionResultSheet.resx">
       <DependentUpon>SectionResultSheet.cs</DependentUpon>
@@ -570,6 +615,51 @@
       <Project>{cd804df0-8849-40f2-a431-44775c270557}</Project>
       <Name>Models</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\118328b9-ac0d-43eb-820f-c3dc719d866e.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\118328b9-ac0d-43eb-820f-c3dc719d866e1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\138-1387775_login-to-do-whatever-you-want-login-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14184.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\141841.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download1.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download2.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file_managemenr_system_icon_set_flat_style-15-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images1.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\library1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\library11.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\library-logo-clipart-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\library-logo-clipart-11.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

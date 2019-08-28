@@ -193,4 +193,49 @@
   <data name="TeachingAids" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TeachingAids.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="118328b9-ac0d-43eb-820f-c3dc719d866e" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\118328b9-ac0d-43eb-820f-c3dc719d866e.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="118328b9-ac0d-43eb-820f-c3dc719d866e1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\118328b9-ac0d-43eb-820f-c3dc719d866e1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="138-1387775_login-to-do-whatever-you-want-login-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\138-1387775_login-to-do-whatever-you-want-login-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="14184" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\14184.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="141841" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\141841.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="download" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\download.jfif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="download1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\download1.jfif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="download2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\download2.jfif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="file_managemenr_system_icon_set_flat_style-15-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\file_managemenr_system_icon_set_flat_style-15-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="images" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images.jfif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="images1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\images1.jfif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="library-logo-clipart-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\library-logo-clipart-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="library-logo-clipart-11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\library-logo-clipart-11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="library1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\library1.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="library11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\library11.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

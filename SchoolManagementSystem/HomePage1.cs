@@ -117,5 +117,19 @@ namespace SchoolManagementSystem
             this.Hide();
             inveDash.ShowDialog();
         }
+
+        private void MngLibImgBtn_Click(object sender, EventArgs e)
+        {
+            LibraryHome libHome = new LibraryHome();
+            this.Hide();
+            libHome.ShowDialog();
+        }
+
+        private void MngLibBtn_Click(object sender, EventArgs e)
+        {
+            LibraryHome libHome = new LibraryHome();
+            this.Hide();
+            libHome.ShowDialog();
+        }
     }
 }

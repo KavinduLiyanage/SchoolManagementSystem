@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -52,15 +53,61 @@ namespace SchoolManagementSystem
 
         private void Button1_Click(object sender, EventArgs e)
         {
+            ArrayList array1 = new ArrayList();
+
+            Boolean subjectidCon = true;
+            Boolean subjectnameCon = true;
+            Boolean gradeCon = true;
+          
+
+            if (subjectid.Text.Equals(""))
+            {
+                subjectidCon = false;
+                array1.Add("Please Enter Subject Id");
+            }
+
+            if (subjectname.Text.Equals(""))
+            {
+                subjectnameCon = false;
+                array1.Add("Please Enter Subject Name");
+            }
+
+            if (grade.Text.Equals(""))
+            {
+                gradeCon = false;
+                array1.Add("Please Enter Grade");
+            }
+
+           
+
+            string arrayStr = "";
+            foreach (Object obj in array1)
+            {
+                arrayStr = arrayStr + "\n" + obj;
+            }
+
+            if (subjectidCon && subjectnameCon && gradeCon && gradeCon)
+            {
+                this.insertOperation();
+            }
+            else
+            {
+                MessageBox.Show(arrayStr);
+            }
+
+        }
+
+        private void insertOperation()
+        {
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "insert into Subject values('"+textBox1.Text+"','"+textBox2.Text+"','"+comboBox1.Text+"')";
+            cmd.CommandText = "insert into Subject values('" + subjectid.Text + "','" + subjectname.Text + "','" + grade.Text + "')";
             cmd.ExecuteNonQuery();
             con.Close();
-            textBox1.Text = "";
-            textBox2.Text = "";
-            comboBox1.Text = "";
+            subjectid.Text = "";
+            subjectname.Text = "";
+            grade.Text = "";
             display_details();
             MessageBox.Show("Record Inserted Successfully");
         }
@@ -85,7 +132,7 @@ namespace SchoolManagementSystem
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "delete from Subject where subjectId='"+textBox1.Text+"'";
+            cmd.CommandText = "delete from Subject where subjectId='"+subjectid.Text+"'";
             cmd.ExecuteNonQuery();
             con.Close();
             display_details();
@@ -97,7 +144,7 @@ namespace SchoolManagementSystem
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from Subject where subjectId = '"+textBox1.Text+"'";
+            cmd.CommandText = "select * from Subject where subjectId = '"+subjectid.Text+"'";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -122,7 +169,7 @@ namespace SchoolManagementSystem
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "update Subject set subjectName = '"+textBox2.Text+"',grade = '"+comboBox1.Text+"' where subjectId='"+textBox1.Text+"'";
+            cmd.CommandText = "update Subject set subjectName = '"+subjectname.Text+"',grade = '"+grade.Text+"' where subjectId='"+subjectid.Text+"'";
             cmd.ExecuteNonQuery();
             con.Close();
             display_details();
@@ -148,5 +195,40 @@ namespace SchoolManagementSystem
         {
 
         }
+
+        private void NHomeBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ResmngHome_Click(object sender, EventArgs e)
+        {
+            ResourceManageHome ResmngHome= new ResourceManageHome();
+            this.Hide();
+            ResmngHome.ShowDialog();
+        }
+
+        private void Button5_Click(object sender, EventArgs e)
+        {
+            MngClassRoom addclass = new MngClassRoom();
+            this.Hide();
+            addclass.ShowDialog();
+        }
+
+        private void Timetable_Click(object sender, EventArgs e)
+        {
+            MngTimeTable mtimetable = new MngTimeTable();
+            this.Hide();
+            mtimetable.ShowDialog();
+        }
+
+        private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            DataGridViewRow selectRow = dataGridView1.Rows[index];
+            subjectid.Text = selectRow.Cells[0].Value.ToString();
+            subjectname.Text = selectRow.Cells[1].Value.ToString();
+            grade.Text = selectRow.Cells[2].Value.ToString();
+         }
     }
 }

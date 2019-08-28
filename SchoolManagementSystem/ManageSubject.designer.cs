@@ -32,14 +32,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.subjectid = new System.Windows.Forms.TextBox();
+            this.subjectname = new System.Windows.Forms.TextBox();
+            this.grade = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.update = new System.Windows.Forms.Button();
+            this.delete = new System.Windows.Forms.Button();
+            this.search = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnLogOutHeader = new System.Windows.Forms.Button();
             this.btnNoticeMHeader = new System.Windows.Forms.Button();
@@ -54,12 +54,11 @@
             this.UsrlinkLabel = new System.Windows.Forms.LinkLabel();
             this.subLabel2 = new System.Windows.Forms.PictureBox();
             this.NHomeBtn = new System.Windows.Forms.Button();
-            this.NViewStaffBtn = new System.Windows.Forms.Button();
             this.NViewLeaveBtn = new System.Windows.Forms.Button();
-            this.NViewSalaryBtn = new System.Windows.Forms.Button();
-            this.NAddStaffBtn = new System.Windows.Forms.Button();
-            this.NStaffHomeBtn = new System.Windows.Forms.Button();
             this.ButtonPanel = new System.Windows.Forms.Panel();
+            this.timetable = new System.Windows.Forms.Button();
+            this.addClassbtn = new System.Windows.Forms.Button();
+            this.ResmngHome = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -75,7 +74,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label2.ForeColor = System.Drawing.SystemColors.InfoText;
             this.label2.Location = new System.Drawing.Point(35, 28);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 23);
@@ -87,7 +86,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label3.ForeColor = System.Drawing.SystemColors.InfoText;
             this.label3.Location = new System.Drawing.Point(35, 88);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(128, 23);
@@ -99,7 +98,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.label4.ForeColor = System.Drawing.SystemColors.InfoText;
             this.label4.Location = new System.Drawing.Point(35, 150);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(64, 23);
@@ -107,26 +106,26 @@
             this.label4.Text = "Grade";
             this.label4.Click += new System.EventHandler(this.Label4_Click);
             // 
-            // textBox1
+            // subjectid
             // 
-            this.textBox1.Location = new System.Drawing.Point(214, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(193, 22);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
+            this.subjectid.Location = new System.Drawing.Point(214, 30);
+            this.subjectid.Name = "subjectid";
+            this.subjectid.Size = new System.Drawing.Size(193, 22);
+            this.subjectid.TabIndex = 4;
+            this.subjectid.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
             // 
-            // textBox2
+            // subjectname
             // 
-            this.textBox2.Location = new System.Drawing.Point(214, 90);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(193, 22);
-            this.textBox2.TabIndex = 5;
-            this.textBox2.TextChanged += new System.EventHandler(this.TextBox2_TextChanged);
+            this.subjectname.Location = new System.Drawing.Point(214, 90);
+            this.subjectname.Name = "subjectname";
+            this.subjectname.Size = new System.Drawing.Size(193, 22);
+            this.subjectname.TabIndex = 5;
+            this.subjectname.TextChanged += new System.EventHandler(this.TextBox2_TextChanged);
             // 
-            // comboBox1
+            // grade
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.grade.FormattingEnabled = true;
+            this.grade.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
@@ -146,11 +145,11 @@
             "13 Commerce",
             "13 Maths",
             "13 Bio"});
-            this.comboBox1.Location = new System.Drawing.Point(214, 152);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(193, 24);
-            this.comboBox1.TabIndex = 6;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
+            this.grade.Location = new System.Drawing.Point(214, 152);
+            this.grade.Name = "grade";
+            this.grade.Size = new System.Drawing.Size(193, 24);
+            this.grade.TabIndex = 6;
+            this.grade.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
             // 
             // dataGridView1
             // 
@@ -162,13 +161,14 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(471, 507);
             this.dataGridView1.TabIndex = 7;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.Highlight;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(57, 239);
+            this.button1.Location = new System.Drawing.Point(67, 294);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(144, 44);
             this.button1.TabIndex = 8;
@@ -176,55 +176,55 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // button2
+            // update
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(257, 239);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(144, 44);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Update";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.Button2_Click);
+            this.update.BackColor = System.Drawing.SystemColors.Highlight;
+            this.update.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.update.Location = new System.Drawing.Point(275, 294);
+            this.update.Name = "update";
+            this.update.Size = new System.Drawing.Size(144, 44);
+            this.update.TabIndex = 9;
+            this.update.Text = "Update";
+            this.update.UseVisualStyleBackColor = false;
+            this.update.Click += new System.EventHandler(this.Button2_Click);
             // 
-            // button3
+            // delete
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(58, 355);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(144, 44);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "Delete";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.Button3_Click);
+            this.delete.BackColor = System.Drawing.SystemColors.Highlight;
+            this.delete.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.delete.Location = new System.Drawing.Point(67, 355);
+            this.delete.Name = "delete";
+            this.delete.Size = new System.Drawing.Size(144, 44);
+            this.delete.TabIndex = 10;
+            this.delete.Text = "Delete";
+            this.delete.UseVisualStyleBackColor = false;
+            this.delete.Click += new System.EventHandler(this.Button3_Click);
             // 
-            // button4
+            // search
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.Highlight;
-            this.button4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(257, 355);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(144, 44);
-            this.button4.TabIndex = 11;
-            this.button4.Text = "Search";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.Button4_Click);
+            this.search.BackColor = System.Drawing.SystemColors.Highlight;
+            this.search.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.search.Location = new System.Drawing.Point(275, 355);
+            this.search.Name = "search";
+            this.search.Size = new System.Drawing.Size(144, 44);
+            this.search.TabIndex = 11;
+            this.search.Text = "Search";
+            this.search.UseVisualStyleBackColor = false;
+            this.search.Click += new System.EventHandler(this.Button4_Click);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel3.Controls.Add(this.button3);
+            this.panel3.Controls.Add(this.delete);
             this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.button4);
+            this.panel3.Controls.Add(this.search);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.button2);
-            this.panel3.Controls.Add(this.textBox1);
-            this.panel3.Controls.Add(this.textBox2);
-            this.panel3.Controls.Add(this.comboBox1);
+            this.panel3.Controls.Add(this.update);
+            this.panel3.Controls.Add(this.subjectid);
+            this.panel3.Controls.Add(this.subjectname);
+            this.panel3.Controls.Add(this.grade);
             this.panel3.Location = new System.Drawing.Point(0, 49);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(485, 510);
@@ -387,70 +387,63 @@
             this.NHomeBtn.TabIndex = 24;
             this.NHomeBtn.Text = "Home";
             this.NHomeBtn.UseVisualStyleBackColor = false;
-            // 
-            // NViewStaffBtn
-            // 
-            this.NViewStaffBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.NViewStaffBtn.Location = new System.Drawing.Point(11, 115);
-            this.NViewStaffBtn.Name = "NViewStaffBtn";
-            this.NViewStaffBtn.Size = new System.Drawing.Size(235, 35);
-            this.NViewStaffBtn.TabIndex = 23;
-            this.NViewStaffBtn.Text = "View Staff Member";
-            this.NViewStaffBtn.UseVisualStyleBackColor = false;
+            this.NHomeBtn.Click += new System.EventHandler(this.NHomeBtn_Click);
             // 
             // NViewLeaveBtn
             // 
             this.NViewLeaveBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.NViewLeaveBtn.Location = new System.Drawing.Point(11, 187);
+            this.NViewLeaveBtn.Location = new System.Drawing.Point(11, 165);
             this.NViewLeaveBtn.Name = "NViewLeaveBtn";
             this.NViewLeaveBtn.Size = new System.Drawing.Size(235, 35);
             this.NViewLeaveBtn.TabIndex = 18;
-            this.NViewLeaveBtn.Text = "View Staff Leave";
+            this.NViewLeaveBtn.Text = "View Time Table";
             this.NViewLeaveBtn.UseVisualStyleBackColor = false;
-            // 
-            // NViewSalaryBtn
-            // 
-            this.NViewSalaryBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.NViewSalaryBtn.Location = new System.Drawing.Point(11, 151);
-            this.NViewSalaryBtn.Name = "NViewSalaryBtn";
-            this.NViewSalaryBtn.Size = new System.Drawing.Size(235, 35);
-            this.NViewSalaryBtn.TabIndex = 18;
-            this.NViewSalaryBtn.Text = "View Salary Info";
-            this.NViewSalaryBtn.UseVisualStyleBackColor = false;
-            // 
-            // NAddStaffBtn
-            // 
-            this.NAddStaffBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.NAddStaffBtn.Location = new System.Drawing.Point(10, 79);
-            this.NAddStaffBtn.Name = "NAddStaffBtn";
-            this.NAddStaffBtn.Size = new System.Drawing.Size(235, 35);
-            this.NAddStaffBtn.TabIndex = 17;
-            this.NAddStaffBtn.Text = "Add Staff Member";
-            this.NAddStaffBtn.UseVisualStyleBackColor = false;
-            // 
-            // NStaffHomeBtn
-            // 
-            this.NStaffHomeBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.NStaffHomeBtn.Location = new System.Drawing.Point(11, 42);
-            this.NStaffHomeBtn.Name = "NStaffHomeBtn";
-            this.NStaffHomeBtn.Size = new System.Drawing.Size(235, 35);
-            this.NStaffHomeBtn.TabIndex = 17;
-            this.NStaffHomeBtn.Text = "Staff Manage Home";
-            this.NStaffHomeBtn.UseVisualStyleBackColor = false;
             // 
             // ButtonPanel
             // 
             this.ButtonPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ButtonPanel.Controls.Add(this.timetable);
+            this.ButtonPanel.Controls.Add(this.addClassbtn);
+            this.ButtonPanel.Controls.Add(this.ResmngHome);
             this.ButtonPanel.Controls.Add(this.NHomeBtn);
-            this.ButtonPanel.Controls.Add(this.NViewStaffBtn);
             this.ButtonPanel.Controls.Add(this.NViewLeaveBtn);
-            this.ButtonPanel.Controls.Add(this.NViewSalaryBtn);
-            this.ButtonPanel.Controls.Add(this.NAddStaffBtn);
-            this.ButtonPanel.Controls.Add(this.NStaffHomeBtn);
             this.ButtonPanel.Location = new System.Drawing.Point(15, 331);
             this.ButtonPanel.Name = "ButtonPanel";
             this.ButtonPanel.Size = new System.Drawing.Size(260, 335);
             this.ButtonPanel.TabIndex = 46;
+            // 
+            // timetable
+            // 
+            this.timetable.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.timetable.Location = new System.Drawing.Point(11, 126);
+            this.timetable.Name = "timetable";
+            this.timetable.Size = new System.Drawing.Size(235, 35);
+            this.timetable.TabIndex = 27;
+            this.timetable.Text = "Timetable";
+            this.timetable.UseVisualStyleBackColor = false;
+            this.timetable.Click += new System.EventHandler(this.Timetable_Click);
+            // 
+            // addClassbtn
+            // 
+            this.addClassbtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.addClassbtn.Location = new System.Drawing.Point(11, 84);
+            this.addClassbtn.Name = "addClassbtn";
+            this.addClassbtn.Size = new System.Drawing.Size(235, 35);
+            this.addClassbtn.TabIndex = 26;
+            this.addClassbtn.Text = "Add Classroom";
+            this.addClassbtn.UseVisualStyleBackColor = false;
+            this.addClassbtn.Click += new System.EventHandler(this.Button5_Click);
+            // 
+            // ResmngHome
+            // 
+            this.ResmngHome.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.ResmngHome.Location = new System.Drawing.Point(11, 43);
+            this.ResmngHome.Name = "ResmngHome";
+            this.ResmngHome.Size = new System.Drawing.Size(235, 35);
+            this.ResmngHome.TabIndex = 25;
+            this.ResmngHome.Text = "Resource Manage Home";
+            this.ResmngHome.UseVisualStyleBackColor = false;
+            this.ResmngHome.Click += new System.EventHandler(this.ResmngHome_Click);
             // 
             // panel1
             // 
@@ -469,12 +462,12 @@
             this.label1.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(353, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(151, 34);
+            this.label1.Size = new System.Drawing.Size(151, 33);
             this.label1.TabIndex = 51;
             this.label1.Text = "SUBJECTS";
             this.label1.Click += new System.EventHandler(this.Label1_Click_1);
             // 
-            // Subject
+            // ManageSubject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -486,7 +479,7 @@
             this.Controls.Add(this.subLabel2);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.ButtonPanel);
-            this.Name = "Subject";
+            this.Name = "ManageSubject";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Subject";
             this.Load += new System.EventHandler(this.Subject_Load);
@@ -508,14 +501,14 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox subjectid;
+        private System.Windows.Forms.TextBox subjectname;
+        private System.Windows.Forms.ComboBox grade;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button update;
+        private System.Windows.Forms.Button delete;
+        private System.Windows.Forms.Button search;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btnLogOutHeader;
         private System.Windows.Forms.Button btnNoticeMHeader;
@@ -530,14 +523,13 @@
         private System.Windows.Forms.LinkLabel UsrlinkLabel;
         private System.Windows.Forms.PictureBox subLabel2;
         private System.Windows.Forms.Button NHomeBtn;
-        private System.Windows.Forms.Button NViewStaffBtn;
         private System.Windows.Forms.Button NViewLeaveBtn;
-        private System.Windows.Forms.Button NViewSalaryBtn;
-        private System.Windows.Forms.Button NAddStaffBtn;
-        private System.Windows.Forms.Button NStaffHomeBtn;
         private System.Windows.Forms.Panel ButtonPanel;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button ResmngHome;
+        private System.Windows.Forms.Button addClassbtn;
+        private System.Windows.Forms.Button timetable;
     }
 }
 

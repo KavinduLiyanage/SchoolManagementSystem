@@ -214,6 +214,7 @@
             this.MngStaffBtn.TabIndex = 25;
             this.MngStaffBtn.Text = "My Profile";
             this.MngStaffBtn.UseVisualStyleBackColor = false;
+            this.MngStaffBtn.Click += new System.EventHandler(this.MngStaffBtn_Click);
             // 
             // MngStaffImgBtn
             // 
@@ -224,6 +225,7 @@
             this.MngStaffImgBtn.Size = new System.Drawing.Size(95, 92);
             this.MngStaffImgBtn.TabIndex = 24;
             this.MngStaffImgBtn.UseVisualStyleBackColor = true;
+            this.MngStaffImgBtn.Click += new System.EventHandler(this.MngStaffImgBtn_Click);
             // 
             // ReqLeaveBtn
             // 

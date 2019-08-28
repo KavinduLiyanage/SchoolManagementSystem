@@ -178,6 +178,7 @@ namespace SchoolManagementSystem
             Boolean salaryCon = true;
             Boolean phNoCon = true;
             Boolean mailCon = true;
+            Boolean emailCheck = true;
 
 
             if (memberTypeValue.Equals(""))
@@ -238,13 +239,27 @@ namespace SchoolManagementSystem
                 errorArr1.Add("Please Enter a Email Address!");
             }
 
+            try
+            {
+                var addr = new System.Net.Mail.MailAddress(emailTextBox1.Text);
+                emailCheck = addr.Address == emailTextBox1.Text;
+            }
+            catch
+            {
+                emailCheck = false;
+            }
+            if (!emailCheck) {
+                errorArr1.Add("Enter Valid Email!");
+            }
+            
+
             string arrayStr = "";
             foreach (Object obj in errorArr1)
             {
                 arrayStr = arrayStr +"\n"+ obj;
             }
 
-            if (memTypeCon && accessLevelCon && genderCon && fullNameCon && nameCon && nicCon && addCon && addressCon && salaryCon && phNoCon && mailCon)
+            if (emailCheck && memTypeCon && accessLevelCon && genderCon && fullNameCon && nameCon && nicCon && addCon && addressCon && salaryCon && phNoCon && mailCon)
             {
                 this.AddOperation();
             }
@@ -288,7 +303,7 @@ namespace SchoolManagementSystem
 
         private void NameTextBox2_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && !char.IsPunctuation(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -336,6 +351,11 @@ namespace SchoolManagementSystem
             {
                 e.Handled = true;
             }
+        }
+
+        private void EmailTextBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
         }
     }
 }

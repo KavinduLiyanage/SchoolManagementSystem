@@ -33,7 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
@@ -78,6 +85,12 @@
       <DependentUpon>ClassResultSheet.cs</DependentUpon>
     </Compile>
     <Compile Include="Connection.cs" />
+    <Compile Include="CreateStudentAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateStudentAccount.designer.cs">
+      <DependentUpon>CreateStudentAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,11 +159,23 @@
     <Compile Include="StaffReqLeave.Designer.cs">
       <DependentUpon>StaffReqLeave.cs</DependentUpon>
     </Compile>
+    <Compile Include="StudentDetailsUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentDetailsUpdate.designer.cs">
+      <DependentUpon>StudentDetailsUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="StudentExam.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="StudentExam.Designer.cs">
       <DependentUpon>StudentExam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentList.designer.cs">
+      <DependentUpon>StudentList.cs</DependentUpon>
     </Compile>
     <Compile Include="StudentResultSheet.cs">
       <SubType>Form</SubType>
@@ -163,6 +188,12 @@
     </Compile>
     <Compile Include="StudentViewExamTimetable.Designer.cs">
       <DependentUpon>StudentViewExamTimetable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherMyProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherMyProfile.Designer.cs">
+      <DependentUpon>TeacherMyProfile.cs</DependentUpon>
     </Compile>
     <Compile Include="TeachersHome.cs">
       <SubType>Form</SubType>
@@ -187,11 +218,6 @@
     </Compile>
     <Compile Include="ViewSalaryInfo.Designer.cs">
       <DependentUpon>ViewSalaryInfo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ViewStaffDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ViewStaffDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="ViewStaffLeaves.cs">
       <SubType>Form</SubType>
@@ -225,6 +251,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ClassResultSheet.resx">
       <DependentUpon>ClassResultSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateStudentAccount.resx">
+      <DependentUpon>CreateStudentAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomePage3.resx">
       <DependentUpon>HomePage3.cs</DependentUpon>
@@ -268,14 +297,23 @@
     <EmbeddedResource Include="StaffReqLeave.resx">
       <DependentUpon>StaffReqLeave.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="StudentDetailsUpdate.resx">
+      <DependentUpon>StudentDetailsUpdate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StudentExam.resx">
       <DependentUpon>StudentExam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentList.resx">
+      <DependentUpon>StudentList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StudentResultSheet.resx">
       <DependentUpon>StudentResultSheet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StudentViewExamTimetable.resx">
       <DependentUpon>StudentViewExamTimetable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TeacherMyProfile.resx">
+      <DependentUpon>TeacherMyProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TeachersHome.resx">
       <DependentUpon>TeachersHome.cs</DependentUpon>
@@ -298,6 +336,7 @@
     <EmbeddedResource Include="ViewTimetable.resx">
       <DependentUpon>ViewTimetable.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -307,20 +346,19 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="ViewStaffDataSet1.xsc">
-      <DependentUpon>ViewStaffDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="ViewStaffDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ViewStaffDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ViewStaffDataSet1.xss">
-      <DependentUpon>ViewStaffDataSet1.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAO\DAO.csproj">
+      <Project>{19e3d0c6-2044-4fda-9277-12376d145e26}</Project>
+      <Name>DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{cd804df0-8849-40f2-a431-44775c270557}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

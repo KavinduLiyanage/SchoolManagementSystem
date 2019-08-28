@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Collections;
@@ -79,10 +73,20 @@ namespace SchoolManagementSystem
 
         private void ViewStaffMembers_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'viewStaffDataSet.staff' table. You can move, or remove it, as needed.
-                this.staffTableAdapter.Fill(this.viewStaffDataSet.staff);
-            // TODO: This line of code loads data into the 'schoolManagementSystemDBDataSet1.staff' table. You can move, or remove it, as needed.
+            this.displayData();
+        }
 
+        private void displayData() {
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT * FROM staff";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+            con.Close();
         }
 
         private void NonAcedemicRadio_CheckedChanged(object sender, EventArgs e)
@@ -340,7 +344,7 @@ namespace SchoolManagementSystem
                 ConfirmPwdtextBox2.Text = "";
             }
 
-                string arrayStr = "";
+            string arrayStr = "";
             foreach (Object obj in errorArr1)
             {
                 arrayStr = arrayStr + "\n" + obj;
@@ -358,7 +362,6 @@ namespace SchoolManagementSystem
 
         private void DeleteBtn_Click(object sender, EventArgs e)
         {
-            //Copy to Another Table
             DialogResult dlgResult = MessageBox.Show("Are You Sure You Want To Delete?", "Delete!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
             if (dlgResult == DialogResult.Yes)

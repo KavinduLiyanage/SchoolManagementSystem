@@ -49,10 +49,21 @@
             this.btnResourseMHeader = new System.Windows.Forms.Button();
             this.btnInventoryMHeader = new System.Windows.Forms.Button();
             this.btnEventMHeader = new System.Windows.Forms.Button();
+            this.SalarydataView1 = new System.Windows.Forms.DataGridView();
+            this.searchTextBox1 = new System.Windows.Forms.TextBox();
+            this.salaryTextBox = new System.Windows.Forms.TextBox();
+            this.salaryLabel = new System.Windows.Forms.Label();
+            this.NametextBox1 = new System.Windows.Forms.TextBox();
+            this.nameLabel = new System.Windows.Forms.Label();
+            this.updateBtn = new System.Windows.Forms.Button();
+            this.nameTextBox2 = new System.Windows.Forms.TextBox();
+            this.nameLabel2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.imgPanel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.ContentPanel.SuspendLayout();
             this.ButtonPanel.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SalarydataView1)).BeginInit();
             this.SuspendLayout();
             // 
             // NViewStaffBtn
@@ -158,6 +169,15 @@
             // ContentPanel
             // 
             this.ContentPanel.BackColor = System.Drawing.SystemColors.GrayText;
+            this.ContentPanel.Controls.Add(this.nameTextBox2);
+            this.ContentPanel.Controls.Add(this.nameLabel2);
+            this.ContentPanel.Controls.Add(this.updateBtn);
+            this.ContentPanel.Controls.Add(this.salaryTextBox);
+            this.ContentPanel.Controls.Add(this.salaryLabel);
+            this.ContentPanel.Controls.Add(this.NametextBox1);
+            this.ContentPanel.Controls.Add(this.nameLabel);
+            this.ContentPanel.Controls.Add(this.searchTextBox1);
+            this.ContentPanel.Controls.Add(this.SalarydataView1);
             this.ContentPanel.Location = new System.Drawing.Point(283, 105);
             this.ContentPanel.Name = "ContentPanel";
             this.ContentPanel.Size = new System.Drawing.Size(962, 561);
@@ -293,6 +313,90 @@
             this.btnEventMHeader.Text = "Event Management";
             this.btnEventMHeader.UseVisualStyleBackColor = false;
             // 
+            // SalarydataView1
+            // 
+            this.SalarydataView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SalarydataView1.Location = new System.Drawing.Point(454, 69);
+            this.SalarydataView1.Name = "SalarydataView1";
+            this.SalarydataView1.RowHeadersWidth = 51;
+            this.SalarydataView1.RowTemplate.Height = 24;
+            this.SalarydataView1.Size = new System.Drawing.Size(493, 469);
+            this.SalarydataView1.TabIndex = 0;
+            // 
+            // searchTextBox1
+            // 
+            this.searchTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchTextBox1.Location = new System.Drawing.Point(454, 17);
+            this.searchTextBox1.Name = "searchTextBox1";
+            this.searchTextBox1.Size = new System.Drawing.Size(493, 27);
+            this.searchTextBox1.TabIndex = 1;
+            this.searchTextBox1.Tag = "";
+            this.searchTextBox1.Text = "Search Here";
+            this.searchTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // salaryTextBox
+            // 
+            this.salaryTextBox.Location = new System.Drawing.Point(191, 301);
+            this.salaryTextBox.Name = "salaryTextBox";
+            this.salaryTextBox.Size = new System.Drawing.Size(246, 22);
+            this.salaryTextBox.TabIndex = 44;
+            // 
+            // salaryLabel
+            // 
+            this.salaryLabel.AutoSize = true;
+            this.salaryLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.salaryLabel.Location = new System.Drawing.Point(20, 300);
+            this.salaryLabel.Name = "salaryLabel";
+            this.salaryLabel.Size = new System.Drawing.Size(68, 25);
+            this.salaryLabel.TabIndex = 43;
+            this.salaryLabel.Text = "Salary";
+            // 
+            // NametextBox1
+            // 
+            this.NametextBox1.Location = new System.Drawing.Point(191, 213);
+            this.NametextBox1.Name = "NametextBox1";
+            this.NametextBox1.Size = new System.Drawing.Size(246, 22);
+            this.NametextBox1.TabIndex = 42;
+            // 
+            // nameLabel
+            // 
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.nameLabel.Location = new System.Drawing.Point(23, 212);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(100, 25);
+            this.nameLabel.TabIndex = 41;
+            this.nameLabel.Text = "Full Name";
+            // 
+            // updateBtn
+            // 
+            this.updateBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.updateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.updateBtn.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateBtn.Location = new System.Drawing.Point(141, 407);
+            this.updateBtn.Name = "updateBtn";
+            this.updateBtn.Size = new System.Drawing.Size(138, 47);
+            this.updateBtn.TabIndex = 46;
+            this.updateBtn.Text = "Update";
+            this.updateBtn.UseVisualStyleBackColor = true;
+            // 
+            // nameTextBox2
+            // 
+            this.nameTextBox2.Location = new System.Drawing.Point(191, 257);
+            this.nameTextBox2.Name = "nameTextBox2";
+            this.nameTextBox2.Size = new System.Drawing.Size(247, 22);
+            this.nameTextBox2.TabIndex = 48;
+            // 
+            // nameLabel2
+            // 
+            this.nameLabel2.AutoSize = true;
+            this.nameLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.nameLabel2.Location = new System.Drawing.Point(20, 256);
+            this.nameLabel2.Name = "nameLabel2";
+            this.nameLabel2.Size = new System.Drawing.Size(162, 25);
+            this.nameLabel2.TabIndex = 47;
+            this.nameLabel2.Text = "Name with Initials";
+            // 
             // ViewSalaryInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -311,8 +415,11 @@
             this.Text = "ViewSalaryInfo";
             ((System.ComponentModel.ISupportInitialize)(this.imgPanel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ContentPanel.ResumeLayout(false);
+            this.ContentPanel.PerformLayout();
             this.ButtonPanel.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.SalarydataView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -339,5 +446,14 @@
         private System.Windows.Forms.Button btnResourseMHeader;
         private System.Windows.Forms.Button btnInventoryMHeader;
         private System.Windows.Forms.Button btnEventMHeader;
+        private System.Windows.Forms.DataGridView SalarydataView1;
+        private System.Windows.Forms.TextBox searchTextBox1;
+        private System.Windows.Forms.TextBox salaryTextBox;
+        private System.Windows.Forms.Label salaryLabel;
+        private System.Windows.Forms.TextBox NametextBox1;
+        private System.Windows.Forms.Label nameLabel;
+        private System.Windows.Forms.Button updateBtn;
+        private System.Windows.Forms.TextBox nameTextBox2;
+        private System.Windows.Forms.Label nameLabel2;
     }
 }

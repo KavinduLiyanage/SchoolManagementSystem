@@ -82,6 +82,7 @@
             this.MngStuBtn.TabIndex = 11;
             this.MngStuBtn.Text = "Student Management";
             this.MngStuBtn.UseVisualStyleBackColor = false;
+            this.MngStuBtn.Click += new System.EventHandler(this.MngStuBtn_Click);
             // 
             // MngStuImgBtn
             // 

@@ -66,5 +66,12 @@ namespace SchoolManagementSystem
             this.Hide();
             resMngHome.ShowDialog();
         }
+
+        private void MngStuBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CreateStudentAccount sacc = new CreateStudentAccount();
+            sacc.ShowDialog();
+        }
     }
 }

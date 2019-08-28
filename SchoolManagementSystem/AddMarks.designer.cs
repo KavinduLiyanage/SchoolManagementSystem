@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddMarks));
             this.lbRegNo = new System.Windows.Forms.Label();
             this.lbSubName = new System.Windows.Forms.Label();
@@ -53,19 +54,30 @@
             this.btnManageMarksA = new System.Windows.Forms.Button();
             this.btnTeachersHomeA = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cbSubName = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dataGridViewMarks = new System.Windows.Forms.DataGridView();
             this.btnImageAM = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lbUserAM = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.cbSubName = new System.Windows.Forms.ComboBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btnLogOutHeader = new System.Windows.Forms.Button();
+            this.btnNoticeMHeader = new System.Windows.Forms.Button();
+            this.btnExamMheader = new System.Windows.Forms.Button();
+            this.btnLibraryMHeader = new System.Windows.Forms.Button();
+            this.btnStudentMHeader = new System.Windows.Forms.Button();
+            this.btnResourseMHeader = new System.Windows.Forms.Button();
+            this.btnInventoryMHeader = new System.Windows.Forms.Button();
+            this.btnEventMHeader = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMarks)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbRegNo
@@ -127,6 +139,8 @@
             this.tbRegNo.Name = "tbRegNo";
             this.tbRegNo.Size = new System.Drawing.Size(186, 22);
             this.tbRegNo.TabIndex = 5;
+            this.tbRegNo.TextChanged += new System.EventHandler(this.TbRegNo_TextChanged);
+            this.tbRegNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbRegNo_KeyPress);
             // 
             // tbMark
             // 
@@ -134,6 +148,7 @@
             this.tbMark.Name = "tbMark";
             this.tbMark.Size = new System.Drawing.Size(186, 22);
             this.tbMark.TabIndex = 6;
+            this.tbMark.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TbMark_KeyPress);
             // 
             // YearPicker
             // 
@@ -148,7 +163,7 @@
             // 
             this.cbExam.FormattingEnabled = true;
             this.cbExam.Items.AddRange(new object[] {
-            "1 st Term",
+            "1st Term",
             "2nd Term",
             "3rd Term"});
             this.cbExam.Location = new System.Drawing.Point(186, 148);
@@ -341,6 +356,19 @@
             this.panel2.TabIndex = 17;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel2_Paint);
             // 
+            // cbSubName
+            // 
+            this.cbSubName.FormattingEnabled = true;
+            this.cbSubName.Items.AddRange(new object[] {
+            "Sinhala",
+            "Mathematics",
+            "English",
+            "Science"});
+            this.cbSubName.Location = new System.Drawing.Point(186, 87);
+            this.cbSubName.Name = "cbSubName";
+            this.cbSubName.Size = new System.Drawing.Size(186, 24);
+            this.cbSubName.TabIndex = 12;
+            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -349,7 +377,7 @@
             this.panel3.Controls.Add(this.lbSearch);
             this.panel3.Location = new System.Drawing.Point(703, 111);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(547, 512);
+            this.panel3.Size = new System.Drawing.Size(537, 512);
             this.panel3.TabIndex = 18;
             // 
             // dataGridViewMarks
@@ -359,8 +387,10 @@
             this.dataGridViewMarks.Name = "dataGridViewMarks";
             this.dataGridViewMarks.RowHeadersWidth = 51;
             this.dataGridViewMarks.RowTemplate.Height = 24;
-            this.dataGridViewMarks.Size = new System.Drawing.Size(508, 427);
+            this.dataGridViewMarks.Size = new System.Drawing.Size(495, 427);
             this.dataGridViewMarks.TabIndex = 14;
+            this.dataGridViewMarks.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewMarks_CellClick);
+            this.dataGridViewMarks.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewMarks_CellContentClick);
             // 
             // btnImageAM
             // 
@@ -393,20 +423,122 @@
             this.lbUserAM.TabIndex = 20;
             this.lbUserAM.Text = "Ashani Malsha";
             // 
-            // panel4
+            // panel5
             // 
-            this.panel4.Location = new System.Drawing.Point(14, 8);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1236, 92);
-            this.panel4.TabIndex = 15;
+            this.panel5.BackColor = System.Drawing.Color.SkyBlue;
+            this.panel5.Controls.Add(this.btnLogOutHeader);
+            this.panel5.Controls.Add(this.btnNoticeMHeader);
+            this.panel5.Controls.Add(this.btnExamMheader);
+            this.panel5.Controls.Add(this.btnLibraryMHeader);
+            this.panel5.Controls.Add(this.btnStudentMHeader);
+            this.panel5.Controls.Add(this.btnResourseMHeader);
+            this.panel5.Controls.Add(this.btnInventoryMHeader);
+            this.panel5.Controls.Add(this.btnEventMHeader);
+            this.panel5.Location = new System.Drawing.Point(12, 10);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1228, 92);
+            this.panel5.TabIndex = 44;
             // 
-            // cbSubName
+            // btnLogOutHeader
             // 
-            this.cbSubName.FormattingEnabled = true;
-            this.cbSubName.Location = new System.Drawing.Point(186, 87);
-            this.cbSubName.Name = "cbSubName";
-            this.cbSubName.Size = new System.Drawing.Size(186, 24);
-            this.cbSubName.TabIndex = 12;
+            this.btnLogOutHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnLogOutHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogOutHeader.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold);
+            this.btnLogOutHeader.ForeColor = System.Drawing.Color.Maroon;
+            this.btnLogOutHeader.Location = new System.Drawing.Point(1078, 20);
+            this.btnLogOutHeader.Name = "btnLogOutHeader";
+            this.btnLogOutHeader.Size = new System.Drawing.Size(145, 50);
+            this.btnLogOutHeader.TabIndex = 25;
+            this.btnLogOutHeader.Text = "Log Out";
+            this.btnLogOutHeader.UseVisualStyleBackColor = true;
+            // 
+            // btnNoticeMHeader
+            // 
+            this.btnNoticeMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnNoticeMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNoticeMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
+            this.btnNoticeMHeader.Location = new System.Drawing.Point(927, 21);
+            this.btnNoticeMHeader.Name = "btnNoticeMHeader";
+            this.btnNoticeMHeader.Size = new System.Drawing.Size(145, 50);
+            this.btnNoticeMHeader.TabIndex = 23;
+            this.btnNoticeMHeader.Text = "Notice Management";
+            this.btnNoticeMHeader.UseVisualStyleBackColor = false;
+            // 
+            // btnExamMheader
+            // 
+            this.btnExamMheader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnExamMheader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExamMheader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
+            this.btnExamMheader.Location = new System.Drawing.Point(21, 19);
+            this.btnExamMheader.Name = "btnExamMheader";
+            this.btnExamMheader.Size = new System.Drawing.Size(145, 50);
+            this.btnExamMheader.TabIndex = 1;
+            this.btnExamMheader.Text = "Exam Management";
+            this.btnExamMheader.UseVisualStyleBackColor = false;
+            // 
+            // btnLibraryMHeader
+            // 
+            this.btnLibraryMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnLibraryMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLibraryMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
+            this.btnLibraryMHeader.Location = new System.Drawing.Point(776, 21);
+            this.btnLibraryMHeader.Name = "btnLibraryMHeader";
+            this.btnLibraryMHeader.Size = new System.Drawing.Size(145, 50);
+            this.btnLibraryMHeader.TabIndex = 22;
+            this.btnLibraryMHeader.Text = " Library Management";
+            this.btnLibraryMHeader.UseVisualStyleBackColor = false;
+            // 
+            // btnStudentMHeader
+            // 
+            this.btnStudentMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnStudentMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStudentMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
+            this.btnStudentMHeader.Location = new System.Drawing.Point(172, 20);
+            this.btnStudentMHeader.Name = "btnStudentMHeader";
+            this.btnStudentMHeader.Size = new System.Drawing.Size(145, 50);
+            this.btnStudentMHeader.TabIndex = 18;
+            this.btnStudentMHeader.Text = "Student Management";
+            this.btnStudentMHeader.UseVisualStyleBackColor = false;
+            // 
+            // btnResourseMHeader
+            // 
+            this.btnResourseMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnResourseMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnResourseMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
+            this.btnResourseMHeader.Location = new System.Drawing.Point(625, 20);
+            this.btnResourseMHeader.Name = "btnResourseMHeader";
+            this.btnResourseMHeader.Size = new System.Drawing.Size(145, 50);
+            this.btnResourseMHeader.TabIndex = 21;
+            this.btnResourseMHeader.Text = "Resourse Management";
+            this.btnResourseMHeader.UseVisualStyleBackColor = false;
+            // 
+            // btnInventoryMHeader
+            // 
+            this.btnInventoryMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnInventoryMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInventoryMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
+            this.btnInventoryMHeader.Location = new System.Drawing.Point(323, 20);
+            this.btnInventoryMHeader.Name = "btnInventoryMHeader";
+            this.btnInventoryMHeader.Size = new System.Drawing.Size(145, 50);
+            this.btnInventoryMHeader.TabIndex = 19;
+            this.btnInventoryMHeader.Text = "Inventory Management";
+            this.btnInventoryMHeader.UseVisualStyleBackColor = false;
+            // 
+            // btnEventMHeader
+            // 
+            this.btnEventMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnEventMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEventMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
+            this.btnEventMHeader.Location = new System.Drawing.Point(474, 20);
+            this.btnEventMHeader.Name = "btnEventMHeader";
+            this.btnEventMHeader.Size = new System.Drawing.Size(145, 50);
+            this.btnEventMHeader.TabIndex = 20;
+            this.btnEventMHeader.Text = "Event Management";
+            this.btnEventMHeader.UseVisualStyleBackColor = false;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // AddMarks
             // 
@@ -414,7 +546,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1262, 673);
-            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.lbUserAM);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnImageAM);
@@ -424,7 +556,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "AddMarks";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Add Marks";
+            this.Text = "`";
             this.Load += new System.EventHandler(this.AddMarks_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -434,6 +566,8 @@
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMarks)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -470,7 +604,16 @@
         private System.Windows.Forms.Button btnImageAM;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lbUserAM;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.ComboBox cbSubName;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button btnLogOutHeader;
+        private System.Windows.Forms.Button btnNoticeMHeader;
+        private System.Windows.Forms.Button btnExamMheader;
+        private System.Windows.Forms.Button btnLibraryMHeader;
+        private System.Windows.Forms.Button btnStudentMHeader;
+        private System.Windows.Forms.Button btnResourseMHeader;
+        private System.Windows.Forms.Button btnInventoryMHeader;
+        private System.Windows.Forms.Button btnEventMHeader;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

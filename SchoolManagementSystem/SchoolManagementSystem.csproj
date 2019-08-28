@@ -102,11 +102,29 @@
       <DependentUpon>ClassResultSheet.cs</DependentUpon>
     </Compile>
     <Compile Include="Connection.cs" />
+    <Compile Include="DeletedList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeletedList.designer.cs">
+      <DependentUpon>DeletedList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteStatus.designer.cs">
+      <DependentUpon>DeleteStatus.cs</DependentUpon>
+    </Compile>
     <Compile Include="EventDashBoardAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="EventDashBoardAdmin.designer.cs">
       <DependentUpon>EventDashBoardAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryDashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryDashBoard.designer.cs">
+      <DependentUpon>InventoryDashBoard.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -132,11 +150,23 @@
     <Compile Include="HomePage3.Designer.cs">
       <DependentUpon>HomePage3.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManageItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageItem.designer.cs">
+      <DependentUpon>ManageItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="ManageMarks.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ManageMarks.designer.cs">
       <DependentUpon>ManageMarks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageStock.designer.cs">
+      <DependentUpon>ManageStock.cs</DependentUpon>
     </Compile>
     <Compile Include="ManageSubject.cs">
       <SubType>Form</SubType>
@@ -298,11 +328,20 @@
     <EmbeddedResource Include="ClassResultSheet.resx">
       <DependentUpon>ClassResultSheet.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DeletedList.resx">
+      <DependentUpon>DeletedList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteStatus.resx">
+      <DependentUpon>DeleteStatus.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="EventDashBoardAdmin.resx">
       <DependentUpon>EventDashBoardAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomePage3.resx">
       <DependentUpon>HomePage3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryDashBoard.resx">
+      <DependentUpon>InventoryDashBoard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -313,8 +352,14 @@
     <EmbeddedResource Include="HomePage2.resx">
       <DependentUpon>HomePage2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ManageItem.resx">
+      <DependentUpon>ManageItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ManageMarks.resx">
       <DependentUpon>ManageMarks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageStock.resx">
+      <DependentUpon>ManageStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManageSubject.resx">
       <DependentUpon>ManageSubject.cs</DependentUpon>
@@ -454,6 +499,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\noticeBoard111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chemistry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cleaning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\elecronic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-window-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\market-analysis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\moveble.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Music.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sport.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stationery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TeachingAids.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

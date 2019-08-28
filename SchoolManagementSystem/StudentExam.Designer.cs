@@ -40,13 +40,22 @@
             this.btnStudentViewTimetableSH = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel6 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnLogOutHeader = new System.Windows.Forms.Button();
+            this.btnNoticeMHeader = new System.Windows.Forms.Button();
+            this.btnExamMheader = new System.Windows.Forms.Button();
+            this.btnLibraryMHeader = new System.Windows.Forms.Button();
+            this.btnStudentMHeader = new System.Windows.Forms.Button();
+            this.btnResourseMHeader = new System.Windows.Forms.Button();
+            this.btnInventoryMHeader = new System.Windows.Forms.Button();
+            this.btnEventMHeader = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox4
@@ -130,7 +139,7 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(308, 102);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(930, 558);
+            this.panel1.Size = new System.Drawing.Size(942, 558);
             this.panel1.TabIndex = 46;
             // 
             // btnStudentViewTimetableSH
@@ -149,7 +158,7 @@
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(57, 48);
+            this.panel2.Location = new System.Drawing.Point(64, 48);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(816, 376);
             this.panel2.TabIndex = 0;
@@ -157,26 +166,132 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(34, 23);
+            this.pictureBox1.Location = new System.Drawing.Point(43, 27);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(726, 318);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // panel6
+            // panel3
             // 
-            this.panel6.Location = new System.Drawing.Point(20, 4);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1218, 92);
-            this.panel6.TabIndex = 42;
+            this.panel3.BackColor = System.Drawing.Color.SkyBlue;
+            this.panel3.Controls.Add(this.btnLogOutHeader);
+            this.panel3.Controls.Add(this.btnNoticeMHeader);
+            this.panel3.Controls.Add(this.btnExamMheader);
+            this.panel3.Controls.Add(this.btnLibraryMHeader);
+            this.panel3.Controls.Add(this.btnStudentMHeader);
+            this.panel3.Controls.Add(this.btnResourseMHeader);
+            this.panel3.Controls.Add(this.btnInventoryMHeader);
+            this.panel3.Controls.Add(this.btnEventMHeader);
+            this.panel3.Location = new System.Drawing.Point(20, 4);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1228, 92);
+            this.panel3.TabIndex = 47;
+            // 
+            // btnLogOutHeader
+            // 
+            this.btnLogOutHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnLogOutHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogOutHeader.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold);
+            this.btnLogOutHeader.ForeColor = System.Drawing.Color.Maroon;
+            this.btnLogOutHeader.Location = new System.Drawing.Point(1078, 20);
+            this.btnLogOutHeader.Name = "btnLogOutHeader";
+            this.btnLogOutHeader.Size = new System.Drawing.Size(145, 50);
+            this.btnLogOutHeader.TabIndex = 25;
+            this.btnLogOutHeader.Text = "Log Out";
+            this.btnLogOutHeader.UseVisualStyleBackColor = true;
+            // 
+            // btnNoticeMHeader
+            // 
+            this.btnNoticeMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnNoticeMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNoticeMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
+            this.btnNoticeMHeader.Location = new System.Drawing.Point(927, 21);
+            this.btnNoticeMHeader.Name = "btnNoticeMHeader";
+            this.btnNoticeMHeader.Size = new System.Drawing.Size(145, 50);
+            this.btnNoticeMHeader.TabIndex = 23;
+            this.btnNoticeMHeader.Text = "Notice Management";
+            this.btnNoticeMHeader.UseVisualStyleBackColor = false;
+            // 
+            // btnExamMheader
+            // 
+            this.btnExamMheader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnExamMheader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExamMheader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
+            this.btnExamMheader.Location = new System.Drawing.Point(21, 19);
+            this.btnExamMheader.Name = "btnExamMheader";
+            this.btnExamMheader.Size = new System.Drawing.Size(145, 50);
+            this.btnExamMheader.TabIndex = 1;
+            this.btnExamMheader.Text = "Exam Management";
+            this.btnExamMheader.UseVisualStyleBackColor = false;
+            // 
+            // btnLibraryMHeader
+            // 
+            this.btnLibraryMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnLibraryMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLibraryMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
+            this.btnLibraryMHeader.Location = new System.Drawing.Point(776, 21);
+            this.btnLibraryMHeader.Name = "btnLibraryMHeader";
+            this.btnLibraryMHeader.Size = new System.Drawing.Size(145, 50);
+            this.btnLibraryMHeader.TabIndex = 22;
+            this.btnLibraryMHeader.Text = " Library Management";
+            this.btnLibraryMHeader.UseVisualStyleBackColor = false;
+            // 
+            // btnStudentMHeader
+            // 
+            this.btnStudentMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnStudentMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnStudentMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
+            this.btnStudentMHeader.Location = new System.Drawing.Point(172, 20);
+            this.btnStudentMHeader.Name = "btnStudentMHeader";
+            this.btnStudentMHeader.Size = new System.Drawing.Size(145, 50);
+            this.btnStudentMHeader.TabIndex = 18;
+            this.btnStudentMHeader.Text = "Student Management";
+            this.btnStudentMHeader.UseVisualStyleBackColor = false;
+            // 
+            // btnResourseMHeader
+            // 
+            this.btnResourseMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnResourseMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnResourseMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
+            this.btnResourseMHeader.Location = new System.Drawing.Point(625, 20);
+            this.btnResourseMHeader.Name = "btnResourseMHeader";
+            this.btnResourseMHeader.Size = new System.Drawing.Size(145, 50);
+            this.btnResourseMHeader.TabIndex = 21;
+            this.btnResourseMHeader.Text = "Resourse Management";
+            this.btnResourseMHeader.UseVisualStyleBackColor = false;
+            // 
+            // btnInventoryMHeader
+            // 
+            this.btnInventoryMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnInventoryMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInventoryMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
+            this.btnInventoryMHeader.Location = new System.Drawing.Point(323, 20);
+            this.btnInventoryMHeader.Name = "btnInventoryMHeader";
+            this.btnInventoryMHeader.Size = new System.Drawing.Size(145, 50);
+            this.btnInventoryMHeader.TabIndex = 19;
+            this.btnInventoryMHeader.Text = "Inventory Management";
+            this.btnInventoryMHeader.UseVisualStyleBackColor = false;
+            // 
+            // btnEventMHeader
+            // 
+            this.btnEventMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnEventMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEventMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
+            this.btnEventMHeader.Location = new System.Drawing.Point(474, 20);
+            this.btnEventMHeader.Name = "btnEventMHeader";
+            this.btnEventMHeader.Size = new System.Drawing.Size(145, 50);
+            this.btnEventMHeader.TabIndex = 20;
+            this.btnEventMHeader.Text = "Event Management";
+            this.btnEventMHeader.UseVisualStyleBackColor = false;
             // 
             // StudentExam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 673);
-            this.Controls.Add(this.panel6);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.btnimgTH);
@@ -192,6 +307,7 @@
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -210,6 +326,14 @@
         private System.Windows.Forms.Button btnStudentViewTimetableSH;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button btnLogOutHeader;
+        private System.Windows.Forms.Button btnNoticeMHeader;
+        private System.Windows.Forms.Button btnExamMheader;
+        private System.Windows.Forms.Button btnLibraryMHeader;
+        private System.Windows.Forms.Button btnStudentMHeader;
+        private System.Windows.Forms.Button btnResourseMHeader;
+        private System.Windows.Forms.Button btnInventoryMHeader;
+        private System.Windows.Forms.Button btnEventMHeader;
     }
 }

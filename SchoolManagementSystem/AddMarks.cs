@@ -8,12 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Collections;
 
 namespace SchoolManagementSystem
 {
     public partial class AddMarks : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-7DMUT13V\ASHANI;Initial Catalog=SchoolManagementSystemDB;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=.;Initial Catalog=SchoolManagementSystemDB;Integrated Security=True");
 
         public AddMarks()
         {
@@ -40,19 +41,111 @@ namespace SchoolManagementSystem
 
         }
 
+         private void insertData() {
+
+             try
+             {
+                 con.Open();
+                 string qry = "INSERT INTO ExamMarks VALUES('" + tbRegNo.Text + "', @SubjectID ,'" + cbExam.Text + "','" + tbMark.Text + "','" + YearPicker.Value.Year + "')";
+
+
+                 SqlCommand cmd = new SqlCommand(qry, o.con);
+
+                 cmd.Parameters.AddWithValue("@SubjectID", cbSubName.SelectedValue);
+                 cmd.ExecuteNonQuery();
+                 cmd.Parameters.Clear();
+                 MessageBox.Show("Record Inserted successfully!!");
+                 con.Close();
+
+                 AddMarks newAdd = new AddMarks();
+                 this.Hide();
+                 newAdd.ShowDialog();
+             }
+             catch (Exception ex)
+             {
+                 MessageBox.Show("You have already inserted marks for this STUDENT FOR SAME SUBJECT!!!! ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                 //MessageBox.Show(ex.Message);
+             }
+
+         }
+
         private void Button1_Click(object sender, EventArgs e)
         {
-            con.Open();
-            string qry = "INSERT INTO ExamMarks VALUES('" + tbRegNo.Text + "', @SubjectID ,'" + cbExam.Text + "','" + tbMark.Text + "','" + YearPicker.Value.Year + "')";
+            //validations
+
+             ArrayList errorArr1 = new ArrayList();
+
+             Boolean regNo = true;
+             Boolean subName = true;
+             Boolean exam = true;
+             Boolean mark = true;
 
 
-            SqlCommand cmd = new SqlCommand(qry, o.con);
+             if (tbRegNo.Text.Equals(""))
+             {
+                 regNo = false;
+                 errorArr1.Add("Please Enter student registration number!");
+             }
 
-            cmd.Parameters.AddWithValue("@SubjectID", cbSubName.SelectedValue);
-            cmd.ExecuteNonQuery();
-            cmd.Parameters.Clear();
-            MessageBox.Show("Record Inserted successfully!!");
-            con.Close();
+             if (cbSubName.Text.Equals(""))
+             {
+                 subName = false;
+                 errorArr1.Add("Please Enter subject name!");
+             }
+
+             if (cbExam.Text.Equals(""))
+             {
+                 exam = false;
+                 errorArr1.Add("Please Enter exam term!");
+             }
+
+             if (tbMark.Text.Equals(""))
+             {
+                 mark = false;
+                 errorArr1.Add("Please Enter marks!");
+             }
+
+             string arrayStr = "";
+             foreach (Object obj in errorArr1)
+             {
+                 arrayStr = arrayStr + "\n" + obj;
+             }
+
+             if (regNo && subName && exam && mark)
+             {
+                 this.insertData();
+             }
+             else
+             {
+                 MessageBox.Show(arrayStr);
+             }
+
+
+        
+        }
+
+        public void displayData(string searchValue)
+        {
+            try
+            {
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "SELECT * FROM ExamMarks WHERE RegNo LIKE '%" + searchValue + "%'  OR  SubjectID LIKE '%" + searchValue + "%'";
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                dataGridViewMarks.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
         }
 
         private void Label1_Click_1(object sender, EventArgs e)
@@ -196,8 +289,6 @@ namespace SchoolManagementSystem
                 cbSubName.DisplayMember = "SubjectName";
                 cbSubName.ValueMember = "SubjectID";
 
-
-
             }
             catch (Exception ex)
             {
@@ -233,6 +324,57 @@ namespace SchoolManagementSystem
             {
                 con.Close();
             }
+
+        }
+
+        private void TbRegNo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TbRegNo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                MessageBox.Show("Please Enter Only Numbers", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                e.Handled = true;
+            }
+        }
+
+        private void TbMark_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 46 && tbMark.Text.IndexOf('.') != -1)//this allow only one time to use decimale dot
+            {
+                e.Handled = true;
+                return;
+            }
+            if (!(e.KeyChar <= '9'))
+            {
+               e.Handled = true;
+            }
+
+            if (char.IsDigit(e.KeyChar) || e.KeyChar == 8 || e.KeyChar == 32 || e.KeyChar == 46)//keychar == 8 is for backspace and keychar ==32 for spacebarand 46 for .
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                MessageBox.Show("Please Enter Only Numbers", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                e.Handled = true;
+            }
+        }
+
+        private void DataGridViewMarks_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void DataGridViewMarks_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

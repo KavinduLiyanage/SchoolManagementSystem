@@ -13,7 +13,7 @@ namespace SchoolManagementSystem
 {
     public partial class UpdateORDeleteMarks : Form
     {
-        SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-7DMUT13V\ASHANI;Initial Catalog=SchoolManagementSystemDB;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=.;Initial Catalog=SchoolManagementSystemDB;Integrated Security=True");
 
         public UpdateORDeleteMarks()
         {
@@ -164,6 +164,10 @@ namespace SchoolManagementSystem
                         displayData();
                         //  con.Close();
 
+                        UpdateORDeleteMarks newud = new UpdateORDeleteMarks();
+                        this.Hide();
+                        newud.ShowDialog();
+
                     }
 
                 }
@@ -179,7 +183,6 @@ namespace SchoolManagementSystem
 
             void clearFields()
             {
-               // errorProvider1.Clear();
                 tbRegNo.Text = "";
                 cbSubName.SelectedIndex = -1;
                 cbExam.Text = "";
@@ -209,6 +212,7 @@ namespace SchoolManagementSystem
             {
                 con.Close();
             }
+            
 
         }
 
@@ -230,7 +234,6 @@ namespace SchoolManagementSystem
                 cbSubName.ValueMember = "SubjectID";
 
 
-
             }
             catch (Exception ex)
             {
@@ -240,6 +243,7 @@ namespace SchoolManagementSystem
             {
                 con.Close();
             }
+            
 
         }
 
@@ -293,7 +297,7 @@ namespace SchoolManagementSystem
                 tbMark.Text = dataGridViewMarks.Rows[rowIndex].Cells[3].Value.ToString();
                 YearPicker.Value = DateTime.Parse(dataGridViewMarks.CurrentRow.Cells[4].Value.ToString());
 
-               // errorProvider1.Clear();
+              
             }
             catch (Exception ex)
             {
@@ -318,28 +322,72 @@ namespace SchoolManagementSystem
 
         private void BtnUpdate_Click(object sender, EventArgs e)
         {
-            try
+            if (tbRegNo.Text == "" || tbMark.Text == "" || cbExam.Text == "")
             {
-                //errorProvider1.Clear();
-                con.Open();
-                SqlCommand cmd = con.CreateCommand();
-                cmd.CommandType = CommandType.Text;
-
-                cmd.CommandText = "UPDATE ExamMarks SET Mark ='" + tbMark.Text + "' WHERE SID ='" + tbRegNo.Text + "' AND SubjectID = '" + ((DataRowView)cbSubName.SelectedItem)[0] + "' AND Term = '" + cbExam.Text + "' AND  Year = '" + YearPicker.Value + "' ";
-                cmd.ExecuteNonQuery();
-                con.Close();
-                displayData();
-                clearFields();
-                MessageBox.Show("Record Updated Successfully!!!");
-
+                errorProvider1.SetError(tbRegNo, "Please fill the empty Areas!!!!");
+                errorProvider1.SetError(tbMark, "Please fill the empty Areas!!!!");
+                errorProvider1.SetError(cbExam, "Please fill the empty Areas!!!!");
+                MessageBox.Show("Please fill the empty Areas!!!!");
+                return;
             }
-            catch (Exception ex)
+            else
             {
-
-                MessageBox.Show(ex.Message);
-                con.Close();
+                errorProvider1.Clear();
             }
 
+            con.Open();
+            SqlCommand check = new SqlCommand("SELECT * FROM ExamMarks WHERE SID = '" + tbRegNo.Text + "' AND SubjectID =  '" + ((DataRowView)cbSubName.SelectedItem)[0] + "'  AND Term = '" + cbExam.Text + "'  AND  Mark = '" + tbMark.Text + "' AND Year =  '" + YearPicker.Value + "'  ", con);
+            SqlDataAdapter checkDa = new SqlDataAdapter(check);
+            DataSet ds = new DataSet();
+            checkDa.Fill(ds);
+            int i = ds.Tables[0].Rows.Count;
+            if (i > 0)
+            {
+                errorProvider1.SetError(tbRegNo, "This already Exist!!!!");
+                errorProvider1.SetError(cbSubName, "This already Exist!!!!");
+                errorProvider1.SetError(cbExam, "This already Exist!!!!");
+                errorProvider1.SetError(tbMark, "This already Exist!!!!");
+                errorProvider1.SetError(YearPicker, "This already Exist!!!!");
+
+
+                MessageBox.Show("This already Exist!!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                con.Close();
+            }
+            else
+            {
+                try
+                {
+                    //con.Open();
+                    SqlCommand cmd = con.CreateCommand();
+                    cmd.CommandType = CommandType.Text;
+
+                    cmd.CommandText = "UPDATE ExamMarks SET Mark ='" + tbMark.Text + "' WHERE SID ='" + tbRegNo.Text + "' AND SubjectID = '" + ((DataRowView)cbSubName.SelectedItem)[0] + "' AND Term = '" + cbExam.Text + "' AND  Year = '" + YearPicker.Value + "' ";
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    displayData();
+                    clearFields();
+                    MessageBox.Show("Record Updated Successfully!!!");
+
+                    UpdateORDeleteMarks newud = new UpdateORDeleteMarks();
+                    this.Hide();
+                    newud.ShowDialog();
+
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message);
+                    con.Close();
+                }
+            }
+
+        }
+
+        private void BtnRefresh_Click(object sender, EventArgs e)
+        {
+            UpdateORDeleteMarks newud = new UpdateORDeleteMarks();
+            this.Hide();
+            newud.ShowDialog();
         }
     }
 }

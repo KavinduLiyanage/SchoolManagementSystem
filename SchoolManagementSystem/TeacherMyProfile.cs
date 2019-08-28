@@ -21,5 +21,12 @@ namespace SchoolManagementSystem
         {
 
         }
+
+        private void NStaffHomeBtn_Click(object sender, EventArgs e)
+        {
+            TeacherMyProfile tchrProfile = new TeacherMyProfile();
+            this.Hide();
+            tchrProfile.ShowDialog();
+        }
     }
 }

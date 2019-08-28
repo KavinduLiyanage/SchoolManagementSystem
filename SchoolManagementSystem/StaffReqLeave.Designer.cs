@@ -49,28 +49,23 @@
             this.usrImg = new System.Windows.Forms.PictureBox();
             this.UsrlinkLabel = new System.Windows.Forms.LinkLabel();
             this.ContentPanel = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.searchText = new System.Windows.Forms.TextBox();
-            this.lbTimetableIDATT = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.reasonTextBox = new System.Windows.Forms.TextBox();
+            this.updateBtn = new System.Windows.Forms.Button();
+            this.addressTextBox = new System.Windows.Forms.TextBox();
             this.reasonLabel = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.doblabel = new System.Windows.Forms.Label();
-            this.nameTextBox = new System.Windows.Forms.TextBox();
-            this.nameLabel1 = new System.Windows.Forms.Label();
-            this.btnInsertATT = new System.Windows.Forms.Button();
+            this.nameTextBox2 = new System.Windows.Forms.TextBox();
+            this.nameLabel2 = new System.Windows.Forms.Label();
+            this.NametextBox1 = new System.Windows.Forms.TextBox();
+            this.nameLabel = new System.Windows.Forms.Label();
+            this.searchTextBox1 = new System.Windows.Forms.TextBox();
+            this.SalarydataView1 = new System.Windows.Forms.DataGridView();
             this.panel5.SuspendLayout();
             this.ButtonPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgPanel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usrImg)).BeginInit();
             this.ContentPanel.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SalarydataView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel5
@@ -297,147 +292,124 @@
             // ContentPanel
             // 
             this.ContentPanel.BackColor = System.Drawing.SystemColors.GrayText;
-            this.ContentPanel.Controls.Add(this.panel3);
-            this.ContentPanel.Controls.Add(this.panel2);
-            this.ContentPanel.Location = new System.Drawing.Point(286, 104);
+            this.ContentPanel.Controls.Add(this.updateBtn);
+            this.ContentPanel.Controls.Add(this.addressTextBox);
+            this.ContentPanel.Controls.Add(this.reasonLabel);
+            this.ContentPanel.Controls.Add(this.dateTimePicker1);
+            this.ContentPanel.Controls.Add(this.doblabel);
+            this.ContentPanel.Controls.Add(this.nameTextBox2);
+            this.ContentPanel.Controls.Add(this.nameLabel2);
+            this.ContentPanel.Controls.Add(this.NametextBox1);
+            this.ContentPanel.Controls.Add(this.nameLabel);
+            this.ContentPanel.Controls.Add(this.searchTextBox1);
+            this.ContentPanel.Controls.Add(this.SalarydataView1);
+            this.ContentPanel.Location = new System.Drawing.Point(283, 105);
             this.ContentPanel.Name = "ContentPanel";
             this.ContentPanel.Size = new System.Drawing.Size(962, 561);
-            this.ContentPanel.TabIndex = 48;
+            this.ContentPanel.TabIndex = 52;
             // 
-            // panel3
+            // updateBtn
             // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel3.Controls.Add(this.dataGridView1);
-            this.panel3.Controls.Add(this.searchText);
-            this.panel3.Controls.Add(this.lbTimetableIDATT);
-            this.panel3.Location = new System.Drawing.Point(401, 16);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(558, 531);
-            this.panel3.TabIndex = 32;
+            this.updateBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.updateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.updateBtn.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateBtn.Location = new System.Drawing.Point(139, 457);
+            this.updateBtn.Name = "updateBtn";
+            this.updateBtn.Size = new System.Drawing.Size(138, 47);
+            this.updateBtn.TabIndex = 60;
+            this.updateBtn.Text = "Update";
+            this.updateBtn.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // addressTextBox
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(19, 64);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(526, 446);
-            this.dataGridView1.TabIndex = 14;
-            // 
-            // searchText
-            // 
-            this.searchText.Location = new System.Drawing.Point(133, 18);
-            this.searchText.Name = "searchText";
-            this.searchText.Size = new System.Drawing.Size(403, 22);
-            this.searchText.TabIndex = 12;
-            // 
-            // lbTimetableIDATT
-            // 
-            this.lbTimetableIDATT.AutoSize = true;
-            this.lbTimetableIDATT.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTimetableIDATT.Location = new System.Drawing.Point(23, 18);
-            this.lbTimetableIDATT.Name = "lbTimetableIDATT";
-            this.lbTimetableIDATT.Size = new System.Drawing.Size(104, 20);
-            this.lbTimetableIDATT.TabIndex = 13;
-            this.lbTimetableIDATT.Text = "Timetable ID";
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel2.Controls.Add(this.dateTimePicker2);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.reasonTextBox);
-            this.panel2.Controls.Add(this.reasonLabel);
-            this.panel2.Controls.Add(this.dateTimePicker1);
-            this.panel2.Controls.Add(this.doblabel);
-            this.panel2.Controls.Add(this.nameTextBox);
-            this.panel2.Controls.Add(this.nameLabel1);
-            this.panel2.Controls.Add(this.btnInsertATT);
-            this.panel2.Location = new System.Drawing.Point(4, 14);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(380, 533);
-            this.panel2.TabIndex = 31;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(172, 174);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(195, 22);
-            this.dateTimePicker2.TabIndex = 22;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(5, 176);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(123, 25);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "Date Of Birth";
-            // 
-            // reasonTextBox
-            // 
-            this.reasonTextBox.Location = new System.Drawing.Point(171, 216);
-            this.reasonTextBox.Multiline = true;
-            this.reasonTextBox.Name = "reasonTextBox";
-            this.reasonTextBox.Size = new System.Drawing.Size(194, 65);
-            this.reasonTextBox.TabIndex = 20;
+            this.addressTextBox.Location = new System.Drawing.Point(183, 309);
+            this.addressTextBox.Multiline = true;
+            this.addressTextBox.Name = "addressTextBox";
+            this.addressTextBox.Size = new System.Drawing.Size(246, 65);
+            this.addressTextBox.TabIndex = 56;
             // 
             // reasonLabel
             // 
             this.reasonLabel.AutoSize = true;
             this.reasonLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.reasonLabel.Location = new System.Drawing.Point(5, 215);
+            this.reasonLabel.Location = new System.Drawing.Point(11, 308);
             this.reasonLabel.Name = "reasonLabel";
             this.reasonLabel.Size = new System.Drawing.Size(79, 25);
-            this.reasonLabel.TabIndex = 19;
+            this.reasonLabel.TabIndex = 55;
             this.reasonLabel.Text = "Reason";
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(171, 132);
+            this.dateTimePicker1.Checked = false;
+            this.dateTimePicker1.Location = new System.Drawing.Point(183, 262);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(195, 22);
-            this.dateTimePicker1.TabIndex = 18;
+            this.dateTimePicker1.Size = new System.Drawing.Size(247, 22);
+            this.dateTimePicker1.TabIndex = 54;
             // 
             // doblabel
             // 
             this.doblabel.AutoSize = true;
             this.doblabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.doblabel.Location = new System.Drawing.Point(4, 134);
+            this.doblabel.Location = new System.Drawing.Point(12, 264);
             this.doblabel.Name = "doblabel";
-            this.doblabel.Size = new System.Drawing.Size(123, 25);
-            this.doblabel.TabIndex = 17;
-            this.doblabel.Text = "Date Of Birth";
+            this.doblabel.Size = new System.Drawing.Size(53, 25);
+            this.doblabel.TabIndex = 53;
+            this.doblabel.Text = "Date";
             // 
-            // nameTextBox
+            // nameTextBox2
             // 
-            this.nameTextBox.Location = new System.Drawing.Point(171, 98);
-            this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(194, 22);
-            this.nameTextBox.TabIndex = 16;
+            this.nameTextBox2.Location = new System.Drawing.Point(183, 216);
+            this.nameTextBox2.Name = "nameTextBox2";
+            this.nameTextBox2.Size = new System.Drawing.Size(247, 22);
+            this.nameTextBox2.TabIndex = 52;
             // 
-            // nameLabel1
+            // nameLabel2
             // 
-            this.nameLabel1.AutoSize = true;
-            this.nameLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.nameLabel1.Location = new System.Drawing.Point(5, 97);
-            this.nameLabel1.Name = "nameLabel1";
-            this.nameLabel1.Size = new System.Drawing.Size(64, 25);
-            this.nameLabel1.TabIndex = 15;
-            this.nameLabel1.Text = "Name";
+            this.nameLabel2.AutoSize = true;
+            this.nameLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.nameLabel2.Location = new System.Drawing.Point(12, 215);
+            this.nameLabel2.Name = "nameLabel2";
+            this.nameLabel2.Size = new System.Drawing.Size(162, 25);
+            this.nameLabel2.TabIndex = 51;
+            this.nameLabel2.Text = "Name with Initials";
             // 
-            // btnInsertATT
+            // NametextBox1
             // 
-            this.btnInsertATT.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnInsertATT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsertATT.Location = new System.Drawing.Point(128, 408);
-            this.btnInsertATT.Name = "btnInsertATT";
-            this.btnInsertATT.Size = new System.Drawing.Size(130, 50);
-            this.btnInsertATT.TabIndex = 14;
-            this.btnInsertATT.Text = "Insert";
-            this.btnInsertATT.UseVisualStyleBackColor = false;
+            this.NametextBox1.Location = new System.Drawing.Point(183, 176);
+            this.NametextBox1.Name = "NametextBox1";
+            this.NametextBox1.Size = new System.Drawing.Size(246, 22);
+            this.NametextBox1.TabIndex = 50;
+            // 
+            // nameLabel
+            // 
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.nameLabel.Location = new System.Drawing.Point(15, 175);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(100, 25);
+            this.nameLabel.TabIndex = 49;
+            this.nameLabel.Text = "Full Name";
+            // 
+            // searchTextBox1
+            // 
+            this.searchTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchTextBox1.Location = new System.Drawing.Point(454, 18);
+            this.searchTextBox1.Name = "searchTextBox1";
+            this.searchTextBox1.Size = new System.Drawing.Size(493, 27);
+            this.searchTextBox1.TabIndex = 3;
+            this.searchTextBox1.Tag = "";
+            this.searchTextBox1.Text = "Search Here";
+            this.searchTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // SalarydataView1
+            // 
+            this.SalarydataView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SalarydataView1.Location = new System.Drawing.Point(454, 70);
+            this.SalarydataView1.Name = "SalarydataView1";
+            this.SalarydataView1.RowHeadersWidth = 51;
+            this.SalarydataView1.RowTemplate.Height = 24;
+            this.SalarydataView1.Size = new System.Drawing.Size(493, 469);
+            this.SalarydataView1.TabIndex = 2;
             // 
             // StaffReqLeave
             // 
@@ -445,11 +417,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GrayText;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.ContentPanel);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.ButtonPanel);
             this.Controls.Add(this.usrImg);
             this.Controls.Add(this.UsrlinkLabel);
-            this.Controls.Add(this.ContentPanel);
             this.Controls.Add(this.imgPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "StaffReqLeave";
@@ -460,11 +432,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgPanel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usrImg)).EndInit();
             this.ContentPanel.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.ContentPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SalarydataView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -492,19 +461,16 @@
         private System.Windows.Forms.PictureBox usrImg;
         private System.Windows.Forms.LinkLabel UsrlinkLabel;
         private System.Windows.Forms.Panel ContentPanel;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox searchText;
-        private System.Windows.Forms.Label lbTimetableIDATT;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnInsertATT;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox reasonTextBox;
+        private System.Windows.Forms.Button updateBtn;
+        private System.Windows.Forms.TextBox addressTextBox;
         private System.Windows.Forms.Label reasonLabel;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label doblabel;
-        private System.Windows.Forms.TextBox nameTextBox;
-        private System.Windows.Forms.Label nameLabel1;
+        private System.Windows.Forms.TextBox nameTextBox2;
+        private System.Windows.Forms.Label nameLabel2;
+        private System.Windows.Forms.TextBox NametextBox1;
+        private System.Windows.Forms.Label nameLabel;
+        private System.Windows.Forms.TextBox searchTextBox1;
+        private System.Windows.Forms.DataGridView SalarydataView1;
     }
 }

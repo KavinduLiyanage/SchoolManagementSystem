@@ -39,6 +39,19 @@
             this.UsrlinkLabel = new System.Windows.Forms.LinkLabel();
             this.NHomeBtn = new System.Windows.Forms.Button();
             this.ContentPanel = new System.Windows.Forms.Panel();
+            this.updateBtn = new System.Windows.Forms.Button();
+            this.addressLabel = new System.Windows.Forms.Label();
+            this.acTDeclinecomboBox = new System.Windows.Forms.ComboBox();
+            this.addressTextBox = new System.Windows.Forms.TextBox();
+            this.reasonLabel = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.doblabel = new System.Windows.Forms.Label();
+            this.nameTextBox2 = new System.Windows.Forms.TextBox();
+            this.nameLabel2 = new System.Windows.Forms.Label();
+            this.NametextBox1 = new System.Windows.Forms.TextBox();
+            this.nameLabel = new System.Windows.Forms.Label();
+            this.searchTextBox1 = new System.Windows.Forms.TextBox();
+            this.SalarydataView1 = new System.Windows.Forms.DataGridView();
             this.ButtonPanel = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnLogOutHeader = new System.Windows.Forms.Button();
@@ -49,25 +62,12 @@
             this.btnResourseMHeader = new System.Windows.Forms.Button();
             this.btnInventoryMHeader = new System.Windows.Forms.Button();
             this.btnEventMHeader = new System.Windows.Forms.Button();
-            this.searchTextBox1 = new System.Windows.Forms.TextBox();
-            this.SalarydataView1 = new System.Windows.Forms.DataGridView();
-            this.nameTextBox2 = new System.Windows.Forms.TextBox();
-            this.nameLabel2 = new System.Windows.Forms.Label();
-            this.NametextBox1 = new System.Windows.Forms.TextBox();
-            this.nameLabel = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.doblabel = new System.Windows.Forms.Label();
-            this.addressTextBox = new System.Windows.Forms.TextBox();
-            this.reasonLabel = new System.Windows.Forms.Label();
-            this.acTDeclinecomboBox = new System.Windows.Forms.ComboBox();
-            this.addressLabel = new System.Windows.Forms.Label();
-            this.updateBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.imgPanel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.ContentPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SalarydataView1)).BeginInit();
             this.ButtonPanel.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.SalarydataView1)).BeginInit();
             this.SuspendLayout();
             // 
             // NViewStaffBtn
@@ -191,6 +191,130 @@
             this.ContentPanel.Size = new System.Drawing.Size(962, 561);
             this.ContentPanel.TabIndex = 50;
             // 
+            // updateBtn
+            // 
+            this.updateBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.updateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.updateBtn.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateBtn.Location = new System.Drawing.Point(139, 457);
+            this.updateBtn.Name = "updateBtn";
+            this.updateBtn.Size = new System.Drawing.Size(138, 47);
+            this.updateBtn.TabIndex = 60;
+            this.updateBtn.Text = "Update";
+            this.updateBtn.UseVisualStyleBackColor = true;
+            // 
+            // addressLabel
+            // 
+            this.addressLabel.AutoSize = true;
+            this.addressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.addressLabel.Location = new System.Drawing.Point(12, 391);
+            this.addressLabel.Name = "addressLabel";
+            this.addressLabel.Size = new System.Drawing.Size(165, 25);
+            this.addressLabel.TabIndex = 59;
+            this.addressLabel.Text = "Accept or Decline";
+            // 
+            // acTDeclinecomboBox
+            // 
+            this.acTDeclinecomboBox.FormattingEnabled = true;
+            this.acTDeclinecomboBox.Items.AddRange(new object[] {
+            "Accept",
+            "Decline"});
+            this.acTDeclinecomboBox.Location = new System.Drawing.Point(183, 390);
+            this.acTDeclinecomboBox.Name = "acTDeclinecomboBox";
+            this.acTDeclinecomboBox.Size = new System.Drawing.Size(247, 24);
+            this.acTDeclinecomboBox.TabIndex = 58;
+            // 
+            // addressTextBox
+            // 
+            this.addressTextBox.Location = new System.Drawing.Point(183, 309);
+            this.addressTextBox.Multiline = true;
+            this.addressTextBox.Name = "addressTextBox";
+            this.addressTextBox.Size = new System.Drawing.Size(246, 65);
+            this.addressTextBox.TabIndex = 56;
+            // 
+            // reasonLabel
+            // 
+            this.reasonLabel.AutoSize = true;
+            this.reasonLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.reasonLabel.Location = new System.Drawing.Point(8, 308);
+            this.reasonLabel.Name = "reasonLabel";
+            this.reasonLabel.Size = new System.Drawing.Size(79, 25);
+            this.reasonLabel.TabIndex = 55;
+            this.reasonLabel.Text = "Reason";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Checked = false;
+            this.dateTimePicker1.Location = new System.Drawing.Point(183, 262);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(247, 22);
+            this.dateTimePicker1.TabIndex = 54;
+            // 
+            // doblabel
+            // 
+            this.doblabel.AutoSize = true;
+            this.doblabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.doblabel.Location = new System.Drawing.Point(12, 264);
+            this.doblabel.Name = "doblabel";
+            this.doblabel.Size = new System.Drawing.Size(53, 25);
+            this.doblabel.TabIndex = 53;
+            this.doblabel.Text = "Date";
+            // 
+            // nameTextBox2
+            // 
+            this.nameTextBox2.Location = new System.Drawing.Point(183, 216);
+            this.nameTextBox2.Name = "nameTextBox2";
+            this.nameTextBox2.Size = new System.Drawing.Size(247, 22);
+            this.nameTextBox2.TabIndex = 52;
+            // 
+            // nameLabel2
+            // 
+            this.nameLabel2.AutoSize = true;
+            this.nameLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.nameLabel2.Location = new System.Drawing.Point(12, 215);
+            this.nameLabel2.Name = "nameLabel2";
+            this.nameLabel2.Size = new System.Drawing.Size(162, 25);
+            this.nameLabel2.TabIndex = 51;
+            this.nameLabel2.Text = "Name with Initials";
+            // 
+            // NametextBox1
+            // 
+            this.NametextBox1.Location = new System.Drawing.Point(183, 176);
+            this.NametextBox1.Name = "NametextBox1";
+            this.NametextBox1.Size = new System.Drawing.Size(246, 22);
+            this.NametextBox1.TabIndex = 50;
+            // 
+            // nameLabel
+            // 
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.nameLabel.Location = new System.Drawing.Point(15, 175);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(100, 25);
+            this.nameLabel.TabIndex = 49;
+            this.nameLabel.Text = "Full Name";
+            // 
+            // searchTextBox1
+            // 
+            this.searchTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchTextBox1.Location = new System.Drawing.Point(454, 18);
+            this.searchTextBox1.Name = "searchTextBox1";
+            this.searchTextBox1.Size = new System.Drawing.Size(493, 27);
+            this.searchTextBox1.TabIndex = 3;
+            this.searchTextBox1.Tag = "";
+            this.searchTextBox1.Text = "Search Here";
+            this.searchTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // SalarydataView1
+            // 
+            this.SalarydataView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.SalarydataView1.Location = new System.Drawing.Point(454, 70);
+            this.SalarydataView1.Name = "SalarydataView1";
+            this.SalarydataView1.RowHeadersWidth = 51;
+            this.SalarydataView1.RowTemplate.Height = 24;
+            this.SalarydataView1.Size = new System.Drawing.Size(493, 469);
+            this.SalarydataView1.TabIndex = 2;
+            // 
             // ButtonPanel
             // 
             this.ButtonPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -246,6 +370,7 @@
             this.btnNoticeMHeader.TabIndex = 23;
             this.btnNoticeMHeader.Text = "Notice Management";
             this.btnNoticeMHeader.UseVisualStyleBackColor = false;
+            this.btnNoticeMHeader.Click += new System.EventHandler(this.BtnNoticeMHeader_Click);
             // 
             // btnExamMheader
             // 
@@ -283,6 +408,7 @@
             this.btnStudentMHeader.TabIndex = 18;
             this.btnStudentMHeader.Text = "Student Management";
             this.btnStudentMHeader.UseVisualStyleBackColor = false;
+            this.btnStudentMHeader.Click += new System.EventHandler(this.BtnStudentMHeader_Click);
             // 
             // btnResourseMHeader
             // 
@@ -308,6 +434,7 @@
             this.btnInventoryMHeader.TabIndex = 19;
             this.btnInventoryMHeader.Text = "Inventory Management";
             this.btnInventoryMHeader.UseVisualStyleBackColor = false;
+            this.btnInventoryMHeader.Click += new System.EventHandler(this.BtnInventoryMHeader_Click);
             // 
             // btnEventMHeader
             // 
@@ -320,130 +447,7 @@
             this.btnEventMHeader.TabIndex = 20;
             this.btnEventMHeader.Text = "Event Management";
             this.btnEventMHeader.UseVisualStyleBackColor = false;
-            // 
-            // searchTextBox1
-            // 
-            this.searchTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchTextBox1.Location = new System.Drawing.Point(454, 18);
-            this.searchTextBox1.Name = "searchTextBox1";
-            this.searchTextBox1.Size = new System.Drawing.Size(493, 27);
-            this.searchTextBox1.TabIndex = 3;
-            this.searchTextBox1.Tag = "";
-            this.searchTextBox1.Text = "Search Here";
-            this.searchTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // SalarydataView1
-            // 
-            this.SalarydataView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.SalarydataView1.Location = new System.Drawing.Point(454, 70);
-            this.SalarydataView1.Name = "SalarydataView1";
-            this.SalarydataView1.RowHeadersWidth = 51;
-            this.SalarydataView1.RowTemplate.Height = 24;
-            this.SalarydataView1.Size = new System.Drawing.Size(493, 469);
-            this.SalarydataView1.TabIndex = 2;
-            // 
-            // nameTextBox2
-            // 
-            this.nameTextBox2.Location = new System.Drawing.Point(183, 216);
-            this.nameTextBox2.Name = "nameTextBox2";
-            this.nameTextBox2.Size = new System.Drawing.Size(247, 22);
-            this.nameTextBox2.TabIndex = 52;
-            // 
-            // nameLabel2
-            // 
-            this.nameLabel2.AutoSize = true;
-            this.nameLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.nameLabel2.Location = new System.Drawing.Point(12, 215);
-            this.nameLabel2.Name = "nameLabel2";
-            this.nameLabel2.Size = new System.Drawing.Size(162, 25);
-            this.nameLabel2.TabIndex = 51;
-            this.nameLabel2.Text = "Name with Initials";
-            // 
-            // NametextBox1
-            // 
-            this.NametextBox1.Location = new System.Drawing.Point(183, 176);
-            this.NametextBox1.Name = "NametextBox1";
-            this.NametextBox1.Size = new System.Drawing.Size(246, 22);
-            this.NametextBox1.TabIndex = 50;
-            // 
-            // nameLabel
-            // 
-            this.nameLabel.AutoSize = true;
-            this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.nameLabel.Location = new System.Drawing.Point(15, 175);
-            this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(100, 25);
-            this.nameLabel.TabIndex = 49;
-            this.nameLabel.Text = "Full Name";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Checked = false;
-            this.dateTimePicker1.Location = new System.Drawing.Point(183, 262);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(247, 22);
-            this.dateTimePicker1.TabIndex = 54;
-            // 
-            // doblabel
-            // 
-            this.doblabel.AutoSize = true;
-            this.doblabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.doblabel.Location = new System.Drawing.Point(12, 264);
-            this.doblabel.Name = "doblabel";
-            this.doblabel.Size = new System.Drawing.Size(53, 25);
-            this.doblabel.TabIndex = 53;
-            this.doblabel.Text = "Date";
-            // 
-            // addressTextBox
-            // 
-            this.addressTextBox.Location = new System.Drawing.Point(183, 309);
-            this.addressTextBox.Multiline = true;
-            this.addressTextBox.Name = "addressTextBox";
-            this.addressTextBox.Size = new System.Drawing.Size(246, 65);
-            this.addressTextBox.TabIndex = 56;
-            // 
-            // reasonLabel
-            // 
-            this.reasonLabel.AutoSize = true;
-            this.reasonLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.reasonLabel.Location = new System.Drawing.Point(8, 308);
-            this.reasonLabel.Name = "reasonLabel";
-            this.reasonLabel.Size = new System.Drawing.Size(79, 25);
-            this.reasonLabel.TabIndex = 55;
-            this.reasonLabel.Text = "Reason";
-            // 
-            // acTDeclinecomboBox
-            // 
-            this.acTDeclinecomboBox.FormattingEnabled = true;
-            this.acTDeclinecomboBox.Items.AddRange(new object[] {
-            "Accept",
-            "Decline"});
-            this.acTDeclinecomboBox.Location = new System.Drawing.Point(183, 390);
-            this.acTDeclinecomboBox.Name = "acTDeclinecomboBox";
-            this.acTDeclinecomboBox.Size = new System.Drawing.Size(247, 24);
-            this.acTDeclinecomboBox.TabIndex = 58;
-            // 
-            // addressLabel
-            // 
-            this.addressLabel.AutoSize = true;
-            this.addressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.addressLabel.Location = new System.Drawing.Point(12, 391);
-            this.addressLabel.Name = "addressLabel";
-            this.addressLabel.Size = new System.Drawing.Size(85, 25);
-            this.addressLabel.TabIndex = 59;
-            this.addressLabel.Text = "Address";
-            // 
-            // updateBtn
-            // 
-            this.updateBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.updateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.updateBtn.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateBtn.Location = new System.Drawing.Point(139, 457);
-            this.updateBtn.Name = "updateBtn";
-            this.updateBtn.Size = new System.Drawing.Size(138, 47);
-            this.updateBtn.TabIndex = 60;
-            this.updateBtn.Text = "Update";
-            this.updateBtn.UseVisualStyleBackColor = true;
+            this.btnEventMHeader.Click += new System.EventHandler(this.BtnEventMHeader_Click);
             // 
             // ViewStaffLeaves
             // 
@@ -465,9 +469,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ContentPanel.ResumeLayout(false);
             this.ContentPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SalarydataView1)).EndInit();
             this.ButtonPanel.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.SalarydataView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

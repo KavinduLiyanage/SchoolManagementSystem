@@ -143,7 +143,7 @@
             this.MngInvenImgBtn.Size = new System.Drawing.Size(71, 75);
             this.MngInvenImgBtn.TabIndex = 30;
             this.MngInvenImgBtn.UseVisualStyleBackColor = true;
-            this.MngInvenImgBtn.Click += new System.EventHandler(this.MngInvenImgBtn_Click);
+            //this.MngInvenImgBtn.Click += new System.EventHandler(this.MngInvenImgBtn_Click);
             // 
             // MngExmBtn
             // 
@@ -206,7 +206,7 @@
             this.MngStaffBtn.TabIndex = 25;
             this.MngStaffBtn.Text = "My Profile";
             this.MngStaffBtn.UseVisualStyleBackColor = false;
-            this.MngStaffBtn.Click += new System.EventHandler(this.MngStaffBtn_Click);
+            //this.MngStaffBtn.Click += new System.EventHandler(this.MngStaffBtn_Click);
             // 
             // MngStaffImgBtn
             // 
@@ -218,7 +218,7 @@
             this.MngStaffImgBtn.Size = new System.Drawing.Size(71, 75);
             this.MngStaffImgBtn.TabIndex = 24;
             this.MngStaffImgBtn.UseVisualStyleBackColor = true;
-            this.MngStaffImgBtn.Click += new System.EventHandler(this.MngStaffImgBtn_Click);
+            //this.MngStaffImgBtn.Click += new System.EventHandler(this.MngStaffImgBtn_Click);
             // 
             // ReqLeaveBtn
             // 

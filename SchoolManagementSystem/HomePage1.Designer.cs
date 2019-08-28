@@ -137,7 +137,7 @@
             this.MngInvenBtn.TabIndex = 15;
             this.MngInvenBtn.Text = "Inventory Management";
             this.MngInvenBtn.UseVisualStyleBackColor = false;
-            this.MngInvenBtn.Click += new System.EventHandler(this.MngInvenBtn_Click);
+            //this.MngInvenBtn.Click += new System.EventHandler(this.MngInvenBtn_Click);
             // 
             // MngInvenImgBtn
             // 
@@ -149,7 +149,7 @@
             this.MngInvenImgBtn.Size = new System.Drawing.Size(71, 75);
             this.MngInvenImgBtn.TabIndex = 14;
             this.MngInvenImgBtn.UseVisualStyleBackColor = true;
-            this.MngInvenImgBtn.Click += new System.EventHandler(this.MngInvenImgBtn_Click);
+            //this.MngInvenImgBtn.Click += new System.EventHandler(this.MngInvenImgBtn_Click);
             // 
             // MngEvtBtn
             // 

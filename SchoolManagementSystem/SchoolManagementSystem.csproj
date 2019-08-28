@@ -309,11 +309,6 @@
     <Compile Include="ViewSalaryInfo.Designer.cs">
       <DependentUpon>ViewSalaryInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewStaffDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ViewStaffDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="ViewStaffLeaves.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -487,17 +482,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="ViewStaffDataSet1.xsc">
-      <DependentUpon>ViewStaffDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="ViewStaffDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ViewStaffDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ViewStaffDataSet1.xss">
-      <DependentUpon>ViewStaffDataSet1.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

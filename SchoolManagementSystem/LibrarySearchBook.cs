@@ -182,5 +182,17 @@ namespace SchoolManagementSystem
             this.Hide();
             lib.ShowDialog();
         }
+
+        private void NStaffHomeBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NHomeBtn_Click(object sender, EventArgs e)
+        {
+            HomePage1 newHome = new HomePage1();
+            this.Hide();
+            newHome.ShowDialog();
+        }
     }
 }

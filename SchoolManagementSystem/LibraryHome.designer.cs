@@ -294,6 +294,7 @@
             this.btnLogOutHeader.TabIndex = 25;
             this.btnLogOutHeader.Text = "Log Out";
             this.btnLogOutHeader.UseVisualStyleBackColor = true;
+            this.btnLogOutHeader.Click += new System.EventHandler(this.BtnLogOutHeader_Click);
             // 
             // btnNoticeMHeader
             // 
@@ -308,6 +309,7 @@
             this.btnNoticeMHeader.TabIndex = 23;
             this.btnNoticeMHeader.Text = "Notice Management";
             this.btnNoticeMHeader.UseVisualStyleBackColor = false;
+            this.btnNoticeMHeader.Click += new System.EventHandler(this.BtnNoticeMHeader_Click);
             // 
             // btnExamMheader
             // 
@@ -322,6 +324,7 @@
             this.btnExamMheader.TabIndex = 1;
             this.btnExamMheader.Text = "Exam Management";
             this.btnExamMheader.UseVisualStyleBackColor = false;
+            this.btnExamMheader.Click += new System.EventHandler(this.BtnExamMheader_Click);
             // 
             // btnLibraryMHeader
             // 
@@ -334,8 +337,9 @@
             this.btnLibraryMHeader.Name = "btnLibraryMHeader";
             this.btnLibraryMHeader.Size = new System.Drawing.Size(109, 41);
             this.btnLibraryMHeader.TabIndex = 22;
-            this.btnLibraryMHeader.Text = " Library Management";
+            this.btnLibraryMHeader.Text = " Staff Management";
             this.btnLibraryMHeader.UseVisualStyleBackColor = false;
+            this.btnLibraryMHeader.Click += new System.EventHandler(this.BtnLibraryMHeader_Click);
             // 
             // btnStudentMHeader
             // 
@@ -350,6 +354,7 @@
             this.btnStudentMHeader.TabIndex = 18;
             this.btnStudentMHeader.Text = "Student Management";
             this.btnStudentMHeader.UseVisualStyleBackColor = false;
+            this.btnStudentMHeader.Click += new System.EventHandler(this.BtnStudentMHeader_Click);
             // 
             // btnResourseMHeader
             // 
@@ -364,6 +369,7 @@
             this.btnResourseMHeader.TabIndex = 21;
             this.btnResourseMHeader.Text = "Resourse Management";
             this.btnResourseMHeader.UseVisualStyleBackColor = false;
+            this.btnResourseMHeader.Click += new System.EventHandler(this.BtnResourseMHeader_Click);
             // 
             // btnInventoryMHeader
             // 
@@ -378,6 +384,7 @@
             this.btnInventoryMHeader.TabIndex = 19;
             this.btnInventoryMHeader.Text = "Inventory Management";
             this.btnInventoryMHeader.UseVisualStyleBackColor = false;
+            this.btnInventoryMHeader.Click += new System.EventHandler(this.BtnInventoryMHeader_Click);
             // 
             // btnEventMHeader
             // 
@@ -392,6 +399,7 @@
             this.btnEventMHeader.TabIndex = 20;
             this.btnEventMHeader.Text = "Event Management";
             this.btnEventMHeader.UseVisualStyleBackColor = false;
+            this.btnEventMHeader.Click += new System.EventHandler(this.BtnEventMHeader_Click);
             // 
             // pictureBox1
             // 
@@ -413,10 +421,10 @@
             this.UsrlinkLabel.Location = new System.Drawing.Point(48, 245);
             this.UsrlinkLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.UsrlinkLabel.Name = "UsrlinkLabel";
-            this.UsrlinkLabel.Size = new System.Drawing.Size(138, 20);
+            this.UsrlinkLabel.Size = new System.Drawing.Size(137, 20);
             this.UsrlinkLabel.TabIndex = 46;
             this.UsrlinkLabel.TabStop = true;
-            this.UsrlinkLabel.Text = "Milinda Ranawaka";
+            this.UsrlinkLabel.Text = "Kavishka Ransara";
             // 
             // subLabel2
             // 
@@ -455,6 +463,7 @@
             this.NHomeBtn.TabIndex = 24;
             this.NHomeBtn.Text = "Home";
             this.NHomeBtn.UseVisualStyleBackColor = false;
+            this.NHomeBtn.Click += new System.EventHandler(this.NHomeBtn_Click);
             // 
             // NViewStaffBtn
             // 
@@ -465,8 +474,9 @@
             this.NViewStaffBtn.Name = "NViewStaffBtn";
             this.NViewStaffBtn.Size = new System.Drawing.Size(176, 28);
             this.NViewStaffBtn.TabIndex = 23;
-            this.NViewStaffBtn.Text = "View Staff Member";
+            this.NViewStaffBtn.Text = "Issue Book ";
             this.NViewStaffBtn.UseVisualStyleBackColor = false;
+            this.NViewStaffBtn.Click += new System.EventHandler(this.NViewStaffBtn_Click);
             // 
             // NViewLeaveBtn
             // 
@@ -477,7 +487,7 @@
             this.NViewLeaveBtn.Name = "NViewLeaveBtn";
             this.NViewLeaveBtn.Size = new System.Drawing.Size(176, 28);
             this.NViewLeaveBtn.TabIndex = 18;
-            this.NViewLeaveBtn.Text = "View Staff Leave";
+            this.NViewLeaveBtn.Text = "Reports";
             this.NViewLeaveBtn.UseVisualStyleBackColor = false;
             // 
             // NViewSalaryBtn
@@ -489,7 +499,7 @@
             this.NViewSalaryBtn.Name = "NViewSalaryBtn";
             this.NViewSalaryBtn.Size = new System.Drawing.Size(176, 28);
             this.NViewSalaryBtn.TabIndex = 18;
-            this.NViewSalaryBtn.Text = "View Salary Info";
+            this.NViewSalaryBtn.Text = "Return Books";
             this.NViewSalaryBtn.UseVisualStyleBackColor = false;
             // 
             // NAddStaffBtn
@@ -501,7 +511,7 @@
             this.NAddStaffBtn.Name = "NAddStaffBtn";
             this.NAddStaffBtn.Size = new System.Drawing.Size(176, 28);
             this.NAddStaffBtn.TabIndex = 17;
-            this.NAddStaffBtn.Text = "Add Staff Member";
+            this.NAddStaffBtn.Text = "View Books";
             this.NAddStaffBtn.UseVisualStyleBackColor = false;
             // 
             // NStaffHomeBtn
@@ -513,8 +523,9 @@
             this.NStaffHomeBtn.Name = "NStaffHomeBtn";
             this.NStaffHomeBtn.Size = new System.Drawing.Size(176, 28);
             this.NStaffHomeBtn.TabIndex = 17;
-            this.NStaffHomeBtn.Text = "Staff Manage Home";
+            this.NStaffHomeBtn.Text = "Add Books";
             this.NStaffHomeBtn.UseVisualStyleBackColor = false;
+            this.NStaffHomeBtn.Click += new System.EventHandler(this.NStaffHomeBtn_Click);
             // 
             // LibraryHome
             // 

@@ -349,12 +349,13 @@
             // NStaffHomeBtn
             // 
             this.NStaffHomeBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.NStaffHomeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NStaffHomeBtn.Location = new System.Drawing.Point(8, 34);
             this.NStaffHomeBtn.Margin = new System.Windows.Forms.Padding(2);
             this.NStaffHomeBtn.Name = "NStaffHomeBtn";
             this.NStaffHomeBtn.Size = new System.Drawing.Size(176, 28);
             this.NStaffHomeBtn.TabIndex = 17;
-            this.NStaffHomeBtn.Text = "Staff Manage Home";
+            this.NStaffHomeBtn.Text = "Add Books";
             this.NStaffHomeBtn.UseVisualStyleBackColor = false;
             // 
             // panel5
@@ -399,49 +400,54 @@
             this.NHomeBtn.TabIndex = 24;
             this.NHomeBtn.Text = "Home";
             this.NHomeBtn.UseVisualStyleBackColor = false;
+            this.NHomeBtn.Click += new System.EventHandler(this.NHomeBtn_Click);
             // 
             // NViewStaffBtn
             // 
             this.NViewStaffBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.NViewStaffBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NViewStaffBtn.Location = new System.Drawing.Point(8, 93);
             this.NViewStaffBtn.Margin = new System.Windows.Forms.Padding(2);
             this.NViewStaffBtn.Name = "NViewStaffBtn";
             this.NViewStaffBtn.Size = new System.Drawing.Size(176, 28);
             this.NViewStaffBtn.TabIndex = 23;
-            this.NViewStaffBtn.Text = "View Staff Member";
+            this.NViewStaffBtn.Text = "Issue Books";
             this.NViewStaffBtn.UseVisualStyleBackColor = false;
             // 
             // NViewLeaveBtn
             // 
             this.NViewLeaveBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.NViewLeaveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NViewLeaveBtn.Location = new System.Drawing.Point(8, 152);
             this.NViewLeaveBtn.Margin = new System.Windows.Forms.Padding(2);
             this.NViewLeaveBtn.Name = "NViewLeaveBtn";
             this.NViewLeaveBtn.Size = new System.Drawing.Size(176, 28);
             this.NViewLeaveBtn.TabIndex = 18;
-            this.NViewLeaveBtn.Text = "View Staff Leave";
+            this.NViewLeaveBtn.Text = "Reports";
             this.NViewLeaveBtn.UseVisualStyleBackColor = false;
             // 
             // NViewSalaryBtn
             // 
             this.NViewSalaryBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.NViewSalaryBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NViewSalaryBtn.Location = new System.Drawing.Point(8, 123);
             this.NViewSalaryBtn.Margin = new System.Windows.Forms.Padding(2);
             this.NViewSalaryBtn.Name = "NViewSalaryBtn";
             this.NViewSalaryBtn.Size = new System.Drawing.Size(176, 28);
             this.NViewSalaryBtn.TabIndex = 18;
-            this.NViewSalaryBtn.Text = "View Salary Info";
+            this.NViewSalaryBtn.Text = "Return Books";
             this.NViewSalaryBtn.UseVisualStyleBackColor = false;
             // 
             // NAddStaffBtn
             // 
             this.NAddStaffBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.NAddStaffBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NAddStaffBtn.Location = new System.Drawing.Point(8, 64);
             this.NAddStaffBtn.Margin = new System.Windows.Forms.Padding(2);
             this.NAddStaffBtn.Name = "NAddStaffBtn";
             this.NAddStaffBtn.Size = new System.Drawing.Size(176, 28);
             this.NAddStaffBtn.TabIndex = 17;
-            this.NAddStaffBtn.Text = "Add Staff Member";
+            this.NAddStaffBtn.Text = "View Books";
             this.NAddStaffBtn.UseVisualStyleBackColor = false;
             // 
             // pictureBox1

@@ -156,5 +156,26 @@ namespace SchoolManagementSystem
             this.Hide();
             newHome.ShowDialog();
         }
+
+        private void NStaffHomeBtn_Click(object sender, EventArgs e)
+        {
+            LibraryAddBook add = new LibraryAddBook();
+            this.Hide();
+            add.ShowDialog();
+        }
+
+        private void NAddStaffBtn_Click(object sender, EventArgs e)
+        {
+            LibrarySearchBook lsbook = new LibrarySearchBook();
+            this.Hide();
+            lsbook.ShowDialog();
+        }
+
+        private void NViewSalaryBtn_Click(object sender, EventArgs e)
+        {
+            ReturnBook rtn = new ReturnBook();
+            this.Hide();
+            rtn.ShowDialog();
+        }
     }
 }

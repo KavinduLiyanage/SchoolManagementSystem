@@ -439,6 +439,7 @@
             this.NViewStaffBtn.TabIndex = 23;
             this.NViewStaffBtn.Text = "Issue Books";
             this.NViewStaffBtn.UseVisualStyleBackColor = false;
+            this.NViewStaffBtn.Click += new System.EventHandler(this.NViewStaffBtn_Click);
             // 
             // NViewLeaveBtn
             // 
@@ -463,6 +464,7 @@
             this.NViewSalaryBtn.TabIndex = 18;
             this.NViewSalaryBtn.Text = "Return Books";
             this.NViewSalaryBtn.UseVisualStyleBackColor = false;
+            this.NViewSalaryBtn.Click += new System.EventHandler(this.NViewSalaryBtn_Click);
             // 
             // NAddStaffBtn
             // 

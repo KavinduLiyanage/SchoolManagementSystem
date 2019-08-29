@@ -192,7 +192,9 @@ namespace SchoolManagementSystem
 
         private void NStaffHomeBtn_Click(object sender, EventArgs e)
         {
-
+            LibraryAddBook add = new LibraryAddBook();
+            this.Hide();
+            add.ShowDialog();
         }
 
         private void NHomeBtn_Click(object sender, EventArgs e)
@@ -200,6 +202,20 @@ namespace SchoolManagementSystem
             HomePage1 newHome = new HomePage1();
             this.Hide();
             newHome.ShowDialog();
+        }
+
+        private void NViewStaffBtn_Click(object sender, EventArgs e)
+        {
+            IssueBook issue = new IssueBook();
+            this.Hide();
+            issue.ShowDialog();
+        }
+
+        private void NViewSalaryBtn_Click(object sender, EventArgs e)
+        {
+            ReturnBook rtn = new ReturnBook();
+            this.Hide();
+            rtn.ShowDialog();
         }
     }
 }

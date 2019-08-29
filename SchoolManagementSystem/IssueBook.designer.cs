@@ -382,6 +382,7 @@
             this.NStaffHomeBtn.TabIndex = 17;
             this.NStaffHomeBtn.Text = "Add Books";
             this.NStaffHomeBtn.UseVisualStyleBackColor = false;
+            this.NStaffHomeBtn.Click += new System.EventHandler(this.NStaffHomeBtn_Click);
             // 
             // panel5
             // 
@@ -462,6 +463,7 @@
             this.NViewSalaryBtn.TabIndex = 18;
             this.NViewSalaryBtn.Text = "Return Books";
             this.NViewSalaryBtn.UseVisualStyleBackColor = false;
+            this.NViewSalaryBtn.Click += new System.EventHandler(this.NViewSalaryBtn_Click);
             // 
             // NAddStaffBtn
             // 
@@ -474,6 +476,7 @@
             this.NAddStaffBtn.TabIndex = 17;
             this.NAddStaffBtn.Text = "View books";
             this.NAddStaffBtn.UseVisualStyleBackColor = false;
+            this.NAddStaffBtn.Click += new System.EventHandler(this.NAddStaffBtn_Click);
             // 
             // ButtonPanel
             // 

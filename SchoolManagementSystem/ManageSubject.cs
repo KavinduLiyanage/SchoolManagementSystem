@@ -230,5 +230,12 @@ namespace SchoolManagementSystem
             subjectname.Text = selectRow.Cells[1].Value.ToString();
             grade.Text = selectRow.Cells[2].Value.ToString();
          }
+
+        private void BtnLogOutHeader_Click(object sender, EventArgs e)
+        {
+            LoginForm log = new LoginForm();
+            this.Hide();
+            log.ShowDialog();
+        }
     }
 }

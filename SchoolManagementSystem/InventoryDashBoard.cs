@@ -86,5 +86,61 @@ namespace SchoolManagementSystem
             DeletedList list = new DeletedList();
             list.Show();
         }
+
+        private void BtnExamMheader_Click(object sender, EventArgs e)
+        {
+            TeachersHome home = new TeachersHome();
+            this.Hide();
+            home.ShowDialog();
+        }
+
+        private void BtnStudentMHeader_Click(object sender, EventArgs e)
+        {
+            CreateStudentAccount creAcc = new CreateStudentAccount();
+            this.Hide();
+            creAcc.ShowDialog();
+        }
+
+        private void BtnInventoryMHeader_Click(object sender, EventArgs e)
+        {
+            AdminMngStaffHome newADM = new AdminMngStaffHome();
+            this.Hide();
+            newADM.ShowDialog();
+        }
+
+        private void BtnEventMHeader_Click(object sender, EventArgs e)
+        {
+            EventDashboard eveDash = new EventDashboard();
+            this.Hide();
+            eveDash.ShowDialog();
+        }
+
+        private void BtnResourseMHeader_Click(object sender, EventArgs e)
+        {
+            ResourceManageHome newres = new ResourceManageHome();
+            this.Hide();
+            newres.ShowDialog();
+        }
+
+        private void BtnLibraryMHeader_Click(object sender, EventArgs e)
+        {
+            LibraryHome libHome = new LibraryHome();
+            this.Hide();
+            libHome.ShowDialog();
+        }
+
+        private void BtnNoticeMHeader_Click(object sender, EventArgs e)
+        {
+            Notice_Dashboard newdash = new Notice_Dashboard();
+            this.Hide();
+            newdash.ShowDialog();
+        }
+
+        private void BtnLogOutHeader_Click(object sender, EventArgs e)
+        {
+            LoginForm log = new LoginForm();
+            this.Hide();
+            log.ShowDialog();
+        }
     }
 }

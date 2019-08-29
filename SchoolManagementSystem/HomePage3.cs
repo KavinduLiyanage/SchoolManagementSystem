@@ -25,5 +25,15 @@ namespace SchoolManagementSystem
             this.Hide();
             seh.ShowDialog();
         }
+
+        private void MngLibImgBtn_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void MngLibBtn_Click(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }

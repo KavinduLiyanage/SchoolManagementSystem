@@ -381,7 +381,9 @@ namespace SchoolManagementSystem
 
         private void BtnLibraryMHeader_Click(object sender, EventArgs e)
         {
-
+            LibraryHome libHome = new LibraryHome();
+            this.Hide();
+            libHome.ShowDialog();
         }
 
         private void BtnNoticeMHeader_Click(object sender, EventArgs e)

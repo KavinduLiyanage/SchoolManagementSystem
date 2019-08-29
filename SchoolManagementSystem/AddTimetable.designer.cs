@@ -42,6 +42,12 @@
             this.btnTeachersHomeATT = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnReset = new System.Windows.Forms.Button();
+            this.cbTerm = new System.Windows.Forms.ComboBox();
+            this.tbClass = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tbEndTime = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.cbSubject = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lbGradeATT = new System.Windows.Forms.Label();
@@ -69,13 +75,7 @@
             this.btnResourseMHeader = new System.Windows.Forms.Button();
             this.btnInventoryMHeader = new System.Windows.Forms.Button();
             this.btnEventMHeader = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tbEndTime = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tbClass = new System.Windows.Forms.TextBox();
-            this.cbTerm = new System.Windows.Forms.ComboBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.btnReset = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -245,6 +245,64 @@
             this.panel2.Size = new System.Drawing.Size(380, 533);
             this.panel2.TabIndex = 29;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel2_Paint);
+            // 
+            // btnReset
+            // 
+            this.btnReset.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset.Location = new System.Drawing.Point(214, 440);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(130, 50);
+            this.btnReset.TabIndex = 24;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.BtnReset_Click);
+            // 
+            // cbTerm
+            // 
+            this.cbTerm.FormattingEnabled = true;
+            this.cbTerm.Items.AddRange(new object[] {
+            "1st Term",
+            "2nd Term",
+            "3rd Term"});
+            this.cbTerm.Location = new System.Drawing.Point(150, 91);
+            this.cbTerm.Name = "cbTerm";
+            this.cbTerm.Size = new System.Drawing.Size(200, 24);
+            this.cbTerm.TabIndex = 23;
+            // 
+            // tbClass
+            // 
+            this.tbClass.Location = new System.Drawing.Point(150, 358);
+            this.tbClass.Name = "tbClass";
+            this.tbClass.Size = new System.Drawing.Size(200, 22);
+            this.tbClass.TabIndex = 22;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(48, 360);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(90, 20);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Classroom";
+            // 
+            // tbEndTime
+            // 
+            this.tbEndTime.Location = new System.Drawing.Point(150, 223);
+            this.tbEndTime.Name = "tbEndTime";
+            this.tbEndTime.Size = new System.Drawing.Size(200, 22);
+            this.tbEndTime.TabIndex = 20;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(48, 226);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 20);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "End Time";
             // 
             // cbSubject
             // 
@@ -449,6 +507,7 @@
             this.btnLogOutHeader.TabIndex = 25;
             this.btnLogOutHeader.Text = "Log Out";
             this.btnLogOutHeader.UseVisualStyleBackColor = true;
+            this.btnLogOutHeader.Click += new System.EventHandler(this.BtnLogOutHeader_Click);
             // 
             // btnNoticeMHeader
             // 
@@ -534,67 +593,9 @@
             this.btnEventMHeader.Text = "Event Management";
             this.btnEventMHeader.UseVisualStyleBackColor = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(48, 226);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 20);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "End Time";
-            // 
-            // tbEndTime
-            // 
-            this.tbEndTime.Location = new System.Drawing.Point(150, 223);
-            this.tbEndTime.Name = "tbEndTime";
-            this.tbEndTime.Size = new System.Drawing.Size(200, 22);
-            this.tbEndTime.TabIndex = 20;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(48, 360);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 20);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "Classroom";
-            // 
-            // tbClass
-            // 
-            this.tbClass.Location = new System.Drawing.Point(150, 358);
-            this.tbClass.Name = "tbClass";
-            this.tbClass.Size = new System.Drawing.Size(200, 22);
-            this.tbClass.TabIndex = 22;
-            // 
-            // cbTerm
-            // 
-            this.cbTerm.FormattingEnabled = true;
-            this.cbTerm.Items.AddRange(new object[] {
-            "1st Term",
-            "2nd Term",
-            "3rd Term"});
-            this.cbTerm.Location = new System.Drawing.Point(150, 91);
-            this.cbTerm.Name = "cbTerm";
-            this.cbTerm.Size = new System.Drawing.Size(200, 24);
-            this.cbTerm.TabIndex = 23;
-            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
-            // 
-            // btnReset
-            // 
-            this.btnReset.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReset.Location = new System.Drawing.Point(214, 440);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(130, 50);
-            this.btnReset.TabIndex = 24;
-            this.btnReset.Text = "Reset";
-            this.btnReset.UseVisualStyleBackColor = false;
-            this.btnReset.Click += new System.EventHandler(this.BtnReset_Click);
             // 
             // AddTimetable
             // 

@@ -303,5 +303,12 @@ namespace SchoolManagementSystem
             this.Hide();
             newAddTT.ShowDialog();
         }
+
+        private void BtnLogOutHeader_Click(object sender, EventArgs e)
+        {
+            LoginForm log = new LoginForm();
+            this.Hide();
+            log.ShowDialog();
+        }
     }
 }

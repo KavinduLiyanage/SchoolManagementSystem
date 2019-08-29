@@ -84,7 +84,7 @@
             this.panel5.Controls.Add(this.btnInventoryMHeader);
             this.panel5.Controls.Add(this.btnEventMHeader);
             this.panel5.Location = new System.Drawing.Point(16, 4);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1637, 113);
             this.panel5.TabIndex = 52;
@@ -123,7 +123,7 @@
             this.btnExamMheader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExamMheader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
             this.btnExamMheader.Location = new System.Drawing.Point(28, 23);
-            this.btnExamMheader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExamMheader.Margin = new System.Windows.Forms.Padding(4);
             this.btnExamMheader.Name = "btnExamMheader";
             this.btnExamMheader.Size = new System.Drawing.Size(193, 62);
             this.btnExamMheader.TabIndex = 1;
@@ -209,7 +209,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.Categorybox);
             this.panel1.Location = new System.Drawing.Point(397, 124);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1256, 699);
             this.panel1.TabIndex = 60;
@@ -220,7 +220,7 @@
             this.cancelbtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.cancelbtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cancelbtn.Location = new System.Drawing.Point(151, 618);
-            this.cancelbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cancelbtn.Margin = new System.Windows.Forms.Padding(4);
             this.cancelbtn.Name = "cancelbtn";
             this.cancelbtn.Size = new System.Drawing.Size(200, 64);
             this.cancelbtn.TabIndex = 31;
@@ -235,7 +235,7 @@
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(583, 91);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -250,7 +250,7 @@
             this.btnsave.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnsave.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsave.Location = new System.Drawing.Point(151, 530);
-            this.btnsave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnsave.Margin = new System.Windows.Forms.Padding(4);
             this.btnsave.Name = "btnsave";
             this.btnsave.Size = new System.Drawing.Size(200, 64);
             this.btnsave.TabIndex = 30;
@@ -262,7 +262,7 @@
             // 
             this.richDiscription.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richDiscription.Location = new System.Drawing.Point(29, 405);
-            this.richDiscription.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richDiscription.Margin = new System.Windows.Forms.Padding(4);
             this.richDiscription.Name = "richDiscription";
             this.richDiscription.Size = new System.Drawing.Size(472, 117);
             this.richDiscription.TabIndex = 29;
@@ -285,7 +285,7 @@
             this.catbox.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.catbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.catbox.Location = new System.Drawing.Point(164, 14);
-            this.catbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.catbox.Margin = new System.Windows.Forms.Padding(4);
             this.catbox.Name = "catbox";
             this.catbox.Size = new System.Drawing.Size(660, 41);
             this.catbox.TabIndex = 4;
@@ -296,7 +296,7 @@
             // 
             this.nametext.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nametext.Location = new System.Drawing.Point(29, 193);
-            this.nametext.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nametext.Margin = new System.Windows.Forms.Padding(4);
             this.nametext.Name = "nametext";
             this.nametext.Size = new System.Drawing.Size(472, 35);
             this.nametext.TabIndex = 27;
@@ -350,7 +350,7 @@
             "Electronic Items",
             "Teaching Aid"});
             this.Categorybox.Location = new System.Drawing.Point(29, 292);
-            this.Categorybox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Categorybox.Margin = new System.Windows.Forms.Padding(4);
             this.Categorybox.Name = "Categorybox";
             this.Categorybox.Size = new System.Drawing.Size(472, 36);
             this.Categorybox.TabIndex = 25;
@@ -423,6 +423,7 @@
             this.NHomeBtn.TabIndex = 24;
             this.NHomeBtn.Text = "Home";
             this.NHomeBtn.UseVisualStyleBackColor = false;
+            this.NHomeBtn.Click += new System.EventHandler(this.NHomeBtn_Click);
             // 
             // NViewStaffBtn
             // 
@@ -508,7 +509,7 @@
             this.Controls.Add(this.subLabel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel5);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ManageItem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ManageItem";

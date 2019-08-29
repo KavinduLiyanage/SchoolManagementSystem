@@ -491,8 +491,9 @@
             this.NHomeBtn.Name = "NHomeBtn";
             this.NHomeBtn.Size = new System.Drawing.Size(209, 35);
             this.NHomeBtn.TabIndex = 24;
-            this.NHomeBtn.Text = "Notices";
+            this.NHomeBtn.Text = "Home";
             this.NHomeBtn.UseVisualStyleBackColor = false;
+            this.NHomeBtn.Click += new System.EventHandler(this.NHomeBtn_Click);
             // 
             // addNotice
             // 

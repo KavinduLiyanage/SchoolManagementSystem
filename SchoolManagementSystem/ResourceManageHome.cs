@@ -71,5 +71,12 @@ namespace SchoolManagementSystem
         {
 
         }
+
+        private void NHomeBtn_Click(object sender, EventArgs e)
+        {
+            HomePage1 newHome = new HomePage1();
+            this.Hide();
+            newHome.ShowDialog();
+        }
     }
 }

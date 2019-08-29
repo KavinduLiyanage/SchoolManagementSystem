@@ -45,7 +45,10 @@
             this.btnLogOutHeader = new System.Windows.Forms.Button();
             this.btnNoticeMHeader = new System.Windows.Forms.Button();
             this.btnExamMheader = new System.Windows.Forms.Button();
+            this.btnLibraryMHeader = new System.Windows.Forms.Button();
             this.btnStudentMHeader = new System.Windows.Forms.Button();
+            this.btnResourseMHeader = new System.Windows.Forms.Button();
+            this.btnInventoryMHeader = new System.Windows.Forms.Button();
             this.UsrlinkLabel = new System.Windows.Forms.LinkLabel();
             this.usrImg = new System.Windows.Forms.PictureBox();
             this.ButtonPanel = new System.Windows.Forms.Panel();
@@ -56,9 +59,6 @@
             this.NAddStaffBtn = new System.Windows.Forms.Button();
             this.NStaffHomeBtn = new System.Windows.Forms.Button();
             this.imgPanel = new System.Windows.Forms.PictureBox();
-            this.btnInventoryMHeader = new System.Windows.Forms.Button();
-            this.btnLibraryMHeader = new System.Windows.Forms.Button();
-            this.btnResourseMHeader = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usrImg)).BeginInit();
             this.ButtonPanel.SuspendLayout();
@@ -271,6 +271,18 @@
             this.btnExamMheader.UseVisualStyleBackColor = false;
             this.btnExamMheader.Click += new System.EventHandler(this.BtnExamMheader_Click);
             // 
+            // btnLibraryMHeader
+            // 
+            this.btnLibraryMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnLibraryMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLibraryMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
+            this.btnLibraryMHeader.Location = new System.Drawing.Point(739, 19);
+            this.btnLibraryMHeader.Name = "btnLibraryMHeader";
+            this.btnLibraryMHeader.Size = new System.Drawing.Size(145, 50);
+            this.btnLibraryMHeader.TabIndex = 22;
+            this.btnLibraryMHeader.Text = " Library Management";
+            this.btnLibraryMHeader.UseVisualStyleBackColor = false;
+            // 
             // btnStudentMHeader
             // 
             this.btnStudentMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
@@ -282,6 +294,30 @@
             this.btnStudentMHeader.TabIndex = 18;
             this.btnStudentMHeader.Text = "Student Management";
             this.btnStudentMHeader.UseVisualStyleBackColor = false;
+            // 
+            // btnResourseMHeader
+            // 
+            this.btnResourseMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnResourseMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnResourseMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
+            this.btnResourseMHeader.Location = new System.Drawing.Point(560, 19);
+            this.btnResourseMHeader.Name = "btnResourseMHeader";
+            this.btnResourseMHeader.Size = new System.Drawing.Size(145, 50);
+            this.btnResourseMHeader.TabIndex = 21;
+            this.btnResourseMHeader.Text = "Leave Request";
+            this.btnResourseMHeader.UseVisualStyleBackColor = false;
+            // 
+            // btnInventoryMHeader
+            // 
+            this.btnInventoryMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnInventoryMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInventoryMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
+            this.btnInventoryMHeader.Location = new System.Drawing.Point(370, 19);
+            this.btnInventoryMHeader.Name = "btnInventoryMHeader";
+            this.btnInventoryMHeader.Size = new System.Drawing.Size(145, 50);
+            this.btnInventoryMHeader.TabIndex = 19;
+            this.btnInventoryMHeader.Text = "Exam Management";
+            this.btnInventoryMHeader.UseVisualStyleBackColor = false;
             // 
             // UsrlinkLabel
             // 
@@ -331,6 +367,7 @@
             this.NHomeBtn.TabIndex = 24;
             this.NHomeBtn.Text = "Home";
             this.NHomeBtn.UseVisualStyleBackColor = false;
+            this.NHomeBtn.Click += new System.EventHandler(this.NHomeBtn_Click);
             // 
             // NViewStaffBtn
             // 
@@ -390,42 +427,6 @@
             this.imgPanel.Size = new System.Drawing.Size(260, 220);
             this.imgPanel.TabIndex = 45;
             this.imgPanel.TabStop = false;
-            // 
-            // btnInventoryMHeader
-            // 
-            this.btnInventoryMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnInventoryMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInventoryMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
-            this.btnInventoryMHeader.Location = new System.Drawing.Point(370, 19);
-            this.btnInventoryMHeader.Name = "btnInventoryMHeader";
-            this.btnInventoryMHeader.Size = new System.Drawing.Size(145, 50);
-            this.btnInventoryMHeader.TabIndex = 19;
-            this.btnInventoryMHeader.Text = "Exam Management";
-            this.btnInventoryMHeader.UseVisualStyleBackColor = false;
-            // 
-            // btnLibraryMHeader
-            // 
-            this.btnLibraryMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnLibraryMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLibraryMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
-            this.btnLibraryMHeader.Location = new System.Drawing.Point(739, 19);
-            this.btnLibraryMHeader.Name = "btnLibraryMHeader";
-            this.btnLibraryMHeader.Size = new System.Drawing.Size(145, 50);
-            this.btnLibraryMHeader.TabIndex = 22;
-            this.btnLibraryMHeader.Text = " Library Management";
-            this.btnLibraryMHeader.UseVisualStyleBackColor = false;
-            // 
-            // btnResourseMHeader
-            // 
-            this.btnResourseMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnResourseMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnResourseMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
-            this.btnResourseMHeader.Location = new System.Drawing.Point(560, 19);
-            this.btnResourseMHeader.Name = "btnResourseMHeader";
-            this.btnResourseMHeader.Size = new System.Drawing.Size(145, 50);
-            this.btnResourseMHeader.TabIndex = 21;
-            this.btnResourseMHeader.Text = "Leave Request";
-            this.btnResourseMHeader.UseVisualStyleBackColor = false;
             // 
             // HomePage2
             // 

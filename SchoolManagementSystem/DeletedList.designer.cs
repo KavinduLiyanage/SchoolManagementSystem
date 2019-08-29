@@ -72,7 +72,7 @@
             this.panel5.Controls.Add(this.btnInventoryMHeader);
             this.panel5.Controls.Add(this.btnEventMHeader);
             this.panel5.Location = new System.Drawing.Point(16, 1);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1637, 113);
             this.panel5.TabIndex = 54;
@@ -111,7 +111,7 @@
             this.btnExamMheader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExamMheader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
             this.btnExamMheader.Location = new System.Drawing.Point(28, 23);
-            this.btnExamMheader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExamMheader.Margin = new System.Windows.Forms.Padding(4);
             this.btnExamMheader.Name = "btnExamMheader";
             this.btnExamMheader.Size = new System.Drawing.Size(193, 62);
             this.btnExamMheader.TabIndex = 1;
@@ -261,6 +261,7 @@
             this.NHomeBtn.TabIndex = 24;
             this.NHomeBtn.Text = "Home";
             this.NHomeBtn.UseVisualStyleBackColor = false;
+            this.NHomeBtn.Click += new System.EventHandler(this.NHomeBtn_Click);
             // 
             // NViewStaffBtn
             // 
@@ -328,7 +329,7 @@
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(580, 212);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
@@ -339,7 +340,7 @@
             // 
             this.textBox1.Font = new System.Drawing.Font("Times New Roman", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(703, 161);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(459, 42);
             this.textBox1.TabIndex = 79;
@@ -381,7 +382,7 @@
             this.Controls.Add(this.ButtonPanel);
             this.Controls.Add(this.subLabel2);
             this.Controls.Add(this.panel5);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DeletedList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "DeletedList";

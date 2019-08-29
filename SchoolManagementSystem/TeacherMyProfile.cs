@@ -28,5 +28,12 @@ namespace SchoolManagementSystem
             this.Hide();
             tchrProfile.ShowDialog();
         }
+
+        private void NHomeBtn_Click(object sender, EventArgs e)
+        {
+            HomePage2 newHome = new HomePage2();
+            this.Hide();
+            newHome.ShowDialog();
+        }
     }
 }

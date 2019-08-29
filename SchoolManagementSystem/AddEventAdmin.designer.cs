@@ -450,8 +450,9 @@
             this.NHomeBtn.Name = "NHomeBtn";
             this.NHomeBtn.Size = new System.Drawing.Size(209, 28);
             this.NHomeBtn.TabIndex = 24;
-            this.NHomeBtn.Text = "Events";
+            this.NHomeBtn.Text = "Home";
             this.NHomeBtn.UseVisualStyleBackColor = false;
+            this.NHomeBtn.Click += new System.EventHandler(this.NHomeBtn_Click);
             // 
             // NAddStaffBtn
             // 

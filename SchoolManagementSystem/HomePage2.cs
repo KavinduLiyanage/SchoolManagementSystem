@@ -39,5 +39,41 @@ namespace SchoolManagementSystem
         {
 
         }
+
+        private void MngNticeImgBtn_Click(object sender, System.EventArgs e)
+        {
+            userNoticeView Unv = new userNoticeView();
+            this.Hide();
+            Unv.ShowDialog();
+        }
+
+        private void MngStuBtn_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void MngExmImgBtn_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void BtnExamMheader_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void MngStaffBtn_Click(object sender, System.EventArgs e)
+        {
+            TeacherMyProfile myPro = new TeacherMyProfile();
+            this.Hide();
+            myPro.ShowDialog();
+        }
+
+        private void MngStaffImgBtn_Click(object sender, System.EventArgs e)
+        {
+            TeacherMyProfile myPro = new TeacherMyProfile();
+            this.Hide();
+            myPro.ShowDialog();
+        }
     }
 }

@@ -93,7 +93,7 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(40, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 24);
+            this.label1.Size = new System.Drawing.Size(150, 31);
             this.label1.TabIndex = 1;
             this.label1.Text = "View Books";
             // 
@@ -128,7 +128,7 @@
             this.label4.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(51, 12);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 24);
+            this.label4.Size = new System.Drawing.Size(107, 31);
             this.label4.TabIndex = 1;
             this.label4.Text = "Reports";
             // 
@@ -162,7 +162,7 @@
             this.label3.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(22, 12);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(133, 24);
+            this.label3.Size = new System.Drawing.Size(176, 31);
             this.label3.TabIndex = 1;
             this.label3.Text = "Return Books";
             // 
@@ -197,7 +197,7 @@
             this.label2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(40, 11);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 24);
+            this.label2.Size = new System.Drawing.Size(141, 31);
             this.label2.TabIndex = 1;
             this.label2.Text = "Issue Book";
             // 
@@ -233,7 +233,7 @@
             this.Add.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Add.Location = new System.Drawing.Point(40, 11);
             this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(108, 24);
+            this.Add.Size = new System.Drawing.Size(142, 31);
             this.Add.TabIndex = 1;
             this.Add.Text = "Add Books";
             this.Add.Click += new System.EventHandler(this.Add_Click);
@@ -294,6 +294,7 @@
             this.btnLogOutHeader.TabIndex = 25;
             this.btnLogOutHeader.Text = "Log Out";
             this.btnLogOutHeader.UseVisualStyleBackColor = true;
+            this.btnLogOutHeader.Click += new System.EventHandler(this.BtnLogOutHeader_Click);
             // 
             // btnNoticeMHeader
             // 
@@ -413,7 +414,7 @@
             this.UsrlinkLabel.Location = new System.Drawing.Point(48, 245);
             this.UsrlinkLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.UsrlinkLabel.Name = "UsrlinkLabel";
-            this.UsrlinkLabel.Size = new System.Drawing.Size(138, 20);
+            this.UsrlinkLabel.Size = new System.Drawing.Size(171, 25);
             this.UsrlinkLabel.TabIndex = 46;
             this.UsrlinkLabel.TabStop = true;
             this.UsrlinkLabel.Text = "Milinda Ranawaka";
@@ -518,7 +519,7 @@
             // 
             // LibraryHome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GrayText;
             this.ClientSize = new System.Drawing.Size(1264, 681);

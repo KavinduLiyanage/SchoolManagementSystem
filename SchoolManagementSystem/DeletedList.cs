@@ -63,5 +63,12 @@ namespace SchoolManagementSystem
                 label9.Text = "0";
             }
         }
+
+        private void BtnLogOutHeader_Click(object sender, EventArgs e)
+        {
+            LoginForm log = new LoginForm();
+            this.Hide();
+            log.ShowDialog();
+        }
     }
 }

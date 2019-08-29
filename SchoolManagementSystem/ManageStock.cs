@@ -430,5 +430,12 @@ namespace SchoolManagementSystem
             InventoryDashboard add = new InventoryDashboard();
             add.Show();
         }
+
+        private void BtnLogOutHeader_Click(object sender, EventArgs e)
+        {
+            LoginForm log = new LoginForm();
+            this.Hide();
+            log.ShowDialog();
+        }
     }
 }

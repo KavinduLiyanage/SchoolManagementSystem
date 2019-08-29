@@ -182,5 +182,12 @@ namespace SchoolManagementSystem
             this.Hide();
             lib.ShowDialog();
         }
+
+        private void BtnLogOutHeader_Click(object sender, EventArgs e)
+        {
+            LoginForm log = new LoginForm();
+            this.Hide();
+            log.ShowDialog();
+        }
     }
 }

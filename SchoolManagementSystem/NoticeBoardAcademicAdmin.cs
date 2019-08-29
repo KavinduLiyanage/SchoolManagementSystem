@@ -44,5 +44,12 @@ namespace SchoolManagementSystem
             this.Hide();
             form_back.Show();
         }
+
+        private void BtnLogOutHeader_Click(object sender, EventArgs e)
+        {
+            LoginForm log = new LoginForm();
+            this.Hide();
+            log.ShowDialog();
+        }
     }
 }

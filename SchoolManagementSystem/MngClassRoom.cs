@@ -205,5 +205,12 @@ namespace SchoolManagementSystem
             grade.Text = selectRow.Cells[2].Value.ToString();
             capacity.Text = selectRow.Cells[3].Value.ToString();
         }
+
+        private void BtnLogOutHeader_Click(object sender, EventArgs e)
+        {
+            LoginForm log = new LoginForm();
+            this.Hide();
+            log.ShowDialog();
+        }
     }
 }

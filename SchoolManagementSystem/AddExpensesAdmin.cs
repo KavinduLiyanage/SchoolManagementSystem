@@ -237,5 +237,11 @@ namespace SchoolManagementSystem
             CloseConnection();
         }
 
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            LoginForm log = new LoginForm();
+            this.Hide();
+            log.ShowDialog();
+        }
     }
 }

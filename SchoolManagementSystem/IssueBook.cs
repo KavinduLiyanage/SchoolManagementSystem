@@ -142,5 +142,12 @@ namespace SchoolManagementSystem
 
             MessageBox.Show("Books Issued Successfully");
         }
+
+        private void BtnLogOutHeader_Click(object sender, EventArgs e)
+        {
+            LoginForm log = new LoginForm();
+            this.Hide();
+            log.ShowDialog();
+        }
     }
 }

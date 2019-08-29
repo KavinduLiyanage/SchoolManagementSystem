@@ -28,12 +28,37 @@ namespace SchoolManagementSystem
 
         private void MngLibImgBtn_Click(object sender, System.EventArgs e)
         {
-
+            this.Hide();
+            StudentAppointment sappointment = new StudentAppointment();
+            sappointment.ShowDialog();
         }
 
         private void MngLibBtn_Click(object sender, System.EventArgs e)
         {
+            this.Hide();
+            StudentAppointment sappointment = new StudentAppointment();
+            sappointment.ShowDialog();
+        }
 
+        private void Button1_Click(object sender, System.EventArgs e)
+        {
+            this.Hide();
+            ViewStudentMarks vsm = new ViewStudentMarks();
+            vsm.ShowDialog();
+        }
+
+        private void Button2_Click(object sender, System.EventArgs e)
+        {
+            this.Hide();
+            ViewStudentMarks vsm = new ViewStudentMarks();
+            vsm.ShowDialog();
+        }
+
+        private void BtnLogOutHeader_Click(object sender, System.EventArgs e)
+        {
+            LoginForm log = new LoginForm();
+            this.Hide();
+            log.ShowDialog();
         }
     }
 }

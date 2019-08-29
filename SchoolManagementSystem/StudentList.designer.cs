@@ -28,8 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentList));
             this.dgvStudents = new System.Windows.Forms.DataGridView();
-            this.txt111 = new System.Windows.Forms.TextBox();
+            this.SID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SNAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GuardianName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GuardianContact = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnLogOutHeader = new System.Windows.Forms.Button();
             this.btnNoticeMHeader = new System.Windows.Forms.Button();
@@ -42,19 +48,18 @@
             this.ButtonPanel = new System.Windows.Forms.Panel();
             this.NHomeBtn = new System.Windows.Forms.Button();
             this.NViewStudentBtn = new System.Windows.Forms.Button();
-            this.NRemoveStudentBtn = new System.Windows.Forms.Button();
             this.NEditStudentBtn = new System.Windows.Forms.Button();
             this.NAddStudentBtn = new System.Windows.Forms.Button();
             this.NStudentHomeBtn = new System.Windows.Forms.Button();
-            this.SID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SNAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GuardianName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GuardianContact = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.UsrlinkLabel = new System.Windows.Forms.LinkLabel();
+            this.imgPanel = new System.Windows.Forms.PictureBox();
+            this.TitleLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
             this.panel5.SuspendLayout();
             this.ButtonPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgPanel)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvStudents
@@ -68,21 +73,68 @@
             this.Address,
             this.GuardianName,
             this.GuardianContact});
-            this.dgvStudents.Location = new System.Drawing.Point(315, 143);
+            this.dgvStudents.Location = new System.Drawing.Point(278, 195);
             this.dgvStudents.Name = "dgvStudents";
             this.dgvStudents.ReadOnly = true;
             this.dgvStudents.RowHeadersWidth = 51;
             this.dgvStudents.RowTemplate.Height = 24;
-            this.dgvStudents.Size = new System.Drawing.Size(892, 477);
+            this.dgvStudents.Size = new System.Drawing.Size(962, 466);
             this.dgvStudents.TabIndex = 2;
             this.dgvStudents.DoubleClick += new System.EventHandler(this.DgvStudents_DoubleClick);
             // 
-            // txt111
+            // SID
             // 
-            this.txt111.Location = new System.Drawing.Point(97, 351);
-            this.txt111.Name = "txt111";
-            this.txt111.Size = new System.Drawing.Size(100, 22);
-            this.txt111.TabIndex = 4;
+            this.SID.DataPropertyName = "SID";
+            this.SID.HeaderText = "SID";
+            this.SID.MinimumWidth = 6;
+            this.SID.Name = "SID";
+            this.SID.ReadOnly = true;
+            this.SID.Width = 204;
+            // 
+            // SNAME
+            // 
+            this.SNAME.DataPropertyName = "SNAME";
+            this.SNAME.HeaderText = "Full Name";
+            this.SNAME.MinimumWidth = 6;
+            this.SNAME.Name = "SNAME";
+            this.SNAME.ReadOnly = true;
+            this.SNAME.Width = 135;
+            // 
+            // Gender
+            // 
+            this.Gender.DataPropertyName = "SGENDER";
+            this.Gender.HeaderText = "Gender";
+            this.Gender.MinimumWidth = 6;
+            this.Gender.Name = "Gender";
+            this.Gender.ReadOnly = true;
+            this.Gender.Width = 125;
+            // 
+            // Address
+            // 
+            this.Address.DataPropertyName = "SADDRESS";
+            this.Address.HeaderText = "Address";
+            this.Address.MinimumWidth = 6;
+            this.Address.Name = "Address";
+            this.Address.ReadOnly = true;
+            this.Address.Width = 125;
+            // 
+            // GuardianName
+            // 
+            this.GuardianName.DataPropertyName = "SGDNAME";
+            this.GuardianName.HeaderText = "Guardian Name";
+            this.GuardianName.MinimumWidth = 6;
+            this.GuardianName.Name = "GuardianName";
+            this.GuardianName.ReadOnly = true;
+            this.GuardianName.Width = 125;
+            // 
+            // GuardianContact
+            // 
+            this.GuardianContact.DataPropertyName = "SGDCONTACT";
+            this.GuardianContact.HeaderText = "Guardian Contact";
+            this.GuardianContact.MinimumWidth = 6;
+            this.GuardianContact.Name = "GuardianContact";
+            this.GuardianContact.ReadOnly = true;
+            this.GuardianContact.Width = 125;
             // 
             // panel5
             // 
@@ -112,6 +164,7 @@
             this.btnLogOutHeader.TabIndex = 25;
             this.btnLogOutHeader.Text = "Log Out";
             this.btnLogOutHeader.UseVisualStyleBackColor = true;
+            this.btnLogOutHeader.Click += new System.EventHandler(this.BtnLogOutHeader_Click);
             // 
             // btnNoticeMHeader
             // 
@@ -202,14 +255,12 @@
             this.ButtonPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ButtonPanel.Controls.Add(this.NHomeBtn);
             this.ButtonPanel.Controls.Add(this.NViewStudentBtn);
-            this.ButtonPanel.Controls.Add(this.txt111);
-            this.ButtonPanel.Controls.Add(this.NRemoveStudentBtn);
             this.ButtonPanel.Controls.Add(this.NEditStudentBtn);
             this.ButtonPanel.Controls.Add(this.NAddStudentBtn);
             this.ButtonPanel.Controls.Add(this.NStudentHomeBtn);
-            this.ButtonPanel.Location = new System.Drawing.Point(12, 127);
+            this.ButtonPanel.Location = new System.Drawing.Point(12, 336);
             this.ButtonPanel.Name = "ButtonPanel";
-            this.ButtonPanel.Size = new System.Drawing.Size(260, 523);
+            this.ButtonPanel.Size = new System.Drawing.Size(260, 325);
             this.ButtonPanel.TabIndex = 47;
             // 
             // NHomeBtn
@@ -223,6 +274,7 @@
             this.NHomeBtn.TabIndex = 24;
             this.NHomeBtn.Text = "Home";
             this.NHomeBtn.UseVisualStyleBackColor = false;
+            this.NHomeBtn.Click += new System.EventHandler(this.NHomeBtn_Click);
             // 
             // NViewStudentBtn
             // 
@@ -233,16 +285,7 @@
             this.NViewStudentBtn.TabIndex = 23;
             this.NViewStudentBtn.Text = "View Student List";
             this.NViewStudentBtn.UseVisualStyleBackColor = false;
-            // 
-            // NRemoveStudentBtn
-            // 
-            this.NRemoveStudentBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.NRemoveStudentBtn.Location = new System.Drawing.Point(11, 187);
-            this.NRemoveStudentBtn.Name = "NRemoveStudentBtn";
-            this.NRemoveStudentBtn.Size = new System.Drawing.Size(235, 35);
-            this.NRemoveStudentBtn.TabIndex = 18;
-            this.NRemoveStudentBtn.Text = "Remove Student";
-            this.NRemoveStudentBtn.UseVisualStyleBackColor = false;
+            this.NViewStudentBtn.Click += new System.EventHandler(this.NViewStudentBtn_Click);
             // 
             // NEditStudentBtn
             // 
@@ -253,6 +296,7 @@
             this.NEditStudentBtn.TabIndex = 18;
             this.NEditStudentBtn.Text = "Edit Student Details";
             this.NEditStudentBtn.UseVisualStyleBackColor = false;
+            this.NEditStudentBtn.Click += new System.EventHandler(this.NEditStudentBtn_Click);
             // 
             // NAddStudentBtn
             // 
@@ -263,6 +307,7 @@
             this.NAddStudentBtn.TabIndex = 17;
             this.NAddStudentBtn.Text = "Add New Student";
             this.NAddStudentBtn.UseVisualStyleBackColor = false;
+            this.NAddStudentBtn.Click += new System.EventHandler(this.NAddStudentBtn_Click);
             // 
             // NStudentHomeBtn
             // 
@@ -273,66 +318,59 @@
             this.NStudentHomeBtn.TabIndex = 17;
             this.NStudentHomeBtn.Text = "Student Manage Home";
             this.NStudentHomeBtn.UseVisualStyleBackColor = false;
+            this.NStudentHomeBtn.Click += new System.EventHandler(this.NStudentHomeBtn_Click);
             // 
-            // SID
+            // pictureBox1
             // 
-            this.SID.DataPropertyName = "SID";
-            this.SID.HeaderText = "SID";
-            this.SID.MinimumWidth = 6;
-            this.SID.Name = "SID";
-            this.SID.ReadOnly = true;
-            this.SID.Width = 204;
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(51, 127);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(174, 135);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 51;
+            this.pictureBox1.TabStop = false;
             // 
-            // SNAME
+            // UsrlinkLabel
             // 
-            this.SNAME.DataPropertyName = "SNAME";
-            this.SNAME.HeaderText = "Full Name";
-            this.SNAME.MinimumWidth = 6;
-            this.SNAME.Name = "SNAME";
-            this.SNAME.ReadOnly = true;
-            this.SNAME.Width = 135;
+            this.UsrlinkLabel.AutoSize = true;
+            this.UsrlinkLabel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.UsrlinkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsrlinkLabel.Location = new System.Drawing.Point(51, 278);
+            this.UsrlinkLabel.Name = "UsrlinkLabel";
+            this.UsrlinkLabel.Size = new System.Drawing.Size(180, 25);
+            this.UsrlinkLabel.TabIndex = 50;
+            this.UsrlinkLabel.TabStop = true;
+            this.UsrlinkLabel.Text = "Kavindu Sandeepa";
             // 
-            // Gender
+            // imgPanel
             // 
-            this.Gender.DataPropertyName = "SGENDER";
-            this.Gender.HeaderText = "Gender";
-            this.Gender.MinimumWidth = 6;
-            this.Gender.Name = "Gender";
-            this.Gender.ReadOnly = true;
-            this.Gender.Width = 125;
+            this.imgPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.imgPanel.Location = new System.Drawing.Point(12, 110);
+            this.imgPanel.Name = "imgPanel";
+            this.imgPanel.Size = new System.Drawing.Size(260, 220);
+            this.imgPanel.TabIndex = 49;
+            this.imgPanel.TabStop = false;
             // 
-            // Address
+            // TitleLabel
             // 
-            this.Address.DataPropertyName = "SADDRESS";
-            this.Address.HeaderText = "Address";
-            this.Address.MinimumWidth = 6;
-            this.Address.Name = "Address";
-            this.Address.ReadOnly = true;
-            this.Address.Width = 125;
-            // 
-            // GuardianName
-            // 
-            this.GuardianName.DataPropertyName = "SGDNAME";
-            this.GuardianName.HeaderText = "Guardian Name";
-            this.GuardianName.MinimumWidth = 6;
-            this.GuardianName.Name = "GuardianName";
-            this.GuardianName.ReadOnly = true;
-            this.GuardianName.Width = 125;
-            // 
-            // GuardianContact
-            // 
-            this.GuardianContact.DataPropertyName = "SGDCONTACT";
-            this.GuardianContact.HeaderText = "Guardian Contact";
-            this.GuardianContact.MinimumWidth = 6;
-            this.GuardianContact.Name = "GuardianContact";
-            this.GuardianContact.ReadOnly = true;
-            this.GuardianContact.Width = 125;
+            this.TitleLabel.AutoSize = true;
+            this.TitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleLabel.Location = new System.Drawing.Point(588, 127);
+            this.TitleLabel.Name = "TitleLabel";
+            this.TitleLabel.Size = new System.Drawing.Size(250, 38);
+            this.TitleLabel.TabIndex = 52;
+            this.TitleLabel.Text = "All Student List";
             // 
             // StudentList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.TitleLabel);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.UsrlinkLabel);
+            this.Controls.Add(this.imgPanel);
             this.Controls.Add(this.ButtonPanel);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.dgvStudents);
@@ -343,15 +381,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).EndInit();
             this.panel5.ResumeLayout(false);
             this.ButtonPanel.ResumeLayout(false);
-            this.ButtonPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgPanel)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.DataGridView dgvStudents;
-        private System.Windows.Forms.TextBox txt111;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnLogOutHeader;
         private System.Windows.Forms.Button btnNoticeMHeader;
@@ -364,7 +403,6 @@
         private System.Windows.Forms.Panel ButtonPanel;
         private System.Windows.Forms.Button NHomeBtn;
         private System.Windows.Forms.Button NViewStudentBtn;
-        private System.Windows.Forms.Button NRemoveStudentBtn;
         private System.Windows.Forms.Button NEditStudentBtn;
         private System.Windows.Forms.Button NAddStudentBtn;
         private System.Windows.Forms.Button NStudentHomeBtn;
@@ -374,5 +412,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Address;
         private System.Windows.Forms.DataGridViewTextBoxColumn GuardianName;
         private System.Windows.Forms.DataGridViewTextBoxColumn GuardianContact;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.LinkLabel UsrlinkLabel;
+        private System.Windows.Forms.PictureBox imgPanel;
+        private System.Windows.Forms.Label TitleLabel;
     }
 }

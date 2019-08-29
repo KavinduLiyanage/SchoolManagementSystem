@@ -26,11 +26,11 @@ namespace SchoolManagementSystem
             {
                 var student = new StudentModel()
                 {
-                    SName = txtName.Text,
-                    SEmail = txtEmail.Text,
-                    SAddress = txtAddress.Text,
-                    SGDName = txtGDName.Text,
-                    SGDContact = txtGDContact.Text,
+                    SName = txtName.Text.Trim(),
+                    SEmail = txtEmail.Text.Trim(),
+                    SAddress = txtAddress.Text.Trim(),
+                    SGDName = txtGDName.Text.Trim(),
+                    SGDContact = txtGDContact.Text.Trim(),
                     SDob = dateTimePickerDOB.Value,
                     SGender = gender
 
@@ -54,6 +54,9 @@ namespace SchoolManagementSystem
                 if(result)
                 {
                     MessageBox.Show("Student Account Added Sucessfully");
+                    this.Hide();
+                    StudentList slist = new StudentList();
+                    slist.ShowDialog();
                 }
                 else
                 {
@@ -104,6 +107,34 @@ namespace SchoolManagementSystem
             this.Hide();
             StudentList slist = new StudentList();
             slist.ShowDialog();
+        }
+
+        private void NHomeBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            HomePage1 hm = new HomePage1();
+            hm.ShowDialog();
+        }
+
+        private void NAddStudentBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CreateStudentAccount sacc = new CreateStudentAccount();
+            sacc.ShowDialog();
+        }
+
+        private void NEditStudentBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            StudentList slist = new StudentList();
+            slist.ShowDialog();
+        }
+
+        private void NStudentHomeBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            StudentManageHome smanagehome = new StudentManageHome();
+            smanagehome.ShowDialog();
         }
 
         private void BtnLogOutHeader_Click(object sender, EventArgs e)

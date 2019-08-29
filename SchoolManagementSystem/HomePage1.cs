@@ -92,16 +92,16 @@ namespace SchoolManagementSystem
 
         private void MngStuBtn_Click(object sender, EventArgs e)
         {
-            CreateStudentAccount creAcc = new CreateStudentAccount();
+            StudentManageHome sthome = new StudentManageHome();
             this.Hide();
-            creAcc.ShowDialog();
+            sthome.ShowDialog();
         }
 
         private void MngStuImgBtn_Click(object sender, EventArgs e)
         {
-            CreateStudentAccount creAcc = new CreateStudentAccount();
+            StudentManageHome sthome = new StudentManageHome();
             this.Hide();
-            creAcc.ShowDialog();
+            sthome.ShowDialog();
         }
 
         private void MngInvenImgBtn_Click(object sender, EventArgs e)
@@ -141,9 +141,9 @@ namespace SchoolManagementSystem
 
         private void BtnStudentMHeader_Click(object sender, EventArgs e)
         {
-            CreateStudentAccount creAcc = new CreateStudentAccount();
+            StudentManageHome sthome = new StudentManageHome();
             this.Hide();
-            creAcc.ShowDialog();
+            sthome.ShowDialog();
         }
 
         private void BtnInventoryMHeader_Click(object sender, EventArgs e)

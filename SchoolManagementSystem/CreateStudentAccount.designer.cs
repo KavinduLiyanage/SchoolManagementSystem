@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateStudentAccount));
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnLogOutHeader = new System.Windows.Forms.Button();
             this.btnNoticeMHeader = new System.Windows.Forms.Button();
@@ -40,7 +41,6 @@
             this.ButtonPanel = new System.Windows.Forms.Panel();
             this.NHomeBtn = new System.Windows.Forms.Button();
             this.NViewStudentBtn = new System.Windows.Forms.Button();
-            this.NRemoveStudentBtn = new System.Windows.Forms.Button();
             this.NEditStudentBtn = new System.Windows.Forms.Button();
             this.NAddStudentBtn = new System.Windows.Forms.Button();
             this.NStudentHomeBtn = new System.Windows.Forms.Button();
@@ -63,9 +63,14 @@
             this.txtGDName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
+            this.UsrlinkLabel = new System.Windows.Forms.LinkLabel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.imgPanel = new System.Windows.Forms.PictureBox();
             this.panel5.SuspendLayout();
             this.ButtonPanel.SuspendLayout();
             this.ContentPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgPanel)).BeginInit();
             this.SuspendLayout();
             // 
             // panel5
@@ -187,13 +192,12 @@
             this.ButtonPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ButtonPanel.Controls.Add(this.NHomeBtn);
             this.ButtonPanel.Controls.Add(this.NViewStudentBtn);
-            this.ButtonPanel.Controls.Add(this.NRemoveStudentBtn);
             this.ButtonPanel.Controls.Add(this.NEditStudentBtn);
             this.ButtonPanel.Controls.Add(this.NAddStudentBtn);
             this.ButtonPanel.Controls.Add(this.NStudentHomeBtn);
-            this.ButtonPanel.Location = new System.Drawing.Point(22, 124);
+            this.ButtonPanel.Location = new System.Drawing.Point(22, 336);
             this.ButtonPanel.Name = "ButtonPanel";
-            this.ButtonPanel.Size = new System.Drawing.Size(260, 517);
+            this.ButtonPanel.Size = new System.Drawing.Size(260, 325);
             this.ButtonPanel.TabIndex = 46;
             // 
             // NHomeBtn
@@ -207,6 +211,7 @@
             this.NHomeBtn.TabIndex = 24;
             this.NHomeBtn.Text = "Home";
             this.NHomeBtn.UseVisualStyleBackColor = false;
+            this.NHomeBtn.Click += new System.EventHandler(this.NHomeBtn_Click);
             // 
             // NViewStudentBtn
             // 
@@ -219,16 +224,6 @@
             this.NViewStudentBtn.UseVisualStyleBackColor = false;
             this.NViewStudentBtn.Click += new System.EventHandler(this.NViewStaffBtn_Click);
             // 
-            // NRemoveStudentBtn
-            // 
-            this.NRemoveStudentBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.NRemoveStudentBtn.Location = new System.Drawing.Point(11, 187);
-            this.NRemoveStudentBtn.Name = "NRemoveStudentBtn";
-            this.NRemoveStudentBtn.Size = new System.Drawing.Size(235, 35);
-            this.NRemoveStudentBtn.TabIndex = 18;
-            this.NRemoveStudentBtn.Text = "Remove Student";
-            this.NRemoveStudentBtn.UseVisualStyleBackColor = false;
-            // 
             // NEditStudentBtn
             // 
             this.NEditStudentBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
@@ -238,6 +233,7 @@
             this.NEditStudentBtn.TabIndex = 18;
             this.NEditStudentBtn.Text = "Edit Student Details";
             this.NEditStudentBtn.UseVisualStyleBackColor = false;
+            this.NEditStudentBtn.Click += new System.EventHandler(this.NEditStudentBtn_Click);
             // 
             // NAddStudentBtn
             // 
@@ -248,6 +244,7 @@
             this.NAddStudentBtn.TabIndex = 17;
             this.NAddStudentBtn.Text = "Add New Student";
             this.NAddStudentBtn.UseVisualStyleBackColor = false;
+            this.NAddStudentBtn.Click += new System.EventHandler(this.NAddStudentBtn_Click);
             // 
             // NStudentHomeBtn
             // 
@@ -258,6 +255,7 @@
             this.NStudentHomeBtn.TabIndex = 17;
             this.NStudentHomeBtn.Text = "Student Manage Home";
             this.NStudentHomeBtn.UseVisualStyleBackColor = false;
+            this.NStudentHomeBtn.Click += new System.EventHandler(this.NStudentHomeBtn_Click);
             // 
             // TitleLabel
             // 
@@ -289,9 +287,9 @@
             this.ContentPanel.Controls.Add(this.label4);
             this.ContentPanel.Controls.Add(this.txtEmail);
             this.ContentPanel.Controls.Add(this.TitleLabel);
-            this.ContentPanel.Location = new System.Drawing.Point(305, 110);
+            this.ContentPanel.Location = new System.Drawing.Point(300, 110);
             this.ContentPanel.Name = "ContentPanel";
-            this.ContentPanel.Size = new System.Drawing.Size(922, 551);
+            this.ContentPanel.Size = new System.Drawing.Size(950, 551);
             this.ContentPanel.TabIndex = 47;
             // 
             // rbtnMale
@@ -322,7 +320,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(164, 259);
+            this.label2.Location = new System.Drawing.Point(178, 259);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 25);
             this.label2.TabIndex = 32;
@@ -371,7 +369,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(171, 204);
+            this.label3.Location = new System.Drawing.Point(185, 204);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 25);
             this.label3.TabIndex = 39;
@@ -382,7 +380,7 @@
             this.lblEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(177, 317);
+            this.lblEmail.Location = new System.Drawing.Point(191, 317);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(61, 25);
             this.lblEmail.TabIndex = 38;
@@ -403,7 +401,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(177, 160);
+            this.label1.Location = new System.Drawing.Point(191, 160);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 25);
             this.label1.TabIndex = 31;
@@ -435,7 +433,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(137, 412);
+            this.label5.Location = new System.Drawing.Point(151, 412);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(163, 25);
             this.label5.TabIndex = 41;
@@ -446,7 +444,7 @@
             this.lblName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(157, 116);
+            this.lblName.Location = new System.Drawing.Point(171, 116);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(99, 25);
             this.lblName.TabIndex = 37;
@@ -467,7 +465,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(137, 366);
+            this.label4.Location = new System.Drawing.Point(151, 366);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(148, 25);
             this.label4.TabIndex = 40;
@@ -482,9 +480,46 @@
             this.txtEmail.Size = new System.Drawing.Size(300, 30);
             this.txtEmail.TabIndex = 35;
             // 
+            // UsrlinkLabel
+            // 
+            this.UsrlinkLabel.AutoSize = true;
+            this.UsrlinkLabel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.UsrlinkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsrlinkLabel.Location = new System.Drawing.Point(61, 278);
+            this.UsrlinkLabel.Name = "UsrlinkLabel";
+            this.UsrlinkLabel.Size = new System.Drawing.Size(180, 25);
+            this.UsrlinkLabel.TabIndex = 50;
+            this.UsrlinkLabel.TabStop = true;
+            this.UsrlinkLabel.Text = "Kavindu Sandeepa";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(61, 127);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(174, 135);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 51;
+            this.pictureBox1.TabStop = false;
+            // 
+            // imgPanel
+            // 
+            this.imgPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.imgPanel.Location = new System.Drawing.Point(22, 110);
+            this.imgPanel.Name = "imgPanel";
+            this.imgPanel.Size = new System.Drawing.Size(260, 220);
+            this.imgPanel.TabIndex = 49;
+            this.imgPanel.TabStop = false;
+            // 
             // CreateStudentAccount
             // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.UsrlinkLabel);
+            this.Controls.Add(this.imgPanel);
             this.Controls.Add(this.ContentPanel);
             this.Controls.Add(this.ButtonPanel);
             this.Controls.Add(this.panel5);
@@ -495,7 +530,10 @@
             this.ButtonPanel.ResumeLayout(false);
             this.ContentPanel.ResumeLayout(false);
             this.ContentPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgPanel)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -513,7 +551,6 @@
         private System.Windows.Forms.Panel ButtonPanel;
         private System.Windows.Forms.Button NHomeBtn;
         private System.Windows.Forms.Button NViewStudentBtn;
-        private System.Windows.Forms.Button NRemoveStudentBtn;
         private System.Windows.Forms.Button NEditStudentBtn;
         private System.Windows.Forms.Button NAddStudentBtn;
         private System.Windows.Forms.Button NStudentHomeBtn;
@@ -536,6 +573,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.LinkLabel UsrlinkLabel;
+        private System.Windows.Forms.PictureBox imgPanel;
     }
 }
 

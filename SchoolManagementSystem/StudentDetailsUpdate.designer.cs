@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StudentDetailsUpdate));
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnLogOutHeader = new System.Windows.Forms.Button();
             this.btnNoticeMHeader = new System.Windows.Forms.Button();
@@ -40,20 +41,16 @@
             this.ButtonPanel = new System.Windows.Forms.Panel();
             this.NHomeBtn = new System.Windows.Forms.Button();
             this.NViewStudentBtn = new System.Windows.Forms.Button();
-            this.NRemoveStudentBtn = new System.Windows.Forms.Button();
             this.NEditStudentBtn = new System.Windows.Forms.Button();
             this.NAddStudentBtn = new System.Windows.Forms.Button();
             this.NStudentHomeBtn = new System.Windows.Forms.Button();
-            this.rbtnMale = new System.Windows.Forms.RadioButton();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.dateTimePickerDOB = new System.Windows.Forms.DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.txtGDContact = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.rbtnFemale = new System.Windows.Forms.RadioButton();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
@@ -62,9 +59,15 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.TitleLabel = new System.Windows.Forms.Label();
             this.ContentPanel = new System.Windows.Forms.Panel();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.UsrlinkLabel = new System.Windows.Forms.LinkLabel();
+            this.imgPanel = new System.Windows.Forms.PictureBox();
             this.panel5.SuspendLayout();
             this.ButtonPanel.SuspendLayout();
             this.ContentPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgPanel)).BeginInit();
             this.SuspendLayout();
             // 
             // panel5
@@ -95,6 +98,7 @@
             this.btnLogOutHeader.TabIndex = 25;
             this.btnLogOutHeader.Text = "Log Out";
             this.btnLogOutHeader.UseVisualStyleBackColor = true;
+            this.btnLogOutHeader.Click += new System.EventHandler(this.BtnLogOutHeader_Click);
             // 
             // btnNoticeMHeader
             // 
@@ -185,13 +189,12 @@
             this.ButtonPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ButtonPanel.Controls.Add(this.NHomeBtn);
             this.ButtonPanel.Controls.Add(this.NViewStudentBtn);
-            this.ButtonPanel.Controls.Add(this.NRemoveStudentBtn);
             this.ButtonPanel.Controls.Add(this.NEditStudentBtn);
             this.ButtonPanel.Controls.Add(this.NAddStudentBtn);
             this.ButtonPanel.Controls.Add(this.NStudentHomeBtn);
-            this.ButtonPanel.Location = new System.Drawing.Point(12, 129);
+            this.ButtonPanel.Location = new System.Drawing.Point(12, 336);
             this.ButtonPanel.Name = "ButtonPanel";
-            this.ButtonPanel.Size = new System.Drawing.Size(260, 517);
+            this.ButtonPanel.Size = new System.Drawing.Size(260, 310);
             this.ButtonPanel.TabIndex = 47;
             // 
             // NHomeBtn
@@ -205,6 +208,7 @@
             this.NHomeBtn.TabIndex = 24;
             this.NHomeBtn.Text = "Home";
             this.NHomeBtn.UseVisualStyleBackColor = false;
+            this.NHomeBtn.Click += new System.EventHandler(this.NHomeBtn_Click);
             // 
             // NViewStudentBtn
             // 
@@ -215,16 +219,7 @@
             this.NViewStudentBtn.TabIndex = 23;
             this.NViewStudentBtn.Text = "View Student List";
             this.NViewStudentBtn.UseVisualStyleBackColor = false;
-            // 
-            // NRemoveStudentBtn
-            // 
-            this.NRemoveStudentBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.NRemoveStudentBtn.Location = new System.Drawing.Point(11, 187);
-            this.NRemoveStudentBtn.Name = "NRemoveStudentBtn";
-            this.NRemoveStudentBtn.Size = new System.Drawing.Size(235, 35);
-            this.NRemoveStudentBtn.TabIndex = 18;
-            this.NRemoveStudentBtn.Text = "Remove Student";
-            this.NRemoveStudentBtn.UseVisualStyleBackColor = false;
+            this.NViewStudentBtn.Click += new System.EventHandler(this.NViewStudentBtn_Click);
             // 
             // NEditStudentBtn
             // 
@@ -235,6 +230,7 @@
             this.NEditStudentBtn.TabIndex = 18;
             this.NEditStudentBtn.Text = "Edit Student Details";
             this.NEditStudentBtn.UseVisualStyleBackColor = false;
+            this.NEditStudentBtn.Click += new System.EventHandler(this.NEditStudentBtn_Click);
             // 
             // NAddStudentBtn
             // 
@@ -245,6 +241,7 @@
             this.NAddStudentBtn.TabIndex = 17;
             this.NAddStudentBtn.Text = "Add New Student";
             this.NAddStudentBtn.UseVisualStyleBackColor = false;
+            this.NAddStudentBtn.Click += new System.EventHandler(this.NAddStudentBtn_Click);
             // 
             // NStudentHomeBtn
             // 
@@ -255,24 +252,13 @@
             this.NStudentHomeBtn.TabIndex = 17;
             this.NStudentHomeBtn.Text = "Student Manage Home";
             this.NStudentHomeBtn.UseVisualStyleBackColor = false;
-            // 
-            // rbtnMale
-            // 
-            this.rbtnMale.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.rbtnMale.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnMale.Location = new System.Drawing.Point(409, 195);
-            this.rbtnMale.Name = "rbtnMale";
-            this.rbtnMale.Size = new System.Drawing.Size(106, 36);
-            this.rbtnMale.TabIndex = 29;
-            this.rbtnMale.TabStop = true;
-            this.rbtnMale.Text = "Male";
-            this.rbtnMale.UseVisualStyleBackColor = true;
+            this.NStudentHomeBtn.Click += new System.EventHandler(this.NStudentHomeBtn_Click);
             // 
             // txtAddress
             // 
             this.txtAddress.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtAddress.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress.Location = new System.Drawing.Point(388, 247);
+            this.txtAddress.Location = new System.Drawing.Point(388, 205);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(300, 44);
@@ -283,7 +269,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(164, 250);
+            this.label2.Location = new System.Drawing.Point(184, 208);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 25);
             this.label2.TabIndex = 32;
@@ -295,40 +281,30 @@
             this.btnSubmit.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnSubmit.Font = new System.Drawing.Font("Franklin Gothic Medium", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.Black;
-            this.btnSubmit.Location = new System.Drawing.Point(422, 456);
+            this.btnSubmit.Location = new System.Drawing.Point(323, 442);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(226, 46);
             this.btnSubmit.TabIndex = 36;
             this.btnSubmit.Text = "Update Details";
             this.btnSubmit.UseVisualStyleBackColor = false;
+            this.btnSubmit.Click += new System.EventHandler(this.BtnSubmit_Click);
             // 
             // dateTimePickerDOB
             // 
             this.dateTimePickerDOB.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.dateTimePickerDOB.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerDOB.Location = new System.Drawing.Point(388, 151);
+            this.dateTimePickerDOB.Location = new System.Drawing.Point(388, 153);
             this.dateTimePickerDOB.Name = "dateTimePickerDOB";
             this.dateTimePickerDOB.Size = new System.Drawing.Size(300, 30);
             this.dateTimePickerDOB.TabIndex = 45;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(171, 195);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 25);
-            this.label3.TabIndex = 39;
-            this.label3.Text = "Gender";
             // 
             // lblEmail
             // 
             this.lblEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(177, 308);
+            this.lblEmail.Location = new System.Drawing.Point(197, 266);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(61, 25);
             this.lblEmail.TabIndex = 38;
@@ -339,7 +315,7 @@
             // 
             this.txtGDContact.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtGDContact.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGDContact.Location = new System.Drawing.Point(388, 403);
+            this.txtGDContact.Location = new System.Drawing.Point(388, 361);
             this.txtGDContact.Name = "txtGDContact";
             this.txtGDContact.Size = new System.Drawing.Size(300, 30);
             this.txtGDContact.TabIndex = 44;
@@ -349,28 +325,17 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(177, 151);
+            this.label1.Location = new System.Drawing.Point(197, 153);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 25);
             this.label1.TabIndex = 31;
             this.label1.Text = "DOB";
             // 
-            // rbtnFemale
-            // 
-            this.rbtnFemale.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnFemale.Location = new System.Drawing.Point(521, 195);
-            this.rbtnFemale.Name = "rbtnFemale";
-            this.rbtnFemale.Size = new System.Drawing.Size(108, 36);
-            this.rbtnFemale.TabIndex = 34;
-            this.rbtnFemale.TabStop = true;
-            this.rbtnFemale.Text = "Female";
-            this.rbtnFemale.UseVisualStyleBackColor = true;
-            // 
             // txtName
             // 
             this.txtName.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtName.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(388, 102);
+            this.txtName.Location = new System.Drawing.Point(388, 104);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(300, 30);
             this.txtName.TabIndex = 30;
@@ -380,7 +345,7 @@
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(137, 403);
+            this.label5.Location = new System.Drawing.Point(157, 361);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(163, 25);
             this.label5.TabIndex = 41;
@@ -391,7 +356,7 @@
             this.lblName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(157, 107);
+            this.lblName.Location = new System.Drawing.Point(177, 109);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(99, 25);
             this.lblName.TabIndex = 37;
@@ -402,7 +367,7 @@
             // 
             this.txtGDName.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtGDName.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGDName.Location = new System.Drawing.Point(388, 357);
+            this.txtGDName.Location = new System.Drawing.Point(388, 315);
             this.txtGDName.Name = "txtGDName";
             this.txtGDName.Size = new System.Drawing.Size(300, 30);
             this.txtGDName.TabIndex = 42;
@@ -412,7 +377,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(137, 357);
+            this.label4.Location = new System.Drawing.Point(157, 315);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(148, 25);
             this.label4.TabIndex = 40;
@@ -422,7 +387,7 @@
             // 
             this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtEmail.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(388, 308);
+            this.txtEmail.Location = new System.Drawing.Point(388, 266);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(300, 30);
             this.txtEmail.TabIndex = 35;
@@ -439,16 +404,14 @@
             // 
             // ContentPanel
             // 
-            this.ContentPanel.Controls.Add(this.rbtnMale);
             this.ContentPanel.Controls.Add(this.txtAddress);
             this.ContentPanel.Controls.Add(this.label2);
+            this.ContentPanel.Controls.Add(this.btnDelete);
             this.ContentPanel.Controls.Add(this.btnSubmit);
             this.ContentPanel.Controls.Add(this.dateTimePickerDOB);
-            this.ContentPanel.Controls.Add(this.label3);
             this.ContentPanel.Controls.Add(this.lblEmail);
             this.ContentPanel.Controls.Add(this.txtGDContact);
             this.ContentPanel.Controls.Add(this.label1);
-            this.ContentPanel.Controls.Add(this.rbtnFemale);
             this.ContentPanel.Controls.Add(this.txtName);
             this.ContentPanel.Controls.Add(this.label5);
             this.ContentPanel.Controls.Add(this.lblName);
@@ -456,16 +419,65 @@
             this.ContentPanel.Controls.Add(this.label4);
             this.ContentPanel.Controls.Add(this.txtEmail);
             this.ContentPanel.Controls.Add(this.TitleLabel);
-            this.ContentPanel.Location = new System.Drawing.Point(295, 114);
+            this.ContentPanel.Location = new System.Drawing.Point(278, 110);
             this.ContentPanel.Name = "ContentPanel";
-            this.ContentPanel.Size = new System.Drawing.Size(922, 532);
+            this.ContentPanel.Size = new System.Drawing.Size(962, 536);
             this.ContentPanel.TabIndex = 48;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnDelete.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnDelete.Font = new System.Drawing.Font("Franklin Gothic Medium", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.Color.Black;
+            this.btnDelete.Location = new System.Drawing.Point(564, 442);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(226, 46);
+            this.btnDelete.TabIndex = 36;
+            this.btnDelete.Text = "Delete Account";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.BtnDelete_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(51, 127);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(174, 135);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 54;
+            this.pictureBox1.TabStop = false;
+            // 
+            // UsrlinkLabel
+            // 
+            this.UsrlinkLabel.AutoSize = true;
+            this.UsrlinkLabel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.UsrlinkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsrlinkLabel.Location = new System.Drawing.Point(51, 278);
+            this.UsrlinkLabel.Name = "UsrlinkLabel";
+            this.UsrlinkLabel.Size = new System.Drawing.Size(180, 25);
+            this.UsrlinkLabel.TabIndex = 53;
+            this.UsrlinkLabel.TabStop = true;
+            this.UsrlinkLabel.Text = "Kavindu Sandeepa";
+            // 
+            // imgPanel
+            // 
+            this.imgPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.imgPanel.Location = new System.Drawing.Point(12, 110);
+            this.imgPanel.Name = "imgPanel";
+            this.imgPanel.Size = new System.Drawing.Size(260, 220);
+            this.imgPanel.TabIndex = 52;
+            this.imgPanel.TabStop = false;
             // 
             // StudentDetailsUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.UsrlinkLabel);
+            this.Controls.Add(this.imgPanel);
             this.Controls.Add(this.ContentPanel);
             this.Controls.Add(this.ButtonPanel);
             this.Controls.Add(this.panel5);
@@ -477,7 +489,10 @@
             this.ButtonPanel.ResumeLayout(false);
             this.ContentPanel.ResumeLayout(false);
             this.ContentPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgPanel)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -494,20 +509,16 @@
         private System.Windows.Forms.Panel ButtonPanel;
         private System.Windows.Forms.Button NHomeBtn;
         private System.Windows.Forms.Button NViewStudentBtn;
-        private System.Windows.Forms.Button NRemoveStudentBtn;
         private System.Windows.Forms.Button NEditStudentBtn;
         private System.Windows.Forms.Button NAddStudentBtn;
         private System.Windows.Forms.Button NStudentHomeBtn;
-        private System.Windows.Forms.RadioButton rbtnMale;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.DateTimePicker dateTimePickerDOB;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.TextBox txtGDContact;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.RadioButton rbtnFemale;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblName;
@@ -516,5 +527,9 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label TitleLabel;
         private System.Windows.Forms.Panel ContentPanel;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.LinkLabel UsrlinkLabel;
+        private System.Windows.Forms.PictureBox imgPanel;
     }
 }

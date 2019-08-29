@@ -47,5 +47,47 @@ namespace SchoolManagementSystem
         {
             StudentDetailsDataGridView();
         }
+
+        private void NHomeBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            HomePage1 hm = new HomePage1();
+            hm.ShowDialog();
+        }
+
+        private void NAddStudentBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CreateStudentAccount sacc = new CreateStudentAccount();
+            sacc.ShowDialog();
+        }
+
+        private void NViewStudentBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            StudentList slist = new StudentList();
+            slist.ShowDialog();
+        }
+
+        private void NEditStudentBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            StudentList slist = new StudentList();
+            slist.ShowDialog();
+        }
+
+        private void NStudentHomeBtn_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            StudentManageHome smanagehome = new StudentManageHome();
+            smanagehome.ShowDialog();
+        }
+
+        private void BtnLogOutHeader_Click(object sender, EventArgs e)
+        {
+            LoginForm log = new LoginForm();
+            this.Hide();
+            log.ShowDialog();
+        }
     }
 }

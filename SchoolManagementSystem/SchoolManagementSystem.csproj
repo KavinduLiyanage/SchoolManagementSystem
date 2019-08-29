@@ -109,6 +109,12 @@
       <DependentUpon>ClassResultSheet.cs</DependentUpon>
     </Compile>
     <Compile Include="Connection.cs" />
+    <Compile Include="CreateStudentAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateStudentAccount.designer.cs">
+      <DependentUpon>CreateStudentAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="DeletedList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,12 +138,6 @@
     </Compile>
     <Compile Include="InventoryDashBoard.designer.cs">
       <DependentUpon>InventoryDashBoard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CreateStudentAccount.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CreateStudentAccount.designer.cs">
-      <DependentUpon>CreateStudentAccount.cs</DependentUpon>
     </Compile>
     <Compile Include="IssueBook.cs">
       <SubType>Form</SubType>
@@ -279,6 +279,18 @@
     <Compile Include="StaffReqLeave.Designer.cs">
       <DependentUpon>StaffReqLeave.cs</DependentUpon>
     </Compile>
+    <Compile Include="StudentAppointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentAppointment.designer.cs">
+      <DependentUpon>StudentAppointment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentAppointmentEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentAppointmentEdit.designer.cs">
+      <DependentUpon>StudentAppointmentEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="StudentDetailsUpdate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -296,6 +308,12 @@
     </Compile>
     <Compile Include="StudentList.designer.cs">
       <DependentUpon>StudentList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentManageHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentManageHome.designer.cs">
+      <DependentUpon>StudentManageHome.cs</DependentUpon>
     </Compile>
     <Compile Include="StudentResultSheet.cs">
       <SubType>Form</SubType>
@@ -351,6 +369,12 @@
     <Compile Include="ViewStaffMembers.Designer.cs">
       <DependentUpon>ViewStaffMembers.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewStudentMarks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewStudentMarks.designer.cs">
+      <DependentUpon>ViewStudentMarks.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewTimetable.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -384,6 +408,9 @@
     <EmbeddedResource Include="ClassResultSheet.resx">
       <DependentUpon>ClassResultSheet.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CreateStudentAccount.resx">
+      <DependentUpon>CreateStudentAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DeletedList.resx">
       <DependentUpon>DeletedList.cs</DependentUpon>
     </EmbeddedResource>
@@ -392,9 +419,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EventDashBoardAdmin.resx">
       <DependentUpon>EventDashBoardAdmin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CreateStudentAccount.resx">
-      <DependentUpon>CreateStudentAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomePage3.resx">
       <DependentUpon>HomePage3.cs</DependentUpon>
@@ -478,6 +502,12 @@
     <EmbeddedResource Include="StaffReqLeave.resx">
       <DependentUpon>StaffReqLeave.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="StudentAppointment.resx">
+      <DependentUpon>StudentAppointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentAppointmentEdit.resx">
+      <DependentUpon>StudentAppointmentEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StudentDetailsUpdate.resx">
       <DependentUpon>StudentDetailsUpdate.cs</DependentUpon>
     </EmbeddedResource>
@@ -486,6 +516,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StudentList.resx">
       <DependentUpon>StudentList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentManageHome.resx">
+      <DependentUpon>StudentManageHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StudentResultSheet.resx">
       <DependentUpon>StudentResultSheet.cs</DependentUpon>
@@ -513,6 +546,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ViewStaffMembers.resx">
       <DependentUpon>ViewStaffMembers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewStudentMarks.resx">
+      <DependentUpon>ViewStudentMarks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewTimetable.resx">
       <DependentUpon>ViewTimetable.cs</DependentUpon>

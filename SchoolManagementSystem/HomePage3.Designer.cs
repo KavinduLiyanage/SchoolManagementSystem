@@ -38,6 +38,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.btnLogOutHeader = new System.Windows.Forms.Button();
             this.btnExamMheader = new System.Windows.Forms.Button();
             this.btnStudentMHeader = new System.Windows.Forms.Button();
@@ -48,7 +49,6 @@
             this.ButtonPanel = new System.Windows.Forms.Panel();
             this.NHomeBtn = new System.Windows.Forms.Button();
             this.imgPanel = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usrImg)).BeginInit();
             this.ButtonPanel.SuspendLayout();
@@ -133,6 +133,7 @@
             this.button1.Size = new System.Drawing.Size(95, 92);
             this.button1.TabIndex = 38;
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button2
             // 
@@ -145,6 +146,7 @@
             this.button2.TabIndex = 39;
             this.button2.Text = "View Marks";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // panel5
             // 
@@ -160,6 +162,18 @@
             this.panel5.Size = new System.Drawing.Size(1228, 92);
             this.panel5.TabIndex = 54;
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
+            this.button3.Location = new System.Drawing.Point(164, 21);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(145, 50);
+            this.button3.TabIndex = 55;
+            this.button3.Text = "Home";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
             // btnLogOutHeader
             // 
             this.btnLogOutHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
@@ -172,6 +186,7 @@
             this.btnLogOutHeader.TabIndex = 25;
             this.btnLogOutHeader.Text = "Log Out";
             this.btnLogOutHeader.UseVisualStyleBackColor = true;
+            this.btnLogOutHeader.Click += new System.EventHandler(this.BtnLogOutHeader_Click);
             // 
             // btnExamMheader
             // 
@@ -273,18 +288,6 @@
             this.imgPanel.Size = new System.Drawing.Size(260, 220);
             this.imgPanel.TabIndex = 50;
             this.imgPanel.TabStop = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
-            this.button3.Location = new System.Drawing.Point(164, 21);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(145, 50);
-            this.button3.TabIndex = 55;
-            this.button3.Text = "Home";
-            this.button3.UseVisualStyleBackColor = false;
             // 
             // HomePage3
             // 

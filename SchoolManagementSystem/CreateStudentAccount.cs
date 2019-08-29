@@ -139,6 +139,7 @@ namespace SchoolManagementSystem
 
         private void BtnLogOutHeader_Click(object sender, EventArgs e)
         {
+            //Redirect to Login Form
             LoginForm log = new LoginForm();
             this.Hide();
             log.ShowDialog();

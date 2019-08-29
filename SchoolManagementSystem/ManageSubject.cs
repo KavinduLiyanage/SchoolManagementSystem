@@ -14,7 +14,7 @@ namespace SchoolManagementSystem
 {
     public partial class ManageSubject : Form
     {
-         SqlConnection con = new SqlConnection(@"Data Source=.;Initial Catalog=SchoolManegementSystemDB;Integrated Security=True");
+         SqlConnection con = new SqlConnection(@"Data Source=.;Initial Catalog=SchoolManagementSystemDB;Integrated Security=True");
 
         public ManageSubject()
         {

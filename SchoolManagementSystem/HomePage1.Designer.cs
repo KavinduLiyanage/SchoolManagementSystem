@@ -405,6 +405,7 @@
             this.UsrlinkLabel.TabIndex = 48;
             this.UsrlinkLabel.TabStop = true;
             this.UsrlinkLabel.Text = "Milinda Ranawaka";
+            this.UsrlinkLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // usrImg
             // 
@@ -480,6 +481,7 @@
             this.Name = "HomePage1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Welcome Admin";
+            this.Load += new System.EventHandler(this.HomePage1_Load);
             this.panel5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.usrImg)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgPanel)).EndInit();

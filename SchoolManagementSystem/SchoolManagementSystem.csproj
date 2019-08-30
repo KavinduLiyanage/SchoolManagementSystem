@@ -187,6 +187,7 @@
     <Compile Include="HomePage3.Designer.cs">
       <DependentUpon>HomePage3.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoginInfo.cs" />
     <Compile Include="ManageItem.cs">
       <SubType>Form</SubType>
     </Compile>

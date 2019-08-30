@@ -11,7 +11,7 @@ namespace SchoolManagementSystem
 
         private void HomePage3_Load(object sender, System.EventArgs e)
         {
-
+            UsrlinkLabel.Text = LoginInfo.userName;
         }
 
         private void DomainUpDown1_SelectedItemChanged(object sender, System.EventArgs e)

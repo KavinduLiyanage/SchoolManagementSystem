@@ -611,6 +611,7 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TeacherMyProfile";
+            this.Load += new System.EventHandler(this.TeacherMyProfile_Load);
             this.ButtonPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.usrImg)).EndInit();
             this.genderPanel.ResumeLayout(false);

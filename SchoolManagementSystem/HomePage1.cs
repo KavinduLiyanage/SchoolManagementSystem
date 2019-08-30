@@ -194,5 +194,10 @@ namespace SchoolManagementSystem
             this.Hide();
             newhome.ShowDialog();
         }
+
+        private void HomePage1_Load(object sender, EventArgs e)
+        {
+            UsrlinkLabel.Text = LoginInfo.userName;
+        }
     }
 }

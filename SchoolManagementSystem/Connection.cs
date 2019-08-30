@@ -20,7 +20,6 @@ namespace SchoolManagementSystem
                 str = @"Data Source=.;Initial Catalog=SchoolManagementSystemDB;Integrated Security=True";
                 con = new SqlConnection(str);
                 con.Open();
-               // MessageBox.Show("DataBase connected");
 
             }
             catch (SqlException e)

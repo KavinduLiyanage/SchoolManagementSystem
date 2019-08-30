@@ -43,6 +43,7 @@
             // 
             this.pwdTxtBox.Location = new System.Drawing.Point(827, 337);
             this.pwdTxtBox.Name = "pwdTxtBox";
+            this.pwdTxtBox.PasswordChar = '*';
             this.pwdTxtBox.Size = new System.Drawing.Size(151, 22);
             this.pwdTxtBox.TabIndex = 11;
             // 

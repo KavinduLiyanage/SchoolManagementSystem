@@ -11,7 +11,7 @@ namespace SchoolManagementSystem
 
         private void HomePage2_Load(object sender, System.EventArgs e)
         {
-            UsrlinkLabel.Text = LoginInfo.userName;
+            UsrlinkLabel.Text = GetSetInfo.userName;
         }
 
         private void ReqLeaveImgBtn_Click(object sender, System.EventArgs e)

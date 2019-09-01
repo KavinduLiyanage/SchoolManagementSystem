@@ -96,6 +96,7 @@
             this.NReqLeaveBtn.TabIndex = 17;
             this.NReqLeaveBtn.Text = "Request Leave";
             this.NReqLeaveBtn.UseVisualStyleBackColor = false;
+            this.NReqLeaveBtn.Click += new System.EventHandler(this.NReqLeaveBtn_Click);
             // 
             // NStaffHomeBtn
             // 
@@ -267,13 +268,14 @@
             // 
             this.updateStaffBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.updateStaffBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.updateStaffBtn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.updateStaffBtn.Location = new System.Drawing.Point(748, 476);
+            this.updateStaffBtn.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateStaffBtn.Location = new System.Drawing.Point(729, 476);
             this.updateStaffBtn.Name = "updateStaffBtn";
-            this.updateStaffBtn.Size = new System.Drawing.Size(185, 41);
+            this.updateStaffBtn.Size = new System.Drawing.Size(204, 41);
             this.updateStaffBtn.TabIndex = 16;
             this.updateStaffBtn.Text = "Update My Details";
             this.updateStaffBtn.UseVisualStyleBackColor = false;
+            this.updateStaffBtn.Click += new System.EventHandler(this.UpdateStaffBtn_Click);
             // 
             // genderPanel
             // 
@@ -483,6 +485,7 @@
             this.NametextBox1.Name = "NametextBox1";
             this.NametextBox1.Size = new System.Drawing.Size(246, 22);
             this.NametextBox1.TabIndex = 1;
+            this.NametextBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NametextBox1_KeyPress);
             // 
             // nameLabel
             // 

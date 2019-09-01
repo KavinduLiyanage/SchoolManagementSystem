@@ -392,5 +392,11 @@ namespace SchoolManagementSystem
             this.Hide();
             newdash.ShowDialog();
         }
+
+        private void AddStaffMember_Load(object sender, EventArgs e)
+        {
+            GetSetInfo.getSubject(subTextBox1);
+            GetSetInfo.getSubject(subTextBox2);
+        }
     }
 }

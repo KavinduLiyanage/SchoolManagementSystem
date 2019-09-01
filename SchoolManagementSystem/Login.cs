@@ -51,9 +51,9 @@ namespace SchoolManagementSystem
                     name = dr["name"].ToString();
                     accessLevel = dr["accessLevel"].ToString();
                     staffid = Int32.Parse(dr["staffID"].ToString());
-                    LoginInfo.userName = name;
-                    LoginInfo.getsetsysLvl = accessLevel;
-                    LoginInfo.getsetusrId = staffid;
+                    GetSetInfo.userName = name;
+                    GetSetInfo.getsetsysLvl = accessLevel;
+                    GetSetInfo.getsetusrId = staffid;
 
                     if (accessLevel.Equals("Admin")) {
                         HomePage1 loadHome1 = new HomePage1();
@@ -73,9 +73,9 @@ namespace SchoolManagementSystem
                 {
                     name = dr2["SGDNAME"].ToString();
                     stuid = Int32.Parse(dr2["SID"].ToString());
-                    LoginInfo.userName = name;
-                    LoginInfo.getsetusrId = stuid;
-                    LoginInfo.getsetsysLvl = "Student";
+                    GetSetInfo.userName = name;
+                    GetSetInfo.getsetusrId = stuid;
+                    GetSetInfo.getsetsysLvl = "Student";
 
                     HomePage3 loadHome3 = new HomePage3();
                     this.Hide();

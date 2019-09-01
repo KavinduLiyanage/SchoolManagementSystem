@@ -39,7 +39,6 @@
             this.UsrlinkLabel = new System.Windows.Forms.LinkLabel();
             this.NHomeBtn = new System.Windows.Forms.Button();
             this.ContentPanel = new System.Windows.Forms.Panel();
-            this.subTextBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.deleteBtn = new System.Windows.Forms.Button();
             this.updateBtn = new System.Windows.Forms.Button();
@@ -57,7 +56,6 @@
             this.serviceYrsLabel1 = new System.Windows.Forms.Label();
             this.pastSchTextBox = new System.Windows.Forms.TextBox();
             this.paseSchLabel = new System.Windows.Forms.Label();
-            this.subTextBox1 = new System.Windows.Forms.TextBox();
             this.subLabel = new System.Windows.Forms.Label();
             this.addressTextBox = new System.Windows.Forms.TextBox();
             this.addressLabel = new System.Windows.Forms.Label();
@@ -93,6 +91,8 @@
             this.btnResourseMHeader = new System.Windows.Forms.Button();
             this.btnInventoryMHeader = new System.Windows.Forms.Button();
             this.btnEventMHeader = new System.Windows.Forms.Button();
+            this.subTextBox1 = new System.Windows.Forms.ComboBox();
+            this.subTextBox2 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.subLabel2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.ContentPanel.SuspendLayout();
@@ -208,6 +208,7 @@
             // 
             this.ContentPanel.BackColor = System.Drawing.SystemColors.GrayText;
             this.ContentPanel.Controls.Add(this.subTextBox2);
+            this.ContentPanel.Controls.Add(this.subTextBox1);
             this.ContentPanel.Controls.Add(this.label1);
             this.ContentPanel.Controls.Add(this.deleteBtn);
             this.ContentPanel.Controls.Add(this.updateBtn);
@@ -225,7 +226,6 @@
             this.ContentPanel.Controls.Add(this.serviceYrsLabel1);
             this.ContentPanel.Controls.Add(this.pastSchTextBox);
             this.ContentPanel.Controls.Add(this.paseSchLabel);
-            this.ContentPanel.Controls.Add(this.subTextBox1);
             this.ContentPanel.Controls.Add(this.subLabel);
             this.ContentPanel.Controls.Add(this.addressTextBox);
             this.ContentPanel.Controls.Add(this.addressLabel);
@@ -246,13 +246,6 @@
             this.ContentPanel.Name = "ContentPanel";
             this.ContentPanel.Size = new System.Drawing.Size(962, 561);
             this.ContentPanel.TabIndex = 38;
-            // 
-            // subTextBox2
-            // 
-            this.subTextBox2.Location = new System.Drawing.Point(683, 364);
-            this.subTextBox2.Name = "subTextBox2";
-            this.subTextBox2.Size = new System.Drawing.Size(246, 22);
-            this.subTextBox2.TabIndex = 48;
             // 
             // label1
             // 
@@ -410,13 +403,6 @@
             this.paseSchLabel.Size = new System.Drawing.Size(117, 25);
             this.paseSchLabel.TabIndex = 31;
             this.paseSchLabel.Text = "Past School";
-            // 
-            // subTextBox1
-            // 
-            this.subTextBox1.Location = new System.Drawing.Point(682, 325);
-            this.subTextBox1.Name = "subTextBox1";
-            this.subTextBox1.Size = new System.Drawing.Size(246, 22);
-            this.subTextBox1.TabIndex = 30;
             // 
             // subLabel
             // 
@@ -809,6 +795,22 @@
             this.btnEventMHeader.UseVisualStyleBackColor = false;
             this.btnEventMHeader.Click += new System.EventHandler(this.BtnEventMHeader_Click);
             // 
+            // subTextBox1
+            // 
+            this.subTextBox1.FormattingEnabled = true;
+            this.subTextBox1.Location = new System.Drawing.Point(683, 321);
+            this.subTextBox1.Name = "subTextBox1";
+            this.subTextBox1.Size = new System.Drawing.Size(246, 24);
+            this.subTextBox1.TabIndex = 54;
+            // 
+            // subTextBox2
+            // 
+            this.subTextBox2.FormattingEnabled = true;
+            this.subTextBox2.Location = new System.Drawing.Point(682, 363);
+            this.subTextBox2.Name = "subTextBox2";
+            this.subTextBox2.Size = new System.Drawing.Size(246, 24);
+            this.subTextBox2.TabIndex = 55;
+            // 
             // ViewStaffMembers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -891,7 +893,6 @@
         private System.Windows.Forms.Label serviceYrsLabel1;
         private System.Windows.Forms.TextBox pastSchTextBox;
         private System.Windows.Forms.Label paseSchLabel;
-        private System.Windows.Forms.TextBox subTextBox1;
         private System.Windows.Forms.Label subLabel;
         private System.Windows.Forms.TextBox pwdtextBox2;
         private System.Windows.Forms.Label pwdlabel1;
@@ -899,7 +900,6 @@
         private System.Windows.Forms.Label ConfirmPwdlabel1;
         private System.Windows.Forms.Button deleteBtn;
         private System.Windows.Forms.Button updateBtn;
-        private System.Windows.Forms.TextBox subTextBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn staffIDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn memberTypeDataGridViewTextBoxColumn;
@@ -927,5 +927,7 @@
         private System.Windows.Forms.Button btnResourseMHeader;
         private System.Windows.Forms.Button btnInventoryMHeader;
         private System.Windows.Forms.Button btnEventMHeader;
+        private System.Windows.Forms.ComboBox subTextBox2;
+        private System.Windows.Forms.ComboBox subTextBox1;
     }
 }

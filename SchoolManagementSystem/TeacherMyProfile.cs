@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,12 +42,11 @@ namespace SchoolManagementSystem
 
         private void TeacherMyProfile_Load(object sender, EventArgs e)
         {
-            UsrlinkLabel.Text = LoginInfo.userName;
 
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from staff where staffID = '"+LoginInfo.getsetusrId+"' ";
+            cmd.CommandText = "select * from staff where staffID = '"+GetSetInfo.getsetusrId+"' ";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -55,6 +55,7 @@ namespace SchoolManagementSystem
 
             foreach (DataRow dr in dt.Rows)
             {
+                UsrlinkLabel.Text = dr["name"].ToString();
                 linkLabel1.Text = dr["name"].ToString();
                 NametextBox1.Text = dr["fullName"].ToString();
                 nameTextBox2.Text = dr["name"].ToString();
@@ -94,6 +95,137 @@ namespace SchoolManagementSystem
                 subTextBox2.Text = dr["subject2"].ToString();
             }
 
+        }
+
+        private void UpdateStaffBtn_Click(object sender, EventArgs e)
+        {
+
+            string genderValue = "";
+            bool genderisChecked = maleRadioButton2.Checked;
+            if (genderisChecked)
+                genderValue = maleRadioButton2.Text;
+            else if (femaleRadioButton1.Checked)
+                genderValue = femaleRadioButton1.Text;
+
+            ArrayList errorArr1 = new ArrayList();
+            Boolean genderCon = true;
+            Boolean fullNameCon = true;
+            Boolean nameCon = true;
+            Boolean nicCon = true;
+            Boolean addCon = true;
+            Boolean addressCon = true;
+            Boolean salaryCon = true;
+            Boolean phNoCon = true;
+            Boolean mailCon = true;
+
+            if (NametextBox1.Text.Equals(""))
+            {
+                fullNameCon = false;
+                errorArr1.Add("Please Enter Full Name!");
+            }
+
+            if (nameTextBox2.Text.Equals(""))
+            {
+                nameCon = false;
+                errorArr1.Add("Please Enter Name with Initials!");
+            }
+
+            if (genderValue.Equals(""))
+            {
+                genderCon = false;
+                errorArr1.Add("Please Choose a Gender!");
+            }
+
+            if (NICTextBox.Text.Equals(""))
+            {
+                nicCon = false;
+                errorArr1.Add("Please Enter NIC Number!");
+            }
+
+            if (addressTextBox.Text.Equals(""))
+            {
+                addCon = false;
+                errorArr1.Add("Please Enter Address!");
+            }
+
+            if (salaryTextBox.Text.Equals(""))
+            {
+                salaryCon = false;
+                errorArr1.Add("Please Enter Salary!");
+            }
+
+            if (phNoTextBox.Text.Equals(""))
+            {
+                phNoCon = false;
+                errorArr1.Add("Please Enter a Phone Number!");
+            }
+
+            if (emailTextBox1.Text.Equals(""))
+            {
+                mailCon = false;
+                errorArr1.Add("Please Enter a Email Address!");
+            }
+
+            string arrayStr = "";
+            foreach (Object obj in errorArr1)
+            {
+                arrayStr = arrayStr + "\n" + obj;
+            }
+
+            if (genderCon && fullNameCon && nameCon && nicCon && addCon && addressCon && salaryCon && phNoCon && mailCon)
+            {
+                this.updateBtnOperation();
+            }
+            else
+            {
+                MessageBox.Show(arrayStr);
+            }
+        }
+
+        private void updateBtnOperation()
+        {
+
+            string genderValue = "";
+            bool genderisChecked = maleRadioButton2.Checked;
+            if (genderisChecked)
+                genderValue = maleRadioButton2.Text;
+            else
+                genderValue = femaleRadioButton1.Text;
+
+            DialogResult dlgResult = MessageBox.Show("Are You Sure You Want To Update?", "Update!", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (dlgResult == DialogResult.Yes)
+            {
+
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "UPDATE staff SET fullName = '" + NametextBox1.Text + "',name = '" + nameTextBox2.Text + "',gender = '" + genderValue + "',NIC = '" + NICTextBox.Text + "',DOB = '" + dateTimePicker1.Value + "',address = '" + addressTextBox.Text + "',phoneNo = '" + phNoTextBox.Text + "',email = '" + emailTextBox1.Text + "',subject = '" + subTextBox1.Text + "',pastSchool = '" + pastSchTextBox.Text + "',serviceYears = '" + Int32.Parse(serviceYrsTextBox.Text) + "',salary = '" + Convert.ToDouble(salaryTextBox.Text) + "',subject2 = '" + subTextBox2.Text + "' WHERE staffID = '" + GetSetInfo.getsetusrId + "'";
+                cmd.ExecuteNonQuery();
+                con.Close();
+                GetSetInfo.userName = nameTextBox2.Text;
+
+                MessageBox.Show("Updated Succesfully");
+
+                TeacherMyProfile teacherMyProfile = new TeacherMyProfile();
+                this.Hide();
+                teacherMyProfile.ShowDialog();
+            }
+        }
+
+        private void NametextBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void NReqLeaveBtn_Click(object sender, EventArgs e)
+        {
+            StaffReqLeave reqLeave = new StaffReqLeave();
+            this.Hide();
+            reqLeave.ShowDialog();
         }
     }
 }

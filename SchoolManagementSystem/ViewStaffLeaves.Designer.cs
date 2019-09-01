@@ -50,7 +50,6 @@
             this.nameLabel2 = new System.Windows.Forms.Label();
             this.NametextBox1 = new System.Windows.Forms.TextBox();
             this.nameLabel = new System.Windows.Forms.Label();
-            this.searchTextBox1 = new System.Windows.Forms.TextBox();
             this.SalarydataView1 = new System.Windows.Forms.DataGridView();
             this.ButtonPanel = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -62,6 +61,7 @@
             this.btnResourseMHeader = new System.Windows.Forms.Button();
             this.btnInventoryMHeader = new System.Windows.Forms.Button();
             this.btnEventMHeader = new System.Windows.Forms.Button();
+            this.AcceotDeclineCombo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.imgPanel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.ContentPanel.SuspendLayout();
@@ -173,6 +173,7 @@
             // ContentPanel
             // 
             this.ContentPanel.BackColor = System.Drawing.SystemColors.GrayText;
+            this.ContentPanel.Controls.Add(this.AcceotDeclineCombo);
             this.ContentPanel.Controls.Add(this.updateBtn);
             this.ContentPanel.Controls.Add(this.addressLabel);
             this.ContentPanel.Controls.Add(this.acTDeclinecomboBox);
@@ -184,7 +185,6 @@
             this.ContentPanel.Controls.Add(this.nameLabel2);
             this.ContentPanel.Controls.Add(this.NametextBox1);
             this.ContentPanel.Controls.Add(this.nameLabel);
-            this.ContentPanel.Controls.Add(this.searchTextBox1);
             this.ContentPanel.Controls.Add(this.SalarydataView1);
             this.ContentPanel.Location = new System.Drawing.Point(283, 105);
             this.ContentPanel.Name = "ContentPanel";
@@ -293,17 +293,6 @@
             this.nameLabel.Size = new System.Drawing.Size(100, 25);
             this.nameLabel.TabIndex = 49;
             this.nameLabel.Text = "Full Name";
-            // 
-            // searchTextBox1
-            // 
-            this.searchTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.searchTextBox1.Location = new System.Drawing.Point(454, 18);
-            this.searchTextBox1.Name = "searchTextBox1";
-            this.searchTextBox1.Size = new System.Drawing.Size(493, 27);
-            this.searchTextBox1.TabIndex = 3;
-            this.searchTextBox1.Tag = "";
-            this.searchTextBox1.Text = "Search Here";
-            this.searchTextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // SalarydataView1
             // 
@@ -449,6 +438,16 @@
             this.btnEventMHeader.UseVisualStyleBackColor = false;
             this.btnEventMHeader.Click += new System.EventHandler(this.BtnEventMHeader_Click);
             // 
+            // AcceotDeclineCombo
+            // 
+            this.AcceotDeclineCombo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AcceotDeclineCombo.FormattingEnabled = true;
+            this.AcceotDeclineCombo.Location = new System.Drawing.Point(743, 17);
+            this.AcceotDeclineCombo.Name = "AcceotDeclineCombo";
+            this.AcceotDeclineCombo.Size = new System.Drawing.Size(204, 28);
+            this.AcceotDeclineCombo.TabIndex = 61;
+            this.AcceotDeclineCombo.SelectedIndexChanged += new System.EventHandler(this.AcceotDeclineCombo_SelectedIndexChanged);
+            // 
             // ViewStaffLeaves
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -465,6 +464,7 @@
             this.Name = "ViewStaffLeaves";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewStaffLeaves";
+            this.Load += new System.EventHandler(this.ViewStaffLeaves_Load);
             ((System.ComponentModel.ISupportInitialize)(this.imgPanel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ContentPanel.ResumeLayout(false);
@@ -498,7 +498,6 @@
         private System.Windows.Forms.Button btnResourseMHeader;
         private System.Windows.Forms.Button btnInventoryMHeader;
         private System.Windows.Forms.Button btnEventMHeader;
-        private System.Windows.Forms.TextBox searchTextBox1;
         private System.Windows.Forms.DataGridView SalarydataView1;
         private System.Windows.Forms.TextBox nameTextBox2;
         private System.Windows.Forms.Label nameLabel2;
@@ -511,5 +510,6 @@
         private System.Windows.Forms.Label addressLabel;
         private System.Windows.Forms.ComboBox acTDeclinecomboBox;
         private System.Windows.Forms.Button updateBtn;
+        private System.Windows.Forms.ComboBox AcceotDeclineCombo;
     }
 }

@@ -74,6 +74,8 @@ namespace SchoolManagementSystem
         private void ViewStaffMembers_Load(object sender, EventArgs e)
         {
             this.displayData();
+            GetSetInfo.getSubject(subTextBox1);
+            GetSetInfo.getSubject(subTextBox2);
         }
 
         private void displayData() {

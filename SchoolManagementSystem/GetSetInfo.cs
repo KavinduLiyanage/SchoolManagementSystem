@@ -1,17 +1,39 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace SchoolManagementSystem
 {
-    public static class LoginInfo
+    public static class GetSetInfo
     {
         private static string username;
         private static string proPic;
         private static int usrId;
         private static string sysLvl;
+
+        public static SqlConnection getCon() {
+            SqlConnection con = new SqlConnection(@"Data Source=.;Initial Catalog=SchoolManagementSystemDB;Integrated Security=True");
+            return con;
+        }
+
+        public static void getSubject(System.Windows.Forms.ComboBox comboBox)
+        {
+            DataSet ds = new DataSet();
+            string query = "select * from Subject";
+            SqlDataAdapter da = new SqlDataAdapter(query, getCon());
+            getCon().Open();
+
+            da.Fill(ds);
+
+            comboBox.DataSource = ds.Tables[0];
+            comboBox.DisplayMember = "SubjectName";
+            comboBox.ValueMember = "SubjectName";
+            getCon().Close();
+        }
 
         public static string userName
         {

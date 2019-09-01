@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ namespace SchoolManagementSystem
 {
     public partial class ViewStaffLeaves : Form
     {
+        SqlConnection con = new SqlConnection(@"Data Source=.;Initial Catalog=SchoolManagementSystemDB;Integrated Security=True");
         public ViewStaffLeaves()
         {
             InitializeComponent();
@@ -106,6 +108,20 @@ namespace SchoolManagementSystem
             Notice_Dashboard newdash = new Notice_Dashboard();
             this.Hide();
             newdash.ShowDialog();
+        }
+
+        private void ViewStaffLeaves_Load(object sender, EventArgs e)
+        {
+
+        }
+        
+        private void SearchTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AcceotDeclineCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
         }
     }
 }

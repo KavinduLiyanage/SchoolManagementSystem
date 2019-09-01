@@ -33,9 +33,7 @@
             this.NHomeBtn = new System.Windows.Forms.Button();
             this.ContentPanel = new System.Windows.Forms.Panel();
             this.addGroupBox = new System.Windows.Forms.GroupBox();
-            this.subTextBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.subTextBox1 = new System.Windows.Forms.TextBox();
             this.subLabel = new System.Windows.Forms.Label();
             this.salaryTextBox = new System.Windows.Forms.TextBox();
             this.salaryLabel = new System.Windows.Forms.Label();
@@ -87,6 +85,8 @@
             this.btnResourseMHeader = new System.Windows.Forms.Button();
             this.btnInventoryMHeader = new System.Windows.Forms.Button();
             this.btnEventMHeader = new System.Windows.Forms.Button();
+            this.subTextBox1 = new System.Windows.Forms.ComboBox();
+            this.subTextBox2 = new System.Windows.Forms.ComboBox();
             this.ContentPanel.SuspendLayout();
             this.addGroupBox.SuspendLayout();
             this.genderPanel.SuspendLayout();
@@ -135,8 +135,8 @@
             // addGroupBox
             // 
             this.addGroupBox.Controls.Add(this.subTextBox2);
-            this.addGroupBox.Controls.Add(this.label1);
             this.addGroupBox.Controls.Add(this.subTextBox1);
+            this.addGroupBox.Controls.Add(this.label1);
             this.addGroupBox.Controls.Add(this.subLabel);
             this.addGroupBox.Controls.Add(this.salaryTextBox);
             this.addGroupBox.Controls.Add(this.salaryLabel);
@@ -168,13 +168,6 @@
             this.addGroupBox.TabIndex = 0;
             this.addGroupBox.TabStop = false;
             // 
-            // subTextBox2
-            // 
-            this.subTextBox2.Location = new System.Drawing.Point(631, 195);
-            this.subTextBox2.Name = "subTextBox2";
-            this.subTextBox2.Size = new System.Drawing.Size(246, 22);
-            this.subTextBox2.TabIndex = 52;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -184,13 +177,6 @@
             this.label1.Size = new System.Drawing.Size(94, 25);
             this.label1.TabIndex = 51;
             this.label1.Text = "Subject 2";
-            // 
-            // subTextBox1
-            // 
-            this.subTextBox1.Location = new System.Drawing.Point(630, 156);
-            this.subTextBox1.Name = "subTextBox1";
-            this.subTextBox1.Size = new System.Drawing.Size(246, 22);
-            this.subTextBox1.TabIndex = 50;
             // 
             // subLabel
             // 
@@ -743,6 +729,22 @@
             this.btnEventMHeader.UseVisualStyleBackColor = false;
             this.btnEventMHeader.Click += new System.EventHandler(this.BtnEventMHeader_Click);
             // 
+            // subTextBox1
+            // 
+            this.subTextBox1.FormattingEnabled = true;
+            this.subTextBox1.Location = new System.Drawing.Point(631, 155);
+            this.subTextBox1.Name = "subTextBox1";
+            this.subTextBox1.Size = new System.Drawing.Size(246, 24);
+            this.subTextBox1.TabIndex = 53;
+            // 
+            // subTextBox2
+            // 
+            this.subTextBox2.FormattingEnabled = true;
+            this.subTextBox2.Location = new System.Drawing.Point(631, 193);
+            this.subTextBox2.Name = "subTextBox2";
+            this.subTextBox2.Size = new System.Drawing.Size(245, 24);
+            this.subTextBox2.TabIndex = 54;
+            // 
             // AddStaffMember
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -759,6 +761,7 @@
             this.Name = "AddStaffMember";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddStaffMember";
+            this.Load += new System.EventHandler(this.AddStaffMember_Load);
             this.ContentPanel.ResumeLayout(false);
             this.addGroupBox.ResumeLayout(false);
             this.addGroupBox.PerformLayout();
@@ -824,9 +827,7 @@
         private System.Windows.Forms.Label phNolabel;
         private System.Windows.Forms.TextBox salaryTextBox;
         private System.Windows.Forms.Label salaryLabel;
-        private System.Windows.Forms.TextBox subTextBox2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox subTextBox1;
         private System.Windows.Forms.Label subLabel;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnLogOutHeader;
@@ -837,5 +838,7 @@
         private System.Windows.Forms.Button btnResourseMHeader;
         private System.Windows.Forms.Button btnInventoryMHeader;
         private System.Windows.Forms.Button btnEventMHeader;
+        private System.Windows.Forms.ComboBox subTextBox1;
+        private System.Windows.Forms.ComboBox subTextBox2;
     }
 }

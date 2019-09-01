@@ -197,7 +197,7 @@ namespace SchoolManagementSystem
 
         private void HomePage1_Load(object sender, EventArgs e)
         {
-            UsrlinkLabel.Text = LoginInfo.userName;
+            UsrlinkLabel.Text = GetSetInfo.userName;
         }
     }
 }

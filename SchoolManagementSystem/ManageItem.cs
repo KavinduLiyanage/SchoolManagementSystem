@@ -47,6 +47,8 @@ namespace SchoolManagementSystem
             SqlDataAdapter ad = new SqlDataAdapter(cmd);
             ad.Fill(dt1);
             dataGridView1.DataSource = dt1;
+
+            UsrlinkLabel.Text = GetSetInfo.userName;
             con.Close();
         }
 
@@ -302,6 +304,60 @@ namespace SchoolManagementSystem
             this.Hide();
             ManageStock add = new ManageStock(catbox.Text);
             add.Show();
+        }
+
+        private void PictureBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NStaffHomeBtn_Click(object sender, EventArgs e)
+        {
+            InventoryItemReportGenerate rp = new InventoryItemReportGenerate();
+            this.Hide();
+            rp.Show();
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            InventoryProductReportGenerate rp = new InventoryProductReportGenerate();
+            this.Hide();
+            rp.Show();
+        }
+
+        private void BtnStudentMHeader_Click(object sender, EventArgs e)
+        {
+            StudentManageHome st = new StudentManageHome();
+            this.Hide();
+            st.Show();
+        }
+
+        private void BtnEventMHeader_Click(object sender, EventArgs e)
+        {
+            EventDashboard ev = new EventDashboard();
+            this.Hide();
+            ev.Show();
+        }
+
+        private void BtnResourseMHeader_Click(object sender, EventArgs e)
+        {
+            ResourceManageHome mg = new ResourceManageHome();
+            this.Hide();
+            mg.Show();
+        }
+
+        private void BtnLibraryMHeader_Click(object sender, EventArgs e)
+        {
+            LibraryHome lb = new LibraryHome();
+            this.Hide();
+            lb.Show();
+        }
+
+        private void BtnNoticeMHeader_Click(object sender, EventArgs e)
+        {
+            Notice_Dashboard note = new Notice_Dashboard();
+            this.Hide();
+            note.Show();
         }
     }
    

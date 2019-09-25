@@ -60,7 +60,9 @@ namespace SchoolManagementSystem
                 cmd.CommandText = "select * from [dbo].[stockTable] where [Category]='"+ category + "'";
             }
             cmd.ExecuteNonQuery();
-   
+
+
+            UsrlinkLabel.Text = GetSetInfo.userName;
             DataTable dt1 = new DataTable();
             SqlDataAdapter ad = new SqlDataAdapter(cmd);
             ad.Fill(dt1);
@@ -167,7 +169,7 @@ namespace SchoolManagementSystem
         {
             if (validation())
             {
-                DialogResult dialogResult = MessageBox.Show("Are you shure to add this item?", "Message", MessageBoxButtons.YesNo);
+                DialogResult dialogResult = MessageBox.Show("Are you sure to add this item?", "Message", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes)
                 {
                     SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=SchoolManagementSystemDB;Integrated Security=True");
@@ -304,7 +306,7 @@ namespace SchoolManagementSystem
             {
                 this.dgview.Visible = true;
                 dgview.BringToFront();
-                Search(750, 350, 250, 200, "Item Code,Item Name,Category", "50,100,100");
+                Search(550, 300, 250, 100, "Item Code,Item Name,Category", "50,100,100");
                 this.dgview.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ItemCode_MouseDoubleClick);
                 SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=SchoolManagementSystemDB;Integrated Security=True");
                 con.Open();
@@ -454,6 +456,51 @@ namespace SchoolManagementSystem
             InventoryProductReportGenerate report = new InventoryProductReportGenerate();
             this.Hide();
             report.Show();
+        }
+
+        private void Catbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnNoticeMHeader_Click(object sender, EventArgs e)
+        {
+            Notice_Dashboard note = new Notice_Dashboard();
+            this.Hide();
+            note.Show();
+        }
+
+        private void BtnLibraryMHeader_Click(object sender, EventArgs e)
+        {
+            LibraryHome lb = new LibraryHome();
+            this.Hide();
+            lb.Show();
+        }
+
+        private void BtnResourseMHeader_Click(object sender, EventArgs e)
+        {
+            ResourceManageHome mg = new ResourceManageHome();
+            this.Hide();
+            mg.Show();
+        }
+
+        private void BtnEventMHeader_Click(object sender, EventArgs e)
+        {
+            EventDashboard ev = new EventDashboard();
+            this.Hide();
+            ev.Show();
+        }
+
+        private void BtnStudentMHeader_Click(object sender, EventArgs e)
+        {
+            StudentManageHome st = new StudentManageHome();
+            this.Hide();
+            st.Show();
+        }
+
+        private void QuantityBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

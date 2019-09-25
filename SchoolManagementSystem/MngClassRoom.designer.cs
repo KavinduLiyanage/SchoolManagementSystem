@@ -110,6 +110,7 @@
             this.classid.Size = new System.Drawing.Size(181, 22);
             this.classid.TabIndex = 3;
             this.classid.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
+            this.classid.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Classid_KeyPress);
             // 
             // classname
             // 
@@ -118,6 +119,7 @@
             this.classname.Size = new System.Drawing.Size(181, 22);
             this.classname.TabIndex = 4;
             this.classname.TextChanged += new System.EventHandler(this.TextBox2_TextChanged);
+            this.classname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Classname_KeyPress);
             // 
             // insert
             // 
@@ -218,6 +220,7 @@
             this.capacity.Name = "capacity";
             this.capacity.Size = new System.Drawing.Size(181, 22);
             this.capacity.TabIndex = 13;
+            this.capacity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Capacity_KeyPress);
             // 
             // label5
             // 

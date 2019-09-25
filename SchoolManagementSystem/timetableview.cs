@@ -10,63 +10,46 @@ using System.Windows.Forms;
 
 namespace SchoolManagementSystem
 {
-    public partial class MngTimeTable : Form
+    public partial class timetableview : Form
     {
-        public MngTimeTable()
+        public timetableview()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Resmngbtn_Click(object sender, EventArgs e)
-        {
-            ResourceManageHome openForm = new ResourceManageHome();
-            this.Hide();
-            openForm.ShowDialog();
-        }
-
-        private void Addsubbtn_Click(object sender, EventArgs e)
-        {
-            ManageSubject openForm = new ManageSubject();
-            this.Hide();
-            openForm.ShowDialog();
-        }
-
-        private void Addclassbtn_Click(object sender, EventArgs e)
+        private void Button1_Click(object sender, EventArgs e)
         {
             MngClassRoom openForm = new MngClassRoom();
             this.Hide();
             openForm.ShowDialog();
         }
 
-        private void Viewtimetablebtn_Click(object sender, EventArgs e)
+        private void Timetablebtn_Click(object sender, EventArgs e)
         {
-            timetableview openForm = new timetableview();
+            MngTimeTable openForm= new MngTimeTable();
             this.Hide();
             openForm.ShowDialog();
         }
 
-        private void BtnSave_Click(object sender, EventArgs e)
+        private void Addsubjectbtn_Click(object sender, EventArgs e)
         {
-
+            ManageSubject openForm = new ManageSubject();
+            this.Hide();
+            openForm.ShowDialog();
         }
 
-        private void BtnLogOutHeader_Click(object sender, EventArgs e)
+        private void ResmngHome_Click(object sender, EventArgs e)
         {
-            LoginForm log = new LoginForm();
+            ResourceManageHome openForm = new ResourceManageHome();
             this.Hide();
-            log.ShowDialog();
+            openForm.ShowDialog();
         }
 
         private void NHomeBtn_Click(object sender, EventArgs e)
         {
-            HomePage1 newHome = new HomePage1();
+            HomePage1 openForm = new HomePage1();
             this.Hide();
-            newHome.ShowDialog();
+            openForm.ShowDialog();
         }
 
         private void BtnStudentMHeader_Click(object sender, EventArgs e)
@@ -102,11 +85,6 @@ namespace SchoolManagementSystem
             Notice_Dashboard openForm = new Notice_Dashboard();
             this.Hide();
             openForm.ShowDialog();
-        }
-
-        private void Panel2_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

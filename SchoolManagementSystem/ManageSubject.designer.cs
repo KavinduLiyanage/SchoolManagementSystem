@@ -153,7 +153,7 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(491, 49);
             this.dataGridView1.Name = "dataGridView1";
@@ -166,7 +166,7 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Highlight;
+            this.button1.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(67, 294);
             this.button1.Name = "button1";
@@ -178,7 +178,7 @@
             // 
             // update
             // 
-            this.update.BackColor = System.Drawing.SystemColors.Highlight;
+            this.update.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.update.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.update.Location = new System.Drawing.Point(275, 294);
             this.update.Name = "update";
@@ -190,7 +190,7 @@
             // 
             // delete
             // 
-            this.delete.BackColor = System.Drawing.SystemColors.Highlight;
+            this.delete.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.delete.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.delete.Location = new System.Drawing.Point(67, 355);
             this.delete.Name = "delete";
@@ -202,7 +202,7 @@
             // 
             // search
             // 
-            this.search.BackColor = System.Drawing.SystemColors.Highlight;
+            this.search.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.search.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.search.Location = new System.Drawing.Point(275, 355);
             this.search.Name = "search";

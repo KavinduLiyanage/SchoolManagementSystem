@@ -121,7 +121,7 @@
             // 
             // insert
             // 
-            this.insert.BackColor = System.Drawing.SystemColors.Highlight;
+            this.insert.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.insert.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.insert.Location = new System.Drawing.Point(64, 316);
             this.insert.Name = "insert";
@@ -133,7 +133,7 @@
             // 
             // update
             // 
-            this.update.BackColor = System.Drawing.SystemColors.Highlight;
+            this.update.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.update.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.update.Location = new System.Drawing.Point(265, 316);
             this.update.Name = "update";
@@ -145,7 +145,7 @@
             // 
             // delete
             // 
-            this.delete.BackColor = System.Drawing.SystemColors.Highlight;
+            this.delete.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.delete.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.delete.Location = new System.Drawing.Point(64, 373);
             this.delete.Name = "delete";
@@ -157,7 +157,7 @@
             // 
             // search
             // 
-            this.search.BackColor = System.Drawing.SystemColors.Highlight;
+            this.search.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.search.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.search.Location = new System.Drawing.Point(265, 373);
             this.search.Name = "search";
@@ -169,7 +169,7 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(772, 154);
             this.dataGridView1.Name = "dataGridView1";
@@ -295,6 +295,7 @@
             this.btnExamMheader.TabIndex = 1;
             this.btnExamMheader.Text = "Exam Management";
             this.btnExamMheader.UseVisualStyleBackColor = false;
+            this.btnExamMheader.Click += new System.EventHandler(this.BtnExamMheader_Click);
             // 
             // btnLibraryMHeader
             // 

@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DAO;
+using Models;
 
 namespace SchoolManagementSystem
 {
@@ -16,6 +19,60 @@ namespace SchoolManagementSystem
         {
             InitializeComponent();
         }
+
+        private void btnMake_Click(object sender, EventArgs e)
+        {
+            Save();
+        }
+
+        private void Save()
+        {
+            try
+            {
+                var appointment = new AppointmentModel
+                {
+                    TeacherName = txtTName.Text.Trim(),
+                    Reason = txtReason.Text.Trim(),
+                    ADate = YearPicker.Value
+                    
+                };
+
+                ValidationContext context = new ValidationContext(appointment);
+
+                List<ValidationResult> errorList = new List<ValidationResult>();
+
+                var error = string.Empty;
+
+                if (!Validator.TryValidateObject(appointment, context, errorList, true))
+                {
+                    foreach (ValidationResult result1 in errorList)
+                    {
+                        error = error + result1.ErrorMessage + "\r\n";
+                    }
+                    MessageBox.Show(error);
+                    return;
+                }
+
+                var data = new AppointmentData();
+                bool result = data.SaveAppointment(appointment);
+                if (result)
+                {
+                    MessageBox.Show("Appointment place Sucessfully");
+                    this.Hide();
+                   
+                }
+                else
+                {
+                    MessageBox.Show("Appointment place unsucessfully");
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
 
         private void NHomeBtn_Click(object sender, EventArgs e)
         {
@@ -51,5 +108,7 @@ namespace SchoolManagementSystem
             this.Hide();
             log.ShowDialog();
         }
+
+        
     }
 }

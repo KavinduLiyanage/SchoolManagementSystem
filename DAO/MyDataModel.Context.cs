@@ -26,5 +26,7 @@ namespace DAO
         }
     
         public virtual DbSet<Student> Students { get; set; }
+        public virtual DbSet<staff> staffs { get; set; }
+        public virtual DbSet<SAppointment> SAppointments { get; set; }
     }
 }

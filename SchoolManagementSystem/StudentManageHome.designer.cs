@@ -40,13 +40,17 @@
             this.btnInventoryMHeader = new System.Windows.Forms.Button();
             this.addStaffBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.addStaffImgBtn = new System.Windows.Forms.Button();
             this.viewStaffBtn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.viewLeaveImgBtn = new System.Windows.Forms.Button();
             this.ViewSalaryBtn = new System.Windows.Forms.Button();
             this.ContentPanel = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.viewLeaveBtn = new System.Windows.Forms.Button();
+            this.ViewSalaryImgBtn = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.viewStaffImgBtn = new System.Windows.Forms.Button();
             this.TitleLabel = new System.Windows.Forms.Label();
             this.UsrlinkLabel = new System.Windows.Forms.LinkLabel();
             this.ButtonPanel = new System.Windows.Forms.Panel();
@@ -57,10 +61,6 @@
             this.NStudentHomeBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.imgPanel = new System.Windows.Forms.PictureBox();
-            this.ViewSalaryImgBtn = new System.Windows.Forms.Button();
-            this.viewStaffImgBtn = new System.Windows.Forms.Button();
-            this.viewLeaveImgBtn = new System.Windows.Forms.Button();
-            this.addStaffImgBtn = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -208,6 +208,17 @@
             this.panel1.Size = new System.Drawing.Size(340, 120);
             this.panel1.TabIndex = 0;
             // 
+            // addStaffImgBtn
+            // 
+            this.addStaffImgBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("addStaffImgBtn.BackgroundImage")));
+            this.addStaffImgBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.addStaffImgBtn.Location = new System.Drawing.Point(12, 13);
+            this.addStaffImgBtn.Name = "addStaffImgBtn";
+            this.addStaffImgBtn.Size = new System.Drawing.Size(90, 94);
+            this.addStaffImgBtn.TabIndex = 0;
+            this.addStaffImgBtn.UseVisualStyleBackColor = true;
+            this.addStaffImgBtn.Click += new System.EventHandler(this.AddStaffImgBtn_Click);
+            // 
             // viewStaffBtn
             // 
             this.viewStaffBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
@@ -229,6 +240,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(340, 120);
             this.panel2.TabIndex = 1;
+            // 
+            // viewLeaveImgBtn
+            // 
+            this.viewLeaveImgBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("viewLeaveImgBtn.BackgroundImage")));
+            this.viewLeaveImgBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.viewLeaveImgBtn.Location = new System.Drawing.Point(12, 13);
+            this.viewLeaveImgBtn.Name = "viewLeaveImgBtn";
+            this.viewLeaveImgBtn.Size = new System.Drawing.Size(90, 94);
+            this.viewLeaveImgBtn.TabIndex = 24;
+            this.viewLeaveImgBtn.UseVisualStyleBackColor = true;
+            this.viewLeaveImgBtn.Click += new System.EventHandler(this.ViewLeaveImgBtn_Click);
             // 
             // ViewSalaryBtn
             // 
@@ -276,6 +298,16 @@
             this.viewLeaveBtn.Text = "Reset Password";
             this.viewLeaveBtn.UseVisualStyleBackColor = true;
             // 
+            // ViewSalaryImgBtn
+            // 
+            this.ViewSalaryImgBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ViewSalaryImgBtn.BackgroundImage")));
+            this.ViewSalaryImgBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ViewSalaryImgBtn.Location = new System.Drawing.Point(12, 13);
+            this.ViewSalaryImgBtn.Name = "ViewSalaryImgBtn";
+            this.ViewSalaryImgBtn.Size = new System.Drawing.Size(90, 94);
+            this.ViewSalaryImgBtn.TabIndex = 24;
+            this.ViewSalaryImgBtn.UseVisualStyleBackColor = true;
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.ViewSalaryBtn);
@@ -284,6 +316,17 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(340, 120);
             this.panel3.TabIndex = 2;
+            // 
+            // viewStaffImgBtn
+            // 
+            this.viewStaffImgBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("viewStaffImgBtn.BackgroundImage")));
+            this.viewStaffImgBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.viewStaffImgBtn.Location = new System.Drawing.Point(12, 13);
+            this.viewStaffImgBtn.Name = "viewStaffImgBtn";
+            this.viewStaffImgBtn.Size = new System.Drawing.Size(90, 94);
+            this.viewStaffImgBtn.TabIndex = 24;
+            this.viewStaffImgBtn.UseVisualStyleBackColor = true;
+            this.viewStaffImgBtn.Click += new System.EventHandler(this.ViewStaffImgBtn_Click);
             // 
             // TitleLabel
             // 
@@ -397,49 +440,6 @@
             this.imgPanel.TabIndex = 53;
             this.imgPanel.TabStop = false;
             // 
-            // ViewSalaryImgBtn
-            // 
-            this.ViewSalaryImgBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ViewSalaryImgBtn.BackgroundImage")));
-            this.ViewSalaryImgBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ViewSalaryImgBtn.Location = new System.Drawing.Point(12, 13);
-            this.ViewSalaryImgBtn.Name = "ViewSalaryImgBtn";
-            this.ViewSalaryImgBtn.Size = new System.Drawing.Size(90, 94);
-            this.ViewSalaryImgBtn.TabIndex = 24;
-            this.ViewSalaryImgBtn.UseVisualStyleBackColor = true;
-            // 
-            // viewStaffImgBtn
-            // 
-            this.viewStaffImgBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("viewStaffImgBtn.BackgroundImage")));
-            this.viewStaffImgBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.viewStaffImgBtn.Location = new System.Drawing.Point(12, 13);
-            this.viewStaffImgBtn.Name = "viewStaffImgBtn";
-            this.viewStaffImgBtn.Size = new System.Drawing.Size(90, 94);
-            this.viewStaffImgBtn.TabIndex = 24;
-            this.viewStaffImgBtn.UseVisualStyleBackColor = true;
-            this.viewStaffImgBtn.Click += new System.EventHandler(this.ViewStaffImgBtn_Click);
-            // 
-            // viewLeaveImgBtn
-            // 
-            this.viewLeaveImgBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("viewLeaveImgBtn.BackgroundImage")));
-            this.viewLeaveImgBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.viewLeaveImgBtn.Location = new System.Drawing.Point(12, 13);
-            this.viewLeaveImgBtn.Name = "viewLeaveImgBtn";
-            this.viewLeaveImgBtn.Size = new System.Drawing.Size(90, 94);
-            this.viewLeaveImgBtn.TabIndex = 24;
-            this.viewLeaveImgBtn.UseVisualStyleBackColor = true;
-            this.viewLeaveImgBtn.Click += new System.EventHandler(this.ViewLeaveImgBtn_Click);
-            // 
-            // addStaffImgBtn
-            // 
-            this.addStaffImgBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("addStaffImgBtn.BackgroundImage")));
-            this.addStaffImgBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.addStaffImgBtn.Location = new System.Drawing.Point(12, 13);
-            this.addStaffImgBtn.Name = "addStaffImgBtn";
-            this.addStaffImgBtn.Size = new System.Drawing.Size(90, 94);
-            this.addStaffImgBtn.TabIndex = 0;
-            this.addStaffImgBtn.UseVisualStyleBackColor = true;
-            this.addStaffImgBtn.Click += new System.EventHandler(this.AddStaffImgBtn_Click);
-            // 
             // StudentManageHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -451,6 +451,8 @@
             this.Controls.Add(this.ButtonPanel);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.ContentPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "StudentManageHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StudentManageHome";

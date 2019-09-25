@@ -24,7 +24,8 @@ namespace DAO
                         SGDNAME = studentmodel.SGDName,
                         SGDCONTACT = studentmodel.SGDContact,
                         SDOB = studentmodel.SDob,
-                        SGENDER = studentmodel.SGender
+                        SGENDER = studentmodel.SGender,
+                        SPASSWORD = studentmodel.SEmail
                     };
                     db.Students.Add(student);
                     db.SaveChanges();

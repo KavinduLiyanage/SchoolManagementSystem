@@ -329,6 +329,7 @@
             this.SalarydataView1.RowTemplate.Height = 24;
             this.SalarydataView1.Size = new System.Drawing.Size(493, 469);
             this.SalarydataView1.TabIndex = 2;
+            this.SalarydataView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SalarydataView1_CellClick);
             // 
             // panel5
             // 

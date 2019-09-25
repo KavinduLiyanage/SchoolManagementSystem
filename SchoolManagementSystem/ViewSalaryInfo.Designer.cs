@@ -414,6 +414,7 @@
             this.Controls.Add(this.ButtonPanel);
             this.Controls.Add(this.imgPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "ViewSalaryInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewSalaryInfo";

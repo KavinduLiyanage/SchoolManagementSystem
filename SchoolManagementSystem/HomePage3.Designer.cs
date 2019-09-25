@@ -284,6 +284,7 @@
             this.Controls.Add(this.MngExmBtn);
             this.Controls.Add(this.MngExmImgBtn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "HomePage3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Welcome Student";

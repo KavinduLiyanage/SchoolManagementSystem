@@ -33,6 +33,8 @@
             this.NHomeBtn = new System.Windows.Forms.Button();
             this.ContentPanel = new System.Windows.Forms.Panel();
             this.addGroupBox = new System.Windows.Forms.GroupBox();
+            this.subTextBox2 = new System.Windows.Forms.ComboBox();
+            this.subTextBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.subLabel = new System.Windows.Forms.Label();
             this.salaryTextBox = new System.Windows.Forms.TextBox();
@@ -85,8 +87,6 @@
             this.btnResourseMHeader = new System.Windows.Forms.Button();
             this.btnInventoryMHeader = new System.Windows.Forms.Button();
             this.btnEventMHeader = new System.Windows.Forms.Button();
-            this.subTextBox1 = new System.Windows.Forms.ComboBox();
-            this.subTextBox2 = new System.Windows.Forms.ComboBox();
             this.ContentPanel.SuspendLayout();
             this.addGroupBox.SuspendLayout();
             this.genderPanel.SuspendLayout();
@@ -167,6 +167,22 @@
             this.addGroupBox.Size = new System.Drawing.Size(956, 540);
             this.addGroupBox.TabIndex = 0;
             this.addGroupBox.TabStop = false;
+            // 
+            // subTextBox2
+            // 
+            this.subTextBox2.FormattingEnabled = true;
+            this.subTextBox2.Location = new System.Drawing.Point(631, 193);
+            this.subTextBox2.Name = "subTextBox2";
+            this.subTextBox2.Size = new System.Drawing.Size(245, 24);
+            this.subTextBox2.TabIndex = 54;
+            // 
+            // subTextBox1
+            // 
+            this.subTextBox1.FormattingEnabled = true;
+            this.subTextBox1.Location = new System.Drawing.Point(631, 155);
+            this.subTextBox1.Name = "subTextBox1";
+            this.subTextBox1.Size = new System.Drawing.Size(246, 24);
+            this.subTextBox1.TabIndex = 53;
             // 
             // label1
             // 
@@ -729,22 +745,6 @@
             this.btnEventMHeader.UseVisualStyleBackColor = false;
             this.btnEventMHeader.Click += new System.EventHandler(this.BtnEventMHeader_Click);
             // 
-            // subTextBox1
-            // 
-            this.subTextBox1.FormattingEnabled = true;
-            this.subTextBox1.Location = new System.Drawing.Point(631, 155);
-            this.subTextBox1.Name = "subTextBox1";
-            this.subTextBox1.Size = new System.Drawing.Size(246, 24);
-            this.subTextBox1.TabIndex = 53;
-            // 
-            // subTextBox2
-            // 
-            this.subTextBox2.FormattingEnabled = true;
-            this.subTextBox2.Location = new System.Drawing.Point(631, 193);
-            this.subTextBox2.Name = "subTextBox2";
-            this.subTextBox2.Size = new System.Drawing.Size(245, 24);
-            this.subTextBox2.TabIndex = 54;
-            // 
             // AddStaffMember
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -758,6 +758,7 @@
             this.Controls.Add(this.ButtonPanel);
             this.Controls.Add(this.imgPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "AddStaffMember";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddStaffMember";

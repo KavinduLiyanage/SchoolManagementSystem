@@ -71,9 +71,29 @@ namespace SchoolManagementSystem
             conn.Close();
         }
 
+        public void Display_Combo()
+        {
+            comboBox1.Items.Clear();
+            OpenConnection();
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = ("select distinct [Expiration Date] from Notices");
+            cmd.ExecuteNonQuery();
+            CloseConnection();
+            DataTable ddt = new DataTable();
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            sda.Fill(ddt);
+            foreach (DataRow dr in ddt.Rows)
+            {
+                comboBox1.Items.Add(dr["Expiration Date"]);
+            }
+            CloseConnection();
+        }
+
         private void AddNotice_Load(object sender, EventArgs e)
         {
             Display_Data();
+            Display_Combo();
         }
 
         string Category="";
@@ -144,8 +164,9 @@ namespace SchoolManagementSystem
         private void SearchNotice_Click(object sender, EventArgs e)
         {
             OpenConnection();
-            SqlCommand cmd = new SqlCommand("select * from Notices where [Expiration Date] like @EXdate", conn);
-            cmd.Parameters.Add("@EXdate", SqlDbType.DateTime).Value = dateTimePicker1.Value.ToString();
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select * from Notices where  [Expiration Date]='" + comboBox1.SelectedItem + "' ";
 
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
@@ -280,6 +301,11 @@ namespace SchoolManagementSystem
             HomePage1 newHome = new HomePage1();
             this.Hide();
             newHome.ShowDialog();
+        }
+
+        private void DateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

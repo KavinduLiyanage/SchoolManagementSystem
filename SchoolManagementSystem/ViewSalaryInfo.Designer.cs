@@ -211,6 +211,7 @@
             this.updateBtn.TabIndex = 46;
             this.updateBtn.Text = "Update";
             this.updateBtn.UseVisualStyleBackColor = true;
+            this.updateBtn.Click += new System.EventHandler(this.UpdateBtn_Click);
             // 
             // salaryTextBox
             // 
@@ -259,13 +260,17 @@
             // 
             // SalarydataView1
             // 
+            this.SalarydataView1.AllowUserToAddRows = false;
+            this.SalarydataView1.AllowUserToDeleteRows = false;
             this.SalarydataView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.SalarydataView1.Location = new System.Drawing.Point(454, 69);
             this.SalarydataView1.Name = "SalarydataView1";
+            this.SalarydataView1.ReadOnly = true;
             this.SalarydataView1.RowHeadersWidth = 51;
             this.SalarydataView1.RowTemplate.Height = 24;
             this.SalarydataView1.Size = new System.Drawing.Size(493, 469);
             this.SalarydataView1.TabIndex = 0;
+            this.SalarydataView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SalarydataView1_CellClick);
             // 
             // ButtonPanel
             // 
@@ -418,6 +423,7 @@
             this.Name = "ViewSalaryInfo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewSalaryInfo";
+            this.Load += new System.EventHandler(this.ViewSalaryInfo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.imgPanel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ContentPanel.ResumeLayout(false);

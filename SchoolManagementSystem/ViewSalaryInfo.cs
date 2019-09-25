@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,11 @@ namespace SchoolManagementSystem
 {
     public partial class ViewSalaryInfo : Form
     {
+
+        private int staffID;
+        private Double salary;
+
+        SqlConnection con = new SqlConnection(@"Data Source=.;Initial Catalog=SchoolManagementSystemDB;Integrated Security=True");
         public ViewSalaryInfo()
         {
             InitializeComponent();
@@ -103,6 +109,48 @@ namespace SchoolManagementSystem
 
         private void BtnLibraryMHeader_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void ViewSalaryInfo_Load(object sender, EventArgs e)
+        {
+            viewSalary();
+        }
+
+        private void viewSalary() {
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT staffID,fullName,name,salary FROM staff";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            SalarydataView1.DataSource = dt;
+            con.Close();
+        }
+
+        private void SalarydataView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            DataGridViewRow selectRow = SalarydataView1.Rows[index];
+            staffID = Int32.Parse(selectRow.Cells[0].Value.ToString());
+
+            NametextBox1.Text = selectRow.Cells[1].Value.ToString();
+            nameTextBox2.Text = selectRow.Cells[2].Value.ToString();
+            salary = Convert.ToDouble(selectRow.Cells[3].Value.ToString());
+            
+            salaryTextBox.Text = salary.ToString();
+        }
+
+        private void UpdateBtn_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "UPDATE staff SET salary="+Convert.ToDouble(salaryTextBox.Text)+" where staffID = '" + staffID + "'";
+            con.Close();
+
 
         }
     }

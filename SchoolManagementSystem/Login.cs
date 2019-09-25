@@ -92,26 +92,6 @@ namespace SchoolManagementSystem
         {
 
             string text = unTxtBox.Text;
-
-            if (text.Equals("1"))
-            {
-                HomePage1 Page1 = new HomePage1();
-                this.Hide();
-                Page1.ShowDialog();
-            }
-            else if (text.Equals("2"))
-            {
-                HomePage2 Page2 = new HomePage2();
-                this.Hide();
-                Page2.ShowDialog();
-            }
-            else if (text.Equals("3"))
-            {
-                HomePage3 Page3 = new HomePage3();
-                this.Hide();
-                Page3.ShowDialog();
-            }
-
             this.getUserData();
         }
 

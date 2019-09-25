@@ -14,6 +14,7 @@ namespace SchoolManagementSystem
 {
     public partial class AddStaffMember : Form
     {
+        private String staffID;
         SqlConnection con = new SqlConnection(@"Data Source=.;Initial Catalog=SchoolManagementSystemDB;Integrated Security=True");
         public AddStaffMember()
         {
@@ -121,6 +122,30 @@ namespace SchoolManagementSystem
 
             cmd.CommandText = "INSERT INTO staff(memberType,accessLevel,fullName,name,gender,NIC,DOB,address,phoneNo,email,subject,pastSchool,serviceYears,salary,password,subject2) VALUES('" + memberTypeValue + "','" + accessLevelValue + "','" + NametextBox1.Text + "','" + nameTextBox2.Text + "','" + genderValue + "','" + NICTextBox.Text + "','" + dateTimePicker1.Value + "','" + addressTextBox.Text + "','" + phNoTextBox.Text + "','" + emailTextBox1.Text + "','" + subTextBox1.Text + "','" + pastSchTextBox.Text + "','" + Int32.Parse(serviceYrsTextBox.Text) + "','" + Convert.ToDouble(salaryTextBox.Text) + "','" + NICTextBox.Text + "','" + subTextBox2.Text + "')";
             cmd.ExecuteNonQuery();
+            con.Close();
+
+            con.Open();
+            SqlCommand command;
+            SqlDataReader dataReader;
+
+            string query = "SELECT staffID FROM staff where NIC = '" + NICTextBox.Text + "' and email = '" + emailTextBox1.Text + "' and fullName = '" + NametextBox1.Text + "'";
+
+            command = new SqlCommand(query, con);
+            dataReader = command.ExecuteReader();
+
+            if (dataReader.Read())
+            {
+                staffID = dataReader.GetValue(0).ToString();
+            }
+            dataReader.Close();
+            command.Dispose();
+            con.Close();
+
+            con.Open();
+            SqlCommand cmd2 = con.CreateCommand();
+            cmd2.CommandType = CommandType.Text;
+            cmd2.CommandText = "insert into SalaryRecord(staffID,salary,date) values(" + staffID + "," + salaryTextBox.Text + ",'" + DateTime.Now.ToString("M/d/yyyy") + "')";
+            cmd2.ExecuteNonQuery();
             con.Close();
 
             DialogResult dlgResult = MessageBox.Show("Do You Want To Add More Staff", "Staff Member Added Succesfully!", MessageBoxButtons.YesNo, MessageBoxIcon.Information);

@@ -148,9 +148,24 @@ namespace SchoolManagementSystem
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "UPDATE staff SET salary="+Convert.ToDouble(salaryTextBox.Text)+" where staffID = '" + staffID + "'";
+            cmd.CommandText = "UPDATE staff SET salary = "+Convert.ToDouble(salaryTextBox.Text)+" where staffID = '" + staffID + "'";
+            cmd.ExecuteNonQuery();
             con.Close();
 
+            MessageBox.Show(DateTime.Now.ToString("M/d/yyyy"));
+
+            con.Open();
+            SqlCommand cmd2 = con.CreateCommand();
+            cmd2.CommandType = CommandType.Text;
+            cmd2.CommandText = "insert into SalaryRecord(staffID,salary,date) values(" + staffID + "," + salaryTextBox.Text + ",'" + DateTime.Now.ToString("M/d/yyyy") + "')";
+            cmd2.ExecuteNonQuery();
+            con.Close();
+
+            MessageBox.Show("Salary Updated");
+
+            ViewSalaryInfo viewSalaryInfo = new ViewSalaryInfo();
+            this.Hide();
+            viewSalaryInfo.ShowDialog();
 
         }
     }

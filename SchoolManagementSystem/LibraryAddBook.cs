@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Collections;
-//nhjb
+
 namespace SchoolManagementSystem
 {
     public partial class LibraryAddBook : Form

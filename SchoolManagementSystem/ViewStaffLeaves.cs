@@ -251,6 +251,8 @@ namespace SchoolManagementSystem
             ViewStaffLeaves viewStaffLeaves = new ViewStaffLeaves();
             this.Hide();
             viewStaffLeaves.ShowDialog();
+
+            //Done
         }
     }
 }

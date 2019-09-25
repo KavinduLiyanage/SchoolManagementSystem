@@ -122,6 +122,23 @@
     <Compile Include="CreateStudentAccount.designer.cs">
       <DependentUpon>CreateStudentAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="cristalReportItem.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cristalReportItem.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReportStock.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportStock.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataInventory.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataInventory.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DeletedList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +162,18 @@
     </Compile>
     <Compile Include="InventoryDashBoard.designer.cs">
       <DependentUpon>InventoryDashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryItemReportGenerate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryItemReportGenerate.Designer.cs">
+      <DependentUpon>InventoryItemReportGenerate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryProductReportGenerate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryProductReportGenerate.Designer.cs">
+      <DependentUpon>InventoryProductReportGenerate.cs</DependentUpon>
     </Compile>
     <Compile Include="IssueBook.cs">
       <SubType>Form</SubType>
@@ -274,6 +303,11 @@
     </Compile>
     <Compile Include="ReturnBook.designer.cs">
       <DependentUpon>ReturnBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolManagementSystemDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SchoolManagementSystemDBDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="SectionResultSheet.cs">
       <SubType>Form</SubType>
@@ -442,6 +476,14 @@
     <EmbeddedResource Include="CreateStudentAccount.resx">
       <DependentUpon>CreateStudentAccount.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="cristalReportItem.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cristalReportItem.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportStock.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportStock.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="DeletedList.resx">
       <DependentUpon>DeletedList.cs</DependentUpon>
     </EmbeddedResource>
@@ -456,6 +498,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InventoryDashBoard.resx">
       <DependentUpon>InventoryDashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryItemReportGenerate.resx">
+      <DependentUpon>InventoryItemReportGenerate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryProductReportGenerate.resx">
+      <DependentUpon>InventoryProductReportGenerate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IssueBook.resx">
       <DependentUpon>IssueBook.cs</DependentUpon>
@@ -594,6 +642,17 @@
     <EmbeddedResource Include="ViewTimetable.resx">
       <DependentUpon>ViewTimetable.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DataInventory.xsc">
+      <DependentUpon>DataInventory.xsd</DependentUpon>
+    </None>
+    <None Include="DataInventory.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataInventory.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataInventory.xss">
+      <DependentUpon>DataInventory.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -614,6 +673,17 @@
     </None>
     <None Include="StaffMngReport\StaffSalaryDataSet.xss">
       <DependentUpon>StaffSalaryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SchoolManagementSystemDBDataSet.xsc">
+      <DependentUpon>SchoolManagementSystemDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SchoolManagementSystemDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SchoolManagementSystemDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SchoolManagementSystemDBDataSet.xss">
+      <DependentUpon>SchoolManagementSystemDBDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

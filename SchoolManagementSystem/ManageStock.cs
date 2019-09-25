@@ -21,18 +21,6 @@ namespace SchoolManagementSystem
             this.category = category ;
         }
 
-        private void Label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-        private void Label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void ManageStock_Load(object sender, EventArgs e)
         {
             loadDat();
@@ -94,6 +82,7 @@ namespace SchoolManagementSystem
                 label9.Text = "0";
                 label10.Text = "0";
             }
+            RowColour();
         }
 
 
@@ -106,6 +95,7 @@ namespace SchoolManagementSystem
             quantityBox1.Clear();
             btnsave.Text = "Add";
             dateTimePicker1.Focus();
+            
         }
 
         private void Cancelbtn_Click(object sender, EventArgs e)
@@ -122,36 +112,40 @@ namespace SchoolManagementSystem
                 errorProvider1.Clear();
                 errorProvider1.SetError(codeText, "Item Code Required.");
             }
+            else {
+                errorProvider1.Clear();
+            }
             if (string.IsNullOrEmpty(nametext.Text))
             {
                 errorProvider1.Clear();
                 errorProvider1.SetError(nametext, "Item Name Required.");
             }
-            else if (Categorybox.SelectedIndex == -1)
+            else {
+                errorProvider1.Clear();
+            }
+            if (Categorybox.SelectedIndex == -1)
             {
                 errorProvider1.Clear();
                 errorProvider1.SetError(Categorybox, "Select Category.");
             }
-            else if (string.IsNullOrEmpty(quantityBox1.Text))
+            else {
+                errorProvider1.Clear();
+            }
+            if (string.IsNullOrEmpty(quantityBox1.Text))
             {
                 errorProvider1.Clear();
                 errorProvider1.SetError(quantityBox1, "Quantity is Required.");
             }
-            else
-            {
-                result = true;
+            else {
+                errorProvider1.Clear();
             }
+           
             if (!string.IsNullOrEmpty(nametext.Text) && !string.IsNullOrEmpty(quantityBox1.Text) && Categorybox.SelectedIndex > -1)
             {
                 result = true;
             }
 
             return result;
-
-        }
-
-        private void Nametext_TextChanged(object sender, EventArgs e)
-        {
 
         }
 
@@ -197,13 +191,23 @@ namespace SchoolManagementSystem
                     MessageBox.Show("Record saved successfully.");
                     errorProvider1.Clear();
                     resetRecords();
+                    RowColour();
+                }
+            }
+        }
+
+        private void RowColour() {
+            for (int i=0; i < dataGridView1.Rows.Count; i++) {
+                int val = Int32.Parse(dataGridView1.Rows[i].Cells[4].Value.ToString());
+                if (val <= 3) {
+                    dataGridView1.Rows[i].DefaultCellStyle.BackColor = Color.Red; 
                 }
             }
         }
 
         private void DataGridView1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            btnsave.Text = "Update";
+            btnsave.Text = "UPDATE";
             codeText.Text = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
             nametext.Text = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
             Categorybox.Text = dataGridView1.SelectedRows[0].Cells[3].Value.ToString();
@@ -300,7 +304,7 @@ namespace SchoolManagementSystem
             {
                 this.dgview.Visible = true;
                 dgview.BringToFront();
-                Search(250, 250, 250, 200, "Item Code,Item Name,Category", "100,50,0");
+                Search(750, 350, 250, 200, "Item Code,Item Name,Category", "50,100,100");
                 this.dgview.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ItemCode_MouseDoubleClick);
                 SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=SchoolManagementSystemDB;Integrated Security=True");
                 con.Open();
@@ -315,7 +319,6 @@ namespace SchoolManagementSystem
                     dgview.Rows[n].Cells[1].Value = row["ItemName"].ToString();
                     dgview.Rows[n].Cells[2].Value = row["Category"].ToString();
                 }
-                
             }
             else
             {
@@ -436,6 +439,21 @@ namespace SchoolManagementSystem
             LoginForm log = new LoginForm();
             this.Hide();
             log.ShowDialog();
+        }
+
+        private void NStaffHomeBtn_Click(object sender, EventArgs e)
+        {
+            InventoryItemReportGenerate report = new InventoryItemReportGenerate();
+            this.Hide();
+            report.Show();
+
+        }
+
+        private void NAddStaffBtn_Click(object sender, EventArgs e)
+        {
+            InventoryProductReportGenerate report = new InventoryProductReportGenerate();
+            this.Hide();
+            report.Show();
         }
     }
 }

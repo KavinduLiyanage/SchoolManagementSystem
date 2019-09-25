@@ -475,6 +475,7 @@
             this.Name = "AdminMngStaffHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminMngStaff";
+            this.Load += new System.EventHandler(this.AdminMngStaffHome_Load);
             ((System.ComponentModel.ISupportInitialize)(this.usrImg)).EndInit();
             this.ButtonPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imgPanel)).EndInit();

@@ -73,6 +73,7 @@ namespace SchoolManagementSystem
 
         private void ViewStaffMembers_Load(object sender, EventArgs e)
         {
+            UsrlinkLabel.Text = GetSetInfo.userName;
             this.displayData();
             GetSetInfo.getSubject(subTextBox1);
             GetSetInfo.getSubject(subTextBox2);

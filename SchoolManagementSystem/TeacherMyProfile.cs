@@ -42,7 +42,7 @@ namespace SchoolManagementSystem
 
         private void TeacherMyProfile_Load(object sender, EventArgs e)
         {
-
+            UsrlinkLabel.Text = GetSetInfo.userName;
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;

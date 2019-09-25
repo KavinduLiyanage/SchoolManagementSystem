@@ -4,7 +4,39 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="SchoolManagementSystemDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="SchoolManagementSystemDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="SAppointment">
+          <Key>
+            <PropertyRef Name="appointmentID" />
+          </Key>
+          <Property Name="appointmentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="teacherName" Type="varchar" MaxLength="20" />
+          <Property Name="reason" Type="varchar" MaxLength="100" />
+          <Property Name="time" Type="datetime" />
+        </EntityType>
+        <EntityType Name="staff">
+          <Key>
+            <PropertyRef Name="staffID" />
+          </Key>
+          <Property Name="staffID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="memberType" Type="varchar(max)" Nullable="false" />
+          <Property Name="accessLevel" Type="varchar(max)" Nullable="false" />
+          <Property Name="fullName" Type="varchar(max)" Nullable="false" />
+          <Property Name="name" Type="varchar(max)" Nullable="false" />
+          <Property Name="gender" Type="varchar(max)" Nullable="false" />
+          <Property Name="NIC" Type="varchar(max)" Nullable="false" />
+          <Property Name="DOB" Type="varchar(max)" Nullable="false" />
+          <Property Name="address" Type="varchar(max)" Nullable="false" />
+          <Property Name="phoneNo" Type="varchar(max)" Nullable="false" />
+          <Property Name="email" Type="varchar(max)" />
+          <Property Name="subject" Type="varchar(max)" />
+          <Property Name="pastSchool" Type="varchar(max)" />
+          <Property Name="serviceYears" Type="int" />
+          <Property Name="proPic" Type="varchar(max)" />
+          <Property Name="salary" Type="real" Nullable="false" />
+          <Property Name="password" Type="varchar(max)" Nullable="false" />
+          <Property Name="subject2" Type="varchar(max)" />
+        </EntityType>
         <EntityType Name="Student">
           <Key>
             <PropertyRef Name="SID" />
@@ -19,12 +51,14 @@
           <Property Name="SGDCONTACT" Type="varchar" MaxLength="50" />
           <Property Name="Grade" Type="varchar" MaxLength="50" />
           <Property Name="ClassName" Type="varchar" MaxLength="50" />
+          <Property Name="SPASSWORD" Type="varchar" MaxLength="500" />
         </EntityType>
         <EntityContainer Name="SchoolManagementSystemDBModelStoreContainer">
+          <EntitySet Name="SAppointment" EntityType="Self.SAppointment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="staff" EntityType="Self.staff" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="SchoolManagementSystemDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -42,10 +76,45 @@
           <Property Name="SGDCONTACT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="Grade" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="ClassName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SPASSWORD" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityContainer Name="SchoolManagementSystemDBEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Students" EntityType="Self.Student" />
+          <EntitySet Name="staffs" EntityType="SchoolManagementSystemDBModel.staff" />
+          <EntitySet Name="SAppointments" EntityType="SchoolManagementSystemDBModel.SAppointment" />
         </EntityContainer>
+        <EntityType Name="staff">
+          <Key>
+            <PropertyRef Name="staffID" />
+          </Key>
+          <Property Name="staffID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="memberType" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="accessLevel" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="fullName" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="gender" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="NIC" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="DOB" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="address" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="phoneNo" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="subject" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="pastSchool" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="serviceYears" Type="Int32" />
+          <Property Name="proPic" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="salary" Type="Single" Nullable="false" />
+          <Property Name="password" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="subject2" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="SAppointment">
+          <Key>
+            <PropertyRef Name="appointmentID" />
+          </Key>
+          <Property Name="appointmentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="teacherName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="reason" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="time" Type="DateTime" Precision="3" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -55,6 +124,7 @@
           <EntitySetMapping Name="Students">
             <EntityTypeMapping TypeName="SchoolManagementSystemDBModel.Student">
               <MappingFragment StoreEntitySet="Student">
+                <ScalarProperty Name="SPASSWORD" ColumnName="SPASSWORD" />
                 <ScalarProperty Name="SID" ColumnName="SID" />
                 <ScalarProperty Name="SNAME" ColumnName="SNAME" />
                 <ScalarProperty Name="SEMAIL" ColumnName="SEMAIL" />
@@ -65,6 +135,40 @@
                 <ScalarProperty Name="SGDCONTACT" ColumnName="SGDCONTACT" />
                 <ScalarProperty Name="Grade" ColumnName="Grade" />
                 <ScalarProperty Name="ClassName" ColumnName="ClassName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="staffs">
+            <EntityTypeMapping TypeName="SchoolManagementSystemDBModel.staff">
+              <MappingFragment StoreEntitySet="staff">
+                <ScalarProperty Name="subject2" ColumnName="subject2" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="salary" ColumnName="salary" />
+                <ScalarProperty Name="proPic" ColumnName="proPic" />
+                <ScalarProperty Name="serviceYears" ColumnName="serviceYears" />
+                <ScalarProperty Name="pastSchool" ColumnName="pastSchool" />
+                <ScalarProperty Name="subject" ColumnName="subject" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="phoneNo" ColumnName="phoneNo" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="NIC" ColumnName="NIC" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="fullName" ColumnName="fullName" />
+                <ScalarProperty Name="accessLevel" ColumnName="accessLevel" />
+                <ScalarProperty Name="memberType" ColumnName="memberType" />
+                <ScalarProperty Name="staffID" ColumnName="staffID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SAppointments">
+            <EntityTypeMapping TypeName="SchoolManagementSystemDBModel.SAppointment">
+              <MappingFragment StoreEntitySet="SAppointment">
+                <ScalarProperty Name="time" ColumnName="time" />
+                <ScalarProperty Name="reason" ColumnName="reason" />
+                <ScalarProperty Name="teacherName" ColumnName="teacherName" />
+                <ScalarProperty Name="appointmentID" ColumnName="appointmentID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

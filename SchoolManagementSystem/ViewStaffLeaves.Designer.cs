@@ -39,6 +39,9 @@
             this.UsrlinkLabel = new System.Windows.Forms.LinkLabel();
             this.NHomeBtn = new System.Windows.Forms.Button();
             this.ContentPanel = new System.Windows.Forms.Panel();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.AcceotDeclineCombo = new System.Windows.Forms.ComboBox();
             this.updateBtn = new System.Windows.Forms.Button();
             this.addressLabel = new System.Windows.Forms.Label();
             this.acTDeclinecomboBox = new System.Windows.Forms.ComboBox();
@@ -61,7 +64,6 @@
             this.btnResourseMHeader = new System.Windows.Forms.Button();
             this.btnInventoryMHeader = new System.Windows.Forms.Button();
             this.btnEventMHeader = new System.Windows.Forms.Button();
-            this.AcceotDeclineCombo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.imgPanel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.ContentPanel.SuspendLayout();
@@ -173,6 +175,8 @@
             // ContentPanel
             // 
             this.ContentPanel.BackColor = System.Drawing.SystemColors.GrayText;
+            this.ContentPanel.Controls.Add(this.dateTimePicker2);
+            this.ContentPanel.Controls.Add(this.label1);
             this.ContentPanel.Controls.Add(this.AcceotDeclineCombo);
             this.ContentPanel.Controls.Add(this.updateBtn);
             this.ContentPanel.Controls.Add(this.addressLabel);
@@ -191,6 +195,39 @@
             this.ContentPanel.Size = new System.Drawing.Size(962, 561);
             this.ContentPanel.TabIndex = 50;
             // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Checked = false;
+            this.dateTimePicker2.Location = new System.Drawing.Point(182, 262);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(247, 22);
+            this.dateTimePicker2.TabIndex = 66;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.Location = new System.Drawing.Point(11, 264);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(115, 25);
+            this.label1.TabIndex = 65;
+            this.label1.Text = "Return Date";
+            // 
+            // AcceotDeclineCombo
+            // 
+            this.AcceotDeclineCombo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AcceotDeclineCombo.FormattingEnabled = true;
+            this.AcceotDeclineCombo.Items.AddRange(new object[] {
+            "All",
+            "Accepted",
+            "Decline",
+            "Pending"});
+            this.AcceotDeclineCombo.Location = new System.Drawing.Point(743, 17);
+            this.AcceotDeclineCombo.Name = "AcceotDeclineCombo";
+            this.AcceotDeclineCombo.Size = new System.Drawing.Size(204, 28);
+            this.AcceotDeclineCombo.TabIndex = 61;
+            this.AcceotDeclineCombo.SelectedIndexChanged += new System.EventHandler(this.AcceotDeclineCombo_SelectedIndexChanged);
+            // 
             // updateBtn
             // 
             this.updateBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
@@ -202,12 +239,13 @@
             this.updateBtn.TabIndex = 60;
             this.updateBtn.Text = "Update";
             this.updateBtn.UseVisualStyleBackColor = true;
+            this.updateBtn.Click += new System.EventHandler(this.UpdateBtn_Click);
             // 
             // addressLabel
             // 
             this.addressLabel.AutoSize = true;
             this.addressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.addressLabel.Location = new System.Drawing.Point(12, 391);
+            this.addressLabel.Location = new System.Drawing.Point(9, 391);
             this.addressLabel.Name = "addressLabel";
             this.addressLabel.Size = new System.Drawing.Size(165, 25);
             this.addressLabel.TabIndex = 59;
@@ -219,9 +257,9 @@
             this.acTDeclinecomboBox.Items.AddRange(new object[] {
             "Accept",
             "Decline"});
-            this.acTDeclinecomboBox.Location = new System.Drawing.Point(183, 390);
+            this.acTDeclinecomboBox.Location = new System.Drawing.Point(182, 390);
             this.acTDeclinecomboBox.Name = "acTDeclinecomboBox";
-            this.acTDeclinecomboBox.Size = new System.Drawing.Size(247, 24);
+            this.acTDeclinecomboBox.Size = new System.Drawing.Size(248, 24);
             this.acTDeclinecomboBox.TabIndex = 58;
             // 
             // addressTextBox
@@ -245,7 +283,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Checked = false;
-            this.dateTimePicker1.Location = new System.Drawing.Point(183, 262);
+            this.dateTimePicker1.Location = new System.Drawing.Point(183, 216);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(247, 22);
             this.dateTimePicker1.TabIndex = 54;
@@ -254,7 +292,7 @@
             // 
             this.doblabel.AutoSize = true;
             this.doblabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.doblabel.Location = new System.Drawing.Point(12, 264);
+            this.doblabel.Location = new System.Drawing.Point(12, 218);
             this.doblabel.Name = "doblabel";
             this.doblabel.Size = new System.Drawing.Size(53, 25);
             this.doblabel.TabIndex = 53;
@@ -262,7 +300,7 @@
             // 
             // nameTextBox2
             // 
-            this.nameTextBox2.Location = new System.Drawing.Point(183, 216);
+            this.nameTextBox2.Location = new System.Drawing.Point(183, 170);
             this.nameTextBox2.Name = "nameTextBox2";
             this.nameTextBox2.Size = new System.Drawing.Size(247, 22);
             this.nameTextBox2.TabIndex = 52;
@@ -271,7 +309,7 @@
             // 
             this.nameLabel2.AutoSize = true;
             this.nameLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.nameLabel2.Location = new System.Drawing.Point(12, 215);
+            this.nameLabel2.Location = new System.Drawing.Point(12, 169);
             this.nameLabel2.Name = "nameLabel2";
             this.nameLabel2.Size = new System.Drawing.Size(162, 25);
             this.nameLabel2.TabIndex = 51;
@@ -279,7 +317,7 @@
             // 
             // NametextBox1
             // 
-            this.NametextBox1.Location = new System.Drawing.Point(183, 176);
+            this.NametextBox1.Location = new System.Drawing.Point(183, 130);
             this.NametextBox1.Name = "NametextBox1";
             this.NametextBox1.Size = new System.Drawing.Size(246, 22);
             this.NametextBox1.TabIndex = 50;
@@ -288,7 +326,7 @@
             // 
             this.nameLabel.AutoSize = true;
             this.nameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.nameLabel.Location = new System.Drawing.Point(15, 175);
+            this.nameLabel.Location = new System.Drawing.Point(15, 129);
             this.nameLabel.Name = "nameLabel";
             this.nameLabel.Size = new System.Drawing.Size(100, 25);
             this.nameLabel.TabIndex = 49;
@@ -296,13 +334,17 @@
             // 
             // SalarydataView1
             // 
+            this.SalarydataView1.AllowUserToAddRows = false;
+            this.SalarydataView1.AllowUserToDeleteRows = false;
             this.SalarydataView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.SalarydataView1.Location = new System.Drawing.Point(454, 70);
+            this.SalarydataView1.Location = new System.Drawing.Point(454, 74);
             this.SalarydataView1.Name = "SalarydataView1";
+            this.SalarydataView1.ReadOnly = true;
             this.SalarydataView1.RowHeadersWidth = 51;
             this.SalarydataView1.RowTemplate.Height = 24;
             this.SalarydataView1.Size = new System.Drawing.Size(493, 469);
             this.SalarydataView1.TabIndex = 2;
+            this.SalarydataView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SalarydataView1_CellClick);
             // 
             // ButtonPanel
             // 
@@ -438,16 +480,6 @@
             this.btnEventMHeader.UseVisualStyleBackColor = false;
             this.btnEventMHeader.Click += new System.EventHandler(this.BtnEventMHeader_Click);
             // 
-            // AcceotDeclineCombo
-            // 
-            this.AcceotDeclineCombo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AcceotDeclineCombo.FormattingEnabled = true;
-            this.AcceotDeclineCombo.Location = new System.Drawing.Point(743, 17);
-            this.AcceotDeclineCombo.Name = "AcceotDeclineCombo";
-            this.AcceotDeclineCombo.Size = new System.Drawing.Size(204, 28);
-            this.AcceotDeclineCombo.TabIndex = 61;
-            this.AcceotDeclineCombo.SelectedIndexChanged += new System.EventHandler(this.AcceotDeclineCombo_SelectedIndexChanged);
-            // 
             // ViewStaffLeaves
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -461,6 +493,7 @@
             this.Controls.Add(this.ButtonPanel);
             this.Controls.Add(this.imgPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "ViewStaffLeaves";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewStaffLeaves";
@@ -511,5 +544,7 @@
         private System.Windows.Forms.ComboBox acTDeclinecomboBox;
         private System.Windows.Forms.Button updateBtn;
         private System.Windows.Forms.ComboBox AcceotDeclineCombo;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -63,9 +63,47 @@ namespace SchoolManagementSystem
             CloseConnection();
         }
 
+        public void Display_Combo()
+        {
+            comboBoxEv1.Items.Clear();
+            OpenConnection();
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = ("select [Event ID] from Events where [Status]='To be held'");
+            cmd.ExecuteNonQuery();
+            CloseConnection();
+            DataTable ddt = new DataTable();
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            sda.Fill(ddt);
+            foreach (DataRow dr in ddt.Rows)
+            {
+                comboBoxEv1.Items.Add(dr["Event ID"]);
+            }
+            CloseConnection();
+        }
+
+        public void Display_ComboSearch()
+        {
+            comboBoxEv2.Items.Clear();
+            OpenConnection();
+            SqlCommand cmd = conn.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = ("select [Event ID] from Events where [Status]='To be held'");
+            cmd.ExecuteNonQuery();
+            CloseConnection();
+            DataTable ddt = new DataTable();
+            SqlDataAdapter sda = new SqlDataAdapter(cmd);
+            sda.Fill(ddt);
+            foreach (DataRow dr in ddt.Rows)
+            {
+                comboBoxEv2.Items.Add(dr["Event ID"]);
+            }
+            CloseConnection();
+        }
+
         private void ResetRecords()
         {
-            idtextbox.Clear();
+            comboBoxEv1.Items.Clear();
             textBoxdet.Clear();
             textBoxAmt.Clear();
         }
@@ -76,7 +114,7 @@ namespace SchoolManagementSystem
             int index = e.RowIndex;
             DataGridViewRow selectRow = dataGridView1.Rows[index];
             ExpenseID = Int32.Parse(selectRow.Cells[0].Value.ToString());
-            idtextbox.Text = selectRow.Cells[1].Value.ToString();
+            comboBoxEv1.SelectedItem = selectRow.Cells[1].Value;
             textBoxdet.Text = selectRow.Cells[2].Value.ToString();
             textBoxAmt.Text = selectRow.Cells[3].Value.ToString();
 
@@ -85,6 +123,8 @@ namespace SchoolManagementSystem
         private void AddExpense_form_Load(object sender, EventArgs e)
         {
             Display_Data();
+            Display_Combo();
+            Display_ComboSearch();
         }
 
         private void back_e_click(object sender, EventArgs e)
@@ -101,7 +141,7 @@ namespace SchoolManagementSystem
             Boolean details = true;
             Boolean amount = true;
 
-            if (idtextbox.Text.Equals(""))
+            if (comboBoxEv1.SelectedIndex== -1)
             {
                 eventID = false;
                 errors.Add("please Add EventID");
@@ -115,7 +155,7 @@ namespace SchoolManagementSystem
             if (textBoxAmt.Text.Equals(""))
             {
                 amount = false;
-                errors.Add("please add amaount");
+                errors.Add("please add amount");
             }
 
             string errorArr = "";
@@ -129,7 +169,7 @@ namespace SchoolManagementSystem
                 SqlCommand cmd = conn.CreateCommand();
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = ("set IDENTITY_INSERT ON");
-                cmd.CommandText = ("insert into Expenses([Event Id],[Details],[Amount]) values ('" + idtextbox.Text + "','" + textBoxdet.Text + "','" + textBoxAmt.Text + "')");
+                cmd.CommandText = ("insert into Expenses([Event Id],[Details],[Amount]) values ('" + comboBoxEv1.SelectedItem+ "','" + textBoxdet.Text + "','" + textBoxAmt.Text + "')");
                 cmd.ExecuteNonQuery();
                 CloseConnection();
                 this.ResetRecords();
@@ -179,7 +219,7 @@ namespace SchoolManagementSystem
             Boolean details = true;
             Boolean amount = true;
 
-            if (idtextbox.Text.Equals(""))
+            if (comboBoxEv1.SelectedIndex== -1)
             {
                 eventID = false;
                 errors.Add("please Add EventID");
@@ -209,7 +249,7 @@ namespace SchoolManagementSystem
                     OpenConnection();
                     SqlCommand cmd = conn.CreateCommand();
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = ("update Expenses set [Event Id]='" + idtextbox.Text + "', [Details] ='" + textBoxdet.Text + "',[Amount]='" + textBoxAmt.Text + "' where [Expense Id]='" + ExpenseID + "'");
+                    cmd.CommandText = ("update Expenses set [Event Id]='" + comboBoxEv1.SelectedItem + "', [Details] ='" + textBoxdet.Text + "',[Amount]='" + textBoxAmt.Text + "' where [Expense Id]='" + ExpenseID + "'");
                     cmd.ExecuteNonQuery();
                     CloseConnection();
                     MessageBox.Show("Updated Succesfully");
@@ -227,7 +267,7 @@ namespace SchoolManagementSystem
             OpenConnection();
             SqlCommand cmd = conn.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from Expenses where  [Event Id]='" + textBoxExsearch.Text + "' ";
+            cmd.CommandText = "select * from Expenses where  [Event Id]='" + comboBoxEv2.SelectedItem + "' ";
 
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
@@ -249,6 +289,14 @@ namespace SchoolManagementSystem
             HomePage1 newHome = new HomePage1();
             this.Hide();
             newHome.ShowDialog();
+        }
+
+        private void ExpenseAmt_keypress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)&& char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

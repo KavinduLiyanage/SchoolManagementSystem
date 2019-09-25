@@ -117,7 +117,7 @@ namespace SchoolManagementSystem
                 bookquantitycon = false;
                 errorArr1.Add("Please Enter Valid Quantity ");
             }
-
+             
             if (textBox7.Text.Equals(""))
             {
                 bookpricecon = false;
@@ -232,6 +232,16 @@ namespace SchoolManagementSystem
             ReturnBook rtn = new ReturnBook();
             this.Hide();
             rtn.ShowDialog();
+        }
+
+        private void TextBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

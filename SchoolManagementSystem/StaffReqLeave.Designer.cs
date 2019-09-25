@@ -322,13 +322,17 @@
             // 
             // SalarydataView1
             // 
+            this.SalarydataView1.AllowUserToAddRows = false;
+            this.SalarydataView1.AllowUserToDeleteRows = false;
             this.SalarydataView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.SalarydataView1.Location = new System.Drawing.Point(454, 70);
             this.SalarydataView1.Name = "SalarydataView1";
+            this.SalarydataView1.ReadOnly = true;
             this.SalarydataView1.RowHeadersWidth = 51;
             this.SalarydataView1.RowTemplate.Height = 24;
             this.SalarydataView1.Size = new System.Drawing.Size(493, 469);
             this.SalarydataView1.TabIndex = 2;
+            this.SalarydataView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SalarydataView1_CellClick);
             // 
             // panel5
             // 

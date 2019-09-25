@@ -137,7 +137,7 @@ namespace SchoolManagementSystem
         {
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "insert into book_issue (SNAME,Grade,ClassName,SGDCONTACT,SADDRESS,books_name,book_issue_date) values('" + textBox1.Text +"','" +textBox2.Text +"','" +textBox3.Text +"','" +textBox4.Text +"','" +textBox5.Text +"','" +textBox6.Text +"','" +dateTimePicker1.Value.ToShortDateString() +"')";
+            cmd.CommandText = "insert into book_issue (SNAME,Grade,ClassName,SGDCONTACT,SADDRESS,books_name,book_issue_date,book_return_date) values('" + textBox1.Text +"','" +textBox2.Text +"','" +textBox3.Text +"','" +textBox4.Text +"','" +textBox5.Text +"','" +textBox6.Text +"','" +dateTimePicker1.Value.ToShortDateString() +"','')";
             cmd.ExecuteNonQuery();
 
             MessageBox.Show("Books Issued Successfully");

@@ -163,9 +163,29 @@ namespace SchoolManagementSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap checklist {
+            get {
+                object obj = ResourceManager.GetObject("checklist", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap chemistry {
             get {
                 object obj = ResourceManager.GetObject("chemistry", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap classroom {
+            get {
+                object obj = ResourceManager.GetObject("classroom", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -457,6 +477,16 @@ namespace SchoolManagementSystem.Properties {
         internal static System.Drawing.Bitmap TeachingAids {
             get {
                 object obj = ResourceManager.GetObject("TeachingAids", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap timetable {
+            get {
+                object obj = ResourceManager.GetObject("timetable", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

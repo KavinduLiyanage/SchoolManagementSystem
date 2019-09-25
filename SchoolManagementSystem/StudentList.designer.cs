@@ -55,6 +55,7 @@
             this.UsrlinkLabel = new System.Windows.Forms.LinkLabel();
             this.imgPanel = new System.Windows.Forms.PictureBox();
             this.TitleLabel = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
             this.panel5.SuspendLayout();
             this.ButtonPanel.SuspendLayout();
@@ -356,17 +357,26 @@
             // 
             this.TitleLabel.AutoSize = true;
             this.TitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitleLabel.Location = new System.Drawing.Point(588, 127);
+            this.TitleLabel.Location = new System.Drawing.Point(443, 127);
             this.TitleLabel.Name = "TitleLabel";
             this.TitleLabel.Size = new System.Drawing.Size(250, 38);
             this.TitleLabel.TabIndex = 52;
             this.TitleLabel.Text = "All Student List";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(830, 142);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(260, 22);
+            this.textBox1.TabIndex = 53;
+            this.textBox1.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
             // 
             // StudentList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.TitleLabel);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.UsrlinkLabel);
@@ -374,6 +384,8 @@
             this.Controls.Add(this.ButtonPanel);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.dgvStudents);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "StudentList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StudentList";
@@ -416,5 +428,6 @@
         private System.Windows.Forms.LinkLabel UsrlinkLabel;
         private System.Windows.Forms.PictureBox imgPanel;
         private System.Windows.Forms.Label TitleLabel;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

@@ -24,5 +24,6 @@ namespace DAO
         public string SGDCONTACT { get; set; }
         public string Grade { get; set; }
         public string ClassName { get; set; }
+        public string SPASSWORD { get; set; }
     }
 }

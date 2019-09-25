@@ -37,8 +37,11 @@ namespace SchoolManagementSystem
                 };
 
                 ValidationContext context = new ValidationContext(student);
+
                 List<ValidationResult> errorList = new List<ValidationResult>();
+
                 var error = string.Empty;
+
                 if(!Validator.TryValidateObject(student, context, errorList, true))
                 {
                     foreach(ValidationResult result1 in errorList)

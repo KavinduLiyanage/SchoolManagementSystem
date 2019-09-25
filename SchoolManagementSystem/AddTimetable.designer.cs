@@ -269,6 +269,7 @@
             this.cbTerm.Name = "cbTerm";
             this.cbTerm.Size = new System.Drawing.Size(200, 24);
             this.cbTerm.TabIndex = 23;
+            this.cbTerm.SelectedIndexChanged += new System.EventHandler(this.CbTerm_SelectedIndexChanged);
             // 
             // tbClass
             // 
@@ -355,11 +356,30 @@
             // 
             this.cbGrade.FormattingEnabled = true;
             this.cbGrade.Items.AddRange(new object[] {
-            "Grade 06"});
-            this.cbGrade.Location = new System.Drawing.Point(150, 268);
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12 Art",
+            "12 Commerce",
+            "12 Maths",
+            "12 Bio",
+            "13 Art",
+            "13 Commerce",
+            "13 Maths",
+            "13 Bio"});
+            this.cbGrade.Location = new System.Drawing.Point(150, 269);
             this.cbGrade.Name = "cbGrade";
             this.cbGrade.Size = new System.Drawing.Size(200, 24);
             this.cbGrade.TabIndex = 9;
+            this.cbGrade.SelectedIndexChanged += new System.EventHandler(this.CbGrade_SelectedIndexChanged);
             // 
             // tbStartTime
             // 
@@ -421,6 +441,7 @@
             this.dataGridViewTimeTable.RowTemplate.Height = 24;
             this.dataGridViewTimeTable.Size = new System.Drawing.Size(526, 446);
             this.dataGridViewTimeTable.TabIndex = 14;
+            this.dataGridViewTimeTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewTimeTable_CellContentClick);
             // 
             // tbTimeTablID
             // 

@@ -25,8 +25,6 @@ namespace Models
         [RegularExpression(@"^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$", ErrorMessage = "Invalid Email")]
         public string SEmail { get; set; }
 
-
-
         [Required(AllowEmptyStrings = false, ErrorMessage = "Guardian Name is Required")]
         [RegularExpression(@"^([a-zA-Z0-9]+|[a-zA-Z0-9]+\s{1}[a-zA-Z0-9]{1,}|[a-zA-Z0-9]+\s{1}[a-zA-Z0-9]{3,}\s{1}[a-zA-Z0-9]{1,})$", ErrorMessage = "Invalid Guardian Name")]
         public string SGDName { get; set; }
@@ -35,7 +33,8 @@ namespace Models
         [RegularExpression(@"^[+]*[(]{0,1}[0-9]{1,4}[)]{0,1}[-\s\./0-9]*$", ErrorMessage = "Invalid Contact Number")]
         public string SGDContact { get; set; }
 
-
         public DateTime SDob { get; set; }
+
+        public string SPassword { get; set; }
     }
 }

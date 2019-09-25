@@ -35,6 +35,7 @@ namespace SchoolManagementSystem
         {
             AcceptDeclineCombo.Text = "All";
             NametextBox1.Text = GetSetInfo.userName;
+            UsrlinkLabel.Text = GetSetInfo.userName;
             viewLeaves();
         }
 
@@ -83,6 +84,11 @@ namespace SchoolManagementSystem
 
             MessageBox.Show("Inserted Succesfully");
             viewLeaves();
+
+        }
+
+        private void SalarydataView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

@@ -523,6 +523,8 @@
             this.Controls.Add(this.ContentPanel);
             this.Controls.Add(this.ButtonPanel);
             this.Controls.Add(this.panel5);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "CreateStudentAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CreateStudentAccount";

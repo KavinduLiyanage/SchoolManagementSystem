@@ -13,6 +13,12 @@ namespace SchoolManagementSystem
 {
     public partial class ViewStaffLeaves : Form
     {
+
+        private int leaveID;
+        private int staffID;
+        private String name;
+        private String fullName;
+
         SqlConnection con = new SqlConnection(@"Data Source=.;Initial Catalog=SchoolManagementSystemDB;Integrated Security=True");
         public ViewStaffLeaves()
         {
@@ -112,7 +118,8 @@ namespace SchoolManagementSystem
 
         private void ViewStaffLeaves_Load(object sender, EventArgs e)
         {
-
+            AcceotDeclineCombo.Text = "All";
+            fillStaffLeave();
         }
         
         private void SearchTextBox1_TextChanged(object sender, EventArgs e)
@@ -122,6 +129,128 @@ namespace SchoolManagementSystem
 
         private void AcceotDeclineCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
+            fillStaffLeave();
+        }
+
+        private void fillStaffLeave() {
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+
+            if (AcceotDeclineCombo.Text.Equals("All"))
+            {
+                cmd.CommandText = "SELECT * FROM staffLeaves";
+                cmd.ExecuteNonQuery();
+            }
+            else if (AcceotDeclineCombo.Text.Equals("Accepted"))
+            {
+                cmd.CommandText = "SELECT * FROM staffLeaves where status='Accepted'";
+                cmd.ExecuteNonQuery();
+            }
+            else if (AcceotDeclineCombo.Text.Equals("Decline"))
+            {
+                cmd.CommandText = "SELECT * FROM staffLeaves where status='Decline'";
+                cmd.ExecuteNonQuery();
+            }
+            else if (AcceotDeclineCombo.Text.Equals("Pending"))
+            {
+                cmd.CommandText = "SELECT * FROM staffLeaves where status='Pending'";
+                cmd.ExecuteNonQuery();
+            }
+
+
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            SalarydataView1.DataSource = dt;
+            con.Close();
+        }
+
+        private void SalarydataView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            DataGridViewRow selectRow = SalarydataView1.Rows[index];
+            leaveID = Int32.Parse(selectRow.Cells[0].Value.ToString());
+            staffID = Int32.Parse(selectRow.Cells[1].Value.ToString());
+
+            getMemName();
+
+            string date = selectRow.Cells[3].Value.ToString();
+            try
+            {
+                DateTime oDate = Convert.ToDateTime(date);
+                dateTimePicker1.Value = new System.DateTime(oDate.Year, oDate.Month, oDate.Day, 0, 0, 0, 0);
+            }
+            catch (Exception)
+            {
+                DateTime newdate = DateTime.Now;
+                dateTimePicker1.Value = new System.DateTime(newdate.Year, newdate.Month, newdate.Day, 0, 0, 0, 0);
+            }
+
+            string date2 = selectRow.Cells[4].Value.ToString();
+            try
+            {
+                DateTime oDate = Convert.ToDateTime(date2);
+                dateTimePicker1.Value = new System.DateTime(oDate.Year, oDate.Month, oDate.Day, 0, 0, 0, 0);
+            }
+            catch (Exception)
+            {
+                DateTime newdate = DateTime.Now;
+                dateTimePicker2.Value = new System.DateTime(newdate.Year, newdate.Month, newdate.Day, 0, 0, 0, 0);
+            }
+
+            addressTextBox.Text = selectRow.Cells[5].Value.ToString();
+
+        }
+
+        private void getMemName() {
+            con.Open();
+            SqlCommand command;
+            SqlDataReader dataReader;
+
+            string query = "SELECT name,fullName FROM staff where staffID = '" + staffID + "'";
+
+            command = new SqlCommand(query,con);
+            dataReader = command.ExecuteReader();
+
+            if (dataReader.Read())
+            {
+                name = dataReader.GetValue(0).ToString();
+                fullName = dataReader.GetValue(1).ToString();
+            }
+            dataReader.Close();
+            command.Dispose();
+            con.Close();
+
+            NametextBox1.Text = name;
+            nameTextBox2.Text = fullName;
+
+        }
+
+        private void UpdateBtn_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+
+            if (acTDeclinecomboBox.Text.Equals("Accept"))
+            {
+                cmd.CommandText = "UPDATE staffLeaves SET status='Accepted' where leaveID = '" + leaveID + "'";
+                cmd.ExecuteNonQuery();
+            }
+            else if (acTDeclinecomboBox.Text.Equals("Decline"))
+            {
+                cmd.CommandText = "UPDATE staffLeaves SET status='Decline' where leaveID = '" + leaveID + "'";
+                cmd.ExecuteNonQuery();
+            }
+
+            con.Close();
+
+            MessageBox.Show("Leave Status Update Succesfully");
+
+            ViewStaffLeaves viewStaffLeaves = new ViewStaffLeaves();
+            this.Hide();
+            viewStaffLeaves.ShowDialog();
         }
     }
 }

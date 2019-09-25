@@ -59,11 +59,6 @@
             this.subLabel2 = new System.Windows.Forms.PictureBox();
             this.ButtonPanel = new System.Windows.Forms.Panel();
             this.NHomeBtn = new System.Windows.Forms.Button();
-            this.NViewStaffBtn = new System.Windows.Forms.Button();
-            this.NViewLeaveBtn = new System.Windows.Forms.Button();
-            this.NViewSalaryBtn = new System.Windows.Forms.Button();
-            this.NAddStaffBtn = new System.Windows.Forms.Button();
-            this.NStaffHomeBtn = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -144,6 +139,7 @@
             this.button5.Size = new System.Drawing.Size(170, 124);
             this.button5.TabIndex = 0;
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.Button5_Click);
             // 
             // panel6
             // 
@@ -440,11 +436,6 @@
             // 
             this.ButtonPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ButtonPanel.Controls.Add(this.NHomeBtn);
-            this.ButtonPanel.Controls.Add(this.NViewStaffBtn);
-            this.ButtonPanel.Controls.Add(this.NViewLeaveBtn);
-            this.ButtonPanel.Controls.Add(this.NViewSalaryBtn);
-            this.ButtonPanel.Controls.Add(this.NAddStaffBtn);
-            this.ButtonPanel.Controls.Add(this.NStaffHomeBtn);
             this.ButtonPanel.Location = new System.Drawing.Point(0, 255);
             this.ButtonPanel.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonPanel.Name = "ButtonPanel";
@@ -464,68 +455,6 @@
             this.NHomeBtn.Text = "Home";
             this.NHomeBtn.UseVisualStyleBackColor = false;
             this.NHomeBtn.Click += new System.EventHandler(this.NHomeBtn_Click);
-            // 
-            // NViewStaffBtn
-            // 
-            this.NViewStaffBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.NViewStaffBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NViewStaffBtn.Location = new System.Drawing.Point(8, 93);
-            this.NViewStaffBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.NViewStaffBtn.Name = "NViewStaffBtn";
-            this.NViewStaffBtn.Size = new System.Drawing.Size(176, 28);
-            this.NViewStaffBtn.TabIndex = 23;
-            this.NViewStaffBtn.Text = "Issue Book ";
-            this.NViewStaffBtn.UseVisualStyleBackColor = false;
-            this.NViewStaffBtn.Click += new System.EventHandler(this.NViewStaffBtn_Click);
-            // 
-            // NViewLeaveBtn
-            // 
-            this.NViewLeaveBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.NViewLeaveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NViewLeaveBtn.Location = new System.Drawing.Point(8, 152);
-            this.NViewLeaveBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.NViewLeaveBtn.Name = "NViewLeaveBtn";
-            this.NViewLeaveBtn.Size = new System.Drawing.Size(176, 28);
-            this.NViewLeaveBtn.TabIndex = 18;
-            this.NViewLeaveBtn.Text = "Reports";
-            this.NViewLeaveBtn.UseVisualStyleBackColor = false;
-            // 
-            // NViewSalaryBtn
-            // 
-            this.NViewSalaryBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.NViewSalaryBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NViewSalaryBtn.Location = new System.Drawing.Point(8, 123);
-            this.NViewSalaryBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.NViewSalaryBtn.Name = "NViewSalaryBtn";
-            this.NViewSalaryBtn.Size = new System.Drawing.Size(176, 28);
-            this.NViewSalaryBtn.TabIndex = 18;
-            this.NViewSalaryBtn.Text = "Return Books";
-            this.NViewSalaryBtn.UseVisualStyleBackColor = false;
-            // 
-            // NAddStaffBtn
-            // 
-            this.NAddStaffBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.NAddStaffBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NAddStaffBtn.Location = new System.Drawing.Point(8, 64);
-            this.NAddStaffBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.NAddStaffBtn.Name = "NAddStaffBtn";
-            this.NAddStaffBtn.Size = new System.Drawing.Size(176, 28);
-            this.NAddStaffBtn.TabIndex = 17;
-            this.NAddStaffBtn.Text = "View Books";
-            this.NAddStaffBtn.UseVisualStyleBackColor = false;
-            // 
-            // NStaffHomeBtn
-            // 
-            this.NStaffHomeBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.NStaffHomeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NStaffHomeBtn.Location = new System.Drawing.Point(8, 34);
-            this.NStaffHomeBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.NStaffHomeBtn.Name = "NStaffHomeBtn";
-            this.NStaffHomeBtn.Size = new System.Drawing.Size(176, 28);
-            this.NStaffHomeBtn.TabIndex = 17;
-            this.NStaffHomeBtn.Text = "Add Books";
-            this.NStaffHomeBtn.UseVisualStyleBackColor = false;
-            this.NStaffHomeBtn.Click += new System.EventHandler(this.NStaffHomeBtn_Click);
             // 
             // LibraryHome
             // 
@@ -597,11 +526,6 @@
         private System.Windows.Forms.PictureBox subLabel2;
         private System.Windows.Forms.Panel ButtonPanel;
         private System.Windows.Forms.Button NHomeBtn;
-        private System.Windows.Forms.Button NViewStaffBtn;
-        private System.Windows.Forms.Button NViewLeaveBtn;
-        private System.Windows.Forms.Button NViewSalaryBtn;
-        private System.Windows.Forms.Button NAddStaffBtn;
-        private System.Windows.Forms.Button NStaffHomeBtn;
     }
 }
 

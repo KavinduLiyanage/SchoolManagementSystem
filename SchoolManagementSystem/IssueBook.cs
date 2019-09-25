@@ -135,12 +135,39 @@ namespace SchoolManagementSystem
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "insert into book_issue (SNAME,Grade,ClassName,SGDCONTACT,SADDRESS,books_name,book_issue_date,book_return_date) values('" + textBox1.Text +"','" +textBox2.Text +"','" +textBox3.Text +"','" +textBox4.Text +"','" +textBox5.Text +"','" +textBox6.Text +"','" +dateTimePicker1.Value.ToShortDateString() +"','')";
-            cmd.ExecuteNonQuery();
+            int books_quantity=0;
+            SqlCommand cmd2 = con.CreateCommand();
+            cmd2.CommandType = CommandType.Text;
+            cmd2.CommandText = "select * from books_info where books_name='" + textBox6.Text + "'";
+            cmd2.ExecuteNonQuery();
+            DataTable dt2 = new DataTable();
+            SqlDataAdapter da2 = new SqlDataAdapter(cmd2);
+            da2.Fill(dt2);
+            foreach(DataRow dr2 in dt2.Rows)
+            {
+                books_quantity = Convert.ToInt32(dr2["available_qty"].ToString());
+            }
 
-            MessageBox.Show("Books Issued Successfully");
+            if (books_quantity > 0)
+            {
+
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "insert into book_issue (SNAME,Grade,ClassName,SGDCONTACT,SADDRESS,books_name,book_issue_date) values('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox4.Text + "','" + textBox5.Text + "','" + textBox6.Text + "','" + dateTimePicker1.Value.ToShortDateString() + "')";
+                cmd.ExecuteNonQuery();
+
+                SqlCommand cmd1 = con.CreateCommand();
+                cmd1.CommandType = CommandType.Text;
+                cmd1.CommandText = "update books_info set available_qty=available_qty-1 where books_name='" + textBox6.Text + "'";
+                cmd1.ExecuteNonQuery();
+
+                MessageBox.Show("Books Issued Successfully");
+            }
+            else
+            {
+                MessageBox.Show("Books Not Available");
+
+            }
         }
 
         private void BtnLogOutHeader_Click(object sender, EventArgs e)

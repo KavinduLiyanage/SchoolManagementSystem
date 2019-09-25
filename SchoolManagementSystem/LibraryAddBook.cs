@@ -23,7 +23,7 @@ namespace SchoolManagementSystem
 
         private void TextBox6_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void Label4_Click(object sender, EventArgs e)
@@ -55,7 +55,7 @@ namespace SchoolManagementSystem
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "insert into books_info values('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox8.Text + "','" + textBox4.Text + "','" + textBox5.Text + "','" + textBox6.Text + "','" + textBox7.Text + "')";
+            cmd.CommandText = "insert into books_info values('" + textBox1.Text + "','" + textBox2.Text + "','" + textBox3.Text + "','" + textBox8.Text + "','" + textBox4.Text + "','" + textBox5.Text + "'," + Int32.Parse(textBox6.Text) + "," + Convert.ToDouble(textBox7.Text) + "," + Int32.Parse(textBox6.Text) + ")";
             cmd.ExecuteNonQuery();
             MessageBox.Show("Added Successfully");
             con.Close();
@@ -242,6 +242,83 @@ namespace SchoolManagementSystem
         private void Label7_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void TextBox6_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+
+            {
+                e.Handled = true;
+
+           }
+        }
+
+        private void TextBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && !char.IsPunctuation(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TextBox3_KeyUp(object sender, KeyEventArgs e)
+        {
+            
+        }
+
+        private void TextBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && !char.IsPunctuation(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TextBox8_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && !char.IsPunctuation(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TextBox4_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar))
+
+            {
+                e.Handled = true;
+
+            }
+        }
+
+        private void TextBox5_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetterOrDigit(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && !char.IsPunctuation(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void TextBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+
+            {
+                e.Handled = true;
+
+            }
+        }
+
+        private void TextBox7_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+
+            {
+                e.Handled = true;
+
+            }
         }
     }
 }

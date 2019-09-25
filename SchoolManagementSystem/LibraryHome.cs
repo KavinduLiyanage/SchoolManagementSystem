@@ -139,5 +139,12 @@ namespace SchoolManagementSystem
         {
 
         }
+
+        private void Button5_Click(object sender, EventArgs e)
+        {
+            ReportBooks log = new ReportBooks();
+            this.Hide();
+            log.ShowDialog();
+        }
     }
 }

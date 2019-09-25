@@ -152,6 +152,7 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(726, 252);
             this.panel4.TabIndex = 4;
+            this.panel4.Visible = false;
             // 
             // button3
             // 

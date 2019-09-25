@@ -113,6 +113,7 @@
             this.subjectid.Size = new System.Drawing.Size(193, 22);
             this.subjectid.TabIndex = 4;
             this.subjectid.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
+            this.subjectid.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Subjectid_KeyPress);
             // 
             // subjectname
             // 
@@ -121,6 +122,7 @@
             this.subjectname.Size = new System.Drawing.Size(193, 22);
             this.subjectname.TabIndex = 5;
             this.subjectname.TextChanged += new System.EventHandler(this.TextBox2_TextChanged);
+            this.subjectname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Subjectname_KeyPress);
             // 
             // grade
             // 

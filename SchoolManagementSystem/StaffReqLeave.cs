@@ -33,6 +33,7 @@ namespace SchoolManagementSystem
 
         private void StaffReqLeave_Load(object sender, EventArgs e)
         {
+            UsrlinkLabel.Text = GetSetInfo.userName;
             AcceptDeclineCombo.Text = "All";
             NametextBox1.Text = GetSetInfo.userName;
             UsrlinkLabel.Text = GetSetInfo.userName;

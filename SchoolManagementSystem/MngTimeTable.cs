@@ -303,5 +303,13 @@ namespace SchoolManagementSystem
             MessageBox.Show("Updated Successfully");
             reset();
         }
+
+        private void Time_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetterOrDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar) && !char.IsPunctuation(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

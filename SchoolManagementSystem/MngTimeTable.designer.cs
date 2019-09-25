@@ -392,6 +392,7 @@
             this.time.Name = "time";
             this.time.Size = new System.Drawing.Size(204, 22);
             this.time.TabIndex = 26;
+            this.time.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Time_KeyPress);
             // 
             // label7
             // 

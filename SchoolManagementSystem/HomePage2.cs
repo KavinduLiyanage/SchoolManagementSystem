@@ -89,5 +89,10 @@ namespace SchoolManagementSystem
             this.Hide();
             log.ShowDialog();
         }
+
+        private void Button1_Click(object sender, System.EventArgs e)
+        {
+            
+        }
     }
 }

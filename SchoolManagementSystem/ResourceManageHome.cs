@@ -69,7 +69,9 @@ namespace SchoolManagementSystem
 
         private void Viewtimetablebtn_Click(object sender, EventArgs e)
         {
-
+            timetableview openForm = new timetableview();
+            this.Hide();
+            openForm.ShowDialog();
         }
 
         private void Button4_Click(object sender, EventArgs e)

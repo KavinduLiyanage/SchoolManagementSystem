@@ -114,6 +114,7 @@ namespace SchoolManagementSystem
 
         private void ViewSalaryInfo_Load(object sender, EventArgs e)
         {
+            UsrlinkLabel.Text = GetSetInfo.userName;
             viewSalary();
         }
 

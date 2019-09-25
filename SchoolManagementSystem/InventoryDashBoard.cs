@@ -149,5 +149,22 @@ namespace SchoolManagementSystem
             this.Hide();
             newHome.ShowDialog();
         }
+
+        private void Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void NAddStaffBtn_Click(object sender, EventArgs e)
+        {
+            InventoryProductReportGenerate rp = new InventoryProductReportGenerate();
+            this.Hide();
+            rp.Show();
+        }
+
+        private void InventoryDashboard_Load(object sender, EventArgs e)
+        {
+            UsrlinkLabel.Text = GetSetInfo.userName;
+        }
     }
 }

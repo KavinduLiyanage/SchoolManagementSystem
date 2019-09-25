@@ -38,7 +38,6 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.btnLogOutHeader = new System.Windows.Forms.Button();
-            this.btnExamMheader = new System.Windows.Forms.Button();
             this.btnStudentMHeader = new System.Windows.Forms.Button();
             this.btnResourseMHeader = new System.Windows.Forms.Button();
             this.btnInventoryMHeader = new System.Windows.Forms.Button();
@@ -129,7 +128,6 @@
             this.panel5.BackColor = System.Drawing.Color.SkyBlue;
             this.panel5.Controls.Add(this.button3);
             this.panel5.Controls.Add(this.btnLogOutHeader);
-            this.panel5.Controls.Add(this.btnExamMheader);
             this.panel5.Controls.Add(this.btnStudentMHeader);
             this.panel5.Controls.Add(this.btnResourseMHeader);
             this.panel5.Controls.Add(this.btnInventoryMHeader);
@@ -143,7 +141,7 @@
             this.button3.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
-            this.button3.Location = new System.Drawing.Point(164, 21);
+            this.button3.Location = new System.Drawing.Point(58, 20);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(145, 50);
             this.button3.TabIndex = 55;
@@ -156,7 +154,7 @@
             this.btnLogOutHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogOutHeader.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold);
             this.btnLogOutHeader.ForeColor = System.Drawing.Color.Maroon;
-            this.btnLogOutHeader.Location = new System.Drawing.Point(1078, 20);
+            this.btnLogOutHeader.Location = new System.Drawing.Point(1007, 19);
             this.btnLogOutHeader.Name = "btnLogOutHeader";
             this.btnLogOutHeader.Size = new System.Drawing.Size(145, 50);
             this.btnLogOutHeader.TabIndex = 25;
@@ -164,24 +162,12 @@
             this.btnLogOutHeader.UseVisualStyleBackColor = true;
             this.btnLogOutHeader.Click += new System.EventHandler(this.BtnLogOutHeader_Click);
             // 
-            // btnExamMheader
-            // 
-            this.btnExamMheader.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnExamMheader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExamMheader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
-            this.btnExamMheader.Location = new System.Drawing.Point(348, 20);
-            this.btnExamMheader.Name = "btnExamMheader";
-            this.btnExamMheader.Size = new System.Drawing.Size(145, 50);
-            this.btnExamMheader.TabIndex = 1;
-            this.btnExamMheader.Text = "My Profile";
-            this.btnExamMheader.UseVisualStyleBackColor = false;
-            // 
             // btnStudentMHeader
             // 
             this.btnStudentMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnStudentMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStudentMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
-            this.btnStudentMHeader.Location = new System.Drawing.Point(523, 20);
+            this.btnStudentMHeader.Location = new System.Drawing.Point(291, 21);
             this.btnStudentMHeader.Name = "btnStudentMHeader";
             this.btnStudentMHeader.Size = new System.Drawing.Size(145, 50);
             this.btnStudentMHeader.TabIndex = 18;
@@ -193,7 +179,7 @@
             this.btnResourseMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnResourseMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnResourseMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
-            this.btnResourseMHeader.Location = new System.Drawing.Point(891, 20);
+            this.btnResourseMHeader.Location = new System.Drawing.Point(758, 20);
             this.btnResourseMHeader.Name = "btnResourseMHeader";
             this.btnResourseMHeader.Size = new System.Drawing.Size(145, 50);
             this.btnResourseMHeader.TabIndex = 21;
@@ -205,7 +191,7 @@
             this.btnInventoryMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnInventoryMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInventoryMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
-            this.btnInventoryMHeader.Location = new System.Drawing.Point(701, 20);
+            this.btnInventoryMHeader.Location = new System.Drawing.Point(515, 19);
             this.btnInventoryMHeader.Name = "btnInventoryMHeader";
             this.btnInventoryMHeader.Size = new System.Drawing.Size(145, 50);
             this.btnInventoryMHeader.TabIndex = 19;
@@ -307,7 +293,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnLogOutHeader;
-        private System.Windows.Forms.Button btnExamMheader;
         private System.Windows.Forms.Button btnStudentMHeader;
         private System.Windows.Forms.Button btnResourseMHeader;
         private System.Windows.Forms.Button btnInventoryMHeader;

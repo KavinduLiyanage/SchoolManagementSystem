@@ -252,7 +252,7 @@ namespace SchoolManagementSystem
             this.Hide();
             viewStaffLeaves.ShowDialog();
 
-            //Done
+            //Done2
         }
     }
 }

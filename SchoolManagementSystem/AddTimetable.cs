@@ -168,7 +168,7 @@ namespace SchoolManagementSystem
 
                 }
                 tbTimeTablID.Text = "";
-                // cbTerm.SelectedIndex = -1;
+                cbTerm.SelectedIndex = -1;
                 dateTimePicker1.Value = DateTime.Now;
                 tbStartTime.Text = "";
                 tbEndTime.Text = "";
@@ -178,17 +178,6 @@ namespace SchoolManagementSystem
             }
         }
 
-        /*public String getIncrTimetblId()
-        {
-            string query = "SELECT COUNT(*) FROM ExamTimeTable";
-            SqlCommand cmd2 = new SqlCommand(query, con);
-            //con.Open();
-            int t = 10001 + (Int32)cmd2.ExecuteScalar();
-            String TimetableID = "T" + t.ToString();
-            //con.Close();
-            return TimetableID;
-
-        }*/
 
         private void Panel2_Paint(object sender, PaintEventArgs e)
         {
@@ -202,7 +191,7 @@ namespace SchoolManagementSystem
                 //con.Open();
                 SqlCommand cmd = con.CreateCommand();
                 cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "SELECT * FROM ExamTimeTable  ";
+                cmd.CommandText = "SELECT * FROM ExamTimeTable";
                 cmd.ExecuteNonQuery();
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
@@ -220,32 +209,6 @@ namespace SchoolManagementSystem
 
         }
 
-        void FillGradeCombo()
-        {
-            DataSet ds = new DataSet();
-            try
-            {
-
-                string query = "select distinct grade from classroom ";
-                SqlDataAdapter da = new SqlDataAdapter(query, con);
-                //con.Open();
-
-                da.Fill(ds);
-                cbGrade.DataSource = ds.Tables[0];
-                cbGrade.DisplayMember = "grade";
-
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-
-                //con.Close();
-            }
-        }
 
         void FillSubjectCombo()
         {
@@ -266,8 +229,6 @@ namespace SchoolManagementSystem
                 cbSubject.DisplayMember = "SubjectName";
                 cbSubject.ValueMember = "SubjectID";
 
-
-
             }
             catch (Exception ex)
             {
@@ -282,8 +243,10 @@ namespace SchoolManagementSystem
 
         private void AddTimetable_Load(object sender, EventArgs e)
         {
-            FillGradeCombo();
             FillSubjectCombo();
+            displayData();
+
+            //GetSetInfo.getSubject(cbSubject);
 
             if (con.State == ConnectionState.Open)
             {
@@ -294,7 +257,7 @@ namespace SchoolManagementSystem
 
         private void TbTimeTablID_TextChanged(object sender, EventArgs e)
         {
-            //tbTimeTablID.ReadOnly = true;
+            tbTimeTablID.ReadOnly = true;
         }
 
         private void BtnReset_Click(object sender, EventArgs e)
@@ -309,6 +272,21 @@ namespace SchoolManagementSystem
             LoginForm log = new LoginForm();
             this.Hide();
             log.ShowDialog();
+        }
+
+        private void DataGridViewTimeTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void CbTerm_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CbGrade_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

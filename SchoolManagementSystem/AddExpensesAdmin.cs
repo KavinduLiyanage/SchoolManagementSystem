@@ -103,7 +103,7 @@ namespace SchoolManagementSystem
 
         private void ResetRecords()
         {
-            comboBoxEv1.Items.Clear();
+
             textBoxdet.Clear();
             textBoxAmt.Clear();
         }
@@ -141,7 +141,7 @@ namespace SchoolManagementSystem
             Boolean details = true;
             Boolean amount = true;
 
-            if (comboBoxEv1.SelectedIndex== -1)
+            if (comboBoxEv1.SelectedIndex == -1)
             {
                 eventID = false;
                 errors.Add("please Add EventID");
@@ -169,19 +169,19 @@ namespace SchoolManagementSystem
                 SqlCommand cmd = conn.CreateCommand();
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = ("set IDENTITY_INSERT ON");
-                cmd.CommandText = ("insert into Expenses([Event Id],[Details],[Amount]) values ('" + comboBoxEv1.SelectedItem+ "','" + textBoxdet.Text + "','" + textBoxAmt.Text + "')");
+                cmd.CommandText = ("insert into Expenses([Event Id],[Details],[Amount]) values ('" + comboBoxEv1.SelectedItem + "','" + textBoxdet.Text + "','" + textBoxAmt.Text + "')");
                 cmd.ExecuteNonQuery();
                 CloseConnection();
-                this.ResetRecords();
+                ResetRecords();
 
 
 
                 DialogResult dResult = MessageBox.Show("Add more Expenses", "Record Inserted Successfully", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
                 if (dResult == DialogResult.Yes)
                 {
-                    AddEventform Addevent = new AddEventform();
+                    AddExpense_form AddExpense = new AddExpense_form();
                     this.Hide();
-                    Addevent.Show();
+                    AddExpense.Show();
                 }
             }
             else
@@ -208,6 +208,7 @@ namespace SchoolManagementSystem
                 cmd.CommandText = "delete from Expenses where [Expense Id]= '" + ExpenseID + "'";
                 cmd.ExecuteNonQuery();
                 CloseConnection();
+                ResetRecords();
                 MessageBox.Show("Deleted Succesfully");
             }
         }
@@ -219,7 +220,7 @@ namespace SchoolManagementSystem
             Boolean details = true;
             Boolean amount = true;
 
-            if (comboBoxEv1.SelectedIndex== -1)
+            if (comboBoxEv1.SelectedIndex == -1)
             {
                 eventID = false;
                 errors.Add("please Add EventID");
@@ -252,6 +253,7 @@ namespace SchoolManagementSystem
                     cmd.CommandText = ("update Expenses set [Event Id]='" + comboBoxEv1.SelectedItem + "', [Details] ='" + textBoxdet.Text + "',[Amount]='" + textBoxAmt.Text + "' where [Expense Id]='" + ExpenseID + "'");
                     cmd.ExecuteNonQuery();
                     CloseConnection();
+                    ResetRecords();
                     MessageBox.Show("Updated Succesfully");
                 }
                 else
@@ -259,7 +261,7 @@ namespace SchoolManagementSystem
                     MessageBox.Show(errorArr);
                 }
             }
-            
+
         }
 
         private void SearchEx_click(object sender, EventArgs e)
@@ -293,10 +295,64 @@ namespace SchoolManagementSystem
 
         private void ExpenseAmt_keypress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar)&& char.IsWhiteSpace(e.KeyChar))
+
+        }
+
+        private void GenerateEventReport_click(object sender, EventArgs e)
+        {
+            YearlyEventReport.YearlyEventReport evRepo = new YearlyEventReport.YearlyEventReport();
+            this.Hide();
+            evRepo.Show();
+        }
+
+        private void Expense_keypress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
             }
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            TeachersHome home = new TeachersHome();
+            this.Hide();
+            home.ShowDialog();
+        }
+
+        private void Button5_Click(object sender, EventArgs e)
+        {
+            CreateStudentAccount creAcc = new CreateStudentAccount();
+            this.Hide();
+            creAcc.ShowDialog();
+        }
+
+        private void Button7_Click(object sender, EventArgs e)
+        {
+            InventoryDashboard inveDash = new InventoryDashboard();
+            this.Hide();
+            inveDash.ShowDialog();
+        }
+
+        private void Button6_Click(object sender, EventArgs e)
+        {
+            ResourceManageHome newres = new ResourceManageHome();
+            this.Hide();
+            newres.ShowDialog();
+        }
+
+        private void Button4_Click(object sender, EventArgs e)
+        {
+            LibraryHome libHome = new LibraryHome();
+            this.Hide();
+            libHome.ShowDialog();
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            Notice_Dashboard nd = new Notice_Dashboard();
+            this.Hide();
+            nd.Show();
         }
     }
 }

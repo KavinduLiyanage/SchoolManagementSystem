@@ -46,6 +46,8 @@
             this.NStudentHomeBtn = new System.Windows.Forms.Button();
             this.TitleLabel = new System.Windows.Forms.Label();
             this.ContentPanel = new System.Windows.Forms.Panel();
+            this.comboBoxClass = new System.Windows.Forms.ComboBox();
+            this.comboBoxGrade = new System.Windows.Forms.ComboBox();
             this.rbtnMale = new System.Windows.Forms.RadioButton();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -58,6 +60,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.rbtnFemale = new System.Windows.Forms.RadioButton();
             this.txtName = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
             this.txtGDName = new System.Windows.Forms.TextBox();
@@ -66,6 +70,7 @@
             this.UsrlinkLabel = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.imgPanel = new System.Windows.Forms.PictureBox();
+            this.entityCommand1 = new System.Data.Entity.Core.EntityClient.EntityCommand();
             this.panel5.SuspendLayout();
             this.ButtonPanel.SuspendLayout();
             this.ContentPanel.SuspendLayout();
@@ -261,7 +266,7 @@
             // 
             this.TitleLabel.AutoSize = true;
             this.TitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitleLabel.Location = new System.Drawing.Point(214, 30);
+            this.TitleLabel.Location = new System.Drawing.Point(213, 15);
             this.TitleLabel.Name = "TitleLabel";
             this.TitleLabel.Size = new System.Drawing.Size(386, 38);
             this.TitleLabel.TabIndex = 23;
@@ -269,6 +274,9 @@
             // 
             // ContentPanel
             // 
+            this.ContentPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ContentPanel.Controls.Add(this.comboBoxClass);
+            this.ContentPanel.Controls.Add(this.comboBoxGrade);
             this.ContentPanel.Controls.Add(this.rbtnMale);
             this.ContentPanel.Controls.Add(this.txtAddress);
             this.ContentPanel.Controls.Add(this.label2);
@@ -281,6 +289,8 @@
             this.ContentPanel.Controls.Add(this.label1);
             this.ContentPanel.Controls.Add(this.rbtnFemale);
             this.ContentPanel.Controls.Add(this.txtName);
+            this.ContentPanel.Controls.Add(this.label7);
+            this.ContentPanel.Controls.Add(this.label6);
             this.ContentPanel.Controls.Add(this.label5);
             this.ContentPanel.Controls.Add(this.lblName);
             this.ContentPanel.Controls.Add(this.txtGDName);
@@ -292,11 +302,49 @@
             this.ContentPanel.Size = new System.Drawing.Size(950, 551);
             this.ContentPanel.TabIndex = 47;
             // 
+            // comboBoxClass
+            // 
+            this.comboBoxClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxClass.FormattingEnabled = true;
+            this.comboBoxClass.Items.AddRange(new object[] {
+            "Class A",
+            "Class B",
+            "Class C",
+            "Class D",
+            "Class E"});
+            this.comboBoxClass.Location = new System.Drawing.Point(384, 449);
+            this.comboBoxClass.Name = "comboBoxClass";
+            this.comboBoxClass.Size = new System.Drawing.Size(300, 28);
+            this.comboBoxClass.TabIndex = 46;
+            // 
+            // comboBoxGrade
+            // 
+            this.comboBoxGrade.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxGrade.FormattingEnabled = true;
+            this.comboBoxGrade.Items.AddRange(new object[] {
+            "Grade 1",
+            "Grade 2",
+            "Grade 3",
+            "Grade 4",
+            "Grade 5",
+            "Grade 6",
+            "Grade 7",
+            "Grade 8",
+            "Grade 9",
+            "Grade 10",
+            "Grade 11",
+            "Grade 12",
+            "Grade 13"});
+            this.comboBoxGrade.Location = new System.Drawing.Point(384, 404);
+            this.comboBoxGrade.Name = "comboBoxGrade";
+            this.comboBoxGrade.Size = new System.Drawing.Size(300, 28);
+            this.comboBoxGrade.TabIndex = 46;
+            // 
             // rbtnMale
             // 
             this.rbtnMale.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.rbtnMale.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnMale.Location = new System.Drawing.Point(409, 204);
+            this.rbtnMale.Location = new System.Drawing.Point(405, 160);
             this.rbtnMale.Name = "rbtnMale";
             this.rbtnMale.Size = new System.Drawing.Size(106, 36);
             this.rbtnMale.TabIndex = 29;
@@ -309,10 +357,10 @@
             // 
             this.txtAddress.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtAddress.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress.Location = new System.Drawing.Point(388, 256);
+            this.txtAddress.Location = new System.Drawing.Point(384, 205);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(300, 44);
+            this.txtAddress.Size = new System.Drawing.Size(300, 40);
             this.txtAddress.TabIndex = 43;
             // 
             // label2
@@ -320,7 +368,7 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(178, 259);
+            this.label2.Location = new System.Drawing.Point(174, 208);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 25);
             this.label2.TabIndex = 32;
@@ -332,7 +380,7 @@
             this.button2.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.button2.Font = new System.Drawing.Font("Franklin Gothic Medium", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(604, 475);
+            this.button2.Location = new System.Drawing.Point(604, 491);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(176, 46);
             this.button2.TabIndex = 36;
@@ -346,7 +394,7 @@
             this.btnSubmit.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnSubmit.Font = new System.Drawing.Font("Franklin Gothic Medium", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.Black;
-            this.btnSubmit.Location = new System.Drawing.Point(333, 475);
+            this.btnSubmit.Location = new System.Drawing.Point(333, 491);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(226, 46);
             this.btnSubmit.TabIndex = 36;
@@ -359,7 +407,7 @@
             this.dateTimePickerDOB.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.dateTimePickerDOB.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerDOB.Location = new System.Drawing.Point(388, 160);
+            this.dateTimePickerDOB.Location = new System.Drawing.Point(384, 120);
             this.dateTimePickerDOB.Name = "dateTimePickerDOB";
             this.dateTimePickerDOB.Size = new System.Drawing.Size(300, 30);
             this.dateTimePickerDOB.TabIndex = 45;
@@ -369,7 +417,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(185, 204);
+            this.label3.Location = new System.Drawing.Point(181, 166);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 25);
             this.label3.TabIndex = 39;
@@ -380,18 +428,19 @@
             this.lblEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(191, 317);
+            this.lblEmail.Location = new System.Drawing.Point(187, 261);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(61, 25);
             this.lblEmail.TabIndex = 38;
             this.lblEmail.Text = "Email";
             this.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblEmail.Click += new System.EventHandler(this.lblEmail_Click);
             // 
             // txtGDContact
             // 
             this.txtGDContact.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtGDContact.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGDContact.Location = new System.Drawing.Point(388, 412);
+            this.txtGDContact.Location = new System.Drawing.Point(384, 356);
             this.txtGDContact.Name = "txtGDContact";
             this.txtGDContact.Size = new System.Drawing.Size(300, 30);
             this.txtGDContact.TabIndex = 44;
@@ -401,7 +450,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(191, 160);
+            this.label1.Location = new System.Drawing.Point(192, 125);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 25);
             this.label1.TabIndex = 31;
@@ -410,7 +459,7 @@
             // rbtnFemale
             // 
             this.rbtnFemale.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnFemale.Location = new System.Drawing.Point(521, 204);
+            this.rbtnFemale.Location = new System.Drawing.Point(517, 160);
             this.rbtnFemale.Name = "rbtnFemale";
             this.rbtnFemale.Size = new System.Drawing.Size(108, 36);
             this.rbtnFemale.TabIndex = 34;
@@ -423,17 +472,39 @@
             // 
             this.txtName.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtName.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(388, 111);
+            this.txtName.Location = new System.Drawing.Point(384, 75);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(300, 30);
             this.txtName.TabIndex = 30;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(184, 449);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(58, 25);
+            this.label7.TabIndex = 41;
+            this.label7.Text = "Class";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(184, 404);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(64, 25);
+            this.label6.TabIndex = 41;
+            this.label6.Text = "Grade";
             // 
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(151, 412);
+            this.label5.Location = new System.Drawing.Point(147, 356);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(163, 25);
             this.label5.TabIndex = 41;
@@ -444,7 +515,7 @@
             this.lblName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(171, 116);
+            this.lblName.Location = new System.Drawing.Point(174, 78);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(99, 25);
             this.lblName.TabIndex = 37;
@@ -455,7 +526,7 @@
             // 
             this.txtGDName.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtGDName.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGDName.Location = new System.Drawing.Point(388, 366);
+            this.txtGDName.Location = new System.Drawing.Point(384, 309);
             this.txtGDName.Name = "txtGDName";
             this.txtGDName.Size = new System.Drawing.Size(300, 30);
             this.txtGDName.TabIndex = 42;
@@ -465,7 +536,7 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(151, 366);
+            this.label4.Location = new System.Drawing.Point(147, 309);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(148, 25);
             this.label4.TabIndex = 40;
@@ -475,10 +546,11 @@
             // 
             this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.txtEmail.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(388, 317);
+            this.txtEmail.Location = new System.Drawing.Point(384, 261);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(300, 30);
             this.txtEmail.TabIndex = 35;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // UsrlinkLabel
             // 
@@ -512,10 +584,19 @@
             this.imgPanel.TabIndex = 49;
             this.imgPanel.TabStop = false;
             // 
+            // entityCommand1
+            // 
+            this.entityCommand1.CommandTimeout = 0;
+            this.entityCommand1.CommandTree = null;
+            this.entityCommand1.Connection = null;
+            this.entityCommand1.EnablePlanCaching = true;
+            this.entityCommand1.Transaction = null;
+            // 
             // CreateStudentAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1262, 673);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.UsrlinkLabel);
@@ -578,6 +659,11 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.LinkLabel UsrlinkLabel;
         private System.Windows.Forms.PictureBox imgPanel;
+        private System.Windows.Forms.ComboBox comboBoxGrade;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox comboBoxClass;
+        private System.Windows.Forms.Label label7;
+        private System.Data.Entity.Core.EntityClient.EntityCommand entityCommand1;
     }
 }
 

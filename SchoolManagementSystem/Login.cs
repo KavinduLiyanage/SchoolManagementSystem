@@ -38,7 +38,7 @@ namespace SchoolManagementSystem
             con.Open();
             SqlCommand cmd2 = con.CreateCommand();
             cmd2.CommandType = CommandType.Text;
-            cmd2.CommandText = "SELECT SID,SGDNAME FROM Student WHERE SEMAIL = '" + unTxtBox.Text + "' AND SEMAIL = '" + pwdTxtBox.Text + "'";
+            cmd2.CommandText = "SELECT SID,SNAME FROM Student WHERE [SEMAIL] = '" + unTxtBox.Text + "' AND [SPASSWORD] = '" + pwdTxtBox.Text + "'";
             cmd2.ExecuteNonQuery();
             con.Close();
             DataTable dt2 = new DataTable();
@@ -71,7 +71,7 @@ namespace SchoolManagementSystem
             {
                 foreach (DataRow dr2 in dt2.Rows)
                 {
-                    name = dr2["SGDNAME"].ToString();
+                    name = dr2["SNAME"].ToString();
                     stuid = Int32.Parse(dr2["SID"].ToString());
                     GetSetInfo.userName = name;
                     GetSetInfo.getsetusrId = stuid;
@@ -92,26 +92,6 @@ namespace SchoolManagementSystem
         {
 
             string text = unTxtBox.Text;
-
-            if (text.Equals("1"))
-            {
-                HomePage1 Page1 = new HomePage1();
-                this.Hide();
-                Page1.ShowDialog();
-            }
-            else if (text.Equals("2"))
-            {
-                HomePage2 Page2 = new HomePage2();
-                this.Hide();
-                Page2.ShowDialog();
-            }
-            else if (text.Equals("3"))
-            {
-                HomePage3 Page3 = new HomePage3();
-                this.Hide();
-                Page3.ShowDialog();
-            }
-
             this.getUserData();
         }
 

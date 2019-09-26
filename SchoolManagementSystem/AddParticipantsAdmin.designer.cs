@@ -37,7 +37,6 @@
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.comboBoxpar2 = new System.Windows.Forms.ComboBox();
             this.comboBoxpar1 = new System.Windows.Forms.ComboBox();
@@ -62,7 +61,6 @@
             this.subLabel2 = new System.Windows.Forms.PictureBox();
             this.ButtonPanel = new System.Windows.Forms.Panel();
             this.NHomeBtn = new System.Windows.Forms.Button();
-            this.NAddStaffBtn = new System.Windows.Forms.Button();
             this.NStaffHomeBtn = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -95,7 +93,6 @@
             this.panel2.Controls.Add(this.button13);
             this.panel2.Controls.Add(this.button14);
             this.panel2.Controls.Add(this.button15);
-            this.panel2.Controls.Add(this.button16);
             this.panel2.Location = new System.Drawing.Point(15, 8);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
@@ -122,13 +119,14 @@
             this.button10.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
-            this.button10.Location = new System.Drawing.Point(927, 19);
+            this.button10.Location = new System.Drawing.Point(902, 19);
             this.button10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(145, 50);
             this.button10.TabIndex = 23;
             this.button10.Text = "Notice Management";
             this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.Button10_Click);
             // 
             // button11
             // 
@@ -142,71 +140,63 @@
             this.button11.TabIndex = 1;
             this.button11.Text = "Exam Management";
             this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.Button11_Click);
             // 
             // button12
             // 
             this.button12.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
-            this.button12.Location = new System.Drawing.Point(776, 19);
+            this.button12.Location = new System.Drawing.Point(734, 19);
             this.button12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(145, 50);
             this.button12.TabIndex = 22;
             this.button12.Text = " Library Management";
             this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.Button12_Click);
             // 
             // button13
             // 
             this.button13.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button13.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
-            this.button13.Location = new System.Drawing.Point(172, 19);
+            this.button13.Location = new System.Drawing.Point(198, 19);
             this.button13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(145, 50);
             this.button13.TabIndex = 18;
             this.button13.Text = "Student Management";
             this.button13.UseVisualStyleBackColor = false;
+            this.button13.Click += new System.EventHandler(this.Button13_Click);
             // 
             // button14
             // 
             this.button14.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button14.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
-            this.button14.Location = new System.Drawing.Point(626, 19);
+            this.button14.Location = new System.Drawing.Point(555, 19);
             this.button14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(145, 50);
             this.button14.TabIndex = 21;
             this.button14.Text = "Resourse Management";
             this.button14.UseVisualStyleBackColor = false;
+            this.button14.Click += new System.EventHandler(this.Button14_Click);
             // 
             // button15
             // 
             this.button15.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button15.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
-            this.button15.Location = new System.Drawing.Point(323, 19);
+            this.button15.Location = new System.Drawing.Point(377, 19);
             this.button15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(145, 50);
             this.button15.TabIndex = 19;
             this.button15.Text = "Inventory Management";
             this.button15.UseVisualStyleBackColor = false;
-            // 
-            // button16
-            // 
-            this.button16.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button16.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
-            this.button16.Location = new System.Drawing.Point(474, 19);
-            this.button16.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(145, 50);
-            this.button16.TabIndex = 20;
-            this.button16.Text = "Event Management";
-            this.button16.UseVisualStyleBackColor = false;
+            this.button15.Click += new System.EventHandler(this.Button15_Click);
             // 
             // panel1
             // 
@@ -483,7 +473,6 @@
             // 
             this.ButtonPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ButtonPanel.Controls.Add(this.NHomeBtn);
-            this.ButtonPanel.Controls.Add(this.NAddStaffBtn);
             this.ButtonPanel.Controls.Add(this.NStaffHomeBtn);
             this.ButtonPanel.Location = new System.Drawing.Point(15, 334);
             this.ButtonPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -505,17 +494,6 @@
             this.NHomeBtn.UseVisualStyleBackColor = false;
             this.NHomeBtn.Click += new System.EventHandler(this.NHomeBtn_Click);
             // 
-            // NAddStaffBtn
-            // 
-            this.NAddStaffBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.NAddStaffBtn.Location = new System.Drawing.Point(12, 99);
-            this.NAddStaffBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.NAddStaffBtn.Name = "NAddStaffBtn";
-            this.NAddStaffBtn.Size = new System.Drawing.Size(235, 35);
-            this.NAddStaffBtn.TabIndex = 17;
-            this.NAddStaffBtn.Text = "Get Budget Reports";
-            this.NAddStaffBtn.UseVisualStyleBackColor = false;
-            // 
             // NStaffHomeBtn
             // 
             this.NStaffHomeBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
@@ -526,6 +504,7 @@
             this.NStaffHomeBtn.TabIndex = 17;
             this.NStaffHomeBtn.Text = "Yearly Event Report";
             this.NStaffHomeBtn.UseVisualStyleBackColor = false;
+            this.NStaffHomeBtn.Click += new System.EventHandler(this.GenerateEventRepo_click);
             // 
             // addParticipant_form
             // 
@@ -570,7 +549,6 @@
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Button UpdateParticipantbtn;
@@ -591,7 +569,6 @@
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.Panel ButtonPanel;
         private System.Windows.Forms.Button NHomeBtn;
-        private System.Windows.Forms.Button NAddStaffBtn;
         private System.Windows.Forms.Button NStaffHomeBtn;
         private System.Windows.Forms.ComboBox comboBoxpar1;
         private System.Windows.Forms.ComboBox comboBoxpar2;

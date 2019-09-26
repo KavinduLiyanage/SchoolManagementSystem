@@ -20,6 +20,50 @@ namespace SchoolManagementSystem
             InitializeComponent();
         }
 
+        private void BtnExamMheader_Click(object sender, EventArgs e)
+        {
+            TeachersHome home = new TeachersHome();
+            this.Hide();
+            home.ShowDialog();
+        }
+
+        private void BtnStudentMHeader_Click(object sender, EventArgs e)
+        {
+            CreateStudentAccount creAcc = new CreateStudentAccount();
+            this.Hide();
+            creAcc.ShowDialog();
+        }
+
+        private void BtnInventoryMHeader_Click(object sender, EventArgs e)
+        {
+            InventoryDashboard inveDash = new InventoryDashboard();
+            this.Hide();
+            inveDash.ShowDialog();
+        }
+
+        private void BtnLibraryMHeader_Click(object sender, EventArgs e)
+        {
+            LibraryHome libHome = new LibraryHome();
+            this.Hide();
+            libHome.ShowDialog();
+        }
+
+        private void BtnNoticeMHeader_Click(object sender, EventArgs e)
+        {
+            Notice_Dashboard nd = new Notice_Dashboard();
+            this.Hide();
+            nd.Show();
+        }
+
+        private void BtnResourseMHeader_Click(object sender, EventArgs e)
+        {
+            ResourceManageHome newres = new ResourceManageHome();
+            this.Hide();
+            newres.ShowDialog();
+        }
+
+
+
         public bool OpenConnection()
         {
             try
@@ -291,6 +335,15 @@ namespace SchoolManagementSystem
                 e.Handled = true;
             }
         }
+
+        private void GenerateEventReport_click(object sender, EventArgs e)
+        {
+            YearlyEventReport.YearlyEventReport evRepo = new YearlyEventReport.YearlyEventReport();
+            this.Hide();
+            evRepo.Show();
+        }
+
+        
     }
 }
 //end line

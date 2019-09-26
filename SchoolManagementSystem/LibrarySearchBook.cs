@@ -23,6 +23,7 @@ namespace SchoolManagementSystem
 
         private void LibrarySearchBook_Load(object sender, EventArgs e)
         {
+            UsrlinkLabel.Text = GetSetInfo.username;
             display_books();
         }
 

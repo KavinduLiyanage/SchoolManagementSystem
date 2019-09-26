@@ -49,10 +49,16 @@ namespace SchoolManagementSystem
 
         }
 
+        
+
         private void BtnExamMheader_Click(object sender, EventArgs e)
         {
-
+            TeachersHome home = new TeachersHome();
+            this.Hide();
+            home.ShowDialog();
         }
+
+        
 
         private void BtnLogOutHeader_Click(object sender, EventArgs e)
         {
@@ -70,12 +76,16 @@ namespace SchoolManagementSystem
 
         private void BtnLibraryMHeader_Click(object sender, EventArgs e)
         {
-
+            LibraryHome libHome = new LibraryHome();
+            this.Hide();
+            libHome.ShowDialog();
         }
 
         private void BtnResourseMHeader_Click(object sender, EventArgs e)
         {
-
+            ResourceManageHome newres = new ResourceManageHome();
+            this.Hide();
+            newres.ShowDialog();
         }
 
         private void BtnEventMHeader_Click(object sender, EventArgs e)
@@ -85,12 +95,16 @@ namespace SchoolManagementSystem
 
         private void BtnInventoryMHeader_Click(object sender, EventArgs e)
         {
-
+            InventoryDashboard inveDash = new InventoryDashboard();
+            this.Hide();
+            inveDash.ShowDialog();
         }
 
         private void BtnStudentMHeader_Click(object sender, EventArgs e)
         {
-
+            CreateStudentAccount creAcc = new CreateStudentAccount();
+            this.Hide();
+            creAcc.ShowDialog();
         }
 
         private void Panel5_Paint(object sender, PaintEventArgs e)
@@ -132,6 +146,13 @@ namespace SchoolManagementSystem
             HomePage1 newHome = new HomePage1();
             this.Hide();
             newHome.ShowDialog();
+        }
+
+        private void GenerateEventRepo_click(object sender, EventArgs e)
+        {
+            YearlyEventReport.YearlyEventReport evRepo = new YearlyEventReport.YearlyEventReport();
+            this.Hide();
+            evRepo.Show();
         }
     }
 }

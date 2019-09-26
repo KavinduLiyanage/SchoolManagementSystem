@@ -191,7 +191,7 @@
             this.addStaffBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.addStaffBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addStaffBtn.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addStaffBtn.Location = new System.Drawing.Point(113, 45);
+            this.addStaffBtn.Location = new System.Drawing.Point(21, 165);
             this.addStaffBtn.Name = "addStaffBtn";
             this.addStaffBtn.Size = new System.Drawing.Size(202, 32);
             this.addStaffBtn.TabIndex = 24;
@@ -203,18 +203,18 @@
             // 
             this.panel1.Controls.Add(this.addStaffBtn);
             this.panel1.Controls.Add(this.addStaffImgBtn);
-            this.panel1.Location = new System.Drawing.Point(56, 168);
+            this.panel1.Location = new System.Drawing.Point(112, 81);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(340, 120);
+            this.panel1.Size = new System.Drawing.Size(250, 220);
             this.panel1.TabIndex = 0;
             // 
             // addStaffImgBtn
             // 
             this.addStaffImgBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("addStaffImgBtn.BackgroundImage")));
             this.addStaffImgBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.addStaffImgBtn.Location = new System.Drawing.Point(12, 13);
+            this.addStaffImgBtn.Location = new System.Drawing.Point(51, 3);
             this.addStaffImgBtn.Name = "addStaffImgBtn";
-            this.addStaffImgBtn.Size = new System.Drawing.Size(90, 94);
+            this.addStaffImgBtn.Size = new System.Drawing.Size(150, 150);
             this.addStaffImgBtn.TabIndex = 0;
             this.addStaffImgBtn.UseVisualStyleBackColor = true;
             this.addStaffImgBtn.Click += new System.EventHandler(this.AddStaffImgBtn_Click);
@@ -224,7 +224,7 @@
             this.viewStaffBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.viewStaffBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.viewStaffBtn.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewStaffBtn.Location = new System.Drawing.Point(108, 42);
+            this.viewStaffBtn.Location = new System.Drawing.Point(19, 165);
             this.viewStaffBtn.Name = "viewStaffBtn";
             this.viewStaffBtn.Size = new System.Drawing.Size(214, 32);
             this.viewStaffBtn.TabIndex = 25;
@@ -236,18 +236,18 @@
             // 
             this.panel2.Controls.Add(this.viewStaffBtn);
             this.panel2.Controls.Add(this.viewLeaveImgBtn);
-            this.panel2.Location = new System.Drawing.Point(568, 168);
+            this.panel2.Location = new System.Drawing.Point(528, 81);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(340, 120);
+            this.panel2.Size = new System.Drawing.Size(250, 220);
             this.panel2.TabIndex = 1;
             // 
             // viewLeaveImgBtn
             // 
             this.viewLeaveImgBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("viewLeaveImgBtn.BackgroundImage")));
             this.viewLeaveImgBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.viewLeaveImgBtn.Location = new System.Drawing.Point(12, 13);
+            this.viewLeaveImgBtn.Location = new System.Drawing.Point(48, 3);
             this.viewLeaveImgBtn.Name = "viewLeaveImgBtn";
-            this.viewLeaveImgBtn.Size = new System.Drawing.Size(90, 94);
+            this.viewLeaveImgBtn.Size = new System.Drawing.Size(150, 150);
             this.viewLeaveImgBtn.TabIndex = 24;
             this.viewLeaveImgBtn.UseVisualStyleBackColor = true;
             this.viewLeaveImgBtn.Click += new System.EventHandler(this.ViewLeaveImgBtn_Click);
@@ -257,7 +257,7 @@
             this.ViewSalaryBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ViewSalaryBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ViewSalaryBtn.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ViewSalaryBtn.Location = new System.Drawing.Point(113, 45);
+            this.ViewSalaryBtn.Location = new System.Drawing.Point(21, 174);
             this.ViewSalaryBtn.Name = "ViewSalaryBtn";
             this.ViewSalaryBtn.Size = new System.Drawing.Size(202, 32);
             this.ViewSalaryBtn.TabIndex = 25;
@@ -281,9 +281,9 @@
             // 
             this.panel4.Controls.Add(this.viewLeaveBtn);
             this.panel4.Controls.Add(this.ViewSalaryImgBtn);
-            this.panel4.Location = new System.Drawing.Point(568, 342);
+            this.panel4.Location = new System.Drawing.Point(528, 319);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(340, 120);
+            this.panel4.Size = new System.Drawing.Size(250, 220);
             this.panel4.TabIndex = 3;
             // 
             // viewLeaveBtn
@@ -291,39 +291,41 @@
             this.viewLeaveBtn.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.viewLeaveBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.viewLeaveBtn.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewLeaveBtn.Location = new System.Drawing.Point(108, 42);
+            this.viewLeaveBtn.Location = new System.Drawing.Point(19, 174);
             this.viewLeaveBtn.Name = "viewLeaveBtn";
             this.viewLeaveBtn.Size = new System.Drawing.Size(214, 32);
             this.viewLeaveBtn.TabIndex = 26;
-            this.viewLeaveBtn.Text = "Reset Password";
+            this.viewLeaveBtn.Text = "Generate Report";
             this.viewLeaveBtn.UseVisualStyleBackColor = true;
+            this.viewLeaveBtn.Click += new System.EventHandler(this.viewLeaveBtn_Click);
             // 
             // ViewSalaryImgBtn
             // 
             this.ViewSalaryImgBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ViewSalaryImgBtn.BackgroundImage")));
             this.ViewSalaryImgBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ViewSalaryImgBtn.Location = new System.Drawing.Point(12, 13);
+            this.ViewSalaryImgBtn.Location = new System.Drawing.Point(48, 9);
             this.ViewSalaryImgBtn.Name = "ViewSalaryImgBtn";
-            this.ViewSalaryImgBtn.Size = new System.Drawing.Size(90, 94);
+            this.ViewSalaryImgBtn.Size = new System.Drawing.Size(150, 150);
             this.ViewSalaryImgBtn.TabIndex = 24;
             this.ViewSalaryImgBtn.UseVisualStyleBackColor = true;
+            this.ViewSalaryImgBtn.Click += new System.EventHandler(this.ViewSalaryImgBtn_Click);
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.ViewSalaryBtn);
             this.panel3.Controls.Add(this.viewStaffImgBtn);
-            this.panel3.Location = new System.Drawing.Point(56, 342);
+            this.panel3.Location = new System.Drawing.Point(112, 319);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(340, 120);
+            this.panel3.Size = new System.Drawing.Size(250, 220);
             this.panel3.TabIndex = 2;
             // 
             // viewStaffImgBtn
             // 
             this.viewStaffImgBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("viewStaffImgBtn.BackgroundImage")));
             this.viewStaffImgBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.viewStaffImgBtn.Location = new System.Drawing.Point(12, 13);
+            this.viewStaffImgBtn.Location = new System.Drawing.Point(69, 9);
             this.viewStaffImgBtn.Name = "viewStaffImgBtn";
-            this.viewStaffImgBtn.Size = new System.Drawing.Size(90, 94);
+            this.viewStaffImgBtn.Size = new System.Drawing.Size(120, 150);
             this.viewStaffImgBtn.TabIndex = 24;
             this.viewStaffImgBtn.UseVisualStyleBackColor = true;
             this.viewStaffImgBtn.Click += new System.EventHandler(this.ViewStaffImgBtn_Click);
@@ -332,7 +334,7 @@
             // 
             this.TitleLabel.AutoSize = true;
             this.TitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitleLabel.Location = new System.Drawing.Point(231, 45);
+            this.TitleLabel.Location = new System.Drawing.Point(228, 18);
             this.TitleLabel.Name = "TitleLabel";
             this.TitleLabel.Size = new System.Drawing.Size(471, 38);
             this.TitleLabel.TabIndex = 23;

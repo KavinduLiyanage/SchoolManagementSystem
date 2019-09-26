@@ -33,16 +33,23 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -388,6 +395,23 @@
     <Compile Include="ViewTimetable.designer.cs">
       <DependentUpon>ViewTimetable.cs</DependentUpon>
     </Compile>
+    <Compile Include="YearlyEventReport\DataSetEvents.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetEvents.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="YearlyEventReport\YearlyEventReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YearlyEventReport\YearlyEventReport.Designer.cs">
+      <DependentUpon>YearlyEventReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YearlyEventReport\YearlyEvReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YearlyEvReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="AddEventAdmin.resx">
       <DependentUpon>AddEventAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -563,6 +587,13 @@
     <EmbeddedResource Include="ViewTimetable.resx">
       <DependentUpon>ViewTimetable.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="YearlyEventReport\YearlyEventReport.resx">
+      <DependentUpon>YearlyEventReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YearlyEventReport\YearlyEvReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>YearlyEvReport.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -573,6 +604,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="YearlyEventReport\DataSetEvents.xsc">
+      <DependentUpon>DataSetEvents.xsd</DependentUpon>
+    </None>
+    <None Include="YearlyEventReport\DataSetEvents.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetEvents.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="YearlyEventReport\DataSetEvents.xss">
+      <DependentUpon>DataSetEvents.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -715,6 +757,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\timetable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

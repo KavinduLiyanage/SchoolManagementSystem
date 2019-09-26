@@ -32,7 +32,9 @@ namespace SchoolManagementSystem
                     SGDName = txtGDName.Text.Trim(),
                     SGDContact = txtGDContact.Text.Trim(),
                     SDob = dateTimePickerDOB.Value,
-                    SGender = gender
+                    SGender = gender,
+                    SGrade = comboBoxGrade.Text.Trim(),
+                    SClass = comboBoxClass.Text.Trim()
 
                 };
 
@@ -146,6 +148,16 @@ namespace SchoolManagementSystem
             LoginForm log = new LoginForm();
             this.Hide();
             log.ShowDialog();
+        }
+
+        private void lblEmail_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

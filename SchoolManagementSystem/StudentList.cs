@@ -25,6 +25,7 @@ namespace SchoolManagementSystem
         private void StudentList_Load(object sender, EventArgs e)
         {
             StudentDetailsDataGridView();
+            UsrlinkLabel.Text = GetSetInfo.userName;
         }
 
         private void StudentDetailsDataGridView()

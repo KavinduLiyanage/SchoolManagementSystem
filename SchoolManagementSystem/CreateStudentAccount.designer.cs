@@ -609,6 +609,7 @@
             this.Name = "CreateStudentAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CreateStudentAccount";
+            this.Load += new System.EventHandler(this.CreateStudentAccount_Load);
             this.panel5.ResumeLayout(false);
             this.ButtonPanel.ResumeLayout(false);
             this.ContentPanel.ResumeLayout(false);

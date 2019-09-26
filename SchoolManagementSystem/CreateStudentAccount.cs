@@ -159,5 +159,10 @@ namespace SchoolManagementSystem
         {
 
         }
+
+        private void CreateStudentAccount_Load(object sender, EventArgs e)
+        {
+            UsrlinkLabel.Text = GetSetInfo.userName;
+        }
     }
 }

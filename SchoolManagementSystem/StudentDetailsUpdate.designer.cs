@@ -44,25 +44,29 @@
             this.NEditStudentBtn = new System.Windows.Forms.Button();
             this.NAddStudentBtn = new System.Windows.Forms.Button();
             this.NStudentHomeBtn = new System.Windows.Forms.Button();
-            this.txtAddress = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
-            this.dateTimePickerDOB = new System.Windows.Forms.DateTimePicker();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.txtGDContact = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
-            this.txtGDName = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
             this.TitleLabel = new System.Windows.Forms.Label();
             this.ContentPanel = new System.Windows.Forms.Panel();
             this.btnDelete = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.UsrlinkLabel = new System.Windows.Forms.LinkLabel();
             this.imgPanel = new System.Windows.Forms.PictureBox();
+            this.comboBoxClass = new System.Windows.Forms.ComboBox();
+            this.comboBoxGrade = new System.Windows.Forms.ComboBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dateTimePickerDOB = new System.Windows.Forms.DateTimePicker();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.txtGDContact = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
+            this.txtGDName = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.panel5.SuspendLayout();
             this.ButtonPanel.SuspendLayout();
             this.ContentPanel.SuspendLayout();
@@ -254,34 +258,13 @@
             this.NStudentHomeBtn.UseVisualStyleBackColor = false;
             this.NStudentHomeBtn.Click += new System.EventHandler(this.NStudentHomeBtn_Click);
             // 
-            // txtAddress
-            // 
-            this.txtAddress.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtAddress.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress.Location = new System.Drawing.Point(388, 205);
-            this.txtAddress.Multiline = true;
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(300, 44);
-            this.txtAddress.TabIndex = 43;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(184, 208);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 25);
-            this.label2.TabIndex = 32;
-            this.label2.Text = "Address";
-            // 
             // btnSubmit
             // 
             this.btnSubmit.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btnSubmit.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnSubmit.Font = new System.Drawing.Font("Franklin Gothic Medium", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.Color.Black;
-            this.btnSubmit.Location = new System.Drawing.Point(323, 442);
+            this.btnSubmit.Location = new System.Drawing.Point(318, 478);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(226, 46);
             this.btnSubmit.TabIndex = 36;
@@ -289,114 +272,11 @@
             this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.BtnSubmit_Click);
             // 
-            // dateTimePickerDOB
-            // 
-            this.dateTimePickerDOB.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.dateTimePickerDOB.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePickerDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerDOB.Location = new System.Drawing.Point(388, 153);
-            this.dateTimePickerDOB.Name = "dateTimePickerDOB";
-            this.dateTimePickerDOB.Size = new System.Drawing.Size(300, 30);
-            this.dateTimePickerDOB.TabIndex = 45;
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(197, 266);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(61, 25);
-            this.lblEmail.TabIndex = 38;
-            this.lblEmail.Text = "Email";
-            this.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtGDContact
-            // 
-            this.txtGDContact.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtGDContact.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGDContact.Location = new System.Drawing.Point(388, 361);
-            this.txtGDContact.Name = "txtGDContact";
-            this.txtGDContact.Size = new System.Drawing.Size(300, 30);
-            this.txtGDContact.TabIndex = 44;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(197, 153);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 25);
-            this.label1.TabIndex = 31;
-            this.label1.Text = "DOB";
-            // 
-            // txtName
-            // 
-            this.txtName.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtName.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(388, 104);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(300, 30);
-            this.txtName.TabIndex = 30;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(157, 361);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(163, 25);
-            this.label5.TabIndex = 41;
-            this.label5.Text = "Guardian Contact";
-            // 
-            // lblName
-            // 
-            this.lblName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(177, 109);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(99, 25);
-            this.lblName.TabIndex = 37;
-            this.lblName.Text = "Full Name";
-            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtGDName
-            // 
-            this.txtGDName.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtGDName.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGDName.Location = new System.Drawing.Point(388, 315);
-            this.txtGDName.Name = "txtGDName";
-            this.txtGDName.Size = new System.Drawing.Size(300, 30);
-            this.txtGDName.TabIndex = 42;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(157, 315);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(148, 25);
-            this.label4.TabIndex = 40;
-            this.label4.Text = "Guardian Name";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.txtEmail.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(388, 266);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(300, 30);
-            this.txtEmail.TabIndex = 35;
-            // 
             // TitleLabel
             // 
             this.TitleLabel.AutoSize = true;
             this.TitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitleLabel.Location = new System.Drawing.Point(214, 30);
+            this.TitleLabel.Location = new System.Drawing.Point(215, 17);
             this.TitleLabel.Name = "TitleLabel";
             this.TitleLabel.Size = new System.Drawing.Size(374, 38);
             this.TitleLabel.TabIndex = 23;
@@ -404,20 +284,24 @@
             // 
             // ContentPanel
             // 
+            this.ContentPanel.Controls.Add(this.comboBoxClass);
+            this.ContentPanel.Controls.Add(this.comboBoxGrade);
             this.ContentPanel.Controls.Add(this.txtAddress);
             this.ContentPanel.Controls.Add(this.label2);
-            this.ContentPanel.Controls.Add(this.btnDelete);
-            this.ContentPanel.Controls.Add(this.btnSubmit);
             this.ContentPanel.Controls.Add(this.dateTimePickerDOB);
             this.ContentPanel.Controls.Add(this.lblEmail);
             this.ContentPanel.Controls.Add(this.txtGDContact);
             this.ContentPanel.Controls.Add(this.label1);
             this.ContentPanel.Controls.Add(this.txtName);
+            this.ContentPanel.Controls.Add(this.label7);
+            this.ContentPanel.Controls.Add(this.label6);
             this.ContentPanel.Controls.Add(this.label5);
             this.ContentPanel.Controls.Add(this.lblName);
             this.ContentPanel.Controls.Add(this.txtGDName);
             this.ContentPanel.Controls.Add(this.label4);
             this.ContentPanel.Controls.Add(this.txtEmail);
+            this.ContentPanel.Controls.Add(this.btnDelete);
+            this.ContentPanel.Controls.Add(this.btnSubmit);
             this.ContentPanel.Controls.Add(this.TitleLabel);
             this.ContentPanel.Location = new System.Drawing.Point(278, 110);
             this.ContentPanel.Name = "ContentPanel";
@@ -430,7 +314,7 @@
             this.btnDelete.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnDelete.Font = new System.Drawing.Font("Franklin Gothic Medium", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.Black;
-            this.btnDelete.Location = new System.Drawing.Point(564, 442);
+            this.btnDelete.Location = new System.Drawing.Point(559, 478);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(226, 46);
             this.btnDelete.TabIndex = 36;
@@ -469,6 +353,190 @@
             this.imgPanel.Size = new System.Drawing.Size(260, 220);
             this.imgPanel.TabIndex = 52;
             this.imgPanel.TabStop = false;
+            // 
+            // comboBoxClass
+            // 
+            this.comboBoxClass.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxClass.FormattingEnabled = true;
+            this.comboBoxClass.Items.AddRange(new object[] {
+            "Class A",
+            "Class B",
+            "Class C",
+            "Class D",
+            "Class E"});
+            this.comboBoxClass.Location = new System.Drawing.Point(410, 418);
+            this.comboBoxClass.Name = "comboBoxClass";
+            this.comboBoxClass.Size = new System.Drawing.Size(300, 28);
+            this.comboBoxClass.TabIndex = 65;
+            // 
+            // comboBoxGrade
+            // 
+            this.comboBoxGrade.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxGrade.FormattingEnabled = true;
+            this.comboBoxGrade.Items.AddRange(new object[] {
+            "Grade 1",
+            "Grade 2",
+            "Grade 3",
+            "Grade 4",
+            "Grade 5",
+            "Grade 6",
+            "Grade 7",
+            "Grade 8",
+            "Grade 9",
+            "Grade 10",
+            "Grade 11",
+            "Grade 12",
+            "Grade 13"});
+            this.comboBoxGrade.Location = new System.Drawing.Point(410, 373);
+            this.comboBoxGrade.Name = "comboBoxGrade";
+            this.comboBoxGrade.Size = new System.Drawing.Size(300, 28);
+            this.comboBoxGrade.TabIndex = 64;
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtAddress.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.Location = new System.Drawing.Point(410, 174);
+            this.txtAddress.Multiline = true;
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(300, 40);
+            this.txtAddress.TabIndex = 61;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(200, 177);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(81, 25);
+            this.label2.TabIndex = 50;
+            this.label2.Text = "Address";
+            // 
+            // dateTimePickerDOB
+            // 
+            this.dateTimePickerDOB.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.dateTimePickerDOB.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePickerDOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerDOB.Location = new System.Drawing.Point(410, 126);
+            this.dateTimePickerDOB.Name = "dateTimePickerDOB";
+            this.dateTimePickerDOB.Size = new System.Drawing.Size(300, 30);
+            this.dateTimePickerDOB.TabIndex = 63;
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Location = new System.Drawing.Point(213, 230);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(61, 25);
+            this.lblEmail.TabIndex = 54;
+            this.lblEmail.Text = "Email";
+            this.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtGDContact
+            // 
+            this.txtGDContact.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtGDContact.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGDContact.Location = new System.Drawing.Point(410, 325);
+            this.txtGDContact.Name = "txtGDContact";
+            this.txtGDContact.Size = new System.Drawing.Size(300, 30);
+            this.txtGDContact.TabIndex = 62;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(218, 131);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 25);
+            this.label1.TabIndex = 49;
+            this.label1.Text = "DOB";
+            // 
+            // txtName
+            // 
+            this.txtName.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtName.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(410, 81);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(300, 30);
+            this.txtName.TabIndex = 48;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(210, 418);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(58, 25);
+            this.label7.TabIndex = 57;
+            this.label7.Text = "Class";
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(210, 373);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(64, 25);
+            this.label6.TabIndex = 58;
+            this.label6.Text = "Grade";
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(173, 325);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(163, 25);
+            this.label5.TabIndex = 59;
+            this.label5.Text = "Guardian Contact";
+            // 
+            // lblName
+            // 
+            this.lblName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(200, 84);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(99, 25);
+            this.lblName.TabIndex = 53;
+            this.lblName.Text = "Full Name";
+            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtGDName
+            // 
+            this.txtGDName.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtGDName.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGDName.Location = new System.Drawing.Point(410, 278);
+            this.txtGDName.Name = "txtGDName";
+            this.txtGDName.Size = new System.Drawing.Size(300, 30);
+            this.txtGDName.TabIndex = 60;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(173, 278);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(148, 25);
+            this.label4.TabIndex = 56;
+            this.label4.Text = "Guardian Name";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtEmail.Font = new System.Drawing.Font("Franklin Gothic Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(410, 230);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(300, 30);
+            this.txtEmail.TabIndex = 52;
             // 
             // StudentDetailsUpdate
             // 
@@ -514,24 +582,28 @@
         private System.Windows.Forms.Button NEditStudentBtn;
         private System.Windows.Forms.Button NAddStudentBtn;
         private System.Windows.Forms.Button NStudentHomeBtn;
-        private System.Windows.Forms.TextBox txtAddress;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnSubmit;
-        private System.Windows.Forms.DateTimePicker dateTimePickerDOB;
-        private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.TextBox txtGDContact;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.TextBox txtGDName;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label TitleLabel;
         private System.Windows.Forms.Panel ContentPanel;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.LinkLabel UsrlinkLabel;
         private System.Windows.Forms.PictureBox imgPanel;
+        private System.Windows.Forms.ComboBox comboBoxClass;
+        private System.Windows.Forms.ComboBox comboBoxGrade;
+        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker dateTimePickerDOB;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.TextBox txtGDContact;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.TextBox txtGDName;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtEmail;
     }
 }

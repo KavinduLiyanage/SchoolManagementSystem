@@ -42,7 +42,7 @@ namespace SchoolManagementSystem
 
         private void TeacherMyProfile_Load(object sender, EventArgs e)
         {
-
+            UsrlinkLabel.Text = GetSetInfo.userName;
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
@@ -226,6 +226,13 @@ namespace SchoolManagementSystem
             StaffReqLeave reqLeave = new StaffReqLeave();
             this.Hide();
             reqLeave.ShowDialog();
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            StaffMngReport.SalaryReportForm salary = new StaffMngReport.SalaryReportForm();
+            this.Hide();
+            salary.ShowDialog();
         }
     }
 }

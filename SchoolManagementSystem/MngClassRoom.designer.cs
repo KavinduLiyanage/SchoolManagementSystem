@@ -44,6 +44,7 @@
             this.capacity = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.grade = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnLogOutHeader = new System.Windows.Forms.Button();
             this.btnNoticeMHeader = new System.Windows.Forms.Button();
             this.btnExamMheader = new System.Windows.Forms.Button();
@@ -53,30 +54,30 @@
             this.btnInventoryMHeader = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnEventMHeader = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.UsrlinkLabel = new System.Windows.Forms.LinkLabel();
-            this.subLabel2 = new System.Windows.Forms.PictureBox();
             this.Timetablebtn = new System.Windows.Forms.Button();
             this.viewtimetable = new System.Windows.Forms.Button();
             this.addsubjectbtn = new System.Windows.Forms.Button();
             this.ResmngHome = new System.Windows.Forms.Button();
             this.ButtonPanel = new System.Windows.Forms.Panel();
             this.NHomeBtn = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.subLabel2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.ButtonPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.subLabel2)).BeginInit();
-            this.ButtonPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(470, 105);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(437, 40);
+            this.label1.Size = new System.Drawing.Size(561, 46);
             this.label1.TabIndex = 0;
             this.label1.Text = "CLASSROOM MANAGEMENT";
             // 
@@ -110,6 +111,7 @@
             this.classid.Size = new System.Drawing.Size(181, 22);
             this.classid.TabIndex = 3;
             this.classid.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
+            this.classid.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Classid_KeyPress);
             // 
             // classname
             // 
@@ -118,12 +120,13 @@
             this.classname.Size = new System.Drawing.Size(181, 22);
             this.classname.TabIndex = 4;
             this.classname.TextChanged += new System.EventHandler(this.TextBox2_TextChanged);
+            this.classname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Classname_KeyPress);
             // 
             // insert
             // 
-            this.insert.BackColor = System.Drawing.SystemColors.Highlight;
+            this.insert.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.insert.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.insert.Location = new System.Drawing.Point(64, 316);
+            this.insert.Location = new System.Drawing.Point(57, 341);
             this.insert.Name = "insert";
             this.insert.Size = new System.Drawing.Size(144, 44);
             this.insert.TabIndex = 5;
@@ -133,9 +136,9 @@
             // 
             // update
             // 
-            this.update.BackColor = System.Drawing.SystemColors.Highlight;
+            this.update.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.update.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.update.Location = new System.Drawing.Point(265, 316);
+            this.update.Location = new System.Drawing.Point(277, 341);
             this.update.Name = "update";
             this.update.Size = new System.Drawing.Size(144, 44);
             this.update.TabIndex = 6;
@@ -145,9 +148,9 @@
             // 
             // delete
             // 
-            this.delete.BackColor = System.Drawing.SystemColors.Highlight;
+            this.delete.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.delete.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.delete.Location = new System.Drawing.Point(64, 373);
+            this.delete.Location = new System.Drawing.Point(277, 404);
             this.delete.Name = "delete";
             this.delete.Size = new System.Drawing.Size(144, 44);
             this.delete.TabIndex = 7;
@@ -157,9 +160,9 @@
             // 
             // search
             // 
-            this.search.BackColor = System.Drawing.SystemColors.Highlight;
+            this.search.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.search.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.search.Location = new System.Drawing.Point(265, 373);
+            this.search.Location = new System.Drawing.Point(57, 404);
             this.search.Name = "search";
             this.search.Size = new System.Drawing.Size(144, 44);
             this.search.TabIndex = 8;
@@ -169,13 +172,13 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(772, 154);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(471, 512);
+            this.dataGridView1.Size = new System.Drawing.Size(478, 462);
             this.dataGridView1.TabIndex = 9;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
@@ -218,6 +221,7 @@
             this.capacity.Name = "capacity";
             this.capacity.Size = new System.Drawing.Size(181, 22);
             this.capacity.TabIndex = 13;
+            this.capacity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Capacity_KeyPress);
             // 
             // label5
             // 
@@ -258,6 +262,18 @@
             this.grade.Size = new System.Drawing.Size(181, 24);
             this.grade.TabIndex = 11;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(1106, 622);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(144, 44);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Report ";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.Button1_Click_1);
+            // 
             // btnLogOutHeader
             // 
             this.btnLogOutHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
@@ -283,6 +299,7 @@
             this.btnNoticeMHeader.TabIndex = 23;
             this.btnNoticeMHeader.Text = "Notice Management";
             this.btnNoticeMHeader.UseVisualStyleBackColor = false;
+            this.btnNoticeMHeader.Click += new System.EventHandler(this.BtnNoticeMHeader_Click);
             // 
             // btnExamMheader
             // 
@@ -295,6 +312,7 @@
             this.btnExamMheader.TabIndex = 1;
             this.btnExamMheader.Text = "Exam Management";
             this.btnExamMheader.UseVisualStyleBackColor = false;
+            this.btnExamMheader.Click += new System.EventHandler(this.BtnExamMheader_Click);
             // 
             // btnLibraryMHeader
             // 
@@ -307,6 +325,7 @@
             this.btnLibraryMHeader.TabIndex = 22;
             this.btnLibraryMHeader.Text = " Library Management";
             this.btnLibraryMHeader.UseVisualStyleBackColor = false;
+            this.btnLibraryMHeader.Click += new System.EventHandler(this.BtnLibraryMHeader_Click);
             // 
             // btnStudentMHeader
             // 
@@ -319,6 +338,7 @@
             this.btnStudentMHeader.TabIndex = 18;
             this.btnStudentMHeader.Text = "Student Management";
             this.btnStudentMHeader.UseVisualStyleBackColor = false;
+            this.btnStudentMHeader.Click += new System.EventHandler(this.BtnStudentMHeader_Click);
             // 
             // btnResourseMHeader
             // 
@@ -331,6 +351,7 @@
             this.btnResourseMHeader.TabIndex = 21;
             this.btnResourseMHeader.Text = "Resourse Management";
             this.btnResourseMHeader.UseVisualStyleBackColor = false;
+            this.btnResourseMHeader.Click += new System.EventHandler(this.BtnResourseMHeader_Click);
             // 
             // btnInventoryMHeader
             // 
@@ -343,6 +364,7 @@
             this.btnInventoryMHeader.TabIndex = 19;
             this.btnInventoryMHeader.Text = "Inventory Management";
             this.btnInventoryMHeader.UseVisualStyleBackColor = false;
+            this.btnInventoryMHeader.Click += new System.EventHandler(this.BtnInventoryMHeader_Click);
             // 
             // panel5
             // 
@@ -371,17 +393,7 @@
             this.btnEventMHeader.TabIndex = 20;
             this.btnEventMHeader.Text = "Event Management";
             this.btnEventMHeader.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(59, 129);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(174, 135);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 48;
-            this.pictureBox1.TabStop = false;
+            this.btnEventMHeader.Click += new System.EventHandler(this.BtnEventMHeader_Click);
             // 
             // UsrlinkLabel
             // 
@@ -394,15 +406,7 @@
             this.UsrlinkLabel.TabIndex = 47;
             this.UsrlinkLabel.TabStop = true;
             this.UsrlinkLabel.Text = "Dulmini Kalupahana";
-            // 
-            // subLabel2
-            // 
-            this.subLabel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.subLabel2.Location = new System.Drawing.Point(15, 105);
-            this.subLabel2.Name = "subLabel2";
-            this.subLabel2.Size = new System.Drawing.Size(260, 220);
-            this.subLabel2.TabIndex = 45;
-            this.subLabel2.TabStop = false;
+            this.UsrlinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.UsrlinkLabel_LinkClicked);
             // 
             // Timetablebtn
             // 
@@ -474,11 +478,32 @@
             this.NHomeBtn.UseVisualStyleBackColor = false;
             this.NHomeBtn.Click += new System.EventHandler(this.NHomeBtn_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(59, 129);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(174, 135);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 48;
+            this.pictureBox1.TabStop = false;
+            // 
+            // subLabel2
+            // 
+            this.subLabel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.subLabel2.Location = new System.Drawing.Point(15, 105);
+            this.subLabel2.Name = "subLabel2";
+            this.subLabel2.Size = new System.Drawing.Size(260, 220);
+            this.subLabel2.TabIndex = 45;
+            this.subLabel2.TabStop = false;
+            // 
             // MngClassRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.UsrlinkLabel);
@@ -494,9 +519,9 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel5.ResumeLayout(false);
+            this.ButtonPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.subLabel2)).EndInit();
-            this.ButtonPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -537,6 +562,7 @@
         private System.Windows.Forms.ComboBox grade;
         private System.Windows.Forms.TextBox capacity;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button1;
     }
 }
 

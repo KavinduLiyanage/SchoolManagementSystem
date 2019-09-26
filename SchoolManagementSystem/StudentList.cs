@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,9 +15,16 @@ namespace SchoolManagementSystem
 {
     public partial class StudentList : Form
     {
+        SqlConnection con = new SqlConnection(@"Data Source=.;Initial Catalog=SchoolManagementSystemDB;Integrated Security=True");
+
         public StudentList()
         {
             InitializeComponent();
+        }
+
+        private void StudentList_Load(object sender, EventArgs e)
+        {
+            StudentDetailsDataGridView();
         }
 
         private void StudentDetailsDataGridView()
@@ -43,9 +51,38 @@ namespace SchoolManagementSystem
             supdate.ShowDialog();
         }
 
-        private void StudentList_Load(object sender, EventArgs e)
+        private void textBox1_Click(object sender, EventArgs e)
         {
-            StudentDetailsDataGridView();
+            textBox1.Text = "";
+            textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+        }
+
+        private void TextBox1_TextChanged(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select * from Student where SNAME like '%" + textBox1.Text + "%' ";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            dgvStudents.DataSource = dt;
+            con.Close();
+        }
+
+        private void comboBoxGrade_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "select * from Student where Grade like '%" + comboBoxGrade.Text + "' ";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            dgvStudents.DataSource = dt;
+            con.Close();
         }
 
         private void NHomeBtn_Click(object sender, EventArgs e)
@@ -90,9 +127,6 @@ namespace SchoolManagementSystem
             log.ShowDialog();
         }
 
-        private void TextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

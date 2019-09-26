@@ -30,6 +30,15 @@ namespace SchoolManagementSystem
             
         }
 
+        public void reset()
+        {
+            classid.Clear();
+            classname.Clear();
+            grade.SelectedIndex = -1;
+            capacity.Clear();
+            
+        }
+
         private void Button3_Click(object sender, EventArgs e)
         {
             con.Open();
@@ -39,7 +48,7 @@ namespace SchoolManagementSystem
             cmd.ExecuteNonQuery();
             con.Close();
             display_details();
-            MessageBox.Show("Record Deleted Successfully");
+            MessageBox.Show("Deleted Successfully");
         }
 
         private void Button2_Click(object sender, EventArgs e)
@@ -47,11 +56,12 @@ namespace SchoolManagementSystem
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "update Classroom set ClassId = '" + classid.Text + "' ,ClassName = '"+classname.Text+"',ClassCapacity='"+capacity.Text+"'where ClassId='" + classid.Text + "'";
+            cmd.CommandText = "update Classroom set ClassId = '" + classid.Text + "' ,ClassName = '"+classname.Text+"',ClassCapacity='"+capacity.Text+ "',grade = '" + grade.Text + "'where ClassId='" + classid.Text + "'";
             cmd.ExecuteNonQuery();
             con.Close();
             display_details();
-            MessageBox.Show("Record Updated Successfully");
+            MessageBox.Show("Updated Successfully");
+            reset();
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -117,7 +127,8 @@ namespace SchoolManagementSystem
             grade.Text = "";
             capacity.Text = "";
             display_details();
-            MessageBox.Show("Record Inserted Successfully");
+            MessageBox.Show("Inserted Successfully");
+            reset();
         }
 
         private void Button4_Click(object sender, EventArgs e)
@@ -183,7 +194,9 @@ namespace SchoolManagementSystem
 
         private void Viewtimetable_Click(object sender, EventArgs e)
         {
-            
+            timetableview openForm = new timetableview();
+            this.Hide();
+            openForm.ShowDialog();
         }
 
         private void TextBox2_TextChanged(object sender, EventArgs e)
@@ -218,6 +231,93 @@ namespace SchoolManagementSystem
             HomePage1 newHome = new HomePage1();
             this.Hide();
             newHome.ShowDialog();
+        }
+
+        private void BtnExamMheader_Click(object sender, EventArgs e)
+        {
+            TeachersHome openForm = new TeachersHome();
+            this.Hide();
+            openForm.ShowDialog();
+        }
+
+        private void Capacity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            
+        }
+
+        private void Classid_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Classname_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Button1_Click_1(object sender, EventArgs e)
+        {
+            ClassroomManagementReport.ClassroomReport crr = new ClassroomManagementReport.ClassroomReport();
+            this.Hide();
+            crr.ShowDialog();
+        }
+
+        private void BtnStudentMHeader_Click(object sender, EventArgs e)
+        {
+            StudentManageHome openForm = new StudentManageHome();
+            this.Hide();
+            openForm.ShowDialog();
+        }
+
+        private void BtnInventoryMHeader_Click(object sender, EventArgs e)
+        {
+            InventoryDashboard openForm = new InventoryDashboard();
+            this.Hide();
+            openForm.ShowDialog();
+        }
+
+        private void BtnEventMHeader_Click(object sender, EventArgs e)
+        {
+            EventDashboard openform = new EventDashboard();
+            this.Hide();
+            openform.ShowDialog();
+
+        }
+
+        private void BtnResourseMHeader_Click(object sender, EventArgs e)
+        {
+            ResourceManageHome openForm = new ResourceManageHome();
+            this.Hide();
+            openForm.ShowDialog();
+        }
+
+        private void BtnLibraryMHeader_Click(object sender, EventArgs e)
+        {
+            LibraryHome openForm = new LibraryHome();
+            this.Hide();
+            openForm.ShowDialog();
+        }
+
+        private void BtnNoticeMHeader_Click(object sender, EventArgs e)
+        {
+            Notice_Dashboard openForm = new Notice_Dashboard();
+            this.Hide();
+            openForm.ShowDialog();
+        }
+
+        private void UsrlinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            UsrlinkLabel.Text = GetSetInfo.userName;
         }
     }
 }

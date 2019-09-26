@@ -279,7 +279,7 @@
             // YearPicker
             // 
             this.YearPicker.CustomFormat = "";
-            this.YearPicker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.YearPicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.YearPicker.Location = new System.Drawing.Point(165, 161);
             this.YearPicker.Name = "YearPicker";
             this.YearPicker.Size = new System.Drawing.Size(207, 22);

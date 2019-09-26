@@ -36,5 +36,11 @@ namespace Models
         public DateTime SDob { get; set; }
 
         public string SPassword { get; set; }
+
+        [Required(AllowEmptyStrings = false, ErrorMessage = "Grade is Required")]
+        public string SGrade { get; set; }
+
+        [Required(AllowEmptyStrings = false, ErrorMessage = "Class is Required")]
+        public string SClass { get; set; }
     }
 }

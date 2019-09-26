@@ -59,11 +59,6 @@
             this.subLabel2 = new System.Windows.Forms.PictureBox();
             this.ButtonPanel = new System.Windows.Forms.Panel();
             this.NHomeBtn = new System.Windows.Forms.Button();
-            this.NViewStaffBtn = new System.Windows.Forms.Button();
-            this.NViewLeaveBtn = new System.Windows.Forms.Button();
-            this.NViewSalaryBtn = new System.Windows.Forms.Button();
-            this.NAddStaffBtn = new System.Windows.Forms.Button();
-            this.NStaffHomeBtn = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -81,7 +76,7 @@
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.button2);
-            this.panel4.Location = new System.Drawing.Point(424, 79);
+            this.panel4.Location = new System.Drawing.Point(259, 18);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(180, 180);
             this.panel4.TabIndex = 3;
@@ -116,7 +111,7 @@
             this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.Controls.Add(this.label4);
             this.panel7.Controls.Add(this.button5);
-            this.panel7.Location = new System.Drawing.Point(424, 376);
+            this.panel7.Location = new System.Drawing.Point(260, 239);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(180, 180);
             this.panel7.TabIndex = 6;
@@ -144,13 +139,14 @@
             this.button5.Size = new System.Drawing.Size(170, 124);
             this.button5.TabIndex = 0;
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.Button5_Click);
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
             this.panel6.Controls.Add(this.label3);
             this.panel6.Controls.Add(this.button4);
-            this.panel6.Location = new System.Drawing.Point(113, 376);
+            this.panel6.Location = new System.Drawing.Point(15, 242);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(180, 180);
             this.panel6.TabIndex = 5;
@@ -160,7 +156,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Gainsboro;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(22, 12);
+            this.label3.Location = new System.Drawing.Point(19, 12);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(133, 24);
             this.label3.TabIndex = 1;
@@ -185,7 +181,7 @@
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.Controls.Add(this.label2);
             this.panel5.Controls.Add(this.button3);
-            this.panel5.Location = new System.Drawing.Point(727, 79);
+            this.panel5.Location = new System.Drawing.Point(508, 23);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(180, 180);
             this.panel5.TabIndex = 4;
@@ -220,7 +216,7 @@
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.Add);
             this.panel3.Controls.Add(this.button1);
-            this.panel3.Location = new System.Drawing.Point(113, 79);
+            this.panel3.Location = new System.Drawing.Point(11, 14);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(180, 180);
             this.panel3.TabIndex = 2;
@@ -259,9 +255,9 @@
             this.panel8.Controls.Add(this.panel6);
             this.panel8.Controls.Add(this.panel7);
             this.panel8.Controls.Add(this.panel4);
-            this.panel8.Location = new System.Drawing.Point(211, 86);
+            this.panel8.Location = new System.Drawing.Point(196, 77);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1023, 583);
+            this.panel8.Size = new System.Drawing.Size(725, 450);
             this.panel8.TabIndex = 7;
             // 
             // panel1
@@ -275,7 +271,7 @@
             this.panel1.Controls.Add(this.btnResourseMHeader);
             this.panel1.Controls.Add(this.btnInventoryMHeader);
             this.panel1.Controls.Add(this.btnEventMHeader);
-            this.panel1.Location = new System.Drawing.Point(15, 11);
+            this.panel1.Location = new System.Drawing.Point(0, 1);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(921, 75);
@@ -405,7 +401,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(48, 122);
+            this.pictureBox1.Location = new System.Drawing.Point(30, 97);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(130, 110);
@@ -418,7 +414,7 @@
             this.UsrlinkLabel.AutoSize = true;
             this.UsrlinkLabel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.UsrlinkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsrlinkLabel.Location = new System.Drawing.Point(48, 245);
+            this.UsrlinkLabel.Location = new System.Drawing.Point(27, 210);
             this.UsrlinkLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.UsrlinkLabel.Name = "UsrlinkLabel";
             this.UsrlinkLabel.Size = new System.Drawing.Size(137, 20);
@@ -429,7 +425,7 @@
             // subLabel2
             // 
             this.subLabel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.subLabel2.Location = new System.Drawing.Point(15, 90);
+            this.subLabel2.Location = new System.Drawing.Point(0, 76);
             this.subLabel2.Margin = new System.Windows.Forms.Padding(2);
             this.subLabel2.Name = "subLabel2";
             this.subLabel2.Size = new System.Drawing.Size(195, 179);
@@ -440,12 +436,7 @@
             // 
             this.ButtonPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ButtonPanel.Controls.Add(this.NHomeBtn);
-            this.ButtonPanel.Controls.Add(this.NViewStaffBtn);
-            this.ButtonPanel.Controls.Add(this.NViewLeaveBtn);
-            this.ButtonPanel.Controls.Add(this.NViewSalaryBtn);
-            this.ButtonPanel.Controls.Add(this.NAddStaffBtn);
-            this.ButtonPanel.Controls.Add(this.NStaffHomeBtn);
-            this.ButtonPanel.Location = new System.Drawing.Point(15, 270);
+            this.ButtonPanel.Location = new System.Drawing.Point(0, 255);
             this.ButtonPanel.Margin = new System.Windows.Forms.Padding(2);
             this.ButtonPanel.Name = "ButtonPanel";
             this.ButtonPanel.Size = new System.Drawing.Size(195, 272);
@@ -465,74 +456,12 @@
             this.NHomeBtn.UseVisualStyleBackColor = false;
             this.NHomeBtn.Click += new System.EventHandler(this.NHomeBtn_Click);
             // 
-            // NViewStaffBtn
-            // 
-            this.NViewStaffBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.NViewStaffBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NViewStaffBtn.Location = new System.Drawing.Point(8, 93);
-            this.NViewStaffBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.NViewStaffBtn.Name = "NViewStaffBtn";
-            this.NViewStaffBtn.Size = new System.Drawing.Size(176, 28);
-            this.NViewStaffBtn.TabIndex = 23;
-            this.NViewStaffBtn.Text = "Issue Book ";
-            this.NViewStaffBtn.UseVisualStyleBackColor = false;
-            this.NViewStaffBtn.Click += new System.EventHandler(this.NViewStaffBtn_Click);
-            // 
-            // NViewLeaveBtn
-            // 
-            this.NViewLeaveBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.NViewLeaveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NViewLeaveBtn.Location = new System.Drawing.Point(8, 152);
-            this.NViewLeaveBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.NViewLeaveBtn.Name = "NViewLeaveBtn";
-            this.NViewLeaveBtn.Size = new System.Drawing.Size(176, 28);
-            this.NViewLeaveBtn.TabIndex = 18;
-            this.NViewLeaveBtn.Text = "Reports";
-            this.NViewLeaveBtn.UseVisualStyleBackColor = false;
-            // 
-            // NViewSalaryBtn
-            // 
-            this.NViewSalaryBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.NViewSalaryBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NViewSalaryBtn.Location = new System.Drawing.Point(8, 123);
-            this.NViewSalaryBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.NViewSalaryBtn.Name = "NViewSalaryBtn";
-            this.NViewSalaryBtn.Size = new System.Drawing.Size(176, 28);
-            this.NViewSalaryBtn.TabIndex = 18;
-            this.NViewSalaryBtn.Text = "Return Books";
-            this.NViewSalaryBtn.UseVisualStyleBackColor = false;
-            // 
-            // NAddStaffBtn
-            // 
-            this.NAddStaffBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.NAddStaffBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NAddStaffBtn.Location = new System.Drawing.Point(8, 64);
-            this.NAddStaffBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.NAddStaffBtn.Name = "NAddStaffBtn";
-            this.NAddStaffBtn.Size = new System.Drawing.Size(176, 28);
-            this.NAddStaffBtn.TabIndex = 17;
-            this.NAddStaffBtn.Text = "View Books";
-            this.NAddStaffBtn.UseVisualStyleBackColor = false;
-            // 
-            // NStaffHomeBtn
-            // 
-            this.NStaffHomeBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.NStaffHomeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NStaffHomeBtn.Location = new System.Drawing.Point(8, 34);
-            this.NStaffHomeBtn.Margin = new System.Windows.Forms.Padding(2);
-            this.NStaffHomeBtn.Name = "NStaffHomeBtn";
-            this.NStaffHomeBtn.Size = new System.Drawing.Size(176, 28);
-            this.NStaffHomeBtn.TabIndex = 17;
-            this.NStaffHomeBtn.Text = "Add Books";
-            this.NStaffHomeBtn.UseVisualStyleBackColor = false;
-            this.NStaffHomeBtn.Click += new System.EventHandler(this.NStaffHomeBtn_Click);
-            // 
             // LibraryHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GrayText;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(946, 547);
             this.Controls.Add(this.ButtonPanel);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.UsrlinkLabel);
@@ -545,6 +474,7 @@
             this.Name = "LibraryHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.LibraryHome_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel7.ResumeLayout(false);
@@ -597,11 +527,6 @@
         private System.Windows.Forms.PictureBox subLabel2;
         private System.Windows.Forms.Panel ButtonPanel;
         private System.Windows.Forms.Button NHomeBtn;
-        private System.Windows.Forms.Button NViewStaffBtn;
-        private System.Windows.Forms.Button NViewLeaveBtn;
-        private System.Windows.Forms.Button NViewSalaryBtn;
-        private System.Windows.Forms.Button NAddStaffBtn;
-        private System.Windows.Forms.Button NStaffHomeBtn;
     }
 }
 

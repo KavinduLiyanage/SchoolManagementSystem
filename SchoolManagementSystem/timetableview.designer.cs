@@ -45,13 +45,15 @@
             this.button1 = new System.Windows.Forms.Button();
             this.Timetablebtn = new System.Windows.Forms.Button();
             this.addsubjectbtn = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTimeTable = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.subLabel2 = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             this.ButtonPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTimeTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.subLabel2)).BeginInit();
             this.SuspendLayout();
@@ -84,6 +86,7 @@
             this.btnLogOutHeader.TabIndex = 25;
             this.btnLogOutHeader.Text = "Log Out";
             this.btnLogOutHeader.UseVisualStyleBackColor = true;
+            this.btnLogOutHeader.Click += new System.EventHandler(this.BtnLogOutHeader_Click);
             // 
             // btnNoticeMHeader
             // 
@@ -148,6 +151,7 @@
             this.btnResourseMHeader.TabIndex = 21;
             this.btnResourseMHeader.Text = "Resourse Management";
             this.btnResourseMHeader.UseVisualStyleBackColor = false;
+            this.btnResourseMHeader.Click += new System.EventHandler(this.BtnResourseMHeader_Click);
             // 
             // btnInventoryMHeader
             // 
@@ -173,6 +177,7 @@
             this.btnEventMHeader.TabIndex = 20;
             this.btnEventMHeader.Text = "Event Management";
             this.btnEventMHeader.UseVisualStyleBackColor = false;
+            this.btnEventMHeader.Click += new System.EventHandler(this.BtnEventMHeader_Click);
             // 
             // NHomeBtn
             // 
@@ -209,6 +214,7 @@
             this.UsrlinkLabel.TabIndex = 52;
             this.UsrlinkLabel.TabStop = true;
             this.UsrlinkLabel.Text = "Dulmini Kalupahana";
+            this.UsrlinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.UsrlinkLabel_LinkClicked);
             // 
             // ButtonPanel
             // 
@@ -256,23 +262,25 @@
             this.addsubjectbtn.UseVisualStyleBackColor = false;
             this.addsubjectbtn.Click += new System.EventHandler(this.Addsubjectbtn_Click);
             // 
-            // dataGridView1
+            // dataGridViewTimeTable
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(315, 165);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(907, 501);
-            this.dataGridView1.TabIndex = 55;
+            this.dataGridViewTimeTable.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewTimeTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewTimeTable.Location = new System.Drawing.Point(283, 153);
+            this.dataGridViewTimeTable.Name = "dataGridViewTimeTable";
+            this.dataGridViewTimeTable.RowHeadersWidth = 51;
+            this.dataGridViewTimeTable.RowTemplate.Height = 24;
+            this.dataGridViewTimeTable.Size = new System.Drawing.Size(967, 428);
+            this.dataGridViewTimeTable.TabIndex = 55;
+            this.dataGridViewTimeTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(645, 112);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(645, 105);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(197, 38);
+            this.label1.Size = new System.Drawing.Size(173, 43);
             this.label1.TabIndex = 56;
             this.label1.Text = "Timetable";
             // 
@@ -296,13 +304,34 @@
             this.subLabel2.TabIndex = 50;
             this.subLabel2.TabStop = false;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(524, 619);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(204, 22);
+            this.textBox1.TabIndex = 57;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(793, 608);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(144, 44);
+            this.button2.TabIndex = 58;
+            this.button2.Text = "Search";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
+            // 
             // timetableview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridViewTimeTable);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.UsrlinkLabel);
@@ -311,9 +340,10 @@
             this.Name = "timetableview";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "timetableview";
+            this.Load += new System.EventHandler(this.Timetableview_Load);
             this.panel5.ResumeLayout(false);
             this.ButtonPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTimeTable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.subLabel2)).EndInit();
             this.ResumeLayout(false);
@@ -340,8 +370,10 @@
         private System.Windows.Forms.Panel ButtonPanel;
         private System.Windows.Forms.Button Timetablebtn;
         private System.Windows.Forms.Button addsubjectbtn;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewTimeTable;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button2;
     }
 }

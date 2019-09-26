@@ -69,7 +69,9 @@ namespace SchoolManagementSystem
 
         private void Viewtimetablebtn_Click(object sender, EventArgs e)
         {
-
+            timetableview openForm = new timetableview();
+            this.Hide();
+            openForm.ShowDialog();
         }
 
         private void Button4_Click(object sender, EventArgs e)
@@ -140,6 +142,44 @@ namespace SchoolManagementSystem
             Notice_Dashboard openForm = new Notice_Dashboard();
             this.Hide();
             openForm.ShowDialog();
+        }
+
+        private void Panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void BtnEventMHeader_Click(object sender, EventArgs e)
+        {
+            EventDashboard openform = new EventDashboard();
+            this.Hide();
+            openform.ShowDialog();
+        }
+
+        private void BtnResourseMHeader_Click(object sender, EventArgs e)
+        {
+            ResourceManageHome openForm = new ResourceManageHome();
+            this.Hide();
+            openForm.ShowDialog();
+        }
+
+        private void BtnLogOutHeader_Click(object sender, EventArgs e)
+        {
+            LoginForm log = new LoginForm();
+            this.Hide();
+            log.ShowDialog();
+        }
+
+        private void NHomeBtn_Click(object sender, EventArgs e)
+        {
+            HomePage1 newHome = new HomePage1();
+            this.Hide();
+            newHome.ShowDialog();
+        }
+
+        private void UsrlinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            UsrlinkLabel.Text = GetSetInfo.userName;
         }
     }
 }

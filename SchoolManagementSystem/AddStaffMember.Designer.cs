@@ -87,6 +87,8 @@
             this.btnResourseMHeader = new System.Windows.Forms.Button();
             this.btnInventoryMHeader = new System.Windows.Forms.Button();
             this.btnEventMHeader = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.ContentPanel.SuspendLayout();
             this.addGroupBox.SuspendLayout();
             this.genderPanel.SuspendLayout();
@@ -134,6 +136,8 @@
             // 
             // addGroupBox
             // 
+            this.addGroupBox.Controls.Add(this.button2);
+            this.addGroupBox.Controls.Add(this.button1);
             this.addGroupBox.Controls.Add(this.subTextBox2);
             this.addGroupBox.Controls.Add(this.subTextBox1);
             this.addGroupBox.Controls.Add(this.label1);
@@ -745,6 +749,32 @@
             this.btnEventMHeader.UseVisualStyleBackColor = false;
             this.btnEventMHeader.Click += new System.EventHandler(this.BtnEventMHeader_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(631, 476);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(111, 41);
+            this.button1.TabIndex = 55;
+            this.button1.Text = "Demo 01";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(514, 476);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(111, 41);
+            this.button2.TabIndex = 56;
+            this.button2.Text = "Demo 02";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
+            // 
             // AddStaffMember
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -841,5 +871,7 @@
         private System.Windows.Forms.Button btnEventMHeader;
         private System.Windows.Forms.ComboBox subTextBox1;
         private System.Windows.Forms.ComboBox subTextBox2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

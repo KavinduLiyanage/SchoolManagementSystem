@@ -50,9 +50,7 @@
             this.btnInventoryMHeader = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnEventMHeader = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.UsrlinkLabel = new System.Windows.Forms.LinkLabel();
-            this.subLabel2 = new System.Windows.Forms.PictureBox();
             this.NHomeBtn = new System.Windows.Forms.Button();
             this.NViewLeaveBtn = new System.Windows.Forms.Button();
             this.ButtonPanel = new System.Windows.Forms.Panel();
@@ -60,14 +58,17 @@
             this.addClassbtn = new System.Windows.Forms.Button();
             this.ResmngHome = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.subLabel2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.subLabel2)).BeginInit();
             this.ButtonPanel.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.subLabel2)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -75,7 +76,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label2.Location = new System.Drawing.Point(35, 28);
+            this.label2.Location = new System.Drawing.Point(53, 41);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 23);
             this.label2.TabIndex = 1;
@@ -87,7 +88,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label3.Location = new System.Drawing.Point(35, 88);
+            this.label3.Location = new System.Drawing.Point(53, 136);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(128, 23);
             this.label3.TabIndex = 2;
@@ -99,7 +100,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label4.Location = new System.Drawing.Point(35, 150);
+            this.label4.Location = new System.Drawing.Point(53, 230);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(64, 23);
             this.label4.TabIndex = 3;
@@ -108,7 +109,7 @@
             // 
             // subjectid
             // 
-            this.subjectid.Location = new System.Drawing.Point(214, 30);
+            this.subjectid.Location = new System.Drawing.Point(241, 43);
             this.subjectid.Name = "subjectid";
             this.subjectid.Size = new System.Drawing.Size(193, 22);
             this.subjectid.TabIndex = 4;
@@ -117,7 +118,7 @@
             // 
             // subjectname
             // 
-            this.subjectname.Location = new System.Drawing.Point(214, 90);
+            this.subjectname.Location = new System.Drawing.Point(241, 136);
             this.subjectname.Name = "subjectname";
             this.subjectname.Size = new System.Drawing.Size(193, 22);
             this.subjectname.TabIndex = 5;
@@ -147,7 +148,7 @@
             "13 Commerce",
             "13 Maths",
             "13 Bio"});
-            this.grade.Location = new System.Drawing.Point(214, 152);
+            this.grade.Location = new System.Drawing.Point(241, 224);
             this.grade.Name = "grade";
             this.grade.Size = new System.Drawing.Size(193, 24);
             this.grade.TabIndex = 6;
@@ -161,7 +162,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(471, 507);
+            this.dataGridView1.Size = new System.Drawing.Size(475, 462);
             this.dataGridView1.TabIndex = 7;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
@@ -170,7 +171,7 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(67, 294);
+            this.button1.Location = new System.Drawing.Point(57, 341);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(144, 44);
             this.button1.TabIndex = 8;
@@ -182,7 +183,7 @@
             // 
             this.update.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.update.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.update.Location = new System.Drawing.Point(275, 294);
+            this.update.Location = new System.Drawing.Point(277, 341);
             this.update.Name = "update";
             this.update.Size = new System.Drawing.Size(144, 44);
             this.update.TabIndex = 9;
@@ -194,7 +195,7 @@
             // 
             this.delete.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.delete.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.delete.Location = new System.Drawing.Point(67, 355);
+            this.delete.Location = new System.Drawing.Point(277, 404);
             this.delete.Name = "delete";
             this.delete.Size = new System.Drawing.Size(144, 44);
             this.delete.TabIndex = 10;
@@ -206,7 +207,7 @@
             // 
             this.search.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.search.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.search.Location = new System.Drawing.Point(275, 355);
+            this.search.Location = new System.Drawing.Point(57, 404);
             this.search.Name = "search";
             this.search.Size = new System.Drawing.Size(144, 44);
             this.search.TabIndex = 11;
@@ -258,6 +259,7 @@
             this.btnNoticeMHeader.TabIndex = 23;
             this.btnNoticeMHeader.Text = "Notice Management";
             this.btnNoticeMHeader.UseVisualStyleBackColor = false;
+            this.btnNoticeMHeader.Click += new System.EventHandler(this.BtnNoticeMHeader_Click_1);
             // 
             // btnExamMheader
             // 
@@ -270,6 +272,7 @@
             this.btnExamMheader.TabIndex = 1;
             this.btnExamMheader.Text = "Exam Management";
             this.btnExamMheader.UseVisualStyleBackColor = false;
+            this.btnExamMheader.Click += new System.EventHandler(this.BtnExamMheader_Click_1);
             // 
             // btnLibraryMHeader
             // 
@@ -282,6 +285,7 @@
             this.btnLibraryMHeader.TabIndex = 22;
             this.btnLibraryMHeader.Text = " Library Management";
             this.btnLibraryMHeader.UseVisualStyleBackColor = false;
+            this.btnLibraryMHeader.Click += new System.EventHandler(this.BtnLibraryMHeader_Click_1);
             // 
             // btnStudentMHeader
             // 
@@ -294,6 +298,7 @@
             this.btnStudentMHeader.TabIndex = 18;
             this.btnStudentMHeader.Text = "Student Management";
             this.btnStudentMHeader.UseVisualStyleBackColor = false;
+            this.btnStudentMHeader.Click += new System.EventHandler(this.BtnStudentMHeader_Click_1);
             // 
             // btnResourseMHeader
             // 
@@ -306,6 +311,7 @@
             this.btnResourseMHeader.TabIndex = 21;
             this.btnResourseMHeader.Text = "Resourse Management";
             this.btnResourseMHeader.UseVisualStyleBackColor = false;
+            this.btnResourseMHeader.Click += new System.EventHandler(this.BtnResourseMHeader_Click);
             // 
             // btnInventoryMHeader
             // 
@@ -318,6 +324,7 @@
             this.btnInventoryMHeader.TabIndex = 19;
             this.btnInventoryMHeader.Text = "Inventory Management";
             this.btnInventoryMHeader.UseVisualStyleBackColor = false;
+            this.btnInventoryMHeader.Click += new System.EventHandler(this.BtnInventoryMHeader_Click);
             // 
             // panel5
             // 
@@ -346,17 +353,7 @@
             this.btnEventMHeader.TabIndex = 20;
             this.btnEventMHeader.Text = "Event Management";
             this.btnEventMHeader.UseVisualStyleBackColor = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(58, 118);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(174, 135);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 48;
-            this.pictureBox1.TabStop = false;
+            this.btnEventMHeader.Click += new System.EventHandler(this.BtnEventMHeader_Click);
             // 
             // UsrlinkLabel
             // 
@@ -369,15 +366,7 @@
             this.UsrlinkLabel.TabIndex = 47;
             this.UsrlinkLabel.TabStop = true;
             this.UsrlinkLabel.Text = "Dulmini Kalupahana";
-            // 
-            // subLabel2
-            // 
-            this.subLabel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.subLabel2.Location = new System.Drawing.Point(15, 105);
-            this.subLabel2.Name = "subLabel2";
-            this.subLabel2.Size = new System.Drawing.Size(260, 220);
-            this.subLabel2.TabIndex = 45;
-            this.subLabel2.TabStop = false;
+            this.UsrlinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.UsrlinkLabel_LinkClicked);
             // 
             // NHomeBtn
             // 
@@ -401,6 +390,7 @@
             this.NViewLeaveBtn.TabIndex = 18;
             this.NViewLeaveBtn.Text = "View Time Table";
             this.NViewLeaveBtn.UseVisualStyleBackColor = false;
+            this.NViewLeaveBtn.Click += new System.EventHandler(this.NViewLeaveBtn_Click);
             // 
             // ButtonPanel
             // 
@@ -451,24 +441,57 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Location = new System.Drawing.Point(281, 107);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(962, 556);
+            this.panel1.Size = new System.Drawing.Size(969, 559);
             this.panel1.TabIndex = 50;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(818, 517);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(144, 44);
+            this.button2.TabIndex = 52;
+            this.button2.Text = "Report";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.Button2_Click_1);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(353, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(151, 33);
+            this.label1.Size = new System.Drawing.Size(179, 39);
             this.label1.TabIndex = 51;
             this.label1.Text = "SUBJECTS";
             this.label1.Click += new System.EventHandler(this.Label1_Click_1);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(58, 118);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(174, 135);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 48;
+            this.pictureBox1.TabStop = false;
+            // 
+            // subLabel2
+            // 
+            this.subLabel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.subLabel2.Location = new System.Drawing.Point(15, 105);
+            this.subLabel2.Name = "subLabel2";
+            this.subLabel2.Size = new System.Drawing.Size(260, 220);
+            this.subLabel2.TabIndex = 45;
+            this.subLabel2.TabStop = false;
             // 
             // ManageSubject
             // 
@@ -490,11 +513,11 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.subLabel2)).EndInit();
             this.ButtonPanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.subLabel2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -533,6 +556,7 @@
         private System.Windows.Forms.Button ResmngHome;
         private System.Windows.Forms.Button addClassbtn;
         private System.Windows.Forms.Button timetable;
+        private System.Windows.Forms.Button button2;
     }
 }
 

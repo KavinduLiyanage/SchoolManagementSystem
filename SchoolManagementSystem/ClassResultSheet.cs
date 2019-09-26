@@ -40,7 +40,7 @@ namespace SchoolManagementSystem
 
         private void ClassResultSheet_Load(object sender, EventArgs e)
         {
-            rd.Load(@"D:\SchoolManagementSysytem\ClassResultSheet.rpt");
+            rd.Load(@"D:\SchoolManagementSystem\ClassResultSheet.rpt");
             con.Open();
             DataSet dst = new DataSet();
             String query = "Select * From ExamMarks";

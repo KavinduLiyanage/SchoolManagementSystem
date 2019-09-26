@@ -101,7 +101,7 @@ namespace SchoolManagementSystem
 
         private void ViewTimetable_Load(object sender, EventArgs e)
         {
-            rd.Load(@"D:\SchoolManagementSysytem\StudentResultSheet.rpt");
+            rd.Load(@"D:\SchoolManagementSystem\StudentResultSheet.rpt");
             con.Open();
             DataSet dst = new DataSet();
             String query = "Select * From ExamTimetable";

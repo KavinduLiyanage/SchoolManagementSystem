@@ -41,6 +41,10 @@
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -191,6 +195,28 @@
     </Compile>
     <Compile Include="EventDashBoardAdmin.designer.cs">
       <DependentUpon>EventDashBoardAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExamManagement\ExamMarksDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExamMarksDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ExamManagement\StudentResultSheet.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudentResultSheet.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExamMarksManagement\ClassResultSheet.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClassResultSheet.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExamMarksManagement\ClassResultSheetDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClassResultSheetDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -631,6 +657,14 @@
     <EmbeddedResource Include="EventDashBoardAdmin.resx">
       <DependentUpon>EventDashBoardAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ExamManagement\StudentResultSheet.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StudentResultSheet.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExamMarksManagement\ClassResultSheet.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ClassResultSheet.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="HomePage3.resx">
       <DependentUpon>HomePage3.cs</DependentUpon>
     </EmbeddedResource>
@@ -850,6 +884,28 @@
     </None>
     <None Include="ClassroomManagementReport\ClassroomDataSet.xss">
       <DependentUpon>ClassroomDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ExamManagement\ExamMarksDataSet.xsc">
+      <DependentUpon>ExamMarksDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ExamManagement\ExamMarksDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ExamMarksDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ExamManagement\ExamMarksDataSet.xss">
+      <DependentUpon>ExamMarksDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ExamMarksManagement\ClassResultSheetDataSet.xsc">
+      <DependentUpon>ClassResultSheetDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ExamMarksManagement\ClassResultSheetDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClassResultSheetDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ExamMarksManagement\ClassResultSheetDataSet.xss">
+      <DependentUpon>ClassResultSheetDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -1077,5 +1133,8 @@
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -37,6 +37,16 @@
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -115,6 +125,23 @@
     <Compile Include="ClassResultSheet.designer.cs">
       <DependentUpon>ClassResultSheet.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClassroomManagementReport\ClassroomCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClassroomCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClassroomManagementReport\ClassroomDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClassroomDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClassroomManagementReport\ClassroomReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassroomManagementReport\ClassroomReport.Designer.cs">
+      <DependentUpon>ClassroomReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Connection.cs" />
     <Compile Include="CreateStudentAccount.cs">
       <SubType>Form</SubType>
@@ -170,6 +197,28 @@
     </Compile>
     <Compile Include="EventDashBoardAdmin.designer.cs">
       <DependentUpon>EventDashBoardAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExamManagement\ExamMarksDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExamMarksDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ExamManagement\StudentResultSheet.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudentResultSheet.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExamMarksManagement\ClassResultSheet.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClassResultSheet.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExamMarksManagement\ClassResultSheetDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClassResultSheetDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -441,6 +490,23 @@
     <Compile Include="StudentViewExamTimetable.Designer.cs">
       <DependentUpon>StudentViewExamTimetable.cs</DependentUpon>
     </Compile>
+    <Compile Include="SubjectManageReport\SubjectMngCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SubjectMngCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SubjectManageReport\SubjectMngDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SubjectMngDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SubjectManageReport\SubjectMngForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubjectManageReport\SubjectMngForm.Designer.cs">
+      <DependentUpon>SubjectMngForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="TeacherMyProfile.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -452,6 +518,23 @@
     </Compile>
     <Compile Include="TeachersHome.designer.cs">
       <DependentUpon>TeachersHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimetableResourceReport\TimetableReaCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TimetableReaCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TimetableResourceReport\TimetableResForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TimetableResourceReport\TimetableResForm.Designer.cs">
+      <DependentUpon>TimetableResForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TimetableResourceReport\TimetableResourceDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TimetableResourceDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="timetableview.cs">
       <SubType>Form</SubType>
@@ -501,6 +584,23 @@
     <Compile Include="ViewTimetable.designer.cs">
       <DependentUpon>ViewTimetable.cs</DependentUpon>
     </Compile>
+    <Compile Include="YearlyEventReport\DataSetEvents.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetEvents.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="YearlyEventReport\YearlyEventReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YearlyEventReport\YearlyEventReport.Designer.cs">
+      <DependentUpon>YearlyEventReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YearlyEventReport\YearlyEvReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YearlyEvReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="AddEventAdmin.resx">
       <DependentUpon>AddEventAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -528,6 +628,13 @@
     <EmbeddedResource Include="ClassResultSheet.resx">
       <DependentUpon>ClassResultSheet.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ClassroomManagementReport\ClassroomCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ClassroomCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassroomManagementReport\ClassroomReport.resx">
+      <DependentUpon>ClassroomReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateStudentAccount.resx">
       <DependentUpon>CreateStudentAccount.cs</DependentUpon>
     </EmbeddedResource>
@@ -551,6 +658,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EventDashBoardAdmin.resx">
       <DependentUpon>EventDashBoardAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExamManagement\StudentResultSheet.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StudentResultSheet.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExamMarksManagement\ClassResultSheet.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ClassResultSheet.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="HomePage3.resx">
       <DependentUpon>HomePage3.cs</DependentUpon>
@@ -688,11 +803,25 @@
     <EmbeddedResource Include="StudentViewExamTimetable.resx">
       <DependentUpon>StudentViewExamTimetable.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SubjectManageReport\SubjectMngCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SubjectMngCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectManageReport\SubjectMngForm.resx">
+      <DependentUpon>SubjectMngForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TeacherMyProfile.resx">
       <DependentUpon>TeacherMyProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TeachersHome.resx">
       <DependentUpon>TeachersHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimetableResourceReport\TimetableReaCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TimetableReaCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TimetableResourceReport\TimetableResForm.resx">
+      <DependentUpon>TimetableResForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="timetableview.resx">
       <DependentUpon>timetableview.cs</DependentUpon>
@@ -740,6 +869,46 @@
     <None Include="DataInventory.xss">
       <DependentUpon>DataInventory.xsd</DependentUpon>
     </None>
+    <EmbeddedResource Include="YearlyEventReport\YearlyEventReport.resx">
+      <DependentUpon>YearlyEventReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YearlyEventReport\YearlyEvReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>YearlyEvReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="ClassroomManagementReport\ClassroomDataSet.xsc">
+      <DependentUpon>ClassroomDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ClassroomManagementReport\ClassroomDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClassroomDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ClassroomManagementReport\ClassroomDataSet.xss">
+      <DependentUpon>ClassroomDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ExamManagement\ExamMarksDataSet.xsc">
+      <DependentUpon>ExamMarksDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ExamManagement\ExamMarksDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ExamMarksDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ExamManagement\ExamMarksDataSet.xss">
+      <DependentUpon>ExamMarksDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ExamMarksManagement\ClassResultSheetDataSet.xsc">
+      <DependentUpon>ClassResultSheetDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ExamMarksManagement\ClassResultSheetDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ClassResultSheetDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ExamMarksManagement\ClassResultSheetDataSet.xss">
+      <DependentUpon>ClassResultSheetDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -782,6 +951,39 @@
     </None>
     <None Include="StudentReports\StudentDataSet1.xss">
       <DependentUpon>StudentDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="YearlyEventReport\DataSetEvents.xsc">
+      <DependentUpon>DataSetEvents.xsd</DependentUpon>
+    </None>
+    <None Include="YearlyEventReport\DataSetEvents.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetEvents.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="YearlyEventReport\DataSetEvents.xss">
+      <DependentUpon>DataSetEvents.xsd</DependentUpon>
+    </None>
+    <None Include="SubjectManageReport\SubjectMngDataSet.xsc">
+      <DependentUpon>SubjectMngDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SubjectManageReport\SubjectMngDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SubjectMngDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="SubjectManageReport\SubjectMngDataSet.xss">
+      <DependentUpon>SubjectMngDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TimetableResourceReport\TimetableResourceDataSet.xsc">
+      <DependentUpon>TimetableResourceDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TimetableResourceReport\TimetableResourceDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TimetableResourceDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="TimetableResourceReport\TimetableResourceDataSet.xss">
+      <DependentUpon>TimetableResourceDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -926,6 +1128,13 @@
   <ItemGroup>
     <None Include="Resources\timetable.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>

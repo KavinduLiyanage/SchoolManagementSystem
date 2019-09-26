@@ -48,7 +48,7 @@ namespace SchoolManagementSystem
             cmd.ExecuteNonQuery();
             con.Close();
             display_details();
-            MessageBox.Show("Record Deleted Successfully");
+            MessageBox.Show("Deleted Successfully");
         }
 
         private void Button2_Click(object sender, EventArgs e)
@@ -194,7 +194,9 @@ namespace SchoolManagementSystem
 
         private void Viewtimetable_Click(object sender, EventArgs e)
         {
-            
+            timetableview openForm = new timetableview();
+            this.Hide();
+            openForm.ShowDialog();
         }
 
         private void TextBox2_TextChanged(object sender, EventArgs e)
@@ -233,7 +235,9 @@ namespace SchoolManagementSystem
 
         private void BtnExamMheader_Click(object sender, EventArgs e)
         {
-
+            TeachersHome openForm = new TeachersHome();
+            this.Hide();
+            openForm.ShowDialog();
         }
 
         private void Capacity_KeyPress(object sender, KeyPressEventArgs e)
@@ -259,6 +263,61 @@ namespace SchoolManagementSystem
             {
                 e.Handled = true;
             }
+        }
+
+        private void Button1_Click_1(object sender, EventArgs e)
+        {
+            ClassroomManagementReport.ClassroomReport crr = new ClassroomManagementReport.ClassroomReport();
+            this.Hide();
+            crr.ShowDialog();
+        }
+
+        private void BtnStudentMHeader_Click(object sender, EventArgs e)
+        {
+            StudentManageHome openForm = new StudentManageHome();
+            this.Hide();
+            openForm.ShowDialog();
+        }
+
+        private void BtnInventoryMHeader_Click(object sender, EventArgs e)
+        {
+            InventoryDashboard openForm = new InventoryDashboard();
+            this.Hide();
+            openForm.ShowDialog();
+        }
+
+        private void BtnEventMHeader_Click(object sender, EventArgs e)
+        {
+            EventDashboard openform = new EventDashboard();
+            this.Hide();
+            openform.ShowDialog();
+
+        }
+
+        private void BtnResourseMHeader_Click(object sender, EventArgs e)
+        {
+            ResourceManageHome openForm = new ResourceManageHome();
+            this.Hide();
+            openForm.ShowDialog();
+        }
+
+        private void BtnLibraryMHeader_Click(object sender, EventArgs e)
+        {
+            LibraryHome openForm = new LibraryHome();
+            this.Hide();
+            openForm.ShowDialog();
+        }
+
+        private void BtnNoticeMHeader_Click(object sender, EventArgs e)
+        {
+            Notice_Dashboard openForm = new Notice_Dashboard();
+            this.Hide();
+            openForm.ShowDialog();
+        }
+
+        private void UsrlinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            UsrlinkLabel.Text = GetSetInfo.userName;
         }
     }
 }

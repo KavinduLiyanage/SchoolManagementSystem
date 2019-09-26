@@ -76,6 +76,7 @@
             this.btnInventoryMHeader = new System.Windows.Forms.Button();
             this.btnEventMHeader = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnDemo = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -224,6 +225,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Controls.Add(this.btnDemo);
             this.panel2.Controls.Add(this.btnReset);
             this.panel2.Controls.Add(this.cbTerm);
             this.panel2.Controls.Add(this.tbClass);
@@ -250,7 +252,7 @@
             // 
             this.btnReset.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReset.Location = new System.Drawing.Point(214, 440);
+            this.btnReset.Location = new System.Drawing.Point(214, 405);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(130, 50);
             this.btnReset.TabIndex = 24;
@@ -392,7 +394,7 @@
             // 
             this.btnInsertATT.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnInsertATT.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInsertATT.Location = new System.Drawing.Point(48, 440);
+            this.btnInsertATT.Location = new System.Drawing.Point(48, 405);
             this.btnInsertATT.Name = "btnInsertATT";
             this.btnInsertATT.Size = new System.Drawing.Size(130, 50);
             this.btnInsertATT.TabIndex = 14;
@@ -491,6 +493,7 @@
             this.lbUserAT.Size = new System.Drawing.Size(155, 25);
             this.lbUserAT.TabIndex = 33;
             this.lbUserAT.Text = "Ashani Malsha";
+            this.lbUserAT.Click += new System.EventHandler(this.LbUserAT_Click);
             // 
             // panel4
             // 
@@ -541,6 +544,7 @@
             this.btnNoticeMHeader.TabIndex = 23;
             this.btnNoticeMHeader.Text = "Notice Management";
             this.btnNoticeMHeader.UseVisualStyleBackColor = false;
+            this.btnNoticeMHeader.Click += new System.EventHandler(this.BtnNoticeMHeader_Click);
             // 
             // btnExamMheader
             // 
@@ -553,6 +557,7 @@
             this.btnExamMheader.TabIndex = 1;
             this.btnExamMheader.Text = "Exam Management";
             this.btnExamMheader.UseVisualStyleBackColor = false;
+            this.btnExamMheader.Click += new System.EventHandler(this.BtnExamMheader_Click);
             // 
             // btnLibraryMHeader
             // 
@@ -565,6 +570,7 @@
             this.btnLibraryMHeader.TabIndex = 22;
             this.btnLibraryMHeader.Text = " Library Management";
             this.btnLibraryMHeader.UseVisualStyleBackColor = false;
+            this.btnLibraryMHeader.Click += new System.EventHandler(this.BtnLibraryMHeader_Click);
             // 
             // btnStudentMHeader
             // 
@@ -577,6 +583,7 @@
             this.btnStudentMHeader.TabIndex = 18;
             this.btnStudentMHeader.Text = "Student Management";
             this.btnStudentMHeader.UseVisualStyleBackColor = false;
+            this.btnStudentMHeader.Click += new System.EventHandler(this.BtnStudentMHeader_Click);
             // 
             // btnResourseMHeader
             // 
@@ -589,6 +596,7 @@
             this.btnResourseMHeader.TabIndex = 21;
             this.btnResourseMHeader.Text = "Resourse Management";
             this.btnResourseMHeader.UseVisualStyleBackColor = false;
+            this.btnResourseMHeader.Click += new System.EventHandler(this.BtnResourseMHeader_Click);
             // 
             // btnInventoryMHeader
             // 
@@ -601,6 +609,7 @@
             this.btnInventoryMHeader.TabIndex = 19;
             this.btnInventoryMHeader.Text = "Inventory Management";
             this.btnInventoryMHeader.UseVisualStyleBackColor = false;
+            this.btnInventoryMHeader.Click += new System.EventHandler(this.BtnInventoryMHeader_Click);
             // 
             // btnEventMHeader
             // 
@@ -617,6 +626,18 @@
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
+            // 
+            // btnDemo
+            // 
+            this.btnDemo.BackColor = System.Drawing.SystemColors.Highlight;
+            this.btnDemo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDemo.Location = new System.Drawing.Point(150, 476);
+            this.btnDemo.Name = "btnDemo";
+            this.btnDemo.Size = new System.Drawing.Size(130, 50);
+            this.btnDemo.TabIndex = 25;
+            this.btnDemo.Text = "Demo";
+            this.btnDemo.UseVisualStyleBackColor = false;
+            this.btnDemo.Click += new System.EventHandler(this.BtnDemo_Click);
             // 
             // AddTimetable
             // 
@@ -698,5 +719,6 @@
         private System.Windows.Forms.ComboBox cbTerm;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.Button btnDemo;
     }
 }

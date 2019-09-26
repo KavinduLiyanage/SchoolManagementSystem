@@ -311,5 +311,32 @@ namespace SchoolManagementSystem
                 e.Handled = true;
             }
         }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+            TimetableResourceReport.TimetableResForm trf = new TimetableResourceReport.TimetableResForm();
+            this.Hide();
+            trf.ShowDialog();
+        }
+
+        private void BtnEventMHeader_Click(object sender, EventArgs e)
+        {
+            EventDashboard openform = new EventDashboard();
+            this.Hide();
+            openform.ShowDialog();
+        }
+
+        private void BtnResourseMHeader_Click(object sender, EventArgs e)
+        {
+            ResourceManageHome openForm = new ResourceManageHome();
+            this.Hide();
+            openForm.ShowDialog();
+
+        }
+
+        private void UsrlinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            UsrlinkLabel.Text = GetSetInfo.userName;
+        }
     }
 }

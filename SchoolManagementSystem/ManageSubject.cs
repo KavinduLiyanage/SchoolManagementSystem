@@ -289,5 +289,73 @@ namespace SchoolManagementSystem
                 e.Handled = true;
             }
         }
+
+        private void Button2_Click_1(object sender, EventArgs e)
+        {
+            SubjectManageReport.SubjectMngForm smf = new SubjectManageReport.SubjectMngForm();
+            this.Hide();
+            smf.ShowDialog();
+        }
+
+        private void BtnExamMheader_Click_1(object sender, EventArgs e)
+        {
+            TeachersHome openForm = new TeachersHome();
+            this.Hide();
+            openForm.ShowDialog();
+        }
+
+        private void BtnStudentMHeader_Click_1(object sender, EventArgs e)
+        {
+            StudentManageHome openForm = new StudentManageHome();
+            this.Hide();
+            openForm.ShowDialog();
+        }
+
+        private void BtnInventoryMHeader_Click(object sender, EventArgs e)
+        {
+            InventoryDashboard openForm = new InventoryDashboard();
+            this.Hide();
+            openForm.ShowDialog();
+        }
+
+        private void BtnEventMHeader_Click(object sender, EventArgs e)
+        {
+            EventDashboard openform = new EventDashboard();
+            this.Hide();
+            openform.ShowDialog();
+        }
+
+        private void BtnResourseMHeader_Click(object sender, EventArgs e)
+        {
+            ResourceManageHome openForm = new ResourceManageHome();
+            this.Hide();
+            openForm.ShowDialog();
+        }
+
+        private void BtnLibraryMHeader_Click_1(object sender, EventArgs e)
+        {
+            LibraryHome openForm = new LibraryHome();
+            this.Hide();
+            openForm.ShowDialog();
+        }
+
+        private void BtnNoticeMHeader_Click_1(object sender, EventArgs e)
+        {
+            Notice_Dashboard openForm = new Notice_Dashboard();
+            this.Hide();
+            openForm.ShowDialog();
+        }
+
+        private void NViewLeaveBtn_Click(object sender, EventArgs e)
+        {
+            timetableview openForm = new timetableview();
+            this.Hide();
+            openForm.ShowDialog();
+        }
+
+        private void UsrlinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            UsrlinkLabel.Text = GetSetInfo.userName;
+        }
     }
 }

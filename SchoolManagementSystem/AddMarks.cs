@@ -389,5 +389,69 @@ namespace SchoolManagementSystem
             this.Hide();
             log.ShowDialog();
         }
+
+        private void BtnStudentMHeader_Click(object sender, EventArgs e)
+        {
+            StudentManageHome smh = new StudentManageHome();
+            this.Hide();
+            smh.ShowDialog();
+        }
+
+        private void BtnInventoryMHeader_Click(object sender, EventArgs e)
+        {
+            InventoryDashboard ind = new InventoryDashboard();
+            this.Hide();
+            ind.ShowDialog();
+        }
+
+        private void BtnEventMHeader_Click(object sender, EventArgs e)
+        {
+            EventDashboard ed = new EventDashboard();
+            this.Hide();
+            ed.ShowDialog();
+        }
+
+        private void BtnResourseMHeader_Click(object sender, EventArgs e)
+        {
+            ResourceManageHome rmh = new ResourceManageHome();
+            this.Hide();
+            rmh.ShowDialog();
+        }
+
+        private void BtnLibraryMHeader_Click(object sender, EventArgs e)
+        {
+            LibraryHome lh = new LibraryHome();
+            this.Hide();
+            lh.ShowDialog();
+        }
+
+        private void BtnExamMheader_Click(object sender, EventArgs e)
+        {
+            TeachersHome th = new TeachersHome();
+            this.Hide();
+            th.ShowDialog();
+        }
+
+        private void BtnNoticeMHeader_Click(object sender, EventArgs e)
+        {
+            Notice_Dashboard nd = new Notice_Dashboard();
+            this.Hide();
+            nd.ShowDialog();
+        }
+
+        private void Button1_Click_1(object sender, EventArgs e)
+        {
+            tbRegNo.Text = "1122";
+            cbSubName.Text = "Sinhala";
+            cbExam.Text = "1st Term";
+            tbMark.Text = "80";
+            YearPicker.Text = "";
+
+        }
+
+        private void LbUserAM_Click(object sender, EventArgs e)
+        {
+            lbUserAM.Text = GetSetInfo.userName;
+        }
     }
 }

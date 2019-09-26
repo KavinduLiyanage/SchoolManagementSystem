@@ -48,7 +48,6 @@
             this.UsrlinkLabel = new System.Windows.Forms.LinkLabel();
             this.ButtonPanel = new System.Windows.Forms.Panel();
             this.NHomeBtn = new System.Windows.Forms.Button();
-            this.NAddStaffBtn = new System.Windows.Forms.Button();
             this.NStaffHomeBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_participants)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_expenses)).BeginInit();
@@ -312,7 +311,6 @@
             // 
             this.ButtonPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ButtonPanel.Controls.Add(this.NHomeBtn);
-            this.ButtonPanel.Controls.Add(this.NAddStaffBtn);
             this.ButtonPanel.Controls.Add(this.NStaffHomeBtn);
             this.ButtonPanel.Location = new System.Drawing.Point(15, 331);
             this.ButtonPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -334,17 +332,6 @@
             this.NHomeBtn.UseVisualStyleBackColor = false;
             this.NHomeBtn.Click += new System.EventHandler(this.NHomeBtn_Click);
             // 
-            // NAddStaffBtn
-            // 
-            this.NAddStaffBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.NAddStaffBtn.Location = new System.Drawing.Point(12, 99);
-            this.NAddStaffBtn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.NAddStaffBtn.Name = "NAddStaffBtn";
-            this.NAddStaffBtn.Size = new System.Drawing.Size(235, 35);
-            this.NAddStaffBtn.TabIndex = 17;
-            this.NAddStaffBtn.Text = "Get Budget Reports";
-            this.NAddStaffBtn.UseVisualStyleBackColor = false;
-            // 
             // NStaffHomeBtn
             // 
             this.NStaffHomeBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
@@ -355,6 +342,7 @@
             this.NStaffHomeBtn.TabIndex = 17;
             this.NStaffHomeBtn.Text = "Yearly Event Report";
             this.NStaffHomeBtn.UseVisualStyleBackColor = false;
+            this.NStaffHomeBtn.Click += new System.EventHandler(this.GenerateEventRepo_click);
             // 
             // EventDashboard
             // 
@@ -407,7 +395,6 @@
         private System.Windows.Forms.LinkLabel UsrlinkLabel;
         private System.Windows.Forms.Panel ButtonPanel;
         private System.Windows.Forms.Button NHomeBtn;
-        private System.Windows.Forms.Button NAddStaffBtn;
         private System.Windows.Forms.Button NStaffHomeBtn;
     }
 }

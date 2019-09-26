@@ -68,6 +68,7 @@
             this.dataGridViewtimetable = new System.Windows.Forms.DataGridView();
             this.timetableId = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.subLabel2)).BeginInit();
@@ -153,6 +154,7 @@
             this.btnResourseMHeader.TabIndex = 21;
             this.btnResourseMHeader.Text = "Resourse Management";
             this.btnResourseMHeader.UseVisualStyleBackColor = false;
+            this.btnResourseMHeader.Click += new System.EventHandler(this.BtnResourseMHeader_Click);
             // 
             // btnInventoryMHeader
             // 
@@ -194,6 +196,7 @@
             this.btnEventMHeader.TabIndex = 20;
             this.btnEventMHeader.Text = "Event Management";
             this.btnEventMHeader.UseVisualStyleBackColor = false;
+            this.btnEventMHeader.Click += new System.EventHandler(this.BtnEventMHeader_Click);
             // 
             // pictureBox1
             // 
@@ -217,6 +220,7 @@
             this.UsrlinkLabel.TabIndex = 47;
             this.UsrlinkLabel.TabStop = true;
             this.UsrlinkLabel.Text = "Dulmini Kalupahana";
+            this.UsrlinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.UsrlinkLabel_LinkClicked);
             // 
             // subLabel2
             // 
@@ -326,7 +330,7 @@
             // 
             this.button2.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.button2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(319, 386);
+            this.button2.Location = new System.Drawing.Point(315, 373);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(144, 44);
             this.button2.TabIndex = 32;
@@ -338,7 +342,7 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(169, 386);
+            this.button1.Location = new System.Drawing.Point(165, 373);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(144, 44);
             this.button1.TabIndex = 31;
@@ -497,7 +501,7 @@
             // 
             this.btnSave.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnSave.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(18, 386);
+            this.btnSave.Location = new System.Drawing.Point(14, 373);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(144, 44);
@@ -521,10 +525,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("MingLiU_HKSCS-ExtB", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(582, 118);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(290, 40);
+            this.label5.Size = new System.Drawing.Size(256, 46);
             this.label5.TabIndex = 50;
             this.label5.Text = "Add Timetable";
             // 
@@ -536,7 +540,7 @@
             this.dataGridViewtimetable.Name = "dataGridViewtimetable";
             this.dataGridViewtimetable.RowHeadersWidth = 51;
             this.dataGridViewtimetable.RowTemplate.Height = 24;
-            this.dataGridViewtimetable.Size = new System.Drawing.Size(491, 444);
+            this.dataGridViewtimetable.Size = new System.Drawing.Size(491, 381);
             this.dataGridViewtimetable.TabIndex = 51;
             this.dataGridViewtimetable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellClick);
             this.dataGridViewtimetable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
@@ -558,11 +562,24 @@
             this.label8.TabIndex = 53;
             this.label8.Text = "Timetable Id";
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(1093, 622);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(144, 44);
+            this.button3.TabIndex = 54;
+            this.button3.Text = "Report";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.Button3_Click);
+            // 
             // MngTimeTable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.timetableId);
             this.Controls.Add(this.dataGridViewtimetable);
@@ -631,6 +648,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox timetableId;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button button3;
     }
 }
 

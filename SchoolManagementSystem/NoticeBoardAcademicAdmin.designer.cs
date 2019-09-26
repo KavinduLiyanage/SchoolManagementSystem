@@ -30,7 +30,6 @@
         {
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnLogOutHeader = new System.Windows.Forms.Button();
-            this.btnNoticeMHeader = new System.Windows.Forms.Button();
             this.btnExamMheader = new System.Windows.Forms.Button();
             this.btnLibraryMHeader = new System.Windows.Forms.Button();
             this.btnStudentMHeader = new System.Windows.Forms.Button();
@@ -60,7 +59,6 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.SkyBlue;
             this.panel5.Controls.Add(this.btnLogOutHeader);
-            this.panel5.Controls.Add(this.btnNoticeMHeader);
             this.panel5.Controls.Add(this.btnExamMheader);
             this.panel5.Controls.Add(this.btnLibraryMHeader);
             this.panel5.Controls.Add(this.btnStudentMHeader);
@@ -88,19 +86,6 @@
             this.btnLogOutHeader.UseVisualStyleBackColor = true;
             this.btnLogOutHeader.Click += new System.EventHandler(this.BtnLogOutHeader_Click);
             // 
-            // btnNoticeMHeader
-            // 
-            this.btnNoticeMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnNoticeMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNoticeMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
-            this.btnNoticeMHeader.Location = new System.Drawing.Point(927, 19);
-            this.btnNoticeMHeader.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnNoticeMHeader.Name = "btnNoticeMHeader";
-            this.btnNoticeMHeader.Size = new System.Drawing.Size(145, 50);
-            this.btnNoticeMHeader.TabIndex = 23;
-            this.btnNoticeMHeader.Text = "Notice Management";
-            this.btnNoticeMHeader.UseVisualStyleBackColor = false;
-            // 
             // btnExamMheader
             // 
             this.btnExamMheader.BackColor = System.Drawing.SystemColors.MenuHighlight;
@@ -113,71 +98,77 @@
             this.btnExamMheader.TabIndex = 1;
             this.btnExamMheader.Text = "Exam Management";
             this.btnExamMheader.UseVisualStyleBackColor = false;
+            this.btnExamMheader.Click += new System.EventHandler(this.BtnExamMheader_Click);
             // 
             // btnLibraryMHeader
             // 
             this.btnLibraryMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnLibraryMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLibraryMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
-            this.btnLibraryMHeader.Location = new System.Drawing.Point(776, 19);
+            this.btnLibraryMHeader.Location = new System.Drawing.Point(911, 19);
             this.btnLibraryMHeader.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLibraryMHeader.Name = "btnLibraryMHeader";
             this.btnLibraryMHeader.Size = new System.Drawing.Size(145, 50);
             this.btnLibraryMHeader.TabIndex = 22;
             this.btnLibraryMHeader.Text = " Library Management";
             this.btnLibraryMHeader.UseVisualStyleBackColor = false;
+            this.btnLibraryMHeader.Click += new System.EventHandler(this.BtnLibraryMHeader_Click);
             // 
             // btnStudentMHeader
             // 
             this.btnStudentMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnStudentMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStudentMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
-            this.btnStudentMHeader.Location = new System.Drawing.Point(172, 19);
+            this.btnStudentMHeader.Location = new System.Drawing.Point(203, 19);
             this.btnStudentMHeader.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnStudentMHeader.Name = "btnStudentMHeader";
             this.btnStudentMHeader.Size = new System.Drawing.Size(145, 50);
             this.btnStudentMHeader.TabIndex = 18;
             this.btnStudentMHeader.Text = "Student Management";
             this.btnStudentMHeader.UseVisualStyleBackColor = false;
+            this.btnStudentMHeader.Click += new System.EventHandler(this.BtnStudentMHeader_Click);
             // 
             // btnResourseMHeader
             // 
             this.btnResourseMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnResourseMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnResourseMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
-            this.btnResourseMHeader.Location = new System.Drawing.Point(626, 19);
+            this.btnResourseMHeader.Location = new System.Drawing.Point(737, 19);
             this.btnResourseMHeader.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnResourseMHeader.Name = "btnResourseMHeader";
             this.btnResourseMHeader.Size = new System.Drawing.Size(145, 50);
             this.btnResourseMHeader.TabIndex = 21;
             this.btnResourseMHeader.Text = "Resourse Management";
             this.btnResourseMHeader.UseVisualStyleBackColor = false;
+            this.btnResourseMHeader.Click += new System.EventHandler(this.BtnResourseMHeader_Click);
             // 
             // btnInventoryMHeader
             // 
             this.btnInventoryMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnInventoryMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInventoryMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
-            this.btnInventoryMHeader.Location = new System.Drawing.Point(323, 19);
+            this.btnInventoryMHeader.Location = new System.Drawing.Point(390, 19);
             this.btnInventoryMHeader.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnInventoryMHeader.Name = "btnInventoryMHeader";
             this.btnInventoryMHeader.Size = new System.Drawing.Size(145, 50);
             this.btnInventoryMHeader.TabIndex = 19;
             this.btnInventoryMHeader.Text = "Inventory Management";
             this.btnInventoryMHeader.UseVisualStyleBackColor = false;
+            this.btnInventoryMHeader.Click += new System.EventHandler(this.BtnInventoryMHeader_Click);
             // 
             // btnEventMHeader
             // 
             this.btnEventMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnEventMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEventMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
-            this.btnEventMHeader.Location = new System.Drawing.Point(474, 19);
+            this.btnEventMHeader.Location = new System.Drawing.Point(565, 19);
             this.btnEventMHeader.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnEventMHeader.Name = "btnEventMHeader";
             this.btnEventMHeader.Size = new System.Drawing.Size(145, 50);
             this.btnEventMHeader.TabIndex = 20;
             this.btnEventMHeader.Text = "Event Management";
             this.btnEventMHeader.UseVisualStyleBackColor = false;
+            this.btnEventMHeader.Click += new System.EventHandler(this.BtnEventMHeader_Click);
             // 
             // panel1
             // 
@@ -335,7 +326,6 @@
 
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnLogOutHeader;
-        private System.Windows.Forms.Button btnNoticeMHeader;
         private System.Windows.Forms.Button btnExamMheader;
         private System.Windows.Forms.Button btnLibraryMHeader;
         private System.Windows.Forms.Button btnStudentMHeader;

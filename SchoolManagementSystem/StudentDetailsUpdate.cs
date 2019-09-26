@@ -29,7 +29,7 @@ namespace SchoolManagementSystem
         
         private void StudentDetailsUpdate_Load_1(object sender, EventArgs e)
         {
-
+            UsrlinkLabel.Text = GetSetInfo.userName;
             using (SchoolManagementSystemDBEntities db = new SchoolManagementSystemDBEntities())
             {
                 student1 = db.Students.Where(x => x.SID == sss).FirstOrDefault();

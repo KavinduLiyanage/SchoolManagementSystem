@@ -38,10 +38,6 @@
             this.ButtonPanel = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.dataGridViewMarks = new System.Windows.Forms.DataGridView();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.lbSearch = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.txtTName = new System.Windows.Forms.TextBox();
             this.lbRegNo = new System.Windows.Forms.Label();
@@ -55,8 +51,6 @@
             this.imgPanel = new System.Windows.Forms.PictureBox();
             this.panel5.SuspendLayout();
             this.ButtonPanel.SuspendLayout();
-            this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMarks)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgPanel)).BeginInit();
@@ -166,44 +160,6 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel3.Controls.Add(this.dataGridViewMarks);
-            this.panel3.Controls.Add(this.txtSearch);
-            this.panel3.Controls.Add(this.lbSearch);
-            this.panel3.Location = new System.Drawing.Point(690, 190);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(547, 471);
-            this.panel3.TabIndex = 56;
-            // 
-            // dataGridViewMarks
-            // 
-            this.dataGridViewMarks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewMarks.Location = new System.Drawing.Point(19, 64);
-            this.dataGridViewMarks.Name = "dataGridViewMarks";
-            this.dataGridViewMarks.RowHeadersWidth = 51;
-            this.dataGridViewMarks.RowTemplate.Height = 24;
-            this.dataGridViewMarks.Size = new System.Drawing.Size(508, 393);
-            this.dataGridViewMarks.TabIndex = 14;
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.Location = new System.Drawing.Point(91, 18);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(403, 22);
-            this.txtSearch.TabIndex = 12;
-            // 
-            // lbSearch
-            // 
-            this.lbSearch.AutoSize = true;
-            this.lbSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSearch.Location = new System.Drawing.Point(23, 18);
-            this.lbSearch.Name = "lbSearch";
-            this.lbSearch.Size = new System.Drawing.Size(62, 20);
-            this.lbSearch.TabIndex = 13;
-            this.lbSearch.Text = "Search";
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -214,14 +170,14 @@
             this.panel2.Controls.Add(this.btnMake);
             this.panel2.Controls.Add(this.txtReason);
             this.panel2.Controls.Add(this.YearPicker);
-            this.panel2.Location = new System.Drawing.Point(283, 190);
+            this.panel2.Location = new System.Drawing.Point(344, 173);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(389, 471);
+            this.panel2.Size = new System.Drawing.Size(828, 449);
             this.panel2.TabIndex = 55;
             // 
             // txtTName
             // 
-            this.txtTName.Location = new System.Drawing.Point(165, 44);
+            this.txtTName.Location = new System.Drawing.Point(381, 78);
             this.txtTName.Name = "txtTName";
             this.txtTName.Size = new System.Drawing.Size(207, 22);
             this.txtTName.TabIndex = 5;
@@ -230,7 +186,7 @@
             // 
             this.lbRegNo.AutoSize = true;
             this.lbRegNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbRegNo.Location = new System.Drawing.Point(19, 44);
+            this.lbRegNo.Location = new System.Drawing.Point(158, 80);
             this.lbRegNo.Name = "lbRegNo";
             this.lbRegNo.Size = new System.Drawing.Size(119, 20);
             this.lbRegNo.TabIndex = 0;
@@ -240,7 +196,7 @@
             // 
             this.lbMarks.AutoSize = true;
             this.lbMarks.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMarks.Location = new System.Drawing.Point(19, 97);
+            this.lbMarks.Location = new System.Drawing.Point(184, 141);
             this.lbMarks.Name = "lbMarks";
             this.lbMarks.Size = new System.Drawing.Size(66, 20);
             this.lbMarks.TabIndex = 3;
@@ -250,17 +206,17 @@
             // 
             this.lbYear.AutoSize = true;
             this.lbYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbYear.Location = new System.Drawing.Point(13, 161);
+            this.lbYear.Location = new System.Drawing.Point(170, 214);
             this.lbYear.Name = "lbYear";
-            this.lbYear.Size = new System.Drawing.Size(98, 20);
+            this.lbYear.Size = new System.Drawing.Size(97, 20);
             this.lbYear.TabIndex = 4;
-            this.lbYear.Text = "Select Time";
+            this.lbYear.Text = "Select Date";
             // 
             // btnMake
             // 
             this.btnMake.BackColor = System.Drawing.SystemColors.Highlight;
             this.btnMake.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMake.Location = new System.Drawing.Point(128, 313);
+            this.btnMake.Location = new System.Drawing.Point(299, 289);
             this.btnMake.Name = "btnMake";
             this.btnMake.Size = new System.Drawing.Size(130, 50);
             this.btnMake.TabIndex = 11;
@@ -270,7 +226,7 @@
             // 
             // txtReason
             // 
-            this.txtReason.Location = new System.Drawing.Point(165, 88);
+            this.txtReason.Location = new System.Drawing.Point(381, 131);
             this.txtReason.Multiline = true;
             this.txtReason.Name = "txtReason";
             this.txtReason.Size = new System.Drawing.Size(207, 46);
@@ -280,7 +236,7 @@
             // 
             this.YearPicker.CustomFormat = "";
             this.YearPicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.YearPicker.Location = new System.Drawing.Point(165, 161);
+            this.YearPicker.Location = new System.Drawing.Point(381, 212);
             this.YearPicker.Name = "YearPicker";
             this.YearPicker.Size = new System.Drawing.Size(207, 22);
             this.YearPicker.TabIndex = 8;
@@ -321,7 +277,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 673);
             this.Controls.Add(this.label25);
-            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.pictureBox1);
@@ -333,11 +288,9 @@
             this.Name = "StudentAppointment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StudentAppointment";
+            this.Load += new System.EventHandler(this.StudentAppointment_Load);
             this.panel5.ResumeLayout(false);
             this.ButtonPanel.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewMarks)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -358,10 +311,6 @@
         private System.Windows.Forms.Button NViewStudentBtn;
         private System.Windows.Forms.Button NAddStudentBtn;
         private System.Windows.Forms.Panel ButtonPanel;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dataGridViewMarks;
-        private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.Label lbSearch;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox txtTName;
         private System.Windows.Forms.Label lbRegNo;

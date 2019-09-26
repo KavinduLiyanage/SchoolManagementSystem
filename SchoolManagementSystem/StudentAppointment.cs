@@ -59,7 +59,10 @@ namespace SchoolManagementSystem
                 {
                     MessageBox.Show("Appointment place Sucessfully");
                     this.Hide();
-                   
+                    HomePage3 h3 = new HomePage3();
+                    h3.ShowDialog();
+
+
                 }
                 else
                 {
@@ -109,6 +112,9 @@ namespace SchoolManagementSystem
             log.ShowDialog();
         }
 
-        
+        private void StudentAppointment_Load(object sender, EventArgs e)
+        {
+            UsrlinkLabel.Text = GetSetInfo.userName;
+        }
     }
 }

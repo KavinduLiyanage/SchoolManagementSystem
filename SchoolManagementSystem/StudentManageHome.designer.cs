@@ -458,6 +458,7 @@
             this.Name = "StudentManageHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "StudentManageHome";
+            this.Load += new System.EventHandler(this.StudentManageHome_Load);
             this.panel5.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);

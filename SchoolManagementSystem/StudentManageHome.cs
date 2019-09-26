@@ -114,5 +114,10 @@ namespace SchoolManagementSystem
             this.Hide();
             log.ShowDialog();
         }
+
+        private void StudentManageHome_Load(object sender, EventArgs e)
+        {
+            UsrlinkLabel.Text = GetSetInfo.userName;
+        }
     }
 }

@@ -24,21 +24,8 @@ namespace SchoolManagementSystem
 
         private void ViewStudentMarks_Load(object sender, EventArgs e)
         {
-            using (SchoolManagementSystemDBEntities db = new SchoolManagementSystemDBEntities())
-            {
-                examMark = db.ExamMarks.Where(x => x.SID == GetSetInfo.getsetusrId).FirstOrDefault();
-
-
-                /*
-                txtName.Text = student1.SNAME;
-                txtAddress.Text = student1.SADDRESS;
-                txtEmail.Text = student1.SEMAIL;
-                txtGDName.Text = student1.SGDNAME;
-                txtGDContact.Text = student1.SGDCONTACT;
-                dateTimePickerDOB.Value = (DateTime)student1.SDOB;
-                comboBoxGrade.Text = student1.Grade;
-                comboBoxClass.Text = student1.ClassName;*/
-            }
+            UsrlinkLabel.Text = GetSetInfo.userName;
+           
         }
 
         private void NHomeBtn_Click(object sender, EventArgs e)

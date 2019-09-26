@@ -501,6 +501,23 @@
     <Compile Include="ViewTimetable.designer.cs">
       <DependentUpon>ViewTimetable.cs</DependentUpon>
     </Compile>
+    <Compile Include="YearlyEventReport\DataSetEvents.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetEvents.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="YearlyEventReport\YearlyEventReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YearlyEventReport\YearlyEventReport.Designer.cs">
+      <DependentUpon>YearlyEventReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="YearlyEventReport\YearlyEvReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>YearlyEvReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="AddEventAdmin.resx">
       <DependentUpon>AddEventAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -740,6 +757,13 @@
     <None Include="DataInventory.xss">
       <DependentUpon>DataInventory.xsd</DependentUpon>
     </None>
+    <EmbeddedResource Include="YearlyEventReport\YearlyEventReport.resx">
+      <DependentUpon>YearlyEventReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YearlyEventReport\YearlyEvReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>YearlyEvReport.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -782,6 +806,17 @@
     </None>
     <None Include="StudentReports\StudentDataSet1.xss">
       <DependentUpon>StudentDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="YearlyEventReport\DataSetEvents.xsc">
+      <DependentUpon>DataSetEvents.xsd</DependentUpon>
+    </None>
+    <None Include="YearlyEventReport\DataSetEvents.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetEvents.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="YearlyEventReport\DataSetEvents.xss">
+      <DependentUpon>DataSetEvents.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

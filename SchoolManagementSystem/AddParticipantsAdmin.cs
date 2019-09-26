@@ -327,6 +327,57 @@ namespace SchoolManagementSystem
             
         }
 
-        
+        private void GenerateEventRepo_click(object sender, EventArgs e)
+        {
+            YearlyEventReport.YearlyEventReport evRepo = new YearlyEventReport.YearlyEventReport();
+            this.Hide();
+            evRepo.Show();
+        }
+
+        private void Button11_Click(object sender, EventArgs e)
+        {
+            TeachersHome home = new TeachersHome();
+            this.Hide();
+            home.ShowDialog();
+        }
+
+        private void Button13_Click(object sender, EventArgs e)
+        {
+            CreateStudentAccount creAcc = new CreateStudentAccount();
+            this.Hide();
+            creAcc.ShowDialog();
+        }
+
+        private void Button15_Click(object sender, EventArgs e)
+        {
+            InventoryDashboard inveDash = new InventoryDashboard();
+            this.Hide();
+            inveDash.ShowDialog();
+        }
+
+        private void Button14_Click(object sender, EventArgs e)
+        {
+
+            ResourceManageHome newres = new ResourceManageHome();
+            this.Hide();
+            newres.ShowDialog();
+        }
+
+        private void Button12_Click(object sender, EventArgs e)
+        {
+            LibraryHome libHome = new LibraryHome();
+            this.Hide();
+            libHome.ShowDialog();
+        }
+
+        private void Button10_Click(object sender, EventArgs e)
+        {
+            Notice_Dashboard nd = new Notice_Dashboard();
+            this.Hide();
+            nd.Show();
+        }
+
+
     }
-}
+    }
+

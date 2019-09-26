@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewTimetable));
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tbSearch = new System.Windows.Forms.TextBox();
+            this.dataGridViewTimeTable = new System.Windows.Forms.DataGridView();
             this.lbTimetableIDATT = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.cbTerm = new System.Windows.Forms.ComboBox();
             this.lbGradeATT = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.lbTermATT = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbGrade = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSectionResultSheetGTT = new System.Windows.Forms.Button();
             this.btnAddMarksGTT = new System.Windows.Forms.Button();
@@ -50,6 +50,9 @@
             this.btnTeachersHomeGTT = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.crystalReportViewer3 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.crystalReportViewer2 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.crystalReportViewer1 = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
             this.btnDisplayGTT = new System.Windows.Forms.Button();
             this.btnGetReportGTT = new System.Windows.Forms.Button();
             this.lbUserGT = new System.Windows.Forms.Label();
@@ -65,10 +68,11 @@
             this.btnInventoryMHeader = new System.Windows.Forms.Button();
             this.btnEventMHeader = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTimeTable)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
@@ -76,30 +80,31 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel3.Controls.Add(this.dataGridView1);
             this.panel3.Controls.Add(this.tbSearch);
+            this.panel3.Controls.Add(this.dataGridViewTimeTable);
             this.panel3.Controls.Add(this.lbTimetableIDATT);
             this.panel3.Location = new System.Drawing.Point(292, 290);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(493, 374);
             this.panel3.TabIndex = 35;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(14, 49);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(457, 317);
-            this.dataGridView1.TabIndex = 14;
-            // 
             // tbSearch
             // 
-            this.tbSearch.Location = new System.Drawing.Point(129, 18);
+            this.tbSearch.Location = new System.Drawing.Point(134, 18);
             this.tbSearch.Name = "tbSearch";
-            this.tbSearch.Size = new System.Drawing.Size(342, 22);
-            this.tbSearch.TabIndex = 12;
+            this.tbSearch.Size = new System.Drawing.Size(337, 22);
+            this.tbSearch.TabIndex = 15;
+            this.tbSearch.TextChanged += new System.EventHandler(this.TbSearch_TextChanged);
+            // 
+            // dataGridViewTimeTable
+            // 
+            this.dataGridViewTimeTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewTimeTable.Location = new System.Drawing.Point(14, 49);
+            this.dataGridViewTimeTable.Name = "dataGridViewTimeTable";
+            this.dataGridViewTimeTable.RowHeadersWidth = 51;
+            this.dataGridViewTimeTable.RowTemplate.Height = 24;
+            this.dataGridViewTimeTable.Size = new System.Drawing.Size(457, 317);
+            this.dataGridViewTimeTable.TabIndex = 14;
             // 
             // lbTimetableIDATT
             // 
@@ -114,14 +119,26 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel2.Controls.Add(this.cbTerm);
             this.panel2.Controls.Add(this.lbGradeATT);
-            this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.lbTermATT);
-            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.cbGrade);
             this.panel2.Location = new System.Drawing.Point(292, 110);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(493, 174);
             this.panel2.TabIndex = 34;
+            // 
+            // cbTerm
+            // 
+            this.cbTerm.FormattingEnabled = true;
+            this.cbTerm.Items.AddRange(new object[] {
+            "1st Term",
+            "2nd Term",
+            "3rd Term"});
+            this.cbTerm.Location = new System.Drawing.Point(177, 38);
+            this.cbTerm.Name = "cbTerm";
+            this.cbTerm.Size = new System.Drawing.Size(200, 24);
+            this.cbTerm.TabIndex = 17;
             // 
             // lbGradeATT
             // 
@@ -133,13 +150,6 @@
             this.lbGradeATT.TabIndex = 16;
             this.lbGradeATT.Text = "Grade";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(177, 41);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 22);
-            this.textBox1.TabIndex = 5;
-            // 
             // lbTermATT
             // 
             this.lbTermATT.AutoSize = true;
@@ -150,13 +160,33 @@
             this.lbTermATT.TabIndex = 0;
             this.lbTermATT.Text = "Term";
             // 
-            // comboBox1
+            // cbGrade
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(177, 84);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 24);
-            this.comboBox1.TabIndex = 9;
+            this.cbGrade.FormattingEnabled = true;
+            this.cbGrade.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12 Bio",
+            "12 Maths",
+            "12 Commerce",
+            "12 Art",
+            "13 Bio",
+            "13 Maths",
+            "13 Commerce",
+            "13 Art"});
+            this.cbGrade.Location = new System.Drawing.Point(177, 84);
+            this.cbGrade.Name = "cbGrade";
+            this.cbGrade.Size = new System.Drawing.Size(200, 24);
+            this.cbGrade.TabIndex = 9;
             // 
             // panel1
             // 
@@ -295,10 +325,48 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel4.Controls.Add(this.crystalReportViewer3);
+            this.panel4.Controls.Add(this.crystalReportViewer2);
+            this.panel4.Controls.Add(this.crystalReportViewer1);
             this.panel4.Location = new System.Drawing.Point(802, 110);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(448, 476);
             this.panel4.TabIndex = 36;
+            // 
+            // crystalReportViewer3
+            // 
+            this.crystalReportViewer3.ActiveViewIndex = -1;
+            this.crystalReportViewer3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer3.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crystalReportViewer3.Location = new System.Drawing.Point(0, 0);
+            this.crystalReportViewer3.Name = "crystalReportViewer3";
+            this.crystalReportViewer3.Size = new System.Drawing.Size(448, 476);
+            this.crystalReportViewer3.TabIndex = 2;
+            this.crystalReportViewer3.ToolPanelView = CrystalDecisions.Windows.Forms.ToolPanelViewType.None;
+            // 
+            // crystalReportViewer2
+            // 
+            this.crystalReportViewer2.ActiveViewIndex = -1;
+            this.crystalReportViewer2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crystalReportViewer2.Location = new System.Drawing.Point(0, 0);
+            this.crystalReportViewer2.Name = "crystalReportViewer2";
+            this.crystalReportViewer2.Size = new System.Drawing.Size(448, 476);
+            this.crystalReportViewer2.TabIndex = 1;
+            this.crystalReportViewer2.Load += new System.EventHandler(this.CrystalReportViewer2_Load);
+            // 
+            // crystalReportViewer1
+            // 
+            this.crystalReportViewer1.ActiveViewIndex = -1;
+            this.crystalReportViewer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crystalReportViewer1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crystalReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crystalReportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.crystalReportViewer1.Name = "crystalReportViewer1";
+            this.crystalReportViewer1.Size = new System.Drawing.Size(448, 476);
+            this.crystalReportViewer1.TabIndex = 0;
             // 
             // btnDisplayGTT
             // 
@@ -310,6 +378,7 @@
             this.btnDisplayGTT.TabIndex = 37;
             this.btnDisplayGTT.Text = "Display";
             this.btnDisplayGTT.UseVisualStyleBackColor = false;
+            this.btnDisplayGTT.Click += new System.EventHandler(this.BtnDisplayGTT_Click);
             // 
             // btnGetReportGTT
             // 
@@ -321,6 +390,7 @@
             this.btnGetReportGTT.TabIndex = 38;
             this.btnGetReportGTT.Text = "Get Timetable";
             this.btnGetReportGTT.UseVisualStyleBackColor = false;
+            this.btnGetReportGTT.Click += new System.EventHandler(this.BtnGetReportGTT_Click);
             // 
             // lbUserGT
             // 
@@ -333,6 +403,7 @@
             this.lbUserGT.Size = new System.Drawing.Size(155, 25);
             this.lbUserGT.TabIndex = 39;
             this.lbUserGT.Text = "Ashani Malsha";
+            this.lbUserGT.Click += new System.EventHandler(this.LbUserGT_Click);
             // 
             // btnimgGT
             // 
@@ -393,6 +464,7 @@
             this.btnNoticeMHeader.TabIndex = 23;
             this.btnNoticeMHeader.Text = "Notice Management";
             this.btnNoticeMHeader.UseVisualStyleBackColor = false;
+            this.btnNoticeMHeader.Click += new System.EventHandler(this.BtnNoticeMHeader_Click);
             // 
             // btnExamMheader
             // 
@@ -405,6 +477,7 @@
             this.btnExamMheader.TabIndex = 1;
             this.btnExamMheader.Text = "Exam Management";
             this.btnExamMheader.UseVisualStyleBackColor = false;
+            this.btnExamMheader.Click += new System.EventHandler(this.BtnExamMheader_Click);
             // 
             // btnLibraryMHeader
             // 
@@ -417,6 +490,7 @@
             this.btnLibraryMHeader.TabIndex = 22;
             this.btnLibraryMHeader.Text = " Library Management";
             this.btnLibraryMHeader.UseVisualStyleBackColor = false;
+            this.btnLibraryMHeader.Click += new System.EventHandler(this.BtnLibraryMHeader_Click);
             // 
             // btnStudentMHeader
             // 
@@ -429,6 +503,7 @@
             this.btnStudentMHeader.TabIndex = 18;
             this.btnStudentMHeader.Text = "Student Management";
             this.btnStudentMHeader.UseVisualStyleBackColor = false;
+            this.btnStudentMHeader.Click += new System.EventHandler(this.BtnStudentMHeader_Click);
             // 
             // btnResourseMHeader
             // 
@@ -441,6 +516,7 @@
             this.btnResourseMHeader.TabIndex = 21;
             this.btnResourseMHeader.Text = "Resourse Management";
             this.btnResourseMHeader.UseVisualStyleBackColor = false;
+            this.btnResourseMHeader.Click += new System.EventHandler(this.BtnResourseMHeader_Click);
             // 
             // btnInventoryMHeader
             // 
@@ -453,6 +529,7 @@
             this.btnInventoryMHeader.TabIndex = 19;
             this.btnInventoryMHeader.Text = "Inventory Management";
             this.btnInventoryMHeader.UseVisualStyleBackColor = false;
+            this.btnInventoryMHeader.Click += new System.EventHandler(this.BtnInventoryMHeader_Click);
             // 
             // btnEventMHeader
             // 
@@ -485,13 +562,15 @@
             this.Name = "ViewTimetable";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ViewTimetable";
+            this.Load += new System.EventHandler(this.ViewTimetable_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTimeTable)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -502,14 +581,12 @@
         #endregion
 
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox tbSearch;
+        private System.Windows.Forms.DataGridView dataGridViewTimeTable;
         private System.Windows.Forms.Label lbTimetableIDATT;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lbGradeATT;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lbTermATT;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbGrade;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnSectionResultSheetGTT;
         private System.Windows.Forms.Button btnAddMarksGTT;
@@ -536,5 +613,10 @@
         private System.Windows.Forms.Button btnResourseMHeader;
         private System.Windows.Forms.Button btnInventoryMHeader;
         private System.Windows.Forms.Button btnEventMHeader;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer3;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer2;
+        private CrystalDecisions.Windows.Forms.CrystalReportViewer crystalReportViewer1;
+        private System.Windows.Forms.TextBox tbSearch;
+        private System.Windows.Forms.ComboBox cbTerm;
     }
 }

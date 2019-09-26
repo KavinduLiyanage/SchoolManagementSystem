@@ -389,5 +389,52 @@ namespace SchoolManagementSystem
             this.Hide();
             newud.ShowDialog();
         }
+
+        private void BtnStudentMHeader_Click(object sender, EventArgs e)
+        {
+            StudentManageHome smh = new StudentManageHome();
+            this.Hide();
+            smh.ShowDialog();
+        }
+
+        private void BtnInventoryMHeader_Click(object sender, EventArgs e)
+        {
+            InventoryDashboard ind = new InventoryDashboard();
+            this.Hide();
+            ind.ShowDialog();
+        }
+
+        private void BtnResourseMHeader_Click(object sender, EventArgs e)
+        {
+            ResourceManageHome rmh = new ResourceManageHome();
+            this.Hide();
+            rmh.ShowDialog();
+        }
+
+        private void BtnLibraryMHeader_Click(object sender, EventArgs e)
+        {
+            LibraryHome lh = new LibraryHome();
+            this.Hide();
+            lh.ShowDialog();
+        }
+
+        private void BtnExamMheader_Click(object sender, EventArgs e)
+        {
+            TeachersHome th = new TeachersHome();
+            this.Hide();
+            th.ShowDialog();
+        }
+
+        private void BtnNoticeMHeader_Click(object sender, EventArgs e)
+        {
+            Notice_Dashboard nd = new Notice_Dashboard();
+            this.Hide();
+            nd.ShowDialog();
+        }
+
+        private void LbUserUDM_Click(object sender, EventArgs e)
+        {
+            lbUserUDM.Text = GetSetInfo.userName;
+        }
     }
 }

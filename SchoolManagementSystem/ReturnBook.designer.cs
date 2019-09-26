@@ -49,19 +49,19 @@
             this.ButtonPanel = new System.Windows.Forms.Panel();
             this.subLabel2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lbl_booksName = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lbl_issueDate = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button2 = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lbl_issueDate = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lbl_booksName = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.ButtonPanel.SuspendLayout();
@@ -188,6 +188,7 @@
             this.NStaffHomeBtn.TabIndex = 17;
             this.NStaffHomeBtn.Text = "Add Books";
             this.NStaffHomeBtn.UseVisualStyleBackColor = false;
+            this.NStaffHomeBtn.Click += new System.EventHandler(this.NStaffHomeBtn_Click);
             // 
             // panel5
             // 
@@ -244,6 +245,7 @@
             this.NViewStaffBtn.TabIndex = 23;
             this.NViewStaffBtn.Text = "Issue Books";
             this.NViewStaffBtn.UseVisualStyleBackColor = false;
+            this.NViewStaffBtn.Click += new System.EventHandler(this.NViewStaffBtn_Click);
             // 
             // NViewLeaveBtn
             // 
@@ -256,6 +258,7 @@
             this.NViewLeaveBtn.TabIndex = 18;
             this.NViewLeaveBtn.Text = "Reports";
             this.NViewLeaveBtn.UseVisualStyleBackColor = false;
+            this.NViewLeaveBtn.Click += new System.EventHandler(this.NViewLeaveBtn_Click);
             // 
             // NViewSalaryBtn
             // 
@@ -280,6 +283,7 @@
             this.NAddStaffBtn.TabIndex = 17;
             this.NAddStaffBtn.Text = "View Books";
             this.NAddStaffBtn.UseVisualStyleBackColor = false;
+            this.NAddStaffBtn.Click += new System.EventHandler(this.NAddStaffBtn_Click);
             // 
             // pictureBox1
             // 
@@ -328,6 +332,25 @@
             this.panel1.Size = new System.Drawing.Size(238, 127);
             this.panel1.TabIndex = 50;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(36, 80);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(169, 38);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Search ";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(26, 50);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(193, 20);
+            this.textBox1.TabIndex = 1;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -337,24 +360,6 @@
             this.label1.Size = new System.Drawing.Size(205, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Enter Student Name";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(26, 50);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(193, 20);
-            this.textBox1.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(36, 80);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(169, 38);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Search Books";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // panel2
             // 
@@ -393,43 +398,25 @@
             this.panel3.TabIndex = 52;
             this.panel3.Visible = false;
             // 
-            // label2
+            // button2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(26, 37);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(134, 25);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Books Name";
+            this.button2.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(207, 134);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(168, 36);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "Return Books";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
-            // lbl_booksName
+            // dateTimePicker1
             // 
-            this.lbl_booksName.AutoSize = true;
-            this.lbl_booksName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_booksName.Location = new System.Drawing.Point(176, 37);
-            this.lbl_booksName.Name = "lbl_booksName";
-            this.lbl_booksName.Size = new System.Drawing.Size(0, 25);
-            this.lbl_booksName.TabIndex = 1;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(350, 37);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(114, 25);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Issue Date";
-            // 
-            // lbl_issueDate
-            // 
-            this.lbl_issueDate.AutoSize = true;
-            this.lbl_issueDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_issueDate.Location = new System.Drawing.Point(469, 36);
-            this.lbl_issueDate.Name = "lbl_issueDate";
-            this.lbl_issueDate.Size = new System.Drawing.Size(0, 25);
-            this.lbl_issueDate.TabIndex = 3;
+            this.dateTimePicker1.Location = new System.Drawing.Point(233, 96);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 5;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.DateTimePicker1_ValueChanged);
             // 
             // label6
             // 
@@ -441,24 +428,43 @@
             this.label6.TabIndex = 4;
             this.label6.Text = "Select Return Date";
             // 
-            // dateTimePicker1
+            // lbl_issueDate
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(233, 96);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 5;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.DateTimePicker1_ValueChanged);
+            this.lbl_issueDate.AutoSize = true;
+            this.lbl_issueDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_issueDate.Location = new System.Drawing.Point(469, 36);
+            this.lbl_issueDate.Name = "lbl_issueDate";
+            this.lbl_issueDate.Size = new System.Drawing.Size(0, 25);
+            this.lbl_issueDate.TabIndex = 3;
             // 
-            // button2
+            // label4
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(207, 134);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(168, 36);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Return Books";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.Button2_Click);
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(350, 37);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(114, 25);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Issue Date";
+            // 
+            // lbl_booksName
+            // 
+            this.lbl_booksName.AutoSize = true;
+            this.lbl_booksName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_booksName.Location = new System.Drawing.Point(176, 37);
+            this.lbl_booksName.Name = "lbl_booksName";
+            this.lbl_booksName.Size = new System.Drawing.Size(0, 25);
+            this.lbl_booksName.TabIndex = 1;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(26, 37);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(134, 25);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Books Name";
             // 
             // ReturnBook
             // 

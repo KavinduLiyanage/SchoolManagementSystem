@@ -118,6 +118,7 @@ namespace SchoolManagementSystem
 
         private void ViewStaffLeaves_Load(object sender, EventArgs e)
         {
+            UsrlinkLabel.Text = GetSetInfo.userName;
             AcceotDeclineCombo.Text = "All";
             fillStaffLeave();
         }

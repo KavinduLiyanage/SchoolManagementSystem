@@ -420,8 +420,48 @@ namespace SchoolManagementSystem
 
         private void AddStaffMember_Load(object sender, EventArgs e)
         {
+            UsrlinkLabel.Text = GetSetInfo.userName;
             GetSetInfo.getSubject(subTextBox1);
             GetSetInfo.getSubject(subTextBox2);
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            nonAcedemicRadio.Checked = true;
+            userRadio.Checked = true;
+            NametextBox1.Text = "Isuri Tharushika Aththanayaka";
+            nameTextBox2.Text = "Aththanayaka I. T.";
+            femaleRadioButton1.Checked = true;
+            NICTextBox.Text = "851265254V";
+            dateTimePicker1.Value = new System.DateTime(1985, 08, 13, 0, 0, 0, 0);
+            addressTextBox.Text = "Kamburupitiya, Matara";
+            salaryTextBox.Text = "16520";
+            phNoTextBox.Text = "0776841974";
+            emailTextBox1.Text = "isuri@gmail.com";
+            subTextBox1.Text = "English";
+            subTextBox2.Text = "Science";
+            pastSchTextBox.Text = "Mahanama, Walgama";
+            serviceYrsTextBox.Text = "10";
+
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            adedemicRadio.Checked = true;
+            adminRadio.Checked = true;
+            NametextBox1.Text = "Ruwan Avishka Jayawardana";
+            nameTextBox2.Text = "Jayawardana R. W.";
+            maleRadioButton2.Checked = true;
+            NICTextBox.Text = "758963554V";
+            dateTimePicker1.Value = new System.DateTime(1975, 08, 13, 0, 0, 0, 0);
+            addressTextBox.Text = "Weligama, Matara";
+            salaryTextBox.Text = "36520";
+            phNoTextBox.Text = "0774125760";
+            emailTextBox1.Text = "ruwan@gmail.com";
+            subTextBox1.Text = "Tamil";
+            subTextBox2.Text = "Music";
+            pastSchTextBox.Text = "Mahanama, Walgama";
+            serviceYrsTextBox.Text = "21";
         }
     }
 }

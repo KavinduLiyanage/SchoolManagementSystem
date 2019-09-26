@@ -29,54 +29,41 @@ namespace SchoolManagementSystem
         
         private void StudentDetailsUpdate_Load_1(object sender, EventArgs e)
         {
-            
 
             using (SchoolManagementSystemDBEntities db = new SchoolManagementSystemDBEntities())
             {
                 student1 = db.Students.Where(x => x.SID == sss).FirstOrDefault();
-
+        
                 txtName.Text = student1.SNAME;
                 txtAddress.Text = student1.SADDRESS;
                 txtEmail.Text = student1.SEMAIL;
                 txtGDName.Text = student1.SGDNAME;
                 txtGDContact.Text = student1.SGDCONTACT;
-               
+                dateTimePickerDOB.Value = (DateTime)student1.SDOB;
+                comboBoxGrade.Text = student1.Grade;
+                comboBoxClass.Text = student1.ClassName;              
             }
-
         }
 
-        string gender;
-
-
-
-        
-
-        private void RbtnMale_CheckedChanged(object sender, EventArgs e)
+        private void BtnSubmit_Click(object sender, EventArgs e)
         {
-            gender = "Male";
+            Update();
         }
-
-        private void RbtnFemale_CheckedChanged(object sender, EventArgs e)
-        {
-            gender = "Female";
-
-        }
-
-        
 
         private void Update()
         {
             student1.SNAME = txtName.Text.Trim();
-            student1.SGENDER = "Male";
+           
             student1.SADDRESS = txtAddress.Text.Trim();
             student1.SEMAIL = txtEmail.Text.Trim();
             student1.SGDNAME = txtGDName.Text.Trim();
             student1.SGDCONTACT = txtGDContact.Text.Trim();
+            student1.SDOB = dateTimePickerDOB.Value;
+            student1.Grade = comboBoxGrade.Text.Trim();
+            student1.ClassName = comboBoxClass.Text.Trim();
             
             using (SchoolManagementSystemDBEntities db = new SchoolManagementSystemDBEntities())
-            {
-                
-                
+            {                               
                 if (student1.SID == 0)     
                     db.Students.Add(student1);
                    
@@ -91,21 +78,14 @@ namespace SchoolManagementSystem
             slist.ShowDialog();
         }
 
-        private void BtnSubmit_Click(object sender, EventArgs e)
+        private void BtnDelete_Click(object sender, EventArgs e)
         {
-            Update();
-        }
-
-        private void NViewStudentBtn_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            StudentList slist = new StudentList();
-            slist.ShowDialog();
+            delete();
         }
 
         private void delete()
         {
-            if(MessageBox.Show("Are You Sure to Delete this Account?","EF CRUD Operetion",MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Are You Sure to Delete this Account?", "EF CRUD Operetion", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 using (SchoolManagementSystemDBEntities db = new SchoolManagementSystemDBEntities())
                 {
@@ -120,14 +100,15 @@ namespace SchoolManagementSystem
                     slist.ShowDialog();
 
                 }
-
             }
         }
 
-        private void BtnDelete_Click(object sender, EventArgs e)
+        private void NViewStudentBtn_Click(object sender, EventArgs e)
         {
-            delete();
-        }
+            this.Hide();
+            StudentList slist = new StudentList();
+            slist.ShowDialog();
+        } 
 
         private void NHomeBtn_Click(object sender, EventArgs e)
         {

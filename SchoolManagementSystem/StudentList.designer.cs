@@ -32,10 +32,14 @@
             this.dgvStudents = new System.Windows.Forms.DataGridView();
             this.SID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SNAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Grade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Class = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DOB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GuardianName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GuardianContact = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnLogOutHeader = new System.Windows.Forms.Button();
             this.btnNoticeMHeader = new System.Windows.Forms.Button();
@@ -56,6 +60,9 @@
             this.imgPanel = new System.Windows.Forms.PictureBox();
             this.TitleLabel = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.comboBoxGrade = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvStudents)).BeginInit();
             this.panel5.SuspendLayout();
             this.ButtonPanel.SuspendLayout();
@@ -65,77 +72,129 @@
             // 
             // dgvStudents
             // 
+            this.dgvStudents.AllowUserToAddRows = false;
             this.dgvStudents.AllowUserToDeleteRows = false;
+            this.dgvStudents.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvStudents.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SID,
             this.SNAME,
-            this.Gender,
+            this.Grade,
+            this.Class,
+            this.DOB,
+            this.Email,
             this.Address,
             this.GuardianName,
-            this.GuardianContact});
-            this.dgvStudents.Location = new System.Drawing.Point(278, 195);
+            this.GuardianContact,
+            this.Gender});
+            this.dgvStudents.Location = new System.Drawing.Point(290, 237);
             this.dgvStudents.Name = "dgvStudents";
             this.dgvStudents.ReadOnly = true;
             this.dgvStudents.RowHeadersWidth = 51;
             this.dgvStudents.RowTemplate.Height = 24;
-            this.dgvStudents.Size = new System.Drawing.Size(962, 466);
+            this.dgvStudents.Size = new System.Drawing.Size(950, 424);
             this.dgvStudents.TabIndex = 2;
             this.dgvStudents.DoubleClick += new System.EventHandler(this.DgvStudents_DoubleClick);
             // 
             // SID
             // 
+            this.SID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.SID.DataPropertyName = "SID";
             this.SID.HeaderText = "SID";
             this.SID.MinimumWidth = 6;
             this.SID.Name = "SID";
             this.SID.ReadOnly = true;
-            this.SID.Width = 204;
+            this.SID.Width = 59;
             // 
             // SNAME
             // 
+            this.SNAME.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.SNAME.DataPropertyName = "SNAME";
             this.SNAME.HeaderText = "Full Name";
             this.SNAME.MinimumWidth = 6;
             this.SNAME.Name = "SNAME";
             this.SNAME.ReadOnly = true;
-            this.SNAME.Width = 135;
+            this.SNAME.Width = 92;
             // 
-            // Gender
+            // Grade
             // 
-            this.Gender.DataPropertyName = "SGENDER";
-            this.Gender.HeaderText = "Gender";
-            this.Gender.MinimumWidth = 6;
-            this.Gender.Name = "Gender";
-            this.Gender.ReadOnly = true;
-            this.Gender.Width = 125;
+            this.Grade.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Grade.DataPropertyName = "Grade";
+            this.Grade.HeaderText = "Grade";
+            this.Grade.MinimumWidth = 6;
+            this.Grade.Name = "Grade";
+            this.Grade.ReadOnly = true;
+            this.Grade.Width = 77;
+            // 
+            // Class
+            // 
+            this.Class.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Class.DataPropertyName = "ClassName";
+            this.Class.HeaderText = "Class";
+            this.Class.MinimumWidth = 6;
+            this.Class.Name = "Class";
+            this.Class.ReadOnly = true;
+            this.Class.Width = 71;
+            // 
+            // DOB
+            // 
+            this.DOB.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.DOB.DataPropertyName = "SDOB";
+            this.DOB.HeaderText = "DOB";
+            this.DOB.MinimumWidth = 6;
+            this.DOB.Name = "DOB";
+            this.DOB.ReadOnly = true;
+            this.DOB.Width = 67;
+            // 
+            // Email
+            // 
+            this.Email.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Email.DataPropertyName = "SEMAIL";
+            this.Email.HeaderText = "Email";
+            this.Email.MinimumWidth = 6;
+            this.Email.Name = "Email";
+            this.Email.ReadOnly = true;
+            this.Email.Width = 71;
             // 
             // Address
             // 
+            this.Address.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.Address.DataPropertyName = "SADDRESS";
             this.Address.HeaderText = "Address";
             this.Address.MinimumWidth = 6;
             this.Address.Name = "Address";
             this.Address.ReadOnly = true;
-            this.Address.Width = 125;
+            this.Address.Width = 89;
             // 
             // GuardianName
             // 
+            this.GuardianName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.GuardianName.DataPropertyName = "SGDNAME";
             this.GuardianName.HeaderText = "Guardian Name";
             this.GuardianName.MinimumWidth = 6;
             this.GuardianName.Name = "GuardianName";
             this.GuardianName.ReadOnly = true;
-            this.GuardianName.Width = 125;
+            this.GuardianName.Width = 126;
             // 
             // GuardianContact
             // 
+            this.GuardianContact.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.GuardianContact.DataPropertyName = "SGDCONTACT";
             this.GuardianContact.HeaderText = "Guardian Contact";
             this.GuardianContact.MinimumWidth = 6;
             this.GuardianContact.Name = "GuardianContact";
             this.GuardianContact.ReadOnly = true;
-            this.GuardianContact.Width = 125;
+            this.GuardianContact.Width = 136;
+            // 
+            // Gender
+            // 
+            this.Gender.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.Gender.DataPropertyName = "SGENDER";
+            this.Gender.HeaderText = "Gender";
+            this.Gender.MinimumWidth = 6;
+            this.Gender.Name = "Gender";
+            this.Gender.ReadOnly = true;
+            this.Gender.Width = 85;
             // 
             // panel5
             // 
@@ -357,7 +416,7 @@
             // 
             this.TitleLabel.AutoSize = true;
             this.TitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TitleLabel.Location = new System.Drawing.Point(443, 127);
+            this.TitleLabel.Location = new System.Drawing.Point(605, 127);
             this.TitleLabel.Name = "TitleLabel";
             this.TitleLabel.Size = new System.Drawing.Size(250, 38);
             this.TitleLabel.TabIndex = 52;
@@ -365,17 +424,69 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(830, 142);
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(408, 187);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(260, 22);
+            this.textBox1.Size = new System.Drawing.Size(260, 26);
             this.textBox1.TabIndex = 53;
+            this.textBox1.Text = "Type student name here";
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
             this.textBox1.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
+            // 
+            // comboBoxGrade
+            // 
+            this.comboBoxGrade.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxGrade.FormattingEnabled = true;
+            this.comboBoxGrade.Items.AddRange(new object[] {
+            "Grade 1",
+            "Grade 2",
+            "Grade 3",
+            "Grade 4",
+            "Grade 5",
+            "Grade 6",
+            "Grade 7",
+            "Grade 8",
+            "Grade 9",
+            "Grade 10",
+            "Grade 11",
+            "Grade 12",
+            "Grade 13"});
+            this.comboBoxGrade.Location = new System.Drawing.Point(838, 187);
+            this.comboBoxGrade.Name = "comboBoxGrade";
+            this.comboBoxGrade.Size = new System.Drawing.Size(300, 28);
+            this.comboBoxGrade.TabIndex = 54;
+            this.comboBoxGrade.Text = "Select Grade";
+            this.comboBoxGrade.SelectedIndexChanged += new System.EventHandler(this.comboBoxGrade_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(322, 188);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(80, 24);
+            this.label1.TabIndex = 55;
+            this.label1.Text = "Search :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(752, 188);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(80, 24);
+            this.label2.TabIndex = 55;
+            this.label2.Text = "Search :";
             // 
             // StudentList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 673);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.comboBoxGrade);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.TitleLabel);
             this.Controls.Add(this.pictureBox1);
@@ -418,16 +529,23 @@
         private System.Windows.Forms.Button NEditStudentBtn;
         private System.Windows.Forms.Button NAddStudentBtn;
         private System.Windows.Forms.Button NStudentHomeBtn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SNAME;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Gender;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GuardianName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn GuardianContact;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.LinkLabel UsrlinkLabel;
         private System.Windows.Forms.PictureBox imgPanel;
         private System.Windows.Forms.Label TitleLabel;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SNAME;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Grade;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Class;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DOB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Address;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GuardianName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GuardianContact;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Gender;
+        private System.Windows.Forms.ComboBox comboBoxGrade;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

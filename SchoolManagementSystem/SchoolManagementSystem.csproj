@@ -37,6 +37,14 @@
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -122,6 +130,37 @@
     <Compile Include="CreateStudentAccount.designer.cs">
       <DependentUpon>CreateStudentAccount.cs</DependentUpon>
     </Compile>
+    <Compile Include="CrystalReport1Lib.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1Lib.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSet1Lib.cs">
+      <DependentUpon>DataSet1Lib.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1Lib.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1Lib.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cristalReportItem.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cristalReportItem.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReportStock.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportStock.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataInventory.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataInventory.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DeletedList.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,11 +179,29 @@
     <Compile Include="EventDashBoardAdmin.designer.cs">
       <DependentUpon>EventDashBoardAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="InventoryDashBoard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="InventoryDashBoard.designer.cs">
       <DependentUpon>InventoryDashBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryItemReportGenerate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryItemReportGenerate.Designer.cs">
+      <DependentUpon>InventoryItemReportGenerate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryProductReportGenerate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InventoryProductReportGenerate.Designer.cs">
+      <DependentUpon>InventoryProductReportGenerate.cs</DependentUpon>
     </Compile>
     <Compile Include="IssueBook.cs">
       <SubType>Form</SubType>
@@ -263,6 +320,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportBooks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportBooks.Designer.cs">
+      <DependentUpon>ReportBooks.cs</DependentUpon>
+    </Compile>
     <Compile Include="ResourceManageHome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -275,11 +338,33 @@
     <Compile Include="ReturnBook.designer.cs">
       <DependentUpon>ReturnBook.cs</DependentUpon>
     </Compile>
+    <Compile Include="SchoolManagementSystemDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SchoolManagementSystemDBDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SectionResultSheet.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SectionResultSheet.designer.cs">
       <DependentUpon>SectionResultSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffMngReport\SalaryReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SalaryReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StaffMngReport\SalaryReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffMngReport\SalaryReportForm.Designer.cs">
+      <DependentUpon>SalaryReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffMngReport\StaffSalaryDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StaffSalaryDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="StaffReqLeave.cs">
       <SubType>Form</SubType>
@@ -322,6 +407,35 @@
     </Compile>
     <Compile Include="StudentManageHome.designer.cs">
       <DependentUpon>StudentManageHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentReports\StudentDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudentDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="StudentReports\StudentDetailReport2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentReports\StudentDetailReport2.Designer.cs">
+      <DependentUpon>StudentDetailReport2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StudentReports\StudentDetailsCrystalReport2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudentDetailsCrystalReport2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StudentReports\StudentMarksCrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudentMarksCrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StudentReports\StudentMarksReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudentReports\StudentMarksReport.Designer.cs">
+      <DependentUpon>StudentMarksReport.cs</DependentUpon>
     </Compile>
     <Compile Include="StudentResultSheet.cs">
       <SubType>Form</SubType>
@@ -442,6 +556,18 @@
     <EmbeddedResource Include="CreateStudentAccount.resx">
       <DependentUpon>CreateStudentAccount.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="cristalReportItem.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>cristalReportItem.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReportStock.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportStock.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport1Lib.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1Lib.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="DeletedList.resx">
       <DependentUpon>DeletedList.cs</DependentUpon>
     </EmbeddedResource>
@@ -456,6 +582,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InventoryDashBoard.resx">
       <DependentUpon>InventoryDashBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryItemReportGenerate.resx">
+      <DependentUpon>InventoryItemReportGenerate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InventoryProductReportGenerate.resx">
+      <DependentUpon>InventoryProductReportGenerate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="IssueBook.resx">
       <DependentUpon>IssueBook.cs</DependentUpon>
@@ -521,6 +653,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ReportBooks.resx">
+      <DependentUpon>ReportBooks.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ResourceManageHome.resx">
       <DependentUpon>ResourceManageHome.cs</DependentUpon>
     </EmbeddedResource>
@@ -529,6 +664,13 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SectionResultSheet.resx">
       <DependentUpon>SectionResultSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffMngReport\SalaryReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SalaryReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffMngReport\SalaryReportForm.resx">
+      <DependentUpon>SalaryReportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StaffReqLeave.resx">
       <DependentUpon>StaffReqLeave.cs</DependentUpon>
@@ -550,6 +692,20 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StudentManageHome.resx">
       <DependentUpon>StudentManageHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentReports\StudentDetailReport2.resx">
+      <DependentUpon>StudentDetailReport2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentReports\StudentDetailsCrystalReport2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StudentDetailsCrystalReport2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentReports\StudentMarksCrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>StudentMarksCrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudentReports\StudentMarksReport.resx">
+      <DependentUpon>StudentMarksReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StudentResultSheet.resx">
       <DependentUpon>StudentResultSheet.cs</DependentUpon>
@@ -587,6 +743,28 @@
     <EmbeddedResource Include="ViewTimetable.resx">
       <DependentUpon>ViewTimetable.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DataSet1Lib.xsc">
+      <DependentUpon>DataSet1Lib.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1Lib.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1Lib.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet1Lib.xss">
+      <DependentUpon>DataSet1Lib.xsd</DependentUpon>
+    </None>
+    <None Include="DataInventory.xsc">
+      <DependentUpon>DataInventory.xsd</DependentUpon>
+    </None>
+    <None Include="DataInventory.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataInventory.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataInventory.xss">
+      <DependentUpon>DataInventory.xsd</DependentUpon>
+    </None>
     <EmbeddedResource Include="YearlyEventReport\YearlyEventReport.resx">
       <DependentUpon>YearlyEventReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -604,6 +782,39 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="StaffMngReport\StaffSalaryDataSet.xsc">
+      <DependentUpon>StaffSalaryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="StaffMngReport\StaffSalaryDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StaffSalaryDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="StaffMngReport\StaffSalaryDataSet.xss">
+      <DependentUpon>StaffSalaryDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SchoolManagementSystemDBDataSet.xsc">
+      <DependentUpon>SchoolManagementSystemDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SchoolManagementSystemDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SchoolManagementSystemDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SchoolManagementSystemDBDataSet.xss">
+      <DependentUpon>SchoolManagementSystemDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="StudentReports\StudentDataSet1.xsc">
+      <DependentUpon>StudentDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="StudentReports\StudentDataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>StudentDataSet1.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="StudentReports\StudentDataSet1.xss">
+      <DependentUpon>StudentDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="YearlyEventReport\DataSetEvents.xsc">
       <DependentUpon>DataSetEvents.xsd</DependentUpon>
     </None>

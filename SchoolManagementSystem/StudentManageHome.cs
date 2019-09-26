@@ -100,5 +100,19 @@ namespace SchoolManagementSystem
             this.Hide();
             log.ShowDialog();
         }
+
+        private void ViewSalaryImgBtn_Click(object sender, EventArgs e)
+        {
+            StudentReports.StudentDetailReport2 log = new StudentReports.StudentDetailReport2();
+            this.Hide();
+            log.ShowDialog();
+        }
+
+        private void viewLeaveBtn_Click(object sender, EventArgs e)
+        {
+            StudentReports.StudentDetailReport2 log = new StudentReports.StudentDetailReport2();
+            this.Hide();
+            log.ShowDialog();
+        }
     }
 }

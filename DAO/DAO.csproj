@@ -51,6 +51,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppointmentData.cs" />
+    <Compile Include="ExamMark.cs">
+      <DependentUpon>MyDataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="MyDataModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -77,6 +80,9 @@
       <DependentUpon>MyDataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="StudentData.cs" />
+    <Compile Include="Subject.cs">
+      <DependentUpon>MyDataModel.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="MyDataModel.edmx">

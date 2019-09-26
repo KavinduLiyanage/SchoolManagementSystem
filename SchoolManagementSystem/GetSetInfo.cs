@@ -10,10 +10,10 @@ namespace SchoolManagementSystem
 {
     public static class GetSetInfo
     {
-        private static string username;
-        private static string proPic;
-        private static int usrId;
-        private static string sysLvl;
+        public static string username;
+        public static string proPic;
+        public static int usrId;
+        public static string sysLvl;
 
         public static SqlConnection getCon() {
             SqlConnection con = new SqlConnection(@"Data Source=.;Initial Catalog=SchoolManagementSystemDB;Integrated Security=True");

@@ -138,5 +138,10 @@ namespace SchoolManagementSystem
             this.Hide();
             staffLeave.ShowDialog();
         }
+
+        private void AdminMngStaffHome_Load(object sender, EventArgs e)
+        {
+            UsrlinkLabel.Text = GetSetInfo.userName;
+        }
     }
 }

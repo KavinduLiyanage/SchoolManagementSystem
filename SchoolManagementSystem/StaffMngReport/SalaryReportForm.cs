@@ -25,7 +25,7 @@ namespace SchoolManagementSystem.StaffMngReport
 
         private void SalaryReportForm_Load(object sender, EventArgs e)
         {
-            reportDocument.Load(@"C:\Users\milin\source\Repos\MilindaRanawaka\SchoolManagementSystem\SchoolManagementSystem\StaffMngReport\SalaryReport.rpt");
+            reportDocument.Load(@"D:\SchoolManagementSystem\SalaryReport.rpt");
             con.Open();
             DataSet dst = new DataSet();
             String query = "select SR.staffID,SR.salary,SR.date from SalaryRecord SR,staff S where SR.staffID = S.staffID and SR.staffID=" + GetSetInfo.usrId + "";

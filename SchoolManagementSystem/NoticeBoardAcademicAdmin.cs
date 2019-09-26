@@ -51,5 +51,10 @@ namespace SchoolManagementSystem
             this.Hide();
             log.ShowDialog();
         }
+
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

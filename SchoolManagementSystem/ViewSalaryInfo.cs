@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,11 @@ namespace SchoolManagementSystem
 {
     public partial class ViewSalaryInfo : Form
     {
+
+        private int staffID;
+        private Double salary;
+
+        SqlConnection con = new SqlConnection(@"Data Source=.;Initial Catalog=SchoolManagementSystemDB;Integrated Security=True");
         public ViewSalaryInfo()
         {
             InitializeComponent();
@@ -103,6 +109,64 @@ namespace SchoolManagementSystem
 
         private void BtnLibraryMHeader_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void ViewSalaryInfo_Load(object sender, EventArgs e)
+        {
+            UsrlinkLabel.Text = GetSetInfo.userName;
+            viewSalary();
+        }
+
+        private void viewSalary() {
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT staffID,fullName,name,salary FROM staff";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            SalarydataView1.DataSource = dt;
+            con.Close();
+        }
+
+        private void SalarydataView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            DataGridViewRow selectRow = SalarydataView1.Rows[index];
+            staffID = Int32.Parse(selectRow.Cells[0].Value.ToString());
+
+            NametextBox1.Text = selectRow.Cells[1].Value.ToString();
+            nameTextBox2.Text = selectRow.Cells[2].Value.ToString();
+            salary = Convert.ToDouble(selectRow.Cells[3].Value.ToString());
+            
+            salaryTextBox.Text = salary.ToString();
+        }
+
+        private void UpdateBtn_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "UPDATE staff SET salary = "+Convert.ToDouble(salaryTextBox.Text)+" where staffID = '" + staffID + "'";
+            cmd.ExecuteNonQuery();
+            con.Close();
+
+            MessageBox.Show(DateTime.Now.ToString("M/d/yyyy"));
+
+            con.Open();
+            SqlCommand cmd2 = con.CreateCommand();
+            cmd2.CommandType = CommandType.Text;
+            cmd2.CommandText = "insert into SalaryRecord(staffID,salary,date) values(" + staffID + "," + salaryTextBox.Text + ",'" + DateTime.Now.ToString("M/d/yyyy") + "')";
+            cmd2.ExecuteNonQuery();
+            con.Close();
+
+            MessageBox.Show("Salary Updated");
+
+            ViewSalaryInfo viewSalaryInfo = new ViewSalaryInfo();
+            this.Hide();
+            viewSalaryInfo.ShowDialog();
 
         }
     }

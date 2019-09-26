@@ -71,10 +71,9 @@
             this.panel5.Controls.Add(this.btnResourseMHeader);
             this.panel5.Controls.Add(this.btnInventoryMHeader);
             this.panel5.Controls.Add(this.btnEventMHeader);
-            this.panel5.Location = new System.Drawing.Point(16, 1);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4);
+            this.panel5.Location = new System.Drawing.Point(9, 3);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1637, 113);
+            this.panel5.Size = new System.Drawing.Size(921, 75);
             this.panel5.TabIndex = 54;
             // 
             // btnLogOutHeader
@@ -83,10 +82,10 @@
             this.btnLogOutHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogOutHeader.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold);
             this.btnLogOutHeader.ForeColor = System.Drawing.Color.Maroon;
-            this.btnLogOutHeader.Location = new System.Drawing.Point(1420, 23);
-            this.btnLogOutHeader.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLogOutHeader.Location = new System.Drawing.Point(803, 15);
+            this.btnLogOutHeader.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLogOutHeader.Name = "btnLogOutHeader";
-            this.btnLogOutHeader.Size = new System.Drawing.Size(193, 62);
+            this.btnLogOutHeader.Size = new System.Drawing.Size(109, 41);
             this.btnLogOutHeader.TabIndex = 25;
             this.btnLogOutHeader.Text = "Log Out";
             this.btnLogOutHeader.UseVisualStyleBackColor = true;
@@ -97,10 +96,10 @@
             this.btnNoticeMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnNoticeMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNoticeMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
-            this.btnNoticeMHeader.Location = new System.Drawing.Point(1221, 23);
-            this.btnNoticeMHeader.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnNoticeMHeader.Location = new System.Drawing.Point(690, 14);
+            this.btnNoticeMHeader.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNoticeMHeader.Name = "btnNoticeMHeader";
-            this.btnNoticeMHeader.Size = new System.Drawing.Size(193, 62);
+            this.btnNoticeMHeader.Size = new System.Drawing.Size(109, 41);
             this.btnNoticeMHeader.TabIndex = 23;
             this.btnNoticeMHeader.Text = "Notice Management";
             this.btnNoticeMHeader.UseVisualStyleBackColor = false;
@@ -110,10 +109,9 @@
             this.btnExamMheader.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnExamMheader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExamMheader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
-            this.btnExamMheader.Location = new System.Drawing.Point(28, 23);
-            this.btnExamMheader.Margin = new System.Windows.Forms.Padding(4);
+            this.btnExamMheader.Location = new System.Drawing.Point(11, 15);
             this.btnExamMheader.Name = "btnExamMheader";
-            this.btnExamMheader.Size = new System.Drawing.Size(193, 62);
+            this.btnExamMheader.Size = new System.Drawing.Size(109, 41);
             this.btnExamMheader.TabIndex = 1;
             this.btnExamMheader.Text = "Exam Management";
             this.btnExamMheader.UseVisualStyleBackColor = false;
@@ -123,10 +121,10 @@
             this.btnLibraryMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnLibraryMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLibraryMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
-            this.btnLibraryMHeader.Location = new System.Drawing.Point(1023, 23);
-            this.btnLibraryMHeader.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLibraryMHeader.Location = new System.Drawing.Point(577, 15);
+            this.btnLibraryMHeader.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLibraryMHeader.Name = "btnLibraryMHeader";
-            this.btnLibraryMHeader.Size = new System.Drawing.Size(193, 62);
+            this.btnLibraryMHeader.Size = new System.Drawing.Size(109, 41);
             this.btnLibraryMHeader.TabIndex = 22;
             this.btnLibraryMHeader.Text = " Library Management";
             this.btnLibraryMHeader.UseVisualStyleBackColor = false;
@@ -136,10 +134,10 @@
             this.btnStudentMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnStudentMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStudentMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
-            this.btnStudentMHeader.Location = new System.Drawing.Point(228, 23);
-            this.btnStudentMHeader.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnStudentMHeader.Location = new System.Drawing.Point(125, 14);
+            this.btnStudentMHeader.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnStudentMHeader.Name = "btnStudentMHeader";
-            this.btnStudentMHeader.Size = new System.Drawing.Size(193, 62);
+            this.btnStudentMHeader.Size = new System.Drawing.Size(109, 41);
             this.btnStudentMHeader.TabIndex = 1;
             this.btnStudentMHeader.Text = "Student Management";
             this.btnStudentMHeader.UseVisualStyleBackColor = false;
@@ -149,10 +147,10 @@
             this.btnResourseMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnResourseMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnResourseMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
-            this.btnResourseMHeader.Location = new System.Drawing.Point(824, 23);
-            this.btnResourseMHeader.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnResourseMHeader.Location = new System.Drawing.Point(464, 15);
+            this.btnResourseMHeader.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnResourseMHeader.Name = "btnResourseMHeader";
-            this.btnResourseMHeader.Size = new System.Drawing.Size(193, 62);
+            this.btnResourseMHeader.Size = new System.Drawing.Size(109, 41);
             this.btnResourseMHeader.TabIndex = 21;
             this.btnResourseMHeader.Text = "Resourse Management";
             this.btnResourseMHeader.UseVisualStyleBackColor = false;
@@ -162,10 +160,10 @@
             this.btnInventoryMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnInventoryMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInventoryMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
-            this.btnInventoryMHeader.Location = new System.Drawing.Point(427, 23);
-            this.btnInventoryMHeader.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnInventoryMHeader.Location = new System.Drawing.Point(238, 14);
+            this.btnInventoryMHeader.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnInventoryMHeader.Name = "btnInventoryMHeader";
-            this.btnInventoryMHeader.Size = new System.Drawing.Size(193, 62);
+            this.btnInventoryMHeader.Size = new System.Drawing.Size(109, 41);
             this.btnInventoryMHeader.TabIndex = 19;
             this.btnInventoryMHeader.Text = "Inventory Management";
             this.btnInventoryMHeader.UseVisualStyleBackColor = false;
@@ -175,10 +173,10 @@
             this.btnEventMHeader.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.btnEventMHeader.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEventMHeader.Font = new System.Drawing.Font("Times New Roman", 8F, System.Drawing.FontStyle.Bold);
-            this.btnEventMHeader.Location = new System.Drawing.Point(625, 23);
-            this.btnEventMHeader.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEventMHeader.Location = new System.Drawing.Point(351, 15);
+            this.btnEventMHeader.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEventMHeader.Name = "btnEventMHeader";
-            this.btnEventMHeader.Size = new System.Drawing.Size(193, 62);
+            this.btnEventMHeader.Size = new System.Drawing.Size(109, 41);
             this.btnEventMHeader.TabIndex = 20;
             this.btnEventMHeader.Text = "Event Management";
             this.btnEventMHeader.UseVisualStyleBackColor = false;
@@ -187,10 +185,10 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(79, 144);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(38, 99);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(220, 174);
+            this.pictureBox1.Size = new System.Drawing.Size(130, 110);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 77;
             this.pictureBox1.TabStop = false;
@@ -200,12 +198,14 @@
             this.UsrlinkLabel.AutoSize = true;
             this.UsrlinkLabel.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.UsrlinkLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsrlinkLabel.Location = new System.Drawing.Point(93, 336);
+            this.UsrlinkLabel.Location = new System.Drawing.Point(34, 224);
+            this.UsrlinkLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.UsrlinkLabel.Name = "UsrlinkLabel";
-            this.UsrlinkLabel.Size = new System.Drawing.Size(171, 25);
+            this.UsrlinkLabel.Size = new System.Drawing.Size(138, 20);
             this.UsrlinkLabel.TabIndex = 76;
             this.UsrlinkLabel.TabStop = true;
             this.UsrlinkLabel.Text = "Milinda Ranawaka";
+            this.UsrlinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.UsrlinkLabel_LinkClicked);
             // 
             // ButtonPanel
             // 
@@ -217,20 +217,20 @@
             this.ButtonPanel.Controls.Add(this.NViewLeaveBtn);
             this.ButtonPanel.Controls.Add(this.NAddStaffBtn);
             this.ButtonPanel.Controls.Add(this.NStaffHomeBtn);
-            this.ButtonPanel.Location = new System.Drawing.Point(16, 405);
-            this.ButtonPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ButtonPanel.Location = new System.Drawing.Point(10, 267);
+            this.ButtonPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ButtonPanel.Name = "ButtonPanel";
-            this.ButtonPanel.Size = new System.Drawing.Size(347, 412);
+            this.ButtonPanel.Size = new System.Drawing.Size(195, 272);
             this.ButtonPanel.TabIndex = 75;
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(15, 295);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button2.Location = new System.Drawing.Point(9, 198);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(313, 43);
+            this.button2.Size = new System.Drawing.Size(176, 28);
             this.button2.TabIndex = 26;
             this.button2.Text = "View Stock";
             this.button2.UseVisualStyleBackColor = false;
@@ -240,10 +240,10 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(15, 55);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Location = new System.Drawing.Point(8, 38);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(313, 43);
+            this.button1.Size = new System.Drawing.Size(176, 28);
             this.button1.TabIndex = 25;
             this.button1.Text = "Inventory Home";
             this.button1.UseVisualStyleBackColor = false;
@@ -254,10 +254,10 @@
             this.NHomeBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.NHomeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NHomeBtn.ForeColor = System.Drawing.Color.Red;
-            this.NHomeBtn.Location = new System.Drawing.Point(15, 7);
-            this.NHomeBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.NHomeBtn.Location = new System.Drawing.Point(9, 6);
+            this.NHomeBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.NHomeBtn.Name = "NHomeBtn";
-            this.NHomeBtn.Size = new System.Drawing.Size(313, 43);
+            this.NHomeBtn.Size = new System.Drawing.Size(176, 28);
             this.NHomeBtn.TabIndex = 24;
             this.NHomeBtn.Text = "Home";
             this.NHomeBtn.UseVisualStyleBackColor = false;
@@ -267,10 +267,10 @@
             // 
             this.NViewStaffBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.NViewStaffBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NViewStaffBtn.Location = new System.Drawing.Point(15, 247);
-            this.NViewStaffBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.NViewStaffBtn.Location = new System.Drawing.Point(9, 166);
+            this.NViewStaffBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.NViewStaffBtn.Name = "NViewStaffBtn";
-            this.NViewStaffBtn.Size = new System.Drawing.Size(313, 43);
+            this.NViewStaffBtn.Size = new System.Drawing.Size(176, 28);
             this.NViewStaffBtn.TabIndex = 23;
             this.NViewStaffBtn.Text = "Financial Report";
             this.NViewStaffBtn.UseVisualStyleBackColor = false;
@@ -279,10 +279,10 @@
             // 
             this.NViewLeaveBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.NViewLeaveBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NViewLeaveBtn.Location = new System.Drawing.Point(15, 103);
-            this.NViewLeaveBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.NViewLeaveBtn.Location = new System.Drawing.Point(9, 70);
+            this.NViewLeaveBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.NViewLeaveBtn.Name = "NViewLeaveBtn";
-            this.NViewLeaveBtn.Size = new System.Drawing.Size(313, 43);
+            this.NViewLeaveBtn.Size = new System.Drawing.Size(176, 28);
             this.NViewLeaveBtn.TabIndex = 18;
             this.NViewLeaveBtn.Text = "Add Items";
             this.NViewLeaveBtn.UseVisualStyleBackColor = false;
@@ -292,10 +292,10 @@
             // 
             this.NAddStaffBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.NAddStaffBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NAddStaffBtn.Location = new System.Drawing.Point(15, 199);
-            this.NAddStaffBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.NAddStaffBtn.Location = new System.Drawing.Point(8, 134);
+            this.NAddStaffBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.NAddStaffBtn.Name = "NAddStaffBtn";
-            this.NAddStaffBtn.Size = new System.Drawing.Size(313, 43);
+            this.NAddStaffBtn.Size = new System.Drawing.Size(176, 28);
             this.NAddStaffBtn.TabIndex = 17;
             this.NAddStaffBtn.Text = "Inventory Report";
             this.NAddStaffBtn.UseVisualStyleBackColor = false;
@@ -304,10 +304,10 @@
             // 
             this.NStaffHomeBtn.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.NStaffHomeBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NStaffHomeBtn.Location = new System.Drawing.Point(15, 151);
-            this.NStaffHomeBtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.NStaffHomeBtn.Location = new System.Drawing.Point(9, 102);
+            this.NStaffHomeBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.NStaffHomeBtn.Name = "NStaffHomeBtn";
-            this.NStaffHomeBtn.Size = new System.Drawing.Size(313, 43);
+            this.NStaffHomeBtn.Size = new System.Drawing.Size(176, 28);
             this.NStaffHomeBtn.TabIndex = 17;
             this.NStaffHomeBtn.Text = "Product Report";
             this.NStaffHomeBtn.UseVisualStyleBackColor = false;
@@ -315,10 +315,10 @@
             // subLabel2
             // 
             this.subLabel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.subLabel2.Location = new System.Drawing.Point(16, 121);
-            this.subLabel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.subLabel2.Location = new System.Drawing.Point(10, 84);
+            this.subLabel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.subLabel2.Name = "subLabel2";
-            this.subLabel2.Size = new System.Drawing.Size(347, 271);
+            this.subLabel2.Size = new System.Drawing.Size(195, 179);
             this.subLabel2.TabIndex = 74;
             this.subLabel2.TabStop = false;
             // 
@@ -328,51 +328,47 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(580, 212);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGridView1.Location = new System.Drawing.Point(269, 125);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(749, 562);
+            this.dataGridView1.Size = new System.Drawing.Size(562, 368);
             this.dataGridView1.TabIndex = 78;
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Times New Roman", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(703, 161);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox1.Location = new System.Drawing.Point(375, 84);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(459, 42);
+            this.textBox1.Size = new System.Drawing.Size(345, 35);
             this.textBox1.TabIndex = 79;
-            this.textBox1.Text = "INVENTORY MANAGEMENT";
+            this.textBox1.Text = "DELETED STOCK DETAILS";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(1047, 790);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(605, 505);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(0, 26);
+            this.label9.Size = new System.Drawing.Size(0, 22);
             this.label9.TabIndex = 82;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(801, 790);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(421, 505);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(218, 26);
+            this.label7.Size = new System.Drawing.Size(174, 22);
             this.label7.TabIndex = 80;
             this.label7.Text = "Total Deleted Items:";
             // 
             // DeletedList
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkGray;
-            this.ClientSize = new System.Drawing.Size(1685, 838);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(946, 547);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox1);
@@ -382,7 +378,6 @@
             this.Controls.Add(this.ButtonPanel);
             this.Controls.Add(this.subLabel2);
             this.Controls.Add(this.panel5);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "DeletedList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "DeletedList";

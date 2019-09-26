@@ -14,6 +14,7 @@ namespace SchoolManagementSystem
 {
     public partial class AddStaffMember : Form
     {
+        private String staffID;
         SqlConnection con = new SqlConnection(@"Data Source=.;Initial Catalog=SchoolManagementSystemDB;Integrated Security=True");
         public AddStaffMember()
         {
@@ -121,6 +122,30 @@ namespace SchoolManagementSystem
 
             cmd.CommandText = "INSERT INTO staff(memberType,accessLevel,fullName,name,gender,NIC,DOB,address,phoneNo,email,subject,pastSchool,serviceYears,salary,password,subject2) VALUES('" + memberTypeValue + "','" + accessLevelValue + "','" + NametextBox1.Text + "','" + nameTextBox2.Text + "','" + genderValue + "','" + NICTextBox.Text + "','" + dateTimePicker1.Value + "','" + addressTextBox.Text + "','" + phNoTextBox.Text + "','" + emailTextBox1.Text + "','" + subTextBox1.Text + "','" + pastSchTextBox.Text + "','" + Int32.Parse(serviceYrsTextBox.Text) + "','" + Convert.ToDouble(salaryTextBox.Text) + "','" + NICTextBox.Text + "','" + subTextBox2.Text + "')";
             cmd.ExecuteNonQuery();
+            con.Close();
+
+            con.Open();
+            SqlCommand command;
+            SqlDataReader dataReader;
+
+            string query = "SELECT staffID FROM staff where NIC = '" + NICTextBox.Text + "' and email = '" + emailTextBox1.Text + "' and fullName = '" + NametextBox1.Text + "'";
+
+            command = new SqlCommand(query, con);
+            dataReader = command.ExecuteReader();
+
+            if (dataReader.Read())
+            {
+                staffID = dataReader.GetValue(0).ToString();
+            }
+            dataReader.Close();
+            command.Dispose();
+            con.Close();
+
+            con.Open();
+            SqlCommand cmd2 = con.CreateCommand();
+            cmd2.CommandType = CommandType.Text;
+            cmd2.CommandText = "insert into SalaryRecord(staffID,salary,date) values(" + staffID + "," + salaryTextBox.Text + ",'" + DateTime.Now.ToString("M/d/yyyy") + "')";
+            cmd2.ExecuteNonQuery();
             con.Close();
 
             DialogResult dlgResult = MessageBox.Show("Do You Want To Add More Staff", "Staff Member Added Succesfully!", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
@@ -395,8 +420,48 @@ namespace SchoolManagementSystem
 
         private void AddStaffMember_Load(object sender, EventArgs e)
         {
+            UsrlinkLabel.Text = GetSetInfo.userName;
             GetSetInfo.getSubject(subTextBox1);
             GetSetInfo.getSubject(subTextBox2);
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            nonAcedemicRadio.Checked = true;
+            userRadio.Checked = true;
+            NametextBox1.Text = "Isuri Tharushika Aththanayaka";
+            nameTextBox2.Text = "Aththanayaka I. T.";
+            femaleRadioButton1.Checked = true;
+            NICTextBox.Text = "851265254V";
+            dateTimePicker1.Value = new System.DateTime(1985, 08, 13, 0, 0, 0, 0);
+            addressTextBox.Text = "Kamburupitiya, Matara";
+            salaryTextBox.Text = "16520";
+            phNoTextBox.Text = "0776841974";
+            emailTextBox1.Text = "isuri@gmail.com";
+            subTextBox1.Text = "English";
+            subTextBox2.Text = "Science";
+            pastSchTextBox.Text = "Mahanama, Walgama";
+            serviceYrsTextBox.Text = "10";
+
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            adedemicRadio.Checked = true;
+            adminRadio.Checked = true;
+            NametextBox1.Text = "Ruwan Avishka Jayawardana";
+            nameTextBox2.Text = "Jayawardana R. W.";
+            maleRadioButton2.Checked = true;
+            NICTextBox.Text = "758963554V";
+            dateTimePicker1.Value = new System.DateTime(1975, 08, 13, 0, 0, 0, 0);
+            addressTextBox.Text = "Weligama, Matara";
+            salaryTextBox.Text = "36520";
+            phNoTextBox.Text = "0774125760";
+            emailTextBox1.Text = "ruwan@gmail.com";
+            subTextBox1.Text = "Tamil";
+            subTextBox2.Text = "Music";
+            pastSchTextBox.Text = "Mahanama, Walgama";
+            serviceYrsTextBox.Text = "21";
         }
     }
 }

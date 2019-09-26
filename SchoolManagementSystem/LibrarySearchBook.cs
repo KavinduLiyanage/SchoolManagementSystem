@@ -23,25 +23,8 @@ namespace SchoolManagementSystem
 
         private void LibrarySearchBook_Load(object sender, EventArgs e)
         {
-            try
-            {
-
-                con.Open();
-                SqlCommand cmd = con.CreateCommand();
-                cmd.CommandType = CommandType.Text;
-                cmd.CommandText = "select * from books_info";
-                cmd.ExecuteNonQuery();
-                DataTable dt = new DataTable();
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                da.Fill(dt);
-                dataGridView1.DataSource = dt;
-
-                con.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+            UsrlinkLabel.Text = GetSetInfo.username;
+            display_books();
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -100,6 +83,8 @@ namespace SchoolManagementSystem
 
         private void DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            panel4.Visible = true;
+
             int i;
             i = Convert.ToInt32(dataGridView1.SelectedCells[0].Value.ToString());
 
@@ -156,13 +141,38 @@ namespace SchoolManagementSystem
                 cmd.CommandText = "update books_info set books_name='"+textBox2.Text+"',books_isbn='"+textBox3.Text+"',books_author='"+textBox4.Text+"',books_edition='"+textBox5.Text+"',books_publisher='"+textBox6.Text+"',books_quantity='"+textBox7.Text+"'where id ="+i+"";
                 cmd.ExecuteNonQuery();
                 con.Close();
+                display_books();
                 MessageBox.Show("Record updated Successfully");
+                panel4.Visible = false;
 
                 LibrarySearchBook lib = new LibrarySearchBook();
                 this.Hide();
                 lib.ShowDialog();
             }
             catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        public void display_books()
+        {
+            try
+            {
+
+                con.Open();
+                SqlCommand cmd = con.CreateCommand();
+                cmd.CommandType = CommandType.Text;
+                cmd.CommandText = "select * from books_info";
+                cmd.ExecuteNonQuery();
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+                dataGridView1.DataSource = dt;
+
+                con.Close();
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
@@ -177,7 +187,7 @@ namespace SchoolManagementSystem
             cmd.CommandText = "delete from books_info where Id="+i+"";
             cmd.ExecuteNonQuery();
             con.Close();
-            MessageBox.Show("Record updated Successfully");
+            MessageBox.Show("Record Deleted Successfully");
             LibrarySearchBook lib = new LibrarySearchBook();
             this.Hide();
             lib.ShowDialog();
@@ -216,6 +226,11 @@ namespace SchoolManagementSystem
             ReturnBook rtn = new ReturnBook();
             this.Hide();
             rtn.ShowDialog();
+        }
+
+        private void TextBox6_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

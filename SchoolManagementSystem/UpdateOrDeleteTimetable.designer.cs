@@ -28,20 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateOrDeleteTimetable));
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tbSearch = new System.Windows.Forms.TextBox();
+            this.dataGridViewTimeTable = new System.Windows.Forms.DataGridView();
+            this.tbTimeTablID = new System.Windows.Forms.TextBox();
             this.lbTimetableIDUDTT = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbTerm = new System.Windows.Forms.ComboBox();
+            this.cbSubject = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lbGradeUDTT = new System.Windows.Forms.Label();
-            this.cbTerm = new System.Windows.Forms.TextBox();
             this.lbSubjectUDTT = new System.Windows.Forms.Label();
             this.lbTermUDTT = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.cbGrade = new System.Windows.Forms.ComboBox();
+            this.tbStartTime = new System.Windows.Forms.TextBox();
             this.lbTimeUDTT = new System.Windows.Forms.Label();
             this.lbDateUDTT = new System.Windows.Forms.Label();
             this.btnDeleteUDTT = new System.Windows.Forms.Button();
@@ -71,42 +72,47 @@
             this.btnResourseMHeader = new System.Windows.Forms.Button();
             this.btnInventoryMHeader = new System.Windows.Forms.Button();
             this.btnEventMHeader = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTimeTable)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel3.Controls.Add(this.dataGridView1);
-            this.panel3.Controls.Add(this.tbSearch);
+            this.panel3.Controls.Add(this.dataGridViewTimeTable);
+            this.panel3.Controls.Add(this.tbTimeTablID);
             this.panel3.Controls.Add(this.lbTimetableIDUDTT);
             this.panel3.Location = new System.Drawing.Point(691, 107);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(559, 494);
             this.panel3.TabIndex = 35;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel3_Paint);
             // 
-            // dataGridView1
+            // dataGridViewTimeTable
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 64);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(526, 414);
-            this.dataGridView1.TabIndex = 14;
+            this.dataGridViewTimeTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewTimeTable.Location = new System.Drawing.Point(16, 64);
+            this.dataGridViewTimeTable.Name = "dataGridViewTimeTable";
+            this.dataGridViewTimeTable.RowHeadersWidth = 51;
+            this.dataGridViewTimeTable.RowTemplate.Height = 24;
+            this.dataGridViewTimeTable.Size = new System.Drawing.Size(526, 414);
+            this.dataGridViewTimeTable.TabIndex = 14;
+            this.dataGridViewTimeTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewTimeTable_CellClick);
+            this.dataGridViewTimeTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewTimeTable_CellContentClick);
             // 
-            // tbSearch
+            // tbTimeTablID
             // 
-            this.tbSearch.Location = new System.Drawing.Point(139, 19);
-            this.tbSearch.Name = "tbSearch";
-            this.tbSearch.Size = new System.Drawing.Size(403, 22);
-            this.tbSearch.TabIndex = 12;
+            this.tbTimeTablID.Location = new System.Drawing.Point(139, 19);
+            this.tbTimeTablID.Name = "tbTimeTablID";
+            this.tbTimeTablID.Size = new System.Drawing.Size(403, 22);
+            this.tbTimeTablID.TabIndex = 12;
             // 
             // lbTimetableIDUDTT
             // 
@@ -121,14 +127,14 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel2.Controls.Add(this.comboBox2);
+            this.panel2.Controls.Add(this.cbTerm);
+            this.panel2.Controls.Add(this.cbSubject);
             this.panel2.Controls.Add(this.dateTimePicker1);
             this.panel2.Controls.Add(this.lbGradeUDTT);
-            this.panel2.Controls.Add(this.cbTerm);
             this.panel2.Controls.Add(this.lbSubjectUDTT);
             this.panel2.Controls.Add(this.lbTermUDTT);
-            this.panel2.Controls.Add(this.comboBox1);
-            this.panel2.Controls.Add(this.textBox3);
+            this.panel2.Controls.Add(this.cbGrade);
+            this.panel2.Controls.Add(this.tbStartTime);
             this.panel2.Controls.Add(this.lbTimeUDTT);
             this.panel2.Controls.Add(this.lbDateUDTT);
             this.panel2.Location = new System.Drawing.Point(293, 107);
@@ -136,13 +142,25 @@
             this.panel2.Size = new System.Drawing.Size(380, 494);
             this.panel2.TabIndex = 34;
             // 
-            // comboBox2
+            // cbTerm
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(143, 325);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(200, 24);
-            this.comboBox2.TabIndex = 18;
+            this.cbTerm.FormattingEnabled = true;
+            this.cbTerm.Items.AddRange(new object[] {
+            "1st Term",
+            "2nd Term",
+            "3rd Term"});
+            this.cbTerm.Location = new System.Drawing.Point(143, 126);
+            this.cbTerm.Name = "cbTerm";
+            this.cbTerm.Size = new System.Drawing.Size(200, 24);
+            this.cbTerm.TabIndex = 19;
+            // 
+            // cbSubject
+            // 
+            this.cbSubject.FormattingEnabled = true;
+            this.cbSubject.Location = new System.Drawing.Point(143, 325);
+            this.cbSubject.Name = "cbSubject";
+            this.cbSubject.Size = new System.Drawing.Size(200, 24);
+            this.cbSubject.TabIndex = 18;
             // 
             // dateTimePicker1
             // 
@@ -162,13 +180,6 @@
             this.lbGradeUDTT.Size = new System.Drawing.Size(55, 20);
             this.lbGradeUDTT.TabIndex = 16;
             this.lbGradeUDTT.Text = "Grade";
-            // 
-            // cbTerm
-            // 
-            this.cbTerm.Location = new System.Drawing.Point(143, 129);
-            this.cbTerm.Name = "cbTerm";
-            this.cbTerm.Size = new System.Drawing.Size(200, 22);
-            this.cbTerm.TabIndex = 5;
             // 
             // lbSubjectUDTT
             // 
@@ -190,20 +201,40 @@
             this.lbTermUDTT.TabIndex = 0;
             this.lbTermUDTT.Text = "Term";
             // 
-            // comboBox1
+            // cbGrade
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(143, 273);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 24);
-            this.comboBox1.TabIndex = 9;
+            this.cbGrade.FormattingEnabled = true;
+            this.cbGrade.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12 Art",
+            "12 Commerce",
+            "12 Maths",
+            "12 Bio",
+            "13 Art",
+            "13 Commerce",
+            "13 Maths",
+            "13 Bio"});
+            this.cbGrade.Location = new System.Drawing.Point(143, 273);
+            this.cbGrade.Name = "cbGrade";
+            this.cbGrade.Size = new System.Drawing.Size(200, 24);
+            this.cbGrade.TabIndex = 9;
             // 
-            // textBox3
+            // tbStartTime
             // 
-            this.textBox3.Location = new System.Drawing.Point(143, 225);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(200, 22);
-            this.textBox3.TabIndex = 7;
+            this.tbStartTime.Location = new System.Drawing.Point(143, 225);
+            this.tbStartTime.Name = "tbStartTime";
+            this.tbStartTime.Size = new System.Drawing.Size(200, 22);
+            this.tbStartTime.TabIndex = 7;
             // 
             // lbTimeUDTT
             // 
@@ -235,6 +266,7 @@
             this.btnDeleteUDTT.TabIndex = 19;
             this.btnDeleteUDTT.Text = "Delete";
             this.btnDeleteUDTT.UseVisualStyleBackColor = false;
+            this.btnDeleteUDTT.Click += new System.EventHandler(this.BtnDeleteUDTT_Click);
             // 
             // btnUpdateUDTT
             // 
@@ -246,6 +278,7 @@
             this.btnUpdateUDTT.TabIndex = 14;
             this.btnUpdateUDTT.Text = "Update";
             this.btnUpdateUDTT.UseVisualStyleBackColor = false;
+            this.btnUpdateUDTT.Click += new System.EventHandler(this.BtnUpdateUDTT_Click);
             // 
             // panel1
             // 
@@ -391,6 +424,7 @@
             this.btnDisplayUDTT.TabIndex = 36;
             this.btnDisplayUDTT.Text = "Display";
             this.btnDisplayUDTT.UseVisualStyleBackColor = false;
+            this.btnDisplayUDTT.Click += new System.EventHandler(this.BtnDisplayUDTT_Click);
             // 
             // btnViewUDTT
             // 
@@ -548,6 +582,10 @@
             this.btnEventMHeader.Text = "Event Management";
             this.btnEventMHeader.UseVisualStyleBackColor = false;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // UpdateOrDeleteTimetable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -571,13 +609,14 @@
             this.Load += new System.EventHandler(this.UpdateOrDeleteTimetable_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTimeTable)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -586,18 +625,17 @@
         #endregion
 
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox tbSearch;
+        private System.Windows.Forms.DataGridView dataGridViewTimeTable;
+        private System.Windows.Forms.TextBox tbTimeTablID;
         private System.Windows.Forms.Label lbTimetableIDUDTT;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbSubject;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label lbGradeUDTT;
-        private System.Windows.Forms.TextBox cbTerm;
         private System.Windows.Forms.Label lbSubjectUDTT;
         private System.Windows.Forms.Label lbTermUDTT;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.ComboBox cbGrade;
+        private System.Windows.Forms.TextBox tbStartTime;
         private System.Windows.Forms.Button btnUpdateUDTT;
         private System.Windows.Forms.Label lbTimeUDTT;
         private System.Windows.Forms.Label lbDateUDTT;
@@ -627,5 +665,7 @@
         private System.Windows.Forms.Button btnResourseMHeader;
         private System.Windows.Forms.Button btnInventoryMHeader;
         private System.Windows.Forms.Button btnEventMHeader;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.ComboBox cbTerm;
     }
 }

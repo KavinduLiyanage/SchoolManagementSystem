@@ -30,6 +30,15 @@ namespace SchoolManagementSystem
             
         }
 
+        public void reset()
+        {
+            classid.Clear();
+            classname.Clear();
+            grade.SelectedIndex = -1;
+            capacity.Clear();
+            
+        }
+
         private void Button3_Click(object sender, EventArgs e)
         {
             con.Open();
@@ -47,11 +56,12 @@ namespace SchoolManagementSystem
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "update Classroom set ClassId = '" + classid.Text + "' ,ClassName = '"+classname.Text+"',ClassCapacity='"+capacity.Text+"'where ClassId='" + classid.Text + "'";
+            cmd.CommandText = "update Classroom set ClassId = '" + classid.Text + "' ,ClassName = '"+classname.Text+"',ClassCapacity='"+capacity.Text+ "',grade = '" + grade.Text + "'where ClassId='" + classid.Text + "'";
             cmd.ExecuteNonQuery();
             con.Close();
             display_details();
-            MessageBox.Show("Record Updated Successfully");
+            MessageBox.Show("Updated Successfully");
+            reset();
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -117,7 +127,8 @@ namespace SchoolManagementSystem
             grade.Text = "";
             capacity.Text = "";
             display_details();
-            MessageBox.Show("Record Inserted Successfully");
+            MessageBox.Show("Inserted Successfully");
+            reset();
         }
 
         private void Button4_Click(object sender, EventArgs e)
@@ -218,6 +229,36 @@ namespace SchoolManagementSystem
             HomePage1 newHome = new HomePage1();
             this.Hide();
             newHome.ShowDialog();
+        }
+
+        private void BtnExamMheader_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Capacity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            
+        }
+
+        private void Classid_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Classname_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

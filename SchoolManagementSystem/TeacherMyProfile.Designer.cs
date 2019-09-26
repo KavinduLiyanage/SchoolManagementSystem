@@ -77,6 +77,7 @@
             this.btnStudentMHeader = new System.Windows.Forms.Button();
             this.btnResourseMHeader = new System.Windows.Forms.Button();
             this.btnInventoryMHeader = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.ButtonPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.usrImg)).BeginInit();
             this.genderPanel.SuspendLayout();
@@ -112,6 +113,7 @@
             // ButtonPanel
             // 
             this.ButtonPanel.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ButtonPanel.Controls.Add(this.button1);
             this.ButtonPanel.Controls.Add(this.NHomeBtn);
             this.ButtonPanel.Controls.Add(this.NReqLeaveBtn);
             this.ButtonPanel.Controls.Add(this.NStaffHomeBtn);
@@ -597,6 +599,17 @@
             this.btnInventoryMHeader.Text = "Exam Management";
             this.btnInventoryMHeader.UseVisualStyleBackColor = false;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.button1.Location = new System.Drawing.Point(11, 120);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(235, 35);
+            this.button1.TabIndex = 25;
+            this.button1.Text = "Salary Report";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
             // TeacherMyProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -680,5 +693,6 @@
         private System.Windows.Forms.Button btnStudentMHeader;
         private System.Windows.Forms.Button btnResourseMHeader;
         private System.Windows.Forms.Button btnInventoryMHeader;
+        private System.Windows.Forms.Button button1;
     }
 }

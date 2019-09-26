@@ -245,7 +245,7 @@
             // 
             this.addressLabel.AutoSize = true;
             this.addressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.addressLabel.Location = new System.Drawing.Point(12, 391);
+            this.addressLabel.Location = new System.Drawing.Point(9, 391);
             this.addressLabel.Name = "addressLabel";
             this.addressLabel.Size = new System.Drawing.Size(165, 25);
             this.addressLabel.TabIndex = 59;
@@ -257,9 +257,9 @@
             this.acTDeclinecomboBox.Items.AddRange(new object[] {
             "Accept",
             "Decline"});
-            this.acTDeclinecomboBox.Location = new System.Drawing.Point(183, 390);
+            this.acTDeclinecomboBox.Location = new System.Drawing.Point(182, 390);
             this.acTDeclinecomboBox.Name = "acTDeclinecomboBox";
-            this.acTDeclinecomboBox.Size = new System.Drawing.Size(247, 24);
+            this.acTDeclinecomboBox.Size = new System.Drawing.Size(248, 24);
             this.acTDeclinecomboBox.TabIndex = 58;
             // 
             // addressTextBox
@@ -334,9 +334,12 @@
             // 
             // SalarydataView1
             // 
+            this.SalarydataView1.AllowUserToAddRows = false;
+            this.SalarydataView1.AllowUserToDeleteRows = false;
             this.SalarydataView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.SalarydataView1.Location = new System.Drawing.Point(454, 74);
             this.SalarydataView1.Name = "SalarydataView1";
+            this.SalarydataView1.ReadOnly = true;
             this.SalarydataView1.RowHeadersWidth = 51;
             this.SalarydataView1.RowTemplate.Height = 24;
             this.SalarydataView1.Size = new System.Drawing.Size(493, 469);

@@ -62,6 +62,7 @@ namespace SchoolManagementSystem
             {
                 label9.Text = "0";
             }
+            UsrlinkLabel.Text = GetSetInfo.userName;
         }
 
         private void BtnLogOutHeader_Click(object sender, EventArgs e)
@@ -76,6 +77,11 @@ namespace SchoolManagementSystem
             HomePage1 newHome = new HomePage1();
             this.Hide();
             newHome.ShowDialog();
+        }
+
+        private void UsrlinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
         }
     }
 }

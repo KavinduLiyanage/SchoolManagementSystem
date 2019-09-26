@@ -83,6 +83,7 @@ namespace SchoolManagementSystem
             Boolean eventName = true;
             Boolean eventVenue = true;
             Boolean time = true;
+            Boolean status = true;
             if (textBoxName.Text.Equals(""))
             {
                 eventName = false;
@@ -99,19 +100,25 @@ namespace SchoolManagementSystem
                 time = false;
                 error1.Add("please add time");
             }
+            if (comboBoxStat.SelectedIndex == -1)
+            {
+                status = false;
+                error1.Add("please add status");
+            }
+
             string errorArr1 = "";
             foreach (Object ob in error1)
             {
                 errorArr1 = errorArr1 + "\n" + ob;
             }
 
-            if (eventName && eventVenue && time)
+            if (eventName && eventVenue && time&& status)
             {
                 OpenConnection();
                 SqlCommand cmd = conn.CreateCommand();
                 cmd.CommandType = CommandType.Text;
                 cmd.CommandText = ("set IDENTITY_INSERT ON");
-                cmd.CommandText = ("insert into Events([Event Name], [Event Date], [Event Venue],[Time]) values ('" + textBoxName.Text + "','" + dateTimePicker1.Value.ToString() + "','" + textBoxvenue.Text + "','" + textBoxTime.Text + "')");
+                cmd.CommandText = ("insert into Events([Event Name], [Event Date], [Event Venue],[Time],[Status]) values ('" + textBoxName.Text + "','" + dateTimePicker1.Value.ToString() + "','" + textBoxvenue.Text + "','" + textBoxTime.Text + "','"+comboBoxStat.SelectedItem+"')");
                 cmd.ExecuteNonQuery();
                 CloseConnection();
 
@@ -179,6 +186,7 @@ namespace SchoolManagementSystem
 
             textBoxvenue.Text = selectRow.Cells[3].Value.ToString();
             textBoxTime.Text = selectRow.Cells[4].Value.ToString();
+            comboBoxStat.SelectedItem = selectRow.Cells[5].Value.ToString();
         }
 
         private void UpdateNoticebtn_Click(object sender, EventArgs e)
@@ -187,6 +195,7 @@ namespace SchoolManagementSystem
             Boolean eventName = true;
             Boolean eventVenue = true;
             Boolean time = true;
+            
             if (textBoxName.Text.Equals(""))
             {
                 eventName = false;
@@ -203,6 +212,7 @@ namespace SchoolManagementSystem
                 time = false;
                 error1.Add("please add time");
             }
+            
             string errorArr1 = "";
             foreach (Object ob in error1)
             {
@@ -217,10 +227,11 @@ namespace SchoolManagementSystem
                     OpenConnection();
                     SqlCommand cmd = conn.CreateCommand();
                     cmd.CommandType = CommandType.Text;
-                    cmd.CommandText = ("update Events set [Event Name]='" + textBoxName.Text + "', [Event Date] ='" + dateTimePicker1.Value.ToString() + "',[Event Venue]='" + textBoxvenue.Text + "',  [Time]='" + textBoxTime.Text + "' where [Event ID]='" + EventId + "'");
+                    cmd.CommandText = ("update Events set [Event Name]='" + textBoxName.Text + "', [Event Date] ='" + dateTimePicker1.Value.ToString() + "',[Event Venue]='" + textBoxvenue.Text + "',  [Time]='" + textBoxTime.Text + "',[Status]='"+comboBoxStat.SelectedItem +"' where [Event ID]='" + EventId + "'");
                     cmd.ExecuteNonQuery();
                     CloseConnection();
                     MessageBox.Show("Updated Succesfully");
+                    ResetRecords();
                 }
                 else
                 {
@@ -243,6 +254,7 @@ namespace SchoolManagementSystem
                 cmd.ExecuteNonQuery();
                 CloseConnection();
                 MessageBox.Show("Deleted Succesfully");
+                ResetRecords();
             }
         }
 
@@ -266,5 +278,19 @@ namespace SchoolManagementSystem
             this.Hide();
             newHome.ShowDialog();
         }
+
+        private void TextBoxTime_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TimeKeypress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
+//end line

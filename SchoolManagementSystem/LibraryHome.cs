@@ -146,5 +146,10 @@ namespace SchoolManagementSystem
             this.Hide();
             log.ShowDialog();
         }
+
+        private void LibraryHome_Load(object sender, EventArgs e)
+        {
+            UsrlinkLabel.Text = GetSetInfo.username;
+        }
     }
 }

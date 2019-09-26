@@ -25,7 +25,7 @@ namespace SchoolManagementSystem
             DataSet1Lib ds = new DataSet1Lib();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from book_issue where book_return_date='' ";
+            cmd.CommandText = "select * from book_issue where book_return_date is NULL ";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);

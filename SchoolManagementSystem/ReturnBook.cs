@@ -44,7 +44,8 @@ namespace SchoolManagementSystem
 
         private void ReturnBook_Load(object sender, EventArgs e)
         {
-            if(con.State==ConnectionState.Open)
+            UsrlinkLabel.Text = GetSetInfo.username;
+            if (con.State==ConnectionState.Open)
             {
                 con.Close();
             }
@@ -111,7 +112,30 @@ namespace SchoolManagementSystem
 
         private void NStaffHomeBtn_Click(object sender, EventArgs e)
         {
+            LibraryAddBook add = new LibraryAddBook();
+            this.Hide();
+            add.ShowDialog();
+        }
 
+        private void NAddStaffBtn_Click(object sender, EventArgs e)
+        {
+            LibrarySearchBook lsbook = new LibrarySearchBook();
+            this.Hide();
+            lsbook.ShowDialog();
+        }
+
+        private void NViewStaffBtn_Click(object sender, EventArgs e)
+        {
+            IssueBook issue = new IssueBook();
+            this.Hide();
+            issue.ShowDialog();
+        }
+
+        private void NViewLeaveBtn_Click(object sender, EventArgs e)
+        {
+            ReportBooks report = new ReportBooks();
+            this.Hide();
+            report.ShowDialog();
         }
     }
 }

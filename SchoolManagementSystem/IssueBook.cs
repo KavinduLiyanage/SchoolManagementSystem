@@ -38,7 +38,8 @@ namespace SchoolManagementSystem
 
         private void IssueBook_Load(object sender, EventArgs e)
         {
-            if(con.State==ConnectionState.Open)
+            UsrlinkLabel.Text = GetSetInfo.username;
+            if (con.State==ConnectionState.Open)
             {
                 con.Close();
             }

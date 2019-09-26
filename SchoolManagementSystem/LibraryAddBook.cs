@@ -48,7 +48,7 @@ namespace SchoolManagementSystem
 
         private void Form3_Load(object sender, EventArgs e)
         {
-
+            UsrlinkLabel.Text = GetSetInfo.username;
         }
 
         private void LibAddBook() {
@@ -319,6 +319,19 @@ namespace SchoolManagementSystem
                 e.Handled = true;
 
             }
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            textBox1.Text = "732";
+            textBox2.Text = "Famous Five";
+            textBox3.Text = "WV-732";
+            textBox8.Text = "Enid Blyton";
+            textBox4.Text = "5th";
+            textBox5.Text = "Hodder";
+            textBox6.Text = "10";
+            textBox7.Text = "3500";
+
         }
     }
 }

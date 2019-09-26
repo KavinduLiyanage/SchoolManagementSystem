@@ -245,6 +245,7 @@
             this.NViewStaffBtn.TabIndex = 23;
             this.NViewStaffBtn.Text = "Issue Books";
             this.NViewStaffBtn.UseVisualStyleBackColor = false;
+            this.NViewStaffBtn.Click += new System.EventHandler(this.NViewStaffBtn_Click);
             // 
             // NViewLeaveBtn
             // 
@@ -257,6 +258,7 @@
             this.NViewLeaveBtn.TabIndex = 18;
             this.NViewLeaveBtn.Text = "Reports";
             this.NViewLeaveBtn.UseVisualStyleBackColor = false;
+            this.NViewLeaveBtn.Click += new System.EventHandler(this.NViewLeaveBtn_Click);
             // 
             // NViewSalaryBtn
             // 
@@ -281,6 +283,7 @@
             this.NAddStaffBtn.TabIndex = 17;
             this.NAddStaffBtn.Text = "View Books";
             this.NAddStaffBtn.UseVisualStyleBackColor = false;
+            this.NAddStaffBtn.Click += new System.EventHandler(this.NAddStaffBtn_Click);
             // 
             // pictureBox1
             // 
@@ -331,13 +334,14 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(36, 80);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(169, 38);
             this.button1.TabIndex = 2;
-            this.button1.Text = "Search Books";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Text = "Search ";
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // textBox1
@@ -396,13 +400,14 @@
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Location = new System.Drawing.Point(207, 134);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(168, 36);
             this.button2.TabIndex = 6;
             this.button2.Text = "Return Books";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // dateTimePicker1
